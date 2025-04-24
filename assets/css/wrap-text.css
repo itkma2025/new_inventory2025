@@ -1,0 +1,15 @@
+.wrap-text {
+  max-width: 300px; /* Contoh lebar maksimum */
+  overflow: hidden; /* Sembunyikan teks yang melebihi max-width */
+  white-space: pre-line; /* Tetapkan spasi putih dan pecah baris sesuai dengan teks */
+  word-wrap: break-word; /* Pecah kata jika melebihi max-width */
+}
+@media (max-width: 767px) {
+  /* Media query untuk tampilan mobile */
+  .wrap-text {
+    min-width: 400px; /* Contoh lebar maksimum */
+    overflow: hidden; /* Sembunyikan teks yang melebihi max-width */
+    white-space: pre-line; /* Tetapkan spasi putih dan pecah baris sesuai dengan teks */
+    word-wrap: break-word; /* Pecah kata jika melebihi max-width */
+  }
+}

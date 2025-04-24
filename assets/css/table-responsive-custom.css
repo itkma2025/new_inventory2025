@@ -1,0 +1,26 @@
+.table-responsive {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.col-12{
+    padding: 0 !important;
+}
+
+.col-md-auto{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* CSS untuk ukuran layar tertentu */
+@media screen and (max-width: 500px) {
+    .dt-container .dt-search input {
+        width: 100% !important;
+        margin-top: 10px;
+    }
+
+    .btn-group {
+        border-radius: 0.375rem;
+        width: 100%;
+    }
+}

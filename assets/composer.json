@@ -1,0 +1,17 @@
+{
+    "require": {
+        "phpoffice/phpword": "^1.1",
+        "dompdf/dompdf": "^2.0",
+        "khanamiryan/qrcode-detector-decoder": "^2.0",
+        "ezyang/htmlpurifier": "^4.17",
+        "filp/whoops": "^2.16",
+        "nesbot/carbon": "^3.8",
+        "tecnickcom/tcpdf": "^6.8",
+        "fancyapps/fancybox": "^2.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "robloach/component-installer": true
+        }
+    }
+}

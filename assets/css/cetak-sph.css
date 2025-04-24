@@ -1,0 +1,225 @@
+body {
+  font-family: "Calibri", sans-serif;
+  letter-spacing: 0.8px;
+  background-color: aliceblue;
+  font-size: 14px;
+}
+
+table {
+  border: 1px solid black;
+  color: black;
+}
+
+.sph {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 0; /* Hapus padding */
+}
+
+.sph-img {
+  margin-top: 1cm;
+  margin-left: 0.7cm; /* Tambahkan jarak kiri */
+  margin-right: 1cm; /* Tambahkan jarak kanan */
+}
+
+.sph-content {
+  margin-left: 0.7cm; /* Tambahkan jarak kiri */
+  margin-right: 1.2cm; /* Tambahkan jarak kanan */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Gaya untuk row */
+.row {
+  display: flex; /* Membuat konten menjadi flexbox */
+}
+
+/* Gaya untuk kolom 1 */
+.col {
+  flex: 1; /* Memberikan kolom 1 fleksibilitas sejajar */
+}
+
+.col-content-1 {
+  width: 15%;
+}
+
+.col-content-2 {
+  width: 85%;
+}
+
+.col-content-3 {
+  width: 100%;
+}
+
+.content-yth {
+  max-width: 42%;
+  word-wrap: break-word;
+}
+
+.content-alamat {
+  max-width: 50%;
+  word-wrap: break-word;
+}
+
+.content-hormat {
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.content-img-ttd {
+  max-width: 18%;
+  /* min-height: 100px; */
+  max-height: 90px;
+}
+/* Gaya untuk teks di tengah */
+.text-center {
+  text-align: center;
+}
+
+/* Gaya untuk teks di kiri */
+.text-left {
+  text-align: left;
+}
+
+/* Gaya untuk teks di kanan */
+.text-right {
+  text-align: right;
+}
+
+.mt-3 {
+  margin-top: 10px;
+}
+
+.mb-3 {
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  flex: 0;
+  width: 100px; /* Sesuaikan lebar sesuai kebutuhan */
+  text-align: right;
+  padding-right: 10px;
+}
+
+.content {
+  flex: 1;
+}
+
+/* CSS untuk tabel responsif */
+.table-responsive {
+  overflow-x: auto; /* Memungkinkan pengguliran horizontal jika tabel terlalu lebar */
+  max-width: 100%; /* Membuat tabel maksimum lebar adalah lebar wadah */
+}
+
+/* Stil tambahan untuk tabel (opsional) */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: black;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.2rem;
+  vertical-align: top;
+  border: 1px solid black;
+}
+
+.table thead th {
+  border: 1px solid black;
+  white-space: nowrap; /* Tambahkan no-wrap ke elemen th */
+}
+
+.table tbody + tbody {
+  border: 1px solid black;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .table-responsive {
+    overflow-x: auto; /* Memungkinkan pengguliran horizontal jika tabel terlalu lebar */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.2rem;
+    vertical-align: top;
+    border: 1px solid black;
+    white-space: nowrap; /* Tambahkan no-wrap ke elemen th */
+    overflow-x: auto; /* Aktifkan pengguliran horizontal pada sel-sel tabel */
+  }
+
+  .content-hormat {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .col-content-1 {
+    width: 25%;
+  }
+
+  .col-content-2 {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .table-responsive {
+    overflow-x: auto; /* Memungkinkan pengguliran horizontal jika tabel terlalu lebar */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.2rem;
+    vertical-align: top;
+    border: 1px solid black;
+    white-space: nowrap; /* Tambahkan no-wrap ke elemen th */
+    overflow-x: auto; /* Aktifkan pengguliran horizontal pada sel-sel tabel */
+  }
+
+  .content-hormat {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .col-content-1 {
+    width: 25%;
+  }
+
+  .col-content-2 {
+    width: 75%;
+  }
+}
+
+@media print {
+  @page {
+    size: F4;
+    margin: 0;
+    font-size: 17px;
+  }
+
+  .invoice {
+    background-color: none;
+    box-shadow: none;
+    /* Warna dasar untuk ukuran kertas Letter */
+  }
+}
