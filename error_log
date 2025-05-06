@@ -1,0 +1,21 @@
+[06-Feb-2025 10:01:30 Asia/Jakarta] PHP Warning:  Undefined variable $display in /home/mandir36/test-inventory.mandirialkesindo.co.id/tampil-qr-code.php on line 54
+[06-Feb-2025 15:21:34 Asia/Jakarta] PHP Warning:  Undefined array key "nama" in /home/mandir36/test-inventory.mandirialkesindo.co.id/simpan-data-sph.php on line 10
+[06-Feb-2025 15:21:34 Asia/Jakarta] PHP Warning:  Undefined array key "harga" in /home/mandir36/test-inventory.mandirialkesindo.co.id/simpan-data-sph.php on line 11
+[06-Feb-2025 16:10:36 Asia/Jakarta] PHP Warning:  Undefined array key "nama" in /home/mandir36/test-inventory.mandirialkesindo.co.id/simpan-data-sph.php on line 10
+[06-Feb-2025 16:10:36 Asia/Jakarta] PHP Warning:  Undefined array key "harga" in /home/mandir36/test-inventory.mandirialkesindo.co.id/simpan-data-sph.php on line 11
+[06-Feb-2025 16:46:20 Asia/Jakarta] PHP Warning:  Undefined variable $display in /home/mandir36/test-inventory.mandirialkesindo.co.id/tampil-qr-code.php on line 54
+[06-Feb-2025 16:46:27 Asia/Jakarta] PHP Warning:  Undefined variable $display in /home/mandir36/test-inventory.mandirialkesindo.co.id/tampil-qr-code.php on line 54
+[06-Feb-2025 17:58:10 Asia/Jakarta] PHP Warning:  Undefined array key "nama" in /home/mandir36/test-inventory.mandirialkesindo.co.id/simpan-data-sph.php on line 10
+[06-Feb-2025 17:58:10 Asia/Jakarta] PHP Warning:  Undefined array key "harga" in /home/mandir36/test-inventory.mandirialkesindo.co.id/simpan-data-sph.php on line 11
+[06-Feb-2025 18:14:27 Asia/Jakarta] PHP Warning:  Undefined array key "nama" in /home/mandir36/test-inventory.mandirialkesindo.co.id/simpan-data-sph.php on line 10
+[06-Feb-2025 18:14:27 Asia/Jakarta] PHP Warning:  Undefined array key "harga" in /home/mandir36/test-inventory.mandirialkesindo.co.id/simpan-data-sph.php on line 11
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 34
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 35
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 36
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 46
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 50
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 54
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 63
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 66
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 74
+[06-Feb-2025 18:14:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/mandir36/test-inventory.mandirialkesindo.co.id/cetak-sph.php on line 168

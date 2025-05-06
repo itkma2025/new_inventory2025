@@ -1,0 +1,75 @@
+# BEGIN Force to HTTPS 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+# END Force to HTTPS
+# BEGIN Force to HTTPS 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Mencegah akses langsung ke folder "config"
+    RewriteCond %{REQUEST_URI} ^/config/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "assets"
+    RewriteCond %{REQUEST_URI} ^/assets/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "classPhp"
+    RewriteCond %{REQUEST_URI} ^/classPhp/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "Customer"
+    RewriteCond %{REQUEST_URI} ^/Customer/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /404.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "file-supplier"
+    RewriteCond %{REQUEST_URI} ^/file-supplier/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "function"
+    RewriteCond %{REQUEST_URI} ^/function/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "js-login"
+    RewriteCond %{REQUEST_URI} ^/js-login/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "modal-dialog"
+    RewriteCond %{REQUEST_URI} ^/modal-dialog/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "page"
+    RewriteCond %{REQUEST_URI} ^/page/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "PHPMailer"
+    RewriteCond %{REQUEST_URI} ^/PHPMailer/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+    # Mencegah akses langsung ke folder "proses"
+    RewriteCond %{REQUEST_URI} ^/proses/ [NC]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ /index.php [R=301,L]
+
+</IfModule>
+
+
+
+

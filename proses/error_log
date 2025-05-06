@@ -1,0 +1,26 @@
+[03-Feb-2025 15:17:34 Asia/Jakarta] PHP Warning:  Array to string conversion in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-produk-spk-reg.php on line 89
+[06-Feb-2025 16:11:21 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'alasan_cancel' in 'field list' in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php:236
+Stack trace:
+#0 /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php(236): mysqli_query()
+#1 {main}
+  thrown in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php on line 236
+[06-Feb-2025 16:12:42 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'alasan_cancel' in 'field list' in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php:236
+Stack trace:
+#0 /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php(236): mysqli_query()
+#1 {main}
+  thrown in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php on line 236
+[06-Feb-2025 16:12:55 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'alasan_cancel' in 'field list' in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php:236
+Stack trace:
+#0 /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php(236): mysqli_query()
+#1 {main}
+  thrown in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php on line 236
+[06-Feb-2025 16:13:02 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'alasan_cancel' in 'field list' in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php:236
+Stack trace:
+#0 /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php(236): mysqli_query()
+#1 {main}
+  thrown in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php on line 236
+[06-Feb-2025 16:13:15 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'alasan_cancel' in 'field list' in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php:236
+Stack trace:
+#0 /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php(236): mysqli_query()
+#1 {main}
+  thrown in /home/mandir36/test-inventory.mandirialkesindo.co.id/proses/proses-sph.php on line 236

@@ -96,6 +96,7 @@ if (isset($_POST['id'])) {
                                     }
                                     $nama_driver = $data['nama_driver'];
                                     $nama_driver = !empty($nama_driver) ? str_replace(' ', '_', $nama_driver) : '';
+                                    $driver = urlencode($nama_driver);
                                     $lokasi = $data['lokasi'];
                                     $created_date = $data['created_date'];
                                     $gambar = basename($data['bukti_terima']);
@@ -104,9 +105,16 @@ if (isset($_POST['id'])) {
                                     $result = json_decode($response, true);
                                     $view_image = urlencode($result['result']);
                                     $path = "http://localhost:8082/image-history-ecat.php?file=$view_image";
-                                    $img = "";
+                                    $img = ""; 
                                     if ($gambar) {
-                                        $img = $path ;
+                                        if($nama_driver != ''){
+                                            $encrypt_image = encrypt($gambar, $key_global);
+                                            $view_image_driver = urlencode($encrypt_image);
+                                            $path_driver = "image-history.php?file=$view_image_driver&&driver=$driver";
+                                            $img = $path_driver;
+                                        } else {
+                                            $img = $path ;
+                                        }
                                     } else {
                                         $img = "assets/img/no_img.jpg";
                                     }

@@ -133,12 +133,12 @@ if (isset($_POST['diterima'])) {
                                                         WHERE id_inv_ecat = '$id_inv_decrypt'");
             } else {
                 // Jika data belum ada, lakukan insert
-                $bukti_terima = mysqli_query($connect_ecat, "INSERT INTO inv_bukti_terima (id_bukti_terima, id_inv_ecat, bukti_terima, lokasi, created_date = '$datetime', created_by) 
-                                                        VALUES ('$id_bukti_terima', '$id_inv_decrypt', '$newFileName', '$location', '$id_user')");
+                $bukti_terima = mysqli_query($connect_ecat, "INSERT INTO inv_bukti_terima (id_bukti_terima, id_inv_ecat, bukti_terima, lokasi, created_date, created_by) 
+                                                        VALUES ('$id_bukti_terima', '$id_inv_decrypt', '$newFileName', '$location', '$datetime', '$id_user')");
             }
 
             // Query untuk update status_transaksi di inv_ecat
-            $query_update_inv = mysqli_query($connect_ecat, "UPDATE inv_pl SET ongkir = '$ongkir', status_transaksi = 'Dikirim' WHERE id_inv_ecat = '$id_inv_decrypt'");
+            $query_update_inv = mysqli_query($connect_ecat, "UPDATE inv_pl SET ongkir = '$ongkir', status_transaksi = 'Dikirim' WHERE id_inv_pl = '$id_inv_decrypt'");
 
             // Query untuk update jenis_penerima di status_kirim
             $query_update_status = mysqli_query($connect_ecat, "UPDATE status_kirim SET jenis_penerima = 'Ekspedisi', id_ekspedisi = '$id_ekspedisi', no_resi = '$resi', jenis_ongkir = '$jenis_ongkir', status_review = '0'  WHERE id_inv_ecat = '$id_inv_decrypt'");

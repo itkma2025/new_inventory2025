@@ -26,6 +26,7 @@ if (isset($_POST['diterima'])) {
     $fileName = $month . $year . uuid() .  $day;
     $fileNameEncrypt = encrypt($fileName, $key);
     $newFileName = 'IMG_' . $date_now . $fileNameEncrypt . '.png';
+    $id_user =  decrypt($_SESSION['tiket_id'], $key_global);
 
     // Memulai transaksi
     mysqli_begin_transaction($connect);
@@ -33,7 +34,7 @@ if (isset($_POST['diterima'])) {
     try {
         // Update Bukti Terima
         $bukti_terima = mysqli_query($connect, "UPDATE inv_bukti_terima 
-                                                    SET bukti_satu = '$newFileName', lokasi = '$location', approval = '0'
+                                                    SET bukti_satu = '$newFileName', lokasi = '$location', approval = '0',  created_by = '$id_user'
                                                     WHERE id_inv = '$id_inv_decrypt'");
 
         // Query untuk update jenis_penerima di status_kirim

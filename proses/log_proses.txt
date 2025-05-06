@@ -1,0 +1,261 @@
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.039765 detik.
+Proses dimulai pada: 2024-12-20 10:41:47
+Proses selesai pada: 2024-12-20 10:41:48
+Total waktu proses: 0.6298 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.043286 detik.
+Proses dimulai pada: 2024-12-20 13:32:03
+Proses selesai pada: 2024-12-20 13:32:03
+Total waktu proses: 0.1792 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005128 detik.
+Proses dimulai pada: 2024-12-20 20:24:25
+Proses selesai pada: 2024-12-20 20:24:25
+Total waktu proses: 0.0137 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.004889 detik.
+Proses dimulai pada: 2024-12-22 17:13:55
+Proses selesai pada: 2024-12-22 17:13:55
+Total waktu proses: 0.0145 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005998 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.004496 detik.
+Proses dimulai pada: 2024-12-23 09:46:36
+Proses selesai pada: 2024-12-23 09:46:36
+Total waktu proses: 0.0316 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005428 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.007991 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.007607 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005312 detik.
+Proses dimulai pada: 2025-01-02 08:14:49
+Proses selesai pada: 2025-01-02 08:14:49
+Total waktu proses: 0.0202 detik
+Proses dimulai pada: 2025-01-02 08:15:07
+Proses selesai pada: 2025-01-02 08:15:07
+Total waktu proses: 0.0477 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005342 detik.
+Proses dimulai pada: 2025-01-02 08:18:40
+Proses selesai pada: 2025-01-02 08:18:40
+Total waktu proses: 0.0209 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.014491 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.003897 detik.
+Proses dimulai pada: 2025-01-02 08:41:39
+Proses selesai pada: 2025-01-02 08:41:39
+Total waktu proses: 0.0824 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.009414 detik.
+Proses dimulai pada: 2025-01-02 08:49:44
+Proses selesai pada: 2025-01-02 08:49:44
+Total waktu proses: 0.0615 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.003899 detik.
+Proses dimulai pada: 2025-01-02 08:59:35
+Proses selesai pada: 2025-01-02 08:59:35
+Total waktu proses: 0.0213 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005172 detik.
+Proses dimulai pada: 2025-01-02 09:03:56
+Proses selesai pada: 2025-01-02 09:03:56
+Total waktu proses: 0.0195 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.012572 detik.
+Proses dimulai pada: 2025-01-02 09:06:16
+Proses selesai pada: 2025-01-02 09:06:16
+Total waktu proses: 0.0601 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.006281 detik.
+Proses dimulai pada: 2025-01-02 09:34:31
+Proses selesai pada: 2025-01-02 09:34:31
+Total waktu proses: 0.0114 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005163 detik.
+Proses dimulai pada: 2025-01-02 09:37:51
+Proses selesai pada: 2025-01-02 09:37:51
+Total waktu proses: 0.0166 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.021665 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.004800 detik.
+Proses dimulai pada: 2025-01-02 09:46:26
+Proses selesai pada: 2025-01-02 09:46:26
+Total waktu proses: 0.0921 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005683 detik.
+Proses dimulai pada: 2025-01-02 10:25:58
+Proses selesai pada: 2025-01-02 10:25:58
+Total waktu proses: 0.0114 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.008413 detik.
+Proses dimulai pada: 2025-01-02 10:33:48
+Proses selesai pada: 2025-01-02 10:33:48
+Total waktu proses: 0.0104 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.006238 detik.
+Proses dimulai pada: 2025-01-02 10:46:42
+Proses selesai pada: 2025-01-02 10:46:42
+Total waktu proses: 0.0083 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.008509 detik.
+Proses dimulai pada: 2025-01-02 10:48:09
+Proses selesai pada: 2025-01-02 10:48:09
+Total waktu proses: 0.0376 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.004360 detik.
+Proses dimulai pada: 2025-01-02 10:51:51
+Proses selesai pada: 2025-01-02 10:51:51
+Total waktu proses: 0.0095 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.009435 detik.
+Proses dimulai pada: 2025-01-02 10:54:19
+Proses selesai pada: 2025-01-02 10:54:19
+Total waktu proses: 0.0086 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.006155 detik.
+Proses dimulai pada: 2025-01-02 10:58:30
+Proses selesai pada: 2025-01-02 10:58:30
+Total waktu proses: 0.0170 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.007204 detik.
+Proses dimulai pada: 2025-01-02 11:01:52
+Proses selesai pada: 2025-01-02 11:01:52
+Total waktu proses: 0.0336 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.007447 detik.
+Proses dimulai pada: 2025-01-02 11:10:26
+Proses selesai pada: 2025-01-02 11:10:26
+Total waktu proses: 0.0323 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.006294 detik.
+Proses dimulai pada: 2025-01-02 11:14:24
+Proses selesai pada: 2025-01-02 11:14:24
+Total waktu proses: 0.0158 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.008621 detik.
+Proses dimulai pada: 2025-01-02 11:16:10
+Proses selesai pada: 2025-01-02 11:16:10
+Total waktu proses: 0.0160 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.004546 detik.
+Proses dimulai pada: 2025-01-02 11:16:58
+Proses selesai pada: 2025-01-02 11:16:58
+Total waktu proses: 0.0111 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.008585 detik.
+Proses dimulai pada: 2025-01-02 11:36:52
+Proses selesai pada: 2025-01-02 11:36:52
+Total waktu proses: 0.0093 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.015474 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005548 detik.
+Proses dimulai pada: 2025-01-02 13:24:36
+Proses selesai pada: 2025-01-02 13:24:36
+Total waktu proses: 0.1258 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005632 detik.
+Proses dimulai pada: 2025-01-02 14:05:20
+Proses selesai pada: 2025-01-02 14:05:20
+Total waktu proses: 0.0164 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.011281 detik.
+Proses dimulai pada: 2025-01-02 14:05:49
+Proses selesai pada: 2025-01-02 14:05:49
+Total waktu proses: 0.0076 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.005006 detik.
+Proses dimulai pada: 2025-01-02 14:31:16
+Proses selesai pada: 2025-01-02 14:31:16
+Total waktu proses: 0.0133 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.018052 detik.
+Proses dimulai pada: 2025-01-02 15:10:44
+Proses selesai pada: 2025-01-02 15:10:44
+Total waktu proses: 0.0651 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.007272 detik.
+Proses dimulai pada: 2025-01-02 16:11:40
+Proses selesai pada: 2025-01-02 16:11:40
+Total waktu proses: 0.0084 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.015024 detik.
+Proses dimulai pada: 2025-01-03 08:58:59
+Proses selesai pada: 2025-01-03 08:58:59
+Total waktu proses: 0.0763 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.007210 detik.
+Proses berhasil: Waktu eksekusi untuk SPH ID SPH2502dacf2ccbfddb06 adalah 0.008353 detik.
+Proses berhasil: Waktu eksekusi untuk SPH ID SPH25023d8b1709ac3106 adalah 0.004564 detik.
+Proses berhasil: Waktu eksekusi untuk SPH ID SPH250241904437abd106 adalah 0.004837 detik.
+Proses dimulai pada: 2025-02-10 13:22:02
+Proses selesai pada: 2025-02-10 13:22:02
+Total waktu proses: 0.5366 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.018271 detik.
+Proses dimulai pada: 2025-03-04 13:14:00
+Proses selesai pada: 2025-03-04 13:14:00
+Total waktu proses: 0.0538 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.015358 detik.
+Proses dimulai pada: 2025-03-04 13:16:53
+Proses selesai pada: 2025-03-04 13:16:53
+Total waktu proses: 0.0131 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.044356 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.020296 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.020545 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.024085 detik.
+Proses dimulai pada: 2025-03-14 13:37:11
+Proses selesai pada: 2025-03-14 13:37:11
+Total waktu proses: 0.0584 detik
+Proses dimulai pada: 2025-03-14 13:37:18
+Proses selesai pada: 2025-03-14 13:37:18
+Total waktu proses: 0.0303 detik
+Proses dimulai pada: 2025-03-14 13:37:24
+Proses selesai pada: 2025-03-14 13:37:24
+Total waktu proses: 0.0183 detik
+Proses dimulai pada: 2025-03-14 13:37:34
+Proses selesai pada: 2025-03-14 13:37:34
+Total waktu proses: 0.0194 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.039701 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.023039 detik.
+Proses dimulai pada: 2025-03-17 13:10:50
+Proses selesai pada: 2025-03-17 13:10:50
+Total waktu proses: 0.0483 detik
+Proses dimulai pada: 2025-03-17 13:10:58
+Proses selesai pada: 2025-03-17 13:10:58
+Total waktu proses: 0.0307 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.019728 detik.
+Proses dimulai pada: 2025-03-17 13:11:25
+Proses selesai pada: 2025-03-17 13:11:25
+Total waktu proses: 0.0228 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.023016 detik.
+Proses dimulai pada: 2025-03-17 13:11:57
+Proses selesai pada: 2025-03-17 13:11:57
+Total waktu proses: 0.0190 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.019833 detik.
+Proses dimulai pada: 2025-03-17 13:12:25
+Proses selesai pada: 2025-03-17 13:12:25
+Total waktu proses: 0.0218 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.033961 detik.
+Proses dimulai pada: 2025-03-25 11:21:39
+Proses selesai pada: 2025-03-25 11:21:40
+Total waktu proses: 0.0695 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.021094 detik.
+Proses dimulai pada: 2025-03-26 09:23:33
+Proses selesai pada: 2025-03-26 09:23:33
+Total waktu proses: 0.0641 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.020334 detik.
+Proses dimulai pada: 2025-04-09 15:01:49
+Proses selesai pada: 2025-04-09 15:01:49
+Total waktu proses: 0.0436 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.017352 detik.
+Proses dimulai pada: 2025-04-17 13:52:50
+Proses selesai pada: 2025-04-17 13:52:50
+Total waktu proses: 0.0793 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.025501 detik.
+Proses dimulai pada: 2025-04-17 19:55:30
+Proses selesai pada: 2025-04-17 19:55:30
+Total waktu proses: 0.0770 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.020193 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.018755 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.082879 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.019609 detik.
+Proses dimulai pada: 2025-04-22 14:03:32
+Proses selesai pada: 2025-04-22 14:03:32
+Total waktu proses: 0.0542 detik
+Proses dimulai pada: 2025-04-22 14:03:37
+Proses selesai pada: 2025-04-22 14:03:37
+Total waktu proses: 0.0347 detik
+Proses dimulai pada: 2025-04-22 14:03:41
+Proses selesai pada: 2025-04-22 14:03:41
+Total waktu proses: 0.0211 detik
+Proses dimulai pada: 2025-04-22 14:03:45
+Proses selesai pada: 2025-04-22 14:03:45
+Total waktu proses: 0.0246 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.030501 detik.
+Proses dimulai pada: 2025-04-30 09:44:04
+Proses selesai pada: 2025-04-30 09:44:04
+Total waktu proses: 0.0491 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.022336 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.015749 detik.
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.022451 detik.
+Proses dimulai pada: 2025-04-30 11:33:15
+Proses selesai pada: 2025-04-30 11:33:15
+Total waktu proses: 0.0260 detik
+Proses dimulai pada: 2025-04-30 11:33:19
+Proses selesai pada: 2025-04-30 11:33:19
+Total waktu proses: 0.2629 detik
+Proses dimulai pada: 2025-04-30 11:33:25
+Proses selesai pada: 2025-04-30 11:33:25
+Total waktu proses: 0.0670 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.014278 detik.
+Proses dimulai pada: 2025-04-30 20:34:49
+Proses selesai pada: 2025-04-30 20:34:49
+Total waktu proses: 0.0214 detik
+Proses berhasil: Waktu eksekusi untuk SPK ID Array adalah 0.047643 detik.
+Proses dimulai pada: 2025-05-06 15:38:05
+Proses selesai pada: 2025-05-06 15:38:05
+Total waktu proses: 0.0818 detik

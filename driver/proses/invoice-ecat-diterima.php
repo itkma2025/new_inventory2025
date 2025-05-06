@@ -133,8 +133,8 @@ if (isset($_POST['diterima'])) {
                                                         WHERE id_inv_ecat = '$id_inv_decrypt'");
             } else {
                 // Jika data belum ada, lakukan insert
-                $bukti_terima = mysqli_query($connect_ecat, "INSERT INTO inv_bukti_terima (id_bukti_terima, id_inv_ecat, bukti_terima, lokasi, created_date = '$datetime', created_by) 
-                                                        VALUES ('$id_bukti_terima', '$id_inv_decrypt', '$newFileName', '$location', '$id_user')");
+                $bukti_terima = mysqli_query($connect_ecat, "INSERT INTO inv_bukti_terima (id_bukti_terima, id_inv_ecat, bukti_terima, lokasi, created_date, created_by) 
+                                                        VALUES ('$id_bukti_terima', '$id_inv_decrypt', '$newFileName', '$location', '$datetime', '$id_user')");
             }
 
             // Query untuk update status_transaksi di inv_ecat
@@ -145,7 +145,7 @@ if (isset($_POST['diterima'])) {
 
             // Proses penyimpanan gambar
             // Create ../../gambar/bukti_kirim/ folder if it doesn't exist
-            $baseDir = '../../gambar/bukti_kirim/';
+            $baseDir = '../../gambar/bukti_kirim/ecat/';
             if (!file_exists($baseDir)) {
                 mkdir($baseDir, 0755, true); // Create base directory with permissions 755
             }

@@ -25,31 +25,49 @@ if (isset($_POST['id'])) {
                     sk.no_resi, 
                     sk.tgl_kirim AS tgl_kirim,
                     ex.nama_ekspedisi,
-                    us.nama_user
+                    us.nama_user AS nama_user,
+                    uc.nama_user AS user_created
                 FROM inv_bukti_terima AS ibt
                 LEFT JOIN inv_penerima ip ON (ibt.id_inv_ecat = ip.id_inv_ecat)
                 LEFT JOIN inv_pl pl ON (ibt.id_inv_ecat = pl.id_inv_pl)
                 LEFT JOIN status_kirim sk ON (ibt.id_inv_ecat = sk.id_inv_ecat)
                 LEFT JOIN $db.ekspedisi ex ON (ex.id_ekspedisi = sk.id_ekspedisi) 
                 LEFT JOIN $database2.user us ON (sk.id_driver = us.id_user)
+                LEFT JOIN $database2.user uc ON (ibt.created_by = uc.id_user)
                 WHERE ibt.id_inv_ecat = '$id_inv'";
     $query_bukti = mysqli_query($connect_ecat, $sql_bukti);
     $data_bukti = mysqli_fetch_array($query_bukti); 
     if ($data_bukti) {
+        $created_by = $data_bukti['user_created'];
         $nama_driver = $data_bukti['nama_user'];
         $nama_driver = !empty($nama_driver) ? str_replace(' ', '_', $nama_driver) : '';
         $lokasi = $data_bukti['lokasi'];  
         $created_date = date("d-m-Y H:i:s", strtotime($data_bukti['created_date']));
         $gambar = $data_bukti['bukti_terima'];
+        $gambar_encrypt = encrypt($gambar, $key_global);
+        $gambar_encode_url = urlencode($gambar_encrypt);
         $jenis_penerima = $data_bukti['jenis_penerima'];
         $no_resi = $data_bukti['no_resi'];
-        $path = "https://localhost/test-ecat/bukti%20terima/pl/";
+        // Get encrypt di project ecat
+        $response = file_get_contents('http://localhost:8082/aes.php?action=encrypt&data=' . urlencode($gambar));
+        $result = json_decode($response, true);
+        $view_image = urlencode($result['result']);
+        $driver = urlencode($nama_driver);
+        $path = "image-history.php?file=$gambar_encode_url&&driver=$driver";
+        $path_ecat = "http://localhost:8082/image-history-ecat-pl.php?file=$view_image";
         $img = "";
-        if ($gambar && file_exists($path . $gambar)) {
-            $img = $path . $gambar;
+        if(!empty($nama_driver)){
+            if($gambar && file_exists("../gambar/bukti_kirim/pl/" . $nama_driver . "/" . $gambar)){
+                $img = $path;
+            } else {
+                $img = "assets/img/no_img.jpg";
+            }
         } else {
-            // $img = "assets/img/no_img.jpg";
-            $img = $path . $gambar;
+            if ($gambar) {
+                $img = $path_ecat ;
+            } else {
+                $img = "assets/img/no_img.jpg";
+            }
         }
         ?>
         <div class="card mb-3 p-2">
@@ -64,8 +82,22 @@ if (isset($_POST['id'])) {
                     <?php  
                         if($data_bukti['jenis_pengiriman'] == "Diambil Langsung"){
                             ?>
+                                <?php  
+                                    if($lokasi != ""){
+                                        ?>
+                                            <div class="text-center"><span class="text-dark fw-bold fs-6">Lokasi Upload</span></div>
+                                            <p class="text-center text-wrap" style="text-align: justify;">
+                                                <?php echo $lokasi ?>
+                                            </p>
+                                        <?php
+                                    }
+                                ?>
+
                                 <div class="text-center"><span class="text-dark fw-bold fs-6">Tanggal Upload</span></div>
                                 <p class="card-text text-center"><?php echo $created_date ?></p>
+
+                                <div class="text-center"><span class="text-dark fw-bold fs-6">User Upload</span></div>
+                                <p class="card-text text-center"><?php echo $data_bukti['user_created'] ?></p>
                             <?php
                         } else if($data_bukti['jenis_penerima'] == "Ekspedisi" || $data_bukti['jenis_penerima'] == "Customer"){
                             ?>
@@ -82,7 +114,10 @@ if (isset($_POST['id'])) {
                                     ?>
                                     <div class="text-center"><span class="text-dark fw-bold fs-6">Tanggal Upload</span></div>
                                     <p class="card-text text-center"><?php echo formatTanggalIndonesia($created_date) ?></p>
-                                </div>
+
+                                    <div class="text-center"><span class="text-dark fw-bold fs-6">User Upload</span></div>
+                                        <p class="card-text text-center"><?php echo $data_bukti['user_created'] ?></p>
+                                    </div>
                             <?php
                         } else {
                             echo "Maaf data tidak ditemukan";
@@ -280,42 +315,91 @@ if (isset($_POST['id'])) {
 
 <script>
     $(".reject-data").on("click", function (e) {
-    e.preventDefault();
-    var getLink = $(this).attr("href");
+        e.preventDefault();
+        var getLink = $(this).attr("href");
 
-    // **SOLUSI: Tutup Modal Bootstrap sebelum menampilkan SweetAlert**
-    $(".modal").modal("hide");
+        $(".modal").modal("hide");
 
-    setTimeout(() => {
-        Swal.fire({
-            title: "Anda yakin ingin reject?",
-            text: "Masukkan alasan untuk menolak data ini:",
-            icon: "warning",
-            input: "textarea",
-            inputPlaceholder: "Tulis alasan di sini...",
-            inputAttributes: {
-                autocapitalize: "off"
-            },
-            showCancelButton: true,
-            confirmButtonColor: "#EB5406",
-            cancelButtonColor: "#437C17",
-            confirmButtonText: "Ya, Reject Data",
-            cancelButtonText: "Batal",
-            allowOutsideClick: false,
-            inputValidator: (value) => {
-                if (!value) {
-                    return "Anda harus mengisi alasan!";
-                }
+        setTimeout(() => {
+            let selectedJenis = null;
+            let alasanReject = "";
+
+            // STEP 1 - Pilih Jenis Reject
+            function showStep1() {
+                Swal.fire({
+                    title: "Pilih Jenis Reject",
+                    html: `
+                        <div class="text-start">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="jenisReject" id="gambar" value="1" ${selectedJenis === "1" ? "checked" : ""}>
+                                <label class="form-check-label" for="gambar">Gambar</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="jenisReject" id="data" value="2" ${selectedJenis === "2" ? "checked" : ""}>
+                                <label class="form-check-label" for="data">Data</label>
+                            </div>
+                        </div>
+                    `,
+                    showCancelButton: true,
+                    confirmButtonText: "Next",
+                    cancelButtonText: "Batal",
+                    preConfirm: () => {
+                        const selected = document.querySelector('input[name="jenisReject"]:checked');
+                        if (!selected) {
+                            Swal.showValidationMessage("Silakan pilih jenis reject terlebih dahulu!");
+                            return false;
+                        }
+                        selectedJenis = selected.value;
+                        return true;
+                    }
+                }).then((step1) => {
+                    if (step1.isConfirmed) {
+                        showStep2();
+                    }
+                });
             }
-        }).then((result) => {
-            if (result.isConfirmed) {
-                var alasan = encodeURIComponent(result.value);
-                window.location.href = getLink + "&alasan=" + alasan;
-            }
-        });
-    }, 300); // **Tunggu 300ms setelah modal ditutup**
-});
 
+            // STEP 2 - Masukkan Alasan
+            function showStep2() {
+                Swal.fire({
+                    title: "Masukkan Alasan Reject",
+                    html: `
+                        <textarea id="textareaAlasan" placeholder="Masukkan alasan di sini..." class="form-control">${alasanReject}</textarea>
+                    `,
+                    showCancelButton: true,
+                    showDenyButton: true,
+                    confirmButtonText: "Submit",
+                    denyButtonText: "Kembali",
+                    cancelButtonText: "Batal",
+                    preConfirm: () => {
+                        const alasan = document.getElementById("textareaAlasan").value.trim();
+                        if (!alasan) {
+                            Swal.showValidationMessage("Alasan tidak boleh kosong!");
+                            return false;
+                        }
+                        alasanReject = alasan;
+                        return true;
+                    }
+                }).then((step2) => {
+                    if (step2.isDenied) {
+                        const textareaValue = document.getElementById("textareaAlasan").value.trim();
+                        if (textareaValue) {
+                            alasanReject = textareaValue;
+                        }
+                        showStep1();
+                    } else if (step2.isConfirmed) {
+                        const alasan = encodeURIComponent(alasanReject);
+                        const jenis = encodeURIComponent(selectedJenis);
+                        window.location.href = getLink + `&jenis=${jenis}&alasan=${alasan}`;
+                    }
+                });
+            }
+
+            // Mulai dari step 1
+            showStep1();
+
+        }, 300);
+    });
 </script>
 
 

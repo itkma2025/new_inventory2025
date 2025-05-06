@@ -1,0 +1,114 @@
+/* .dt-search {
+    display: none;
+} */
+/* Custom styling for the date inputs */
+.form-control[type="date"] {
+  appearance: none;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Optional: Adjust the date input height and font-size */
+.form-control[type="date"] {
+  height: 38px;
+  font-size: 14px;
+}
+
+/* Adjust the position of the dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Adjust the style of the dropdown menu items */
+.dropdown-menu {
+  min-width: 350px;
+  padding: 20px;
+}
+
+.dropdown-item {
+  text-align: center;
+  border: 1px solid #ced4da;
+  margin-bottom: 10px;
+}
+
+.separator {
+  display: inline-block;
+  width: 40px; /* Atur panjang pemisah sesuai keinginan */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Ubah warna sesuai keinginan */
+}
+
+.disabled-select {
+  pointer-events: none;
+  background-color: #0d6efd;
+  color: white;
+}
+
+.min-width {
+  min-width: 350px;
+}
+
+/* Aturan media query*/
+@media screen and (max-width: 1790px) {
+  .col-sm-3 {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .col-sm-3 {
+    margin-right: 50px;
+  }
+
+  .min-width {
+    min-width: 272px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .col-sm-3 {
+    width: 272px;
+  }
+
+  form {
+    width: 272px;
+  }
+
+  .min-width {
+    min-width: 272px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .col-sm-3 {
+    width: 328px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .min-width {
+    min-width: 272px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .min-width {
+    min-width: 272px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .min-width {
+    min-width: 272px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .min-width {
+    min-width: 262px;
+  }
+}

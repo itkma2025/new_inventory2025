@@ -1,0 +1,8 @@
+=== Log Akses Ditolak ===
+2025-02-06 16:49:18 - Mencoba masuk detail produk untuk User: Dany Super Admin dengan Role: Super Admin dari IP: 111.94.59.102
+2025-02-06 16:50:09 - Mencoba masuk detail produk untuk User: Dany Super Admin dengan Role: Super Admin dari IP: 111.94.59.102
+2025-02-06 16:52:26 - Mencoba masuk detail produk untuk User: Dany Super Admin dengan Role: Super Admin dari IP: 111.94.59.102
+2025-02-06 16:52:30 - Mencoba masuk detail produk untuk User: Dany Super Admin dengan Role: Super Admin dari IP: 111.94.59.102
+2025-02-06 16:52:35 - Mencoba masuk detail produk untuk User: Dany Super Admin dengan Role: Super Admin dari IP: 111.94.59.102
+2025-02-25 08:25:36 - Mencoba masuk detail produk untuk User: Dany Super Admin dengan Role: Super Admin dari IP: ::1
+2025-02-25 08:25:59 - Mencoba masuk detail produk untuk User: Dany Super Admin dengan Role: Super Admin dari IP: ::1

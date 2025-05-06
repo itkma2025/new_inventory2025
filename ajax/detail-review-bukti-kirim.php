@@ -3,11 +3,17 @@ include '../akses.php'; // Pastikan koneksi database tersedia
 require_once __DIR__ . "/../function/function-enkripsi.php";
 require_once __DIR__ . "/../function/format-tanggal.php";
 
+require_once __DIR__ . "/../function/CSRFToken.php";
+
+$csrf = new CSRFToken();
+$token = $csrf->generateToken();
+$_SESSION['csrf'] = $token;
+
 if (isset($_POST['id'])) {
     $id = urldecode($_POST['id']);
     $id_inv = decrypt($id, $key_global); // Dekripsi ID 
     $id_inv = mysqli_real_escape_string($connect, $id_inv);
-
+    $id_inv_encrypt = encrypt($id_inv, $key_global);
     $sql_bukti = "SELECT 
                     ibt.bukti_satu, 
                     ibt.bukti_dua, 
@@ -26,7 +32,8 @@ if (isset($_POST['id'])) {
                     sk.no_resi, 
                     STR_TO_DATE(sk.tgl_kirim, '%d/%m/%Y') AS tgl_kirim,
                     ex.nama_ekspedisi,
-                    us.nama_user
+                    us.nama_user AS nama_user,
+                    uc.nama_user AS user_created
                 FROM inv_bukti_terima AS ibt
                 LEFT JOIN inv_penerima ip ON (ibt.id_inv = ip.id_inv)
                 LEFT JOIN inv_nonppn nonppn ON (ibt.id_inv = nonppn.id_inv_nonppn)
@@ -35,9 +42,10 @@ if (isset($_POST['id'])) {
                 LEFT JOIN status_kirim sk ON (ibt.id_inv = sk.id_inv)
                 LEFT JOIN ekspedisi ex ON (ex.id_ekspedisi = sk.dikirim_ekspedisi) 
                 LEFT JOIN $database2.user us ON (sk.dikirim_driver = us.id_user)
+                LEFT JOIN $database2.user uc ON (ibt.created_by = uc.id_user)
                 WHERE ibt.id_inv = '$id_inv'";
     $query_bukti = mysqli_query($connect, $sql_bukti);
-    $data_bukti = mysqli_fetch_array($query_bukti); 
+    $data_bukti = mysqli_fetch_array($query_bukti);   
     if ($data_bukti) {
         $nama_driver = $data_bukti['nama_user'];
         $nama_driver = !empty($nama_driver) ? str_replace(' ', '_', $nama_driver) : '';
@@ -69,31 +77,25 @@ if (isset($_POST['id'])) {
                         <img src="<?php echo $img; ?>" class="image img-fluid rounded img-preview" alt="..." id="buktiTerimaImg">
                     </a>
                     <?php  
-                        if($data_bukti['jenis_pengiriman'] == "Diambil Langsung"){
-                            ?>
+                        ?>
+                            <div class="card-body mt-2">
+                                <?php  
+                                    if($lokasi != ""){
+                                        ?>
+                                            <div class="text-center"><span class="text-dark fw-bold fs-6">Lokasi Upload</span></div>
+                                            <p class="text-center text-wrap" style="text-align: justify;">
+                                                <?php echo $lokasi ?>
+                                            </p>
+                                        <?php
+                                    }
+                                ?>
                                 <div class="text-center"><span class="text-dark fw-bold fs-6">Tanggal Upload</span></div>
-                                <p class="card-text text-center"><?php echo $created_date ?></p>
-                            <?php
-                        } else if($data_bukti['jenis_penerima'] == "Ekspedisi" || $data_bukti['jenis_penerima'] == "Customer"){
-                            ?>
-                                <div class="card-body mt-2">
-                                    <?php  
-                                        if($lokasi != ""){
-                                            ?>
-                                                <div class="text-center"><span class="text-dark fw-bold fs-6">Lokasi Upload</span></div>
-                                                <p class="text-center text-wrap" style="text-align: justify;">
-                                                    <?php echo $lokasi ?>
-                                                </p>
-                                            <?php
-                                        }
-                                    ?>
-                                    <div class="text-center"><span class="text-dark fw-bold fs-6">Tanggal Upload</span></div>
-                                    <p class="card-text text-center"><?php echo formatTanggalIndonesia($created_date) ?></p>
-                                </div>
-                            <?php
-                        } else {
-                            echo "Maaf data tidak ditemukan";
-                        }
+                                <p class="card-text text-center"><?php echo formatTanggalIndonesia($created_date) ?></p>
+
+                                <div class="text-center"><span class="text-dark fw-bold fs-6">User Upload</span></div>
+                                <p class="card-text text-center"><?php echo $data_bukti['user_created'] ?></p>
+                            </div>
+                        <?php
                     ?>
                 </div>
                 <div class="col-md-7">
@@ -267,8 +269,13 @@ if (isset($_POST['id'])) {
             <div class="card-footer">
                 <div class="d-flex justify-content-center">
                     <div>
-                        <a href="proses/review.php?id=<?php echo $_POST['id'] ?>&&action=approval" class="btn btn-primary btn-md"><i class="bi bi-check-circle"></i> Approve</a>
-                        <a href="proses/review.php?id=<?php echo $_POST['id'] ?>&&action=reject" class="btn btn-danger btn-md reject-data"><i class="bi bi-x-circle"></i> Reject</a>
+                    <a href="proses/review.php?id=<?php echo urlencode($id_inv_encrypt) ?>&&action=approval&&token=<?php echo $_SESSION['csrf'] ?>" class="btn btn-primary btn-md approval-btn" onclick="disableButtons(this)">
+                            <i class="bi bi-check-circle"></i> Approve
+                        </a>
+
+                        <a href="proses/review.php?id=<?php echo urlencode($id_inv_encrypt) ?>&&action=reject&&token=<?php echo $_SESSION['csrf'] ?>" class="btn btn-danger btn-md reject-data" onclick="disableButtons(this)">
+                            <i class="bi bi-x-circle"></i> Reject
+                        </a>
                     </div>
                 </div>
             </div>
@@ -413,6 +420,22 @@ if (isset($_POST['id'])) {
         }, 300);
     });
 </script>
+
+<script>
+    function disableButtons(btn) {
+        // Nonaktifkan tombol yang diklik
+        btn.classList.add('disabled');
+        btn.style.pointerEvents = 'none';
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Processing...';
+
+        // Optional: nonaktifkan semua tombol lain juga
+        document.querySelectorAll('a.btn').forEach(function(button) {
+            button.classList.add('disabled');
+            button.style.pointerEvents = 'none';
+        });
+    }
+</script>
+
 
 
 

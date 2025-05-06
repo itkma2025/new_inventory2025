@@ -36,6 +36,7 @@ if (isset($_POST['diterima'])) {
     $fileName = $month . $year . uuid() .  $day;
     $fileNameEncrypt = encrypt($fileName, $key);
     $newFileName = 'IMG_' . $date_now . $fileNameEncrypt . '.png';
+    $id_user =  decrypt($_SESSION['tiket_id'], $key_global);
 
     if ($diterima_oleh == 'Customer') {
         // Memulai transaksi
@@ -47,12 +48,12 @@ if (isset($_POST['diterima'])) {
             if (mysqli_num_rows($cek_bukti) > 0) {
                 // Jika data sudah ada, lakukan update
                 $bukti_terima = mysqli_query($connect, "UPDATE inv_bukti_terima 
-                                                        SET bukti_satu = '$newFileName', lokasi = '$location', approval = '0', created_date = '$datetime'
+                                                        SET bukti_satu = '$newFileName', lokasi = '$location', approval = '0', created_date = '$datetime', created_by = '$id_user'
                                                         WHERE id_inv = '$id_inv_decrypt'");
             } else {
                 // Jika data belum ada, lakukan insert
-                $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima (id_bukti_terima, id_inv, bukti_satu, lokasi, created_date) 
-                                                        VALUES ('$id_bukti_terima', '$id_inv_decrypt', '$newFileName', '$location', '$datetime')");
+                $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima (id_bukti_terima, id_inv, bukti_satu, lokasi, created_date, created_by) 
+                                                        VALUES ('$id_bukti_terima', '$id_inv_decrypt', '$newFileName', '$location', '$datetime', '$id_user')");
             }
 
             // Cek apakah data sudah ada di inv_penerima

@@ -1,0 +1,36 @@
+2025-03-18 11:14:00 - ERROR: ID KH13YDYvH1EMBFNTUF9SAgdQXQcAUV8FVQ== tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:21:17 - ERROR: ID KH13YDYvH1EMBFNTUF9SAgdQXQcAUV8FVQ== tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:21:21 - ERROR: ID KH13YDYvH1EMBFNTUF9SAgdQXQcAUV8FVQ== tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:21:53 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:22:41 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:25:18 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:27:51 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:32:12 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:32:46 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:32:56 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:33:09 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:33:43 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:33:48 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:34:14 - ERROR: aaaaUnknown column 'status_transaks' in 'field list'
+2025-03-18 11:34:36 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:37:01 - ERROR: Terjadi kesalahan: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:40:15 - ERROR: Terjadi kesalahan: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:40:26 - ERROR: Terjadi kesalahan: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:40:36 - ERROR: Terjadi kesalahan: Unknown column 'status_transaks' in 'field list'2025-03-18 11:48:39 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:48:46 - ERROR: Unknown column 'status_transaks' in 'field list'
+2025-03-18 11:49:19 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:49:24 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:49:35 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:50:08 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:52:46 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:53:23 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:53:51 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:55:59 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:56:30 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 11:57:28 - ERROR: ID NONPPN-2502cbf4d1bd74b920 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 13:23:25 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 13:23:35 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 13:31:07 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 13:37:18 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 13:37:43 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-03-18 13:37:50 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.

@@ -1,0 +1,10 @@
+<Files "*">
+    Order Deny,Allow
+    Deny from all
+</Files>
+ErrorDocument 403 /error/tolak-akses.php
+
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
