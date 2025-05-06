@@ -9043,3 +9043,25 @@ Stack trace:
 [06-May-2025 17:46:55] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\edit-produk-reg.php on line 196
 [06-May-2025 17:46:55] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\edit-produk-reg.php on line 196
 [06-May-2025 17:46:55] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\edit-produk-reg.php on line 210
+[06-May-2025 20:18:03] PHP Warning: require_once(D:\laragon\www\SSO-KARSA\test-inventoryquery/review-bukti-kirim-reg.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php on line 168
+[06-May-2025 20:18:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\laragon\www\SSO-KARSA\test-inventoryquery/review-bukti-kirim-reg.php' (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php:168
+Stack trace:
+#0 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php on line 168
+[06-May-2025 20:18:25] PHP Warning: require_once(D:\laragon\www\SSO-KARSA\test-inventoryquery/review-bukti-kirim-reg.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php on line 168
+[06-May-2025 20:18:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\laragon\www\SSO-KARSA\test-inventoryquery/review-bukti-kirim-reg.php' (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php:168
+Stack trace:
+#0 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php on line 168
+[06-May-2025 20:54:10 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'test_inventory.tb_spk_ecat' doesn't exist in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-review-bukti-kirim.php:35
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\query\badge-review-bukti-kirim.php(35): mysqli_query(Object(mysqli), 'SELECT COUNT(DI...')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php(93): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-review-bukti-kirim.php on line 35
+[06-May-2025 20:54:25 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'test_inventory.tb_spk_ecat' doesn't exist in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-review-bukti-kirim.php:35
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\query\badge-review-bukti-kirim.php(35): mysqli_query(Object(mysqli), 'SELECT COUNT(DI...')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php(93): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-review-bukti-kirim.php on line 35

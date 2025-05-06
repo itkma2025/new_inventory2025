@@ -90,9 +90,9 @@ $page = 'list-inv';
                             $query_total_data = mysqli_query($connect_ecat, $sql) or die(mysqli_error($connect_ecat));
                             $total_data = mysqli_num_rows($query_total_data);
 
-                            // include "query/menunggu-verif-invoice.php";
-                            // $query_total_data_waiting_verif = mysqli_query($connect_ecat, $sql_waiting_verif) or die(mysqli_error($connect_ecat));
-                            // $total_data_waiting_verif = mysqli_num_rows($query_total_data_waiting_verif); 
+                            include "query/menunggu-verif-invoice.php";
+                            $query_total_data_waiting_verif = mysqli_query($connect_ecat, $sql_waiting_verif) or die(mysqli_error($connect_ecat));
+                            $total_data_waiting_verif = mysqli_num_rows($query_total_data_waiting_verif); 
                         ?>
                         <!-- End Query -->
                         <!-- Tabs menu -->
@@ -102,9 +102,9 @@ $page = 'list-inv';
                                     Invoice Baru &nbsp;
                                     <?php  
                                         if ($total_data != 0){
-                                        ?>
-                                    <span class="badge text-bg-secondary"><?php echo $total_data; ?></span>
-                                    <?php
+                                            ?>
+                                                <span class="badge text-bg-secondary"><?php echo $total_data; ?></span>
+                                            <?php
                                         }
                                     ?>
                                 </a>
@@ -114,9 +114,9 @@ $page = 'list-inv';
                                     Invoice Revisi &nbsp;
                                     <?php  
                                         if ($total_data_rev != 0){
-                                        ?>
-                                    <span class="badge text-bg-secondary"><?php echo $total_data_rev; ?></span>
-                                    <?php
+                                            ?>
+                                                <span class="badge text-bg-secondary"><?php echo $total_data_rev; ?></span>
+                                            <?php
                                         }
                                     ?>
                                 </a>
@@ -126,9 +126,9 @@ $page = 'list-inv';
                                     Menunggu Verifikasi PJT &nbsp;
                                     <?php  
                                         if ($total_data_waiting_verif != 0){
-                                        ?>
-                                    <span class="badge text-bg-secondary"><?php echo $total_data_waiting_verif; ?></span>
-                                    <?php
+                                            ?>
+                                                <span class="badge text-bg-secondary"><?php echo $total_data_waiting_verif; ?></span>
+                                            <?php
                                         }
                                     ?>
                                 </a>

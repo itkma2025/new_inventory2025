@@ -63,11 +63,11 @@ require_once "function/function-enkripsi.php";
 
     <main id="main" class="main">
         <!-- Loading -->
-        <div class="loader loader">
+        <!-- <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div>
+        </div> -->
         <!-- ENd Loading -->
         <div class="pagetitle">
             <h1>Data Review Bukti Kirim</h1>
@@ -89,6 +89,9 @@ require_once "function/function-enkripsi.php";
             ?>
             <!-- END SWEET ALERT -->
             <div class="card">
+                <?php  
+                    require_once __DIR__ . "/query/badge-review-bukti-kirim.php";
+                ?>
                 <div class="card-body mt-3">
                     <!-- Bordered Tabs -->
                     <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
@@ -317,7 +320,7 @@ require_once "function/function-enkripsi.php";
         });
     });
 
-    let totalData = "<?php echo $total_perlu_review ?>";
+    let totalData = "<?php echo $total_reg + $total_ecat + $total_pl ?>";
     $('#review').text(totalData);
 
 </script>
