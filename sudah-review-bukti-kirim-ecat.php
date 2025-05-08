@@ -129,11 +129,11 @@ require_once "function/function-enkripsi.php";
 
     <main id="main" class="main">
         <!-- Loading -->
-        <!-- <div class="loader loader">
+        <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div> -->
+        </div>
         <!-- ENd Loading -->
         <div class="pagetitle">
             <h1>Data Review Bukti Kirim</h1>
@@ -155,36 +155,50 @@ require_once "function/function-enkripsi.php";
             ?>
             <!-- END SWEET ALERT -->
             <div class="card">
+                <?php  
+                    require_once __DIR__ . "/query/badge-review-bukti-kirim.php";
+                    require_once __DIR__ . "/query/badge-menunggu-perbaikan.php";
+                    require_once __DIR__ . "/query/badge-sudah-review-bukti-kirim.php";
+                ?>
                 <div class="card-body mt-3">
                     <!-- Bordered Tabs -->
                     <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <a href="review-bukti-kirim.php?sort=baru" class="nav-link position-relative">
                                 Perlu Direview
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="total_perlu_review">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="review">
                                 </span>
                             </a>
                         </li>
                         <li class="nav-item ms-3" role="presentation">
                             <a href="menunggu-perbaikan-bukti-kirim.php?sort=baru&sort_data=bulan_ini" class="nav-link position-relative">
                                 Menunggu Perbaikan
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="total_sudah_review">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="perbaikan">
                                 </span>
                             </a>
                         </li>
                         <li class="nav-item ms-3" role="presentation">
                             <button class="nav-link active position-relative" id="home-tab" data-bs-toggle="tab" data-bs-target="#bordered-home" type="button" role="tab" aria-controls="home" aria-selected="true">
-                                Sudah Direview
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="sudah_review">
+                                History Direview
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="sudahReview">
                                 </span>
                             </button>
                         </li>
                     </ul>
                     <div class="p-3">
                         <div class="mb-4">
-                            <button type="button" id="sudah-review-reg" class="btn btn-outline-dark" style="width: 150px;">Reguler</button>
-                            <button type="button" id="sudah-review-ecat" class="btn btn-outline-dark active" style="width: 150px;">Ecat</button> 
-                            <button type="button" id="sudah-review-pl" class="btn btn-outline-dark" style="width: 150px;">Ecat PL</button>
+                            <button type="button" id="sudah-review-reg" class="btn btn-outline-primary" style="width: 150px;">
+                                Reguler 
+                                <span class="ms-1 badge text-bg-primary" id="badgeReg"></span>
+                            </button>
+                            <button type="button" id="sudah-review-ecat" class="btn btn-outline-primary active" style="width: 150px;">
+                                Ecat
+                                <span class="ms-1 badge text-bg-primary" id="badgeEcat"></span>
+                            </button> 
+                            <button type="button" id="sudah-review-pl" class="btn btn-outline-primary" style="width: 150px;">
+                                Ecat PL
+                                <span class="ms-1 badge text-bg-primary" id="badgePl"></span>
+                            </button>
                         </div>
                         <div class="mt-4">
                             <div class="col-sm-2 mb-3">
@@ -207,16 +221,13 @@ require_once "function/function-enkripsi.php";
                                     $url = $_SESSION['url']; 
                                     $filter = '';
                                     if (isset($_GET['sort'])) {
-                                        if ($_GET['sort'] == "baru") {
+                                        $sort = htmlspecialchars($_GET['sort']);
+                                        if ($sort == "baru") {
                                             $filter = "ORDER BY ibt.created_date DESC";
-                                        } elseif ($_GET['sort'] == "lama") {
+                                        } elseif ($sort == "lama") {
                                             $filter = "ORDER BY ibt.created_date ASC";
                                         } else {
-                                            ?>
-                                                <script>
-                                                    window.location.replace('404.php');
-                                                </script>
-                                            <?php
+                                            echo "Tidak valid";
                                         }
                                     }
                                     $sql = "SELECT DISTINCT
@@ -581,8 +592,19 @@ require_once "function/function-enkripsi.php";
     });
 </script>
 <script>
-    let totalSudahReview = "<?php echo $total_data_sudah_review ?>";
-    $('#sudah_review').text(totalSudahReview);
+    let totalData = "<?php echo $total_reg + $total_ecat + $total_pl ?>";
+    let totalDataPerbaikan = "<?php echo $total_perbaikan_reg + $total_perbaikan_ecat + $total_perbaikan_ecat_pl ?>";
+    let totalDataSudahReview = "<?php echo $total_data_sudah_review_reg + $total_data_sudah_review_ecat + $total_data_sudah_review_ecat_pl ?>";
+    let badgeReguler = "<?php echo $total_data_sudah_review_reg ?>";
+    let badgeEcat = "<?php echo $total_data_sudah_review_ecat ?>";
+    let badgeEcatPl = "<?php echo $total_data_sudah_review_ecat_pl ?>";
+    
+    $('#review').text(totalData);
+    $('#perbaikan').text(totalDataPerbaikan);
+    $('#sudahReview').text(totalDataSudahReview);
+    $('#badgeReg').text(badgeReguler);
+    $('#badgeEcat').text(badgeEcat);
+    $('#badgePl').text(badgeEcatPl);
 </script>
 <script>
     $(document).ready(function(){

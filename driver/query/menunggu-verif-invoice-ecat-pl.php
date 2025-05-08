@@ -2,7 +2,7 @@
     require_once '../akses.php';
     $id_user = decrypt($_SESSION['tiket_id'], $key_global);
     $sql_waiting_verif = "SELECT
-                            sk.id_inv_pl AS id_inv,
+                            sk.id_inv_ecat AS id_inv,
                             sk.id_driver AS dikirim_driver,
                             sk.jenis_pengiriman,
                             sk.jenis_penerima,
@@ -24,7 +24,7 @@
                             ibt.approval
 
                             FROM status_kirim AS sk
-                            LEFT JOIN inv_pl pl ON sk.id_inv_pl = pl.id_inv_pl
+                            LEFT JOIN inv_pl pl ON sk.id_inv_ecat = pl.id_inv_pl
                             LEFT JOIN tb_spk_pl spk_pl ON pl.id_inv_pl = spk_pl.id_inv_pl
                             LEFT JOIN inv_bukti_terima ibt ON sk.id_inv_ecat = ibt.id_inv_ecat
 

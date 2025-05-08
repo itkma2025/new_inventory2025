@@ -9065,3 +9065,320 @@ Stack trace:
 #1 D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim.php(93): require_once('D:\\laragon\\www\\...')
 #2 {main}
   thrown in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-review-bukti-kirim.php on line 35
+[07-May-2025 14:03:31] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 296
+[07-May-2025 14:03:31] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 340
+[07-May-2025 14:03:38] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 296
+[07-May-2025 14:03:38] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 340
+[07-May-2025 14:03:52] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 296
+[07-May-2025 14:03:52] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 340
+[07-May-2025 14:03:58] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 296
+[07-May-2025 14:03:58] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 340
+[07-May-2025 14:04:04] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 297
+[07-May-2025 14:04:04] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 340
+[07-May-2025 14:04:08] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 297
+[07-May-2025 14:04:08] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 340
+[07-May-2025 14:04:24] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 296
+[07-May-2025 14:04:24] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 340
+[07-May-2025 14:05:57] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 296
+[07-May-2025 14:05:57] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 340
+[07-May-2025 14:36:21] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php on line 441
+[07-May-2025 14:36:55 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'database2' in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php:30
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php(30): mysqli->query('SELECT COUNT(*)...')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php(160): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 30
+[07-May-2025 14:37:23] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:41:05] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:41:29] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:41:54] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:41:59] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:44:53] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:45:08] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:46:08] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:48:53] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:49:01] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 32
+[07-May-2025 14:51:16] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 297
+[07-May-2025 14:51:16] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 340
+[07-May-2025 14:55:24] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 297
+[07-May-2025 14:55:24] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 340
+[07-May-2025 14:55:28 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'test_inventory.tb_spk_ecat' doesn't exist in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php:76
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php(76): mysqli->query('SELECT COUNT(*)...')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim.php(160): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 76
+[07-May-2025 14:56:30] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 78
+[07-May-2025 14:56:30] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 82
+[07-May-2025 14:56:36] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 78
+[07-May-2025 14:56:36] PHP Warning: Undefined array key "total_perbaikan_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-menunggu-perbaikan.php on line 82
+[07-May-2025 14:57:55] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 297
+[07-May-2025 14:57:55] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 340
+[07-May-2025 14:58:51] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 297
+[07-May-2025 14:58:51] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 340
+[07-May-2025 15:56:23] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 15:56:23] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 15:56:23] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 15:56:23] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 15:56:23] PHP Warning: Undefined array key "total_sudah_review_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 76
+[07-May-2025 15:56:41] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 297
+[07-May-2025 15:56:41] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 340
+[07-May-2025 15:56:44] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 15:56:44] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 15:56:44] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 15:56:44] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 15:56:44] PHP Warning: Undefined array key "total_sudah_review_reg" in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 76
+[07-May-2025 15:57:12] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 15:57:12] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 15:57:12] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 15:57:12] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 15:57:22] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 15:57:22] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 15:57:22] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 15:57:22] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:16:00] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:16:00] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:16:00] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:16:00] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:18:12] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:18:12] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:18:12] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:18:12] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:19:05] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:19:05] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:19:05] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:19:05] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:19:23] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:19:23] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:19:23] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:19:23] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:19:28] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:19:28] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:19:28] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:19:28] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:19:42] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:19:42] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:19:42] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:19:42] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:19:47] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:19:47] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:19:47] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:19:47] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:19:49] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:19:49] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:19:49] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:19:49] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:21:43] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:21:43] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:21:43] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:21:43] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:21:45] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:21:45] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:21:45] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:21:45] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:21:49] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:21:49] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:21:49] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:21:49] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:22:18] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:22:18] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:22:18] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:22:18] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:22:54] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:22:54] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:22:54] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:22:54] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:23:48] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:23:48] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:23:48] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:23:48] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:23:52] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:23:52] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:23:52] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:23:52] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:23:54 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY ibt.created_date DESC' at line 34 in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php:249
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php(249): mysqli_query(Object(mysqli), 'SELECT DISTINCT...')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php on line 249
+[07-May-2025 16:24:15 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY ibt.created_date DESC' at line 34 in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php:249
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php(249): mysqli_query(Object(mysqli), 'SELECT DISTINCT...')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php on line 249
+[07-May-2025 16:25:01 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY ibt.created_date DESC' at line 34 in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php:249
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php(249): mysqli_query(Object(mysqli), 'SELECT DISTINCT...')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php on line 249
+[07-May-2025 16:25:03] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:25:03] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:25:03] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:25:03] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:25:05 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY ibt.created_date DESC' at line 34 in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php:249
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php(249): mysqli_query(Object(mysqli), 'SELECT DISTINCT...')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php on line 249
+[07-May-2025 16:26:58 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY ibt.created_date DESC' at line 34 in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php:249
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php(249): mysqli_query(Object(mysqli), 'SELECT DISTINCT...')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php on line 249
+[07-May-2025 16:27:00] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:27:00] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:27:00] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:27:00] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:27:03] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:27:03] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:27:03] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:27:03] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:27:10] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:27:10] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:27:10] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:27:10] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:27:13] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:27:13] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:27:13] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:27:13] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:27:50] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:27:50] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:27:50] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:27:50] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:28:08] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:28:08] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:28:08] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:28:08] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:28:12] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:28:12] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:28:12] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:28:12] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:28:14] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:28:14] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:28:14] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:28:14] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:28:17] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:28:17] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:28:17] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:28:17] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:28:50] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:28:50] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:28:50] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:28:50] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:28:53] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:28:53] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:28:53] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:28:53] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:28:55] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 297
+[07-May-2025 16:28:55] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 340
+[07-May-2025 16:31:01] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:31:01] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:31:01] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:31:01] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:31:03] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:31:03] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:31:03] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:31:03] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:32:07] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:32:07] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:32:07] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:32:07] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:32:15] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:32:15] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:32:15] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:32:15] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:33:52] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:33:52] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:33:52] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:33:52] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:33:56] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:33:56] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:33:56] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:33:56] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:33:56] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 311
+[07-May-2025 16:33:56] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 354
+[07-May-2025 16:34:24] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:34:24] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:34:24] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:34:24] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:34:24] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 311
+[07-May-2025 16:34:24] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 354
+[07-May-2025 16:34:50] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:34:50] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:34:50] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:34:50] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:34:50] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 311
+[07-May-2025 16:34:50] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 354
+[07-May-2025 16:35:45] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:35:45] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:35:45] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:35:45] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:35:45] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 311
+[07-May-2025 16:35:45] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 354
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 430
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 430
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 430
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 431
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 431
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 431
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 432
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 432
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 432
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 433
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 434
+[07-May-2025 16:39:37] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat-pl.php on line 435
+[07-May-2025 16:40:04] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:40:04] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:40:04] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:40:04] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:44:51] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:44:51] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:44:51] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:44:51] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:44:51] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 311
+[07-May-2025 16:44:51] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 354
+[07-May-2025 16:44:52] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:44:52] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:44:52] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:44:52] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:44:55] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:44:55] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:44:55] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:44:55] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:47:31] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:47:31] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:47:31] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:47:31] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:47:41] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:47:41] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:47:41] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:47:41] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[07-May-2025 16:48:48] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 46
+[07-May-2025 16:48:48] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 47
+[07-May-2025 16:48:48] PHP Warning: Undefined variable $sort_data in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 69
+[07-May-2025 16:48:48] PHP Warning: Undefined variable $filter in D:\laragon\www\SSO-KARSA\test-inventory\query\badge-sudah-review-bukti-kirim.php on line 70
+[08-May-2025 09:05:23] PHP Warning: Undefined variable $expired_token in D:\laragon\www\SSO-KARSA\test-inventory\modal\tambah-data-persediaan-barang.php on line 127
+[08-May-2025 09:05:23] PHP Warning: Undefined variable $expired_token in D:\laragon\www\SSO-KARSA\test-inventory\modal\edit-data-in-persediaan-barang.php on line 59
+[08-May-2025 09:05:23] PHP Warning: Undefined variable $expired_token in D:\laragon\www\SSO-KARSA\test-inventory\modal\edit-data-out-persediaan-barang.php on line 61
+[08-May-2025 09:05:33] PHP Warning: Undefined variable $expired_token in D:\laragon\www\SSO-KARSA\test-inventory\modal\tambah-data-persediaan-barang.php on line 127
+[08-May-2025 09:05:33] PHP Warning: Undefined variable $expired_token in D:\laragon\www\SSO-KARSA\test-inventory\modal\edit-data-in-persediaan-barang.php on line 59
+[08-May-2025 09:05:33] PHP Warning: Undefined variable $expired_token in D:\laragon\www\SSO-KARSA\test-inventory\modal\edit-data-out-persediaan-barang.php on line 61
+[08-May-2025 09:36:15] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 311
+[08-May-2025 09:36:15] PHP Warning: Undefined variable $no in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-ecat.php on line 354
+[08-May-2025 09:37:48] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 320
+[08-May-2025 09:37:48] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 320
+[08-May-2025 09:37:48] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 320
+[08-May-2025 09:37:48] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 321
+[08-May-2025 09:37:48] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 321
+[08-May-2025 09:37:48] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 321
+[08-May-2025 09:37:54] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 320
+[08-May-2025 09:37:54] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 320
+[08-May-2025 09:37:54] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 320
+[08-May-2025 09:37:54] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 321
+[08-May-2025 09:37:54] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 321
+[08-May-2025 09:37:54] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-ecat.php on line 321
+[08-May-2025 10:24:04 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 33 in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php:269
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php(269): mysqli_query(Object(mysqli), 'SELECT DISTINCT...')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php on line 269

@@ -1,6 +1,7 @@
 <?php
-    include 'koneksi.php'; // pastikan koneksi $connect tersedia
-    include 'koneksi-ecat.php'; // pastikan koneksi $connect tersedia
+    // Koneksi DB
+    include 'koneksi.php';
+    include 'koneksi-ecat.php';
 
     $sql_total_review_reg = "SELECT COUNT(*) AS total_reg
                                 FROM spk_reg AS sr
@@ -28,17 +29,17 @@
                                     AND sk.status_review = '0'";
 
     // Jalankan query total review reguler
-    $result_reg = mysqli_query($connect, $sql_total_review_reg);
-    $data_reg = mysqli_fetch_assoc($result_reg);
+    $result_reg = $connect->query($sql_total_review_reg);
+    $data_reg = $result_reg->fetch_assoc();
     $total_reg = $data_reg['total_reg'];
 
     // Jalankan query total review ecat
-    $result_ecat = mysqli_query($connect_ecat, $sql_total_review_ecat);
-    $data_ecat = mysqli_fetch_assoc($result_ecat);
+    $result_ecat = $connect_ecat->query($sql_total_review_ecat);
+    $data_ecat = $result_ecat->fetch_assoc();
     $total_ecat = $data_ecat['total_ecat'];
 
     // Jalankan query total review ecat PL
-    $result_pl = mysqli_query($connect_ecat, $sql_total_review_ecat_pl);
-    $data_pl = mysqli_fetch_assoc($result_pl);
+    $result_pl = $connect_ecat->query($sql_total_review_ecat_pl);
+    $data_pl = $result_pl->fetch_assoc();
     $total_pl = $data_pl['total_pl'];
 ?>

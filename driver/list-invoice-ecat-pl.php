@@ -85,14 +85,10 @@ $page = 'list-inv';
                         </div>
                         <!-- Query data inv baru -->
                         <?php  
-                            require_once __DIR__ . "/../koneksi-ecat.php";
-                            include 'query/inv-baru-ecat-pl.php'; 
-                            $query_total_data = mysqli_query($connect_ecat, $sql) or die(mysqli_error($connect_ecat));
-                            echo $total_data = mysqli_num_rows($query_total_data);
-
-                            // include "query/menunggu-verif-invoice.php";
-                            // $query_total_data_waiting_verif = mysqli_query($connect_ecat, $sql_waiting_verif) or die(mysqli_error($connect_ecat));
-                            // $total_data_waiting_verif = mysqli_num_rows($query_total_data_waiting_verif); 
+                            require_once __DIR__. '/query/inv-baru-ecat-pl.php'; 
+                            require_once __DIR__. "/query/menunggu-verif-invoice.php";
+                            require_once __DIR__ . "/query/badge-inv-baru.php";
+                            require_once __DIR__ . "/query/badge-menunggu-verif.php";
                         ?>
                         <!-- End Query -->
                         <!-- Tabs menu -->
@@ -100,44 +96,35 @@ $page = 'list-inv';
                             <li class="nav-item" role="presentation">
                                 <a href="#" class="nav-link active">
                                     Invoice Baru &nbsp;
-                                    <?php  
-                                        if ($total_data != 0){
-                                            ?>
-                                                <span class="badge text-bg-secondary"><?php echo $total_data; ?></span>
-                                            <?php
-                                        }
-                                    ?>
+                                    <span class="badge text-bg-secondary" id="review"></span>
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <a href="list-invoice-revisi.php" class="nav-link">
                                     Invoice Revisi &nbsp;
-                                    <?php  
-                                        if ($total_data_rev != 0){
-                                            ?>
-                                                <span class="badge text-bg-secondary"><?php echo $total_data_rev; ?></span>
-                                            <?php
-                                        }
-                                    ?>
+                                    <span class="badge text-bg-secondary"></span>
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <a href="menunggu-verif-invoice.php" class="nav-link">
                                     Menunggu Verifikasi PJT &nbsp;
-                                    <?php  
-                                        if ($total_data_waiting_verif != 0){
-                                            ?>
-                                                <span class="badge text-bg-secondary"><?php echo $total_data_waiting_verif; ?></span>
-                                            <?php
-                                        }
-                                    ?>
+                                    <span class="badge text-bg-secondary" id="verif"></span>
                                 </a>
                             </li>
                         </ul>
                         <div class="p-3">
-                            <button type="button" class="btn btn-outline-primary" id="reguler">Reguler</button>
-                            <button type="button" class="btn btn-outline-primary" id="ecat">Ecat</button>
-                            <button type="button" class="btn btn-outline-primary active" id="ecat-pl">Ecat PL</button>
+                            <button type="button" id="reguler" class="btn btn-outline-info" style="width: 150px;">
+                                Reguler 
+                                <span class="ms-1 badge text-bg-primary" id="badgeReg"></span>
+                            </button>
+                            <button type="button" id="ecat" class="btn btn-outline-info" style="width: 150px;">
+                                Ecat
+                                <span class="ms-1 badge text-bg-primary" id="badgeEcat"></span>
+                            </button> 
+                            <button type="button" id="ecat-pl" class="btn btn-outline-info active" style="width: 150px;">
+                                Ecat PL
+                                <span class="ms-1 badge text-bg-primary" id="badgePl"></span>
+                            </button>
                         </div>
                         <div class="table-responsive mt-3">
                             <table class="table table-striped table-bordered" id="table2">
@@ -223,4 +210,28 @@ $(document).ready(function() {
         window.location.href = "list-invoice-ecat-pl.php";
     });
 });
+</script>
+
+<script>
+    let totalData = "<?php echo $total_reg + $total_ecat + $total_pl ?>";
+    let totalDataVerif = "<?php echo $total_verif_reg + $total_verif_ecat + $total_verif_pl ?>";
+    let badgeReguler = "<?php echo $total_reg ?>";
+    let badgeEcat = "<?php echo $total_ecat ?>";
+    let badgeEcatPl = "<?php echo $total_pl ?>";
+
+    if(totalData != 0){
+        $('#review').text(totalData);
+    } else {
+        $('#review').addClass('d-none');
+    }
+
+    if(totalDataVerif != 0){
+        $('#verif').text(totalDataVerif);
+    } else {
+        $('#verif').addClass('d-none');
+    }
+
+    $('#badgeReg').text(badgeReguler);
+    $('#badgeEcat').text(badgeEcat);
+    $('#badgePl').text(badgeEcatPl);
 </script>

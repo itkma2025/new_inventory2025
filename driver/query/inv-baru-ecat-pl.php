@@ -1,7 +1,7 @@
 <?php 
     require_once '../akses.php';
     // require_once __DIR__ . "/../../koneksi-pengiriman.php";
-    echo $id_user = decrypt($_SESSION['tiket_id'], $key_global);
+    $id_user = decrypt($_SESSION['tiket_id'], $key_global);
     $sql = "(
                 SELECT
                     sk.id_inv_ecat,
