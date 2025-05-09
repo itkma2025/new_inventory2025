@@ -9382,3 +9382,59 @@ Stack trace:
 #0 D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php(269): mysqli_query(Object(mysqli), 'SELECT DISTINCT...')
 #1 {main}
   thrown in D:\laragon\www\SSO-KARSA\test-inventory\sudah-review-bukti-kirim.php on line 269
+[09-May-2025 08:37:59] PHP Warning: Undefined array key "tgl_inv" in D:\laragon\www\SSO-KARSA\test-inventory\detail-produk-diterima.php on line 742
+[09-May-2025 08:38:45] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:38:45] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:38:47] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:38:47] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:38:47] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1063
+[09-May-2025 08:38:47] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1070
+[09-May-2025 08:38:47] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1070
+[09-May-2025 08:38:47] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1085
+[09-May-2025 08:38:47] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1093
+[09-May-2025 08:38:47] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1093
+[09-May-2025 08:38:47] PHP Warning: Undefined variable $id_bukti_terima in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1575
+[09-May-2025 08:38:47] PHP Warning: Undefined variable $gambar1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1576
+[09-May-2025 08:38:47] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1857
+[09-May-2025 08:39:00] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:39:00] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:39:00] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1063
+[09-May-2025 08:39:00] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1070
+[09-May-2025 08:39:00] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1070
+[09-May-2025 08:39:00] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1085
+[09-May-2025 08:39:00] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1093
+[09-May-2025 08:39:00] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1093
+[09-May-2025 08:39:00] PHP Warning: Undefined variable $id_bukti_terima in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1575
+[09-May-2025 08:39:00] PHP Warning: Undefined variable $gambar1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1576
+[09-May-2025 08:39:00] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1857
+[09-May-2025 08:39:43] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:39:43] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:39:43] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1063
+[09-May-2025 08:39:43] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1070
+[09-May-2025 08:39:43] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1070
+[09-May-2025 08:39:43] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1085
+[09-May-2025 08:39:43] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1093
+[09-May-2025 08:39:43] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1093
+[09-May-2025 08:39:43] PHP Warning: Undefined variable $id_bukti_terima in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1575
+[09-May-2025 08:39:43] PHP Warning: Undefined variable $gambar1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1576
+[09-May-2025 08:39:43] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1857
+[09-May-2025 08:39:44] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:39:44] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:39:44] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1063
+[09-May-2025 08:39:44] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1070
+[09-May-2025 08:39:44] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1070
+[09-May-2025 08:39:44] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1085
+[09-May-2025 08:39:44] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1093
+[09-May-2025 08:39:44] PHP Warning: Trying to access array offset on value of type null in D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-bum.php on line 1093
+[09-May-2025 08:53:23] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 08:53:23] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-bum.php on line 2
+[09-May-2025 11:29:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function decrypt() in D:\laragon\www\SSO-KARSA\test-inventory\driver\page\nav-header.php:18
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\driver\detail-invoice-revisi.php(51): include()
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\driver\page\nav-header.php on line 18
+[09-May-2025 11:29:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function decrypt() in D:\laragon\www\SSO-KARSA\test-inventory\driver\page\nav-header.php:18
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\driver\detail-invoice-revisi.php(51): include()
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\driver\page\nav-header.php on line 18

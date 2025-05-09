@@ -28,6 +28,6 @@
                 LEFT JOIN tb_customer cs_spk_nonppn ON (spk_nonppn.id_customer = cs_spk_nonppn.id_cs)
                 LEFT JOIN tb_customer cs_spk_ppn ON (spk_ppn.id_customer = cs_spk_ppn.id_cs)
                 LEFT JOIN tb_customer cs_spk_bum ON (spk_bum.id_customer = cs_spk_bum.id_cs)
-                WHERE sk.dikirim_driver = '$id_user' AND ir.status_pengiriman = '0' AND sk.jenis_penerima = '' AND STR_TO_DATE(sk.tgl_kirim, '%d/%m/%Y') <= CURDATE()
+                WHERE sk.dikirim_driver = 'US-241216-c89d1aeb-17343403-af74371' AND ir.status_pengiriman = '0' AND sk.jenis_penerima = '' AND STR_TO_DATE(sk.tgl_kirim, '%d/%m/%Y') <= CURDATE()
                 GROUP BY no_inv";
 ?>

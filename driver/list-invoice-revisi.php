@@ -1,7 +1,8 @@
 <?php
-require_once "../akses.php";
-$page = 'list-inv';
-include "function/class-list-inv.php"; 
+require_once '../akses.php';
+$id_user = decrypt($_SESSION['tiket_id'], $key_global);
+$page = 'list-inv'; 
+$page2 = 'list-inv-rev'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +24,7 @@ include "function/class-list-inv.php";
         text-overflow: ellipsis;
         max-width: 100%;
     }
+    
 
     @media (min-width: 768px) {
         .text-nowrap-mobile {
@@ -65,8 +67,8 @@ include "function/class-list-inv.php";
         </div><!-- End Page Title -->
 
         <section>
-             <!-- SWEET ALERT -->
-             <?php
+            <!-- SWEET ALERT -->
+            <?php
                 if (isset($_SESSION['info'])) {
                     echo '<div class="info-data" data-infodata="' . $_SESSION['info'] . '" style="overvlow:hidden !important;"></div>';
                     unset($_SESSION['info']);
@@ -75,131 +77,53 @@ include "function/class-list-inv.php";
             <!-- END SWEET ALERT -->
             <div class="container-fluid">
                 <div class="card">
+                    <?php  
+                       
+                    ?>
                     <div class="card-body p-3">
                         <div class="mt-4">
                             <?php
-                            
                             $date = date('d-m-Y');
                             ?>
                             <p><b>Nama Driver : <?php echo ucfirst(decrypt($_SESSION['tiket_nama'], $key_global)); ?></b></p>
                             <p><b>Tanggal : <?php echo $date; ?></b></p>
                         </div>
-                        <!-- Query data -->
+                        <!-- Query data inv baru -->
                         <?php  
-                             include 'query/inv-baru.php'; 
-                             $query_total_data = mysqli_query($connect, $sql) or die(mysqli_error($connect));
-                             $total_data = mysqli_num_rows($query_total_data);
-
-                            include "query/invoice-revisi.php";
-                            $query_total_data_rev = mysqli_query($connect, $sql_rev) or die(mysqli_error($connect));
-                            $total_data_rev = mysqli_num_rows($query_total_data_rev); 
-
-                            include "query/menunggu-verif-invoice.php";
-                            $query_total_data_waiting_verif = mysqli_query($connect, $sql_waiting_verif) or die(mysqli_error($connect));
-                            $total_data_waiting_verif = mysqli_num_rows($query_total_data_waiting_verif); 
+                            require_once __DIR__. '/query/inv-baru.php'; 
+                            require_once __DIR__. "/query/menunggu-verif-invoice.php";
+                            require_once __DIR__ . "/query/badge-inv-revisi.php";
+                            require_once __DIR__ . "/query/badge-menunggu-verif.php";
                         ?>
-
-                        <!-- End Query data -->
-
-                        <!-- Tabs Menu -->
+                        <!-- End Query -->
+                        <!-- Tabs menu -->
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a href="list-invoice.php" class="nav-link">
-                                    Invoice Baru&nbsp;
-                                    <?php  
-                                        if ($total_data != 0){
-                                        ?>
-                                    <span class="badge text-bg-secondary"><?php echo $total_data; ?></span>
-                                    <?php
-                                        }
-                                    ?>
-                                </a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a href="#" class="nav-link active">
-                                    Invoice Revisi&nbsp;
-                                    <?php  
-                                        if ($total_data_rev != 0){ 
-                                        ?>
-                                    <span class="badge text-bg-secondary"><?php echo $total_data_rev; ?></span>
-                                    <?php
-                                        }
-                                    ?>
+                                <a href="list-invoice-revisi.php" class="nav-link active">
+                                    Invoice Revisi &nbsp;
+                                    <span class="badge text-bg-secondary" id="revisi"></span>
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <a href="menunggu-verif-invoice.php" class="nav-link">
-                                    Reupload Invoice &nbsp;
-                                    <?php  
-                                        if ($total_data_waiting_verif != 0){
-                                        ?>
-                                    <span class="badge text-bg-secondary"><?php echo $total_data_waiting_verif; ?></span>
-                                    <?php
-                                        }
-                                    ?>
+                                    Menunggu Verifikasi PJT &nbsp;
+                                    <span class="badge text-bg-secondary" id="verif"></span>
                                 </a>
                             </li>
                         </ul>
-                        <div class="table-responsive mt-3">
-                            <table class="table table-striped table-bordered" id="table2">
-                                <thead>
-                                    <tr class="text-white" style="background-color: #051683;">
-                                        <td class="text-center p-3 col-2 text-nowrap" style="display: none;">No</td>
-                                        <td class="text-center p-3 col-2 text-nowrap">Aksi</td>
-                                        <td class="text-center p-3 col-2 text-nowrap">No Invoice</td>
-                                        <td class="text-center p-3 col-2 text-nowrap">Nama Customer</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    date_default_timezone_set('Asia/Jakarta');
-                                    require_once "../function/function-enkripsi.php";
-                                    require_once "../function/uuid.php";
-                                    $day = date('d');
-                                    $month = date('m');
-                                    $year = date('Y');
-                                    $key = "Driver2024?";
-                                    $no = 1;
-                                    $query = mysqli_query($connect, $sql_rev) or die(mysqli_error($connect));
-                                    while ($data = mysqli_fetch_array($query)) {
-                                        $no_inv = $data['no_inv']; 
-                                        $tgl_pesanan = $data['spk_tgl_pesanan'];
-                                        $cs_inv = $data['cs_inv'];
-                                        $alamat = $data['alamat'];
-                                        $jenis_pengiriman = $data['jenis_pengiriman'];
-                                        $jenis_penerima = $data['jenis_penerima'];
-                                        $no_inv_revisi = $data['no_inv_rev'];
-                                        $id_komplain = encrypt($data['id_komplain'], $key);
-                                    ?>
-                                    <tr>
-                                        <td style="display: none;"><?php echo $no++ ?></td>
-                                        <td class="text-center text-nowrap">
-                                            <?php
-                                                    if($jenis_pengiriman = 'Driver' && $jenis_penerima == ''){
-                                                        ?>
-                                                            <a href="detail-invoice-revisi.php?id=<?php echo encrypt($data['id_inv'], $key)?>&&id_komplain=<?php echo $id_komplain ?>"
-                                                            class="btn btn-primary btn-sm">
-                                                                <i class="bi bi-arrow-repeat"></i> Proses
-                                                            </a>
-                                                        <?php
-                                                    } else {
-                                                       
-                                                    }
-                                                ?>
-                                        </td>
-                                        <td class="text-nowrap text-center">
-                                            <?php echo $no_inv_revisi ?>
-                                            <br>
-                                            <?php echo date('H:i:s', strtotime($data['created_date'])) ?>
-                                            <br>
-                                            <?php echo $tgl_pesanan ?>
-                                        </td>
-                                        <td class="text-nowrap align-middle"><?php echo $cs_inv ?></td>
-                                    </tr>
-                                    <?php $no++; ?>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                        <div class="p-3">
+                            <button type="button" id="reguler" class="btn btn-outline-info" style="width: 150px;">
+                                Reguler 
+                                <span class="ms-1 badge text-bg-primary" id="badgeReg"></span>
+                            </button>
+                            <button type="button" id="ecat" class="btn btn-outline-info" style="width: 150px;">
+                                Ecat
+                                <span class="ms-1 badge text-bg-primary" id="badgeEcat"></span>
+                            </button> 
+                            <button type="button" id="ecat-pl" class="btn btn-outline-info" style="width: 150px;">
+                                Ecat PL
+                                <span class="ms-1 badge text-bg-primary" id="badgePl"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -216,3 +140,38 @@ include "function/class-list-inv.php";
 </body>
 
 </html>
+
+<!-- jquery 3.6.3 -->
+<script src="../assets/js/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#reguler").click(function() {
+        window.location.href = "list-invoice-revisi-reg.php";
+    });
+
+    $("#ecat").click(function() {
+        window.location.href = "list-invoice-revisi-ecat.php";
+    });
+
+    $("#ecat-pl").click(function() {
+        window.location.href = "list-invoice-revisi-ecat-pl.php";
+    });
+});
+</script>
+
+<script>
+    let totalDataRevisi = "<?php echo $total_rev_reg ?>";
+    let badgeReguler = "<?php echo $total_rev_reg ?>";
+   
+
+    console.log(totalDataRevisi);
+
+    if(totalDataRevisi != 0){
+        $('#revisi').text(totalDataRevisi);
+    } else {
+        $('#revisi').addClass('d-none');
+    }
+
+    $('#badgeReg').text(badgeReguler);
+
+</script>

@@ -1,7 +1,8 @@
 <?php
 require_once '../akses.php';
 $id_user = decrypt($_SESSION['tiket_id'], $key_global);
-$page = 'list-inv';
+$page = 'list-inv'; 
+$page2 = 'list-inv-reg'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
