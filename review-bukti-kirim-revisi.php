@@ -1,7 +1,7 @@
 <?php
     require_once "akses.php";
     $page  = 'review';
-    $page2 = 'list-review';
+    $page2 = 'list-review-revisi';
     require_once "function/function-enkripsi.php";
 ?>
 <!DOCTYPE html>
@@ -90,9 +90,9 @@
             <!-- END SWEET ALERT -->
             <div class="card">
                 <?php  
-                    require_once __DIR__ . "/query/badge-review-bukti-kirim.php";
-                    require_once __DIR__ . "/query/badge-menunggu-perbaikan.php";
-                    require_once __DIR__ . "/query/badge-sudah-review-bukti-kirim.php";
+                    // require_once __DIR__ . "/query/badge-review-bukti-kirim.php";
+                    // require_once __DIR__ . "/query/badge-menunggu-perbaikan.php";
+                    // require_once __DIR__ . "/query/badge-sudah-review-bukti-kirim.php";
                 ?>
                 <div class="card-body mt-3">
                     <!-- Bordered Tabs -->
@@ -348,33 +348,15 @@
 </script>
 
 <script>
-    $(document).ready(function(){
-        $.ajax({
-            url: "query/badge-sudah-review.php",
-            type: "GET",
-            dataType: "json",
-            success: function(response) {
-                // console.log("Data diterima:", response);
-                $("#total_sudah_review").text(response.total_data_sudah_review);
-            },
-            error: function(xhr, status, error) {
-                // console.error("AJAX Error:", status, error);
-                // console.log("Response Text:", xhr.responseText);
-            }
-        });
-    });
-</script>
+    // $(document).ready(function() {
+    //     $("#review-ecat").on("click", function() {
+    //         window.location.href = "review-bukti-kirim-ecat.php"; // Ganti dengan URL tujuan
+    //     });
 
-<script>
-    $(document).ready(function() {
-        $("#review-ecat").on("click", function() {
-            window.location.href = "review-bukti-kirim-ecat.php"; // Ganti dengan URL tujuan
-        });
-
-        $("#review-pl").on("click", function() {
-            window.location.href = "review-bukti-kirim-ecat-pl.php"; // Ganti dengan URL tujuan
-        });
-    });
+    //     $("#review-pl").on("click", function() {
+    //         window.location.href = "review-bukti-kirim-ecat-pl.php"; // Ganti dengan URL tujuan
+    //     });
+    // });
 </script>
 
 

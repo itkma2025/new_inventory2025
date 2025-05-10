@@ -202,16 +202,29 @@ if (isset($user_role)) {
                     <i class="bi bi-circle"></i><span>Invoice Komplain</span>
                   </a>
                 </li>
-                <li>
-                  <a class="<?php echo (isset($page2) && $page2 == 'list-review') ? 'active' : ''; ?>" href="review-bukti-kirim.php?sort=baru">
-                    <i class="bi bi-circle"></i><span>Review Bukti Kirim</span>
-                  </a>
-                </li>
               <?php
               }
               ?>
             </ul>
           </li><!-- End Forms Nav -->
+
+          <!-- Produk  Masuk -->
+          <li class="nav-item">
+            <a class="nav-link collapsed <?php echo (isset($page) && $page == 'review') ? 'active-link' : ''; ?>" data-bs-target="#review_bukti_kirim" data-bs-toggle="collapse" href="#">
+              <i class="bi bi-file-ruled-fill"></i><span>Review Bukti Kirim</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="review_bukti_kirim" class="nav-content collapse <?php echo (isset($page) && $page == 'review') ? 'show' : ''; ?>" data-bs-parent="#sidebar-nav">
+              <li>
+                <a class="<?php echo (isset($page2) && $page2 == 'list-review') ? 'active' : ''; ?>" href="review-bukti-kirim.php?sort=baru">
+                  <i class="bi bi-circle"></i><span>Invoice Baru</span>
+                </a>
+                <a class="<?php echo (isset($page2) && $page2 == 'list-review-revisi') ? 'active' : ''; ?>" href="review-bukti-kirim-revisi.php?sort=baru">
+                  <i class="bi bi-circle"></i><span>Invoice Revisi</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- End Produk  Masuk Nav -->
     
           <?php
           if ($user_role == "Super Admin" || $user_role == "Manager Gudang" || $user_role == "Admin Penjualan") {

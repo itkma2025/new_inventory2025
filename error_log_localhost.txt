@@ -9438,3 +9438,80 @@ Stack trace:
 #0 D:\laragon\www\SSO-KARSA\test-inventory\driver\detail-invoice-revisi.php(51): include()
 #1 {main}
   thrown in D:\laragon\www\SSO-KARSA\test-inventory\driver\page\nav-header.php on line 18
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 337
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[10-May-2025 11:24:17] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 337
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[10-May-2025 13:06:54] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 337
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[10-May-2025 13:09:50] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 337
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[10-May-2025 13:10:02] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 337
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[10-May-2025 13:10:20] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[10-May-2025 13:10:30 Asia/Jakarta] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php:183
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php(183): mysqli_query(Object(mysqli), '')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 183
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 334
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 335
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 336
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 337
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[10-May-2025 13:10:39] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339

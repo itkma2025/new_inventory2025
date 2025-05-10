@@ -407,7 +407,7 @@ $page2 = 'data-kat-prod';
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalDetailLabel">Detail Kategori Produk</h5>
+                <h5 class="modal-title" id="modalDetailLabel">Edit Kategori Produk</h5>
             </div>
             <div class="modal-body" id="editContent">
                 <!-- Data akan dimuat di sini -->
