@@ -1,6 +1,6 @@
 <?php
 $page = 'list-inv';
-include "akses.php";
+include "../akses.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +58,7 @@ include "akses.php";
     <main id="main" class="main">
         <!-- SWEET ALERT -->
         <section>
-            <div class="card shadow p-2" id="detail">
+            <div class="card shadow p-2" id="detail"> 
                 <div class="card-header text-center">
                     <h5>
                         <strong>DETAIL INVOICE REVISI</strong>
@@ -283,7 +283,7 @@ include "akses.php";
                                 
                                 $driver_kirim =  mysqli_query($connect, "SELECT sk.jenis_pengiriman, sk.dikirim_driver, us.nama_user 
                                                                             FROM revisi_status_kirim AS sk
-                                                                            JOIN user us ON (sk.dikirim_driver = us.id_user)
+                                                                            JOIN $database2.user us ON (sk.dikirim_driver = us.id_user)
                                                                             WHERE sk.dikirim_driver = '$driver'");
                                 $data_driver_kirim = mysqli_fetch_array($driver_kirim);
 
@@ -404,7 +404,6 @@ include "akses.php";
                             </thead>
                             <tbody>
                                 <?php
-                                    include "koneksi.php";
                                     $year = date('y');
                                     $day = date('d');
                                     $month = date('m');

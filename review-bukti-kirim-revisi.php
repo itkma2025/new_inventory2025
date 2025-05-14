@@ -63,11 +63,11 @@
 
     <main id="main" class="main">
         <!-- Loading -->
-        <div class="loader loader">
+        <!-- <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div>
+        </div> -->
         <!-- ENd Loading -->
         <div class="pagetitle">
             <h1>Data Review Bukti Kirim</h1>
@@ -105,14 +105,14 @@
                             </button>
                         </li>
                         <li class="nav-item ms-3" role="presentation">
-                            <a href="menunggu-perbaikan-bukti-kirim.php?sort=baru" class="nav-link position-relative">
+                            <a href="menunggu-perbaikan-bukti-kirim-revisi.php?sort=baru" class="nav-link position-relative">
                                 Menunggu Perbaikan
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="perbaikan">
                                 </span>
                             </a>
                         </li>
                         <li class="nav-item ms-3" role="presentation">
-                            <a href="sudah-review-bukti-kirim.php?sort=baru&sort_data=bulan_ini" class="nav-link position-relative">
+                            <a href="sudah-review-bukti-kirim-revisi.php?sort=baru&sort_data=bulan_ini" class="nav-link position-relative">
                                 History Review
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="sudahReview">
                                 </span>
@@ -159,7 +159,7 @@
                                                 <th class="text-center p-3 text-nowrap" style="width: 100px">Jenis Pengiriman</th>
                                                 <th class="text-center p-3 text-nowrap" style="width: 80px">Aksi</th>
                                             </tr>
-                                        </thead>
+                                        </thead>  
                                         <tbody>
                                             <?php
                                             include "koneksi.php";
@@ -178,8 +178,9 @@
                                                     <?php
                                                 }
                                             }
-                                            $sql = "SELECT 
-                                                        COALESCE(nonppn.id_inv_nonppn, ppn.id_inv_ppn, bum.id_inv_bum) AS id_inv,
+                                            $sql = "SELECT
+                                                        ik.id_inv,
+                                                        ik.id_komplain,
                                                         COALESCE(nonppn.no_inv, ppn.no_inv, bum.no_inv) AS no_inv,
                                                         COALESCE(nonppn.tgl_inv, ppn.tgl_inv, bum.tgl_inv) AS tgl_inv,
                                                         COALESCE(nonppn.kategori_inv, ppn.kategori_inv, bum.kategori_inv) AS kategori_inv,
@@ -190,29 +191,29 @@
                                                         sk.jenis_pengiriman,
                                                         sk.dikirim_driver,
                                                         sk.dikirim_ekspedisi,
+                                                        sk.status_review,
                                                         ip.nama_penerima,
                                                         us.nama_user,
                                                         ex.nama_ekspedisi,
                                                         ibt.approval
-                                                    FROM spk_reg AS sr
-                                                    LEFT JOIN inv_nonppn AS nonppn ON sr.id_inv = nonppn.id_inv_nonppn
-                                                    LEFT JOIN inv_ppn AS ppn ON sr.id_inv = ppn.id_inv_ppn
-                                                    LEFT JOIN inv_bum AS bum ON sr.id_inv = bum.id_inv_bum
-                                                    LEFT JOIN tb_customer cs ON sr.id_customer = cs.id_cs
-                                                    LEFT JOIN status_kirim sk ON sr.id_inv = sk.id_inv
-                                                    LEFT JOIN inv_penerima ip ON sr.id_inv = ip.id_inv
+                                                    FROM inv_komplain AS ik
+                                                    LEFT JOIN inv_nonppn AS nonppn ON ik.id_inv = nonppn.id_inv_nonppn
+                                                    LEFT JOIN inv_ppn AS ppn ON ik.id_inv = ppn.id_inv_ppn
+                                                    LEFT JOIN inv_bum AS bum ON ik.id_inv = bum.id_inv_bum
+                                                    LEFT JOIN spk_reg  AS sr ON ik.id_inv = sr.id_inv
+                                                    LEFT JOIN tb_customer AS cs ON sr.id_customer = cs.id_cs
+                                                    LEFT JOIN revisi_status_kirim AS sk ON ik.id_komplain = sk.id_komplain
+                                                    LEFT JOIN inv_penerima_revisi ip ON ik.id_komplain = ip.id_komplain
                                                     LEFT JOIN $database2.user AS us ON sk.dikirim_driver = us.id_user
-                                                    LEFT JOIN ekspedisi ex ON sk.dikirim_ekspedisi = ex.id_ekspedisi
-                                                    LEFT JOIN inv_bukti_terima ibt ON sk.id_inv = ibt.id_inv
-                                                    WHERE COALESCE(nonppn.status_transaksi, ppn.status_transaksi, bum.status_transaksi) = 'Diterima' 
-                                                    AND sk.status_review = '0' 
-                                                    GROUP BY no_inv $filter";
-
+                                                    LEFT JOIN ekspedisi AS ex ON sk.dikirim_ekspedisi = ex.id_ekspedisi
+                                                    LEFT JOIN inv_bukti_terima_revisi AS ibt ON sk.id_komplain = ibt.id_komplain
+                                                    WHERE ik.status_komplain = '0' AND sk.status_review = '0' 
+                                                    GROUP BY ik.id_inv";
                                             $query = mysqli_query($connect, $sql);
                                             $total_perlu_review = mysqli_num_rows($query);
 
                                             while ($data = mysqli_fetch_array($query)) {
-                                               $id_inv = encrypt($data['id_inv'], $key_global);
+                                               $id_komplain = encrypt($data['id_komplain'], $key_global);
                                             ?>
                                                 <tr>
                                                     <td class="text-center text-nowrap"><?php echo $no; ?></td>
@@ -261,7 +262,7 @@
                                                         ?>
                                                     </td>
                                                     <td class="text-center text-nowrap">
-                                                        <button type="button" data-id ="<?php echo urlencode($id_inv); ?>" class="btn btn-primary btn-sm mb-2 detailReview" id="detailReview" data-bs-toggle="modal" data-bs-target="#modalDetail" title="Lihat Bukti"><i class="bi bi-eye-fill"></i></buuton>
+                                                        <button type="button" data-id ="<?php echo urlencode($id_komplain); ?>" class="btn btn-primary btn-sm mb-2 detailReview" id="detailReview" data-bs-toggle="modal" data-bs-target="#modalDetail" title="Lihat Bukti"><i class="bi bi-eye-fill"></i></buuton>
                                                     </td>
                                                 </tr>
                                                 <?php $no++ ?>
@@ -319,7 +320,7 @@
         var id = $(this).data("id");
 
         $.ajax({
-            url: "ajax/detail-review-bukti-kirim.php", 
+            url: "ajax/detail-review-bukti-kirim-revisi.php", 
             type: "POST",
             data: { id: id },
             success: function (response) {

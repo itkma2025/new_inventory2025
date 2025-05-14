@@ -1,6 +1,6 @@
 <?php
 $page = 'list-inv';
-include "akses.php";
+include "../akses.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,15 +54,15 @@ include "akses.php";
                             $month = date('m');
                             $year = date('Y');
                             $key = "Driver2024?";
-                            $id_inv = $_GET['id'];
+                            $id_inv = htmlspecialchars($_GET['id']);
                             $id_inv_decrypt = decrypt($id_inv, $key);
-                            $id_komplain = $_GET['idk'];
+                            $id_komplain = htmlspecialchars($_GET['idk']);
                             $id_komplain_decrypt = decrypt($id_komplain, $key);
-                            $id_spk = $_GET['ids'];
+                            $id_spk = htmlspecialchars($_GET['ids']);
                             $id_spk_decrypt = decrypt($id_spk, $key);
-                            $alamat = $_GET['ida'];
+                            $alamat = htmlspecialchars($_GET['ida']);
                             $alamat_decrypt = decrypt($alamat, $key);
-                            $no_komplain = $_GET['nok'];
+                            $no_komplain = htmlspecialchars($_GET['nok']);
                             $no_komplain_decrypt = decrypt($no_komplain, $key);
                             $location = isset($_SESSION['display_name']) ? $_SESSION['display_name'] : '';
                             $location_encrypt = encrypt($location, $key);

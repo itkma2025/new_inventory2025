@@ -8,6 +8,7 @@
     if(isset($_POST['diterima'])){
         $location = htmlspecialchars(decrypt($_POST['location'], $key));
         $date_now = date('d_m_Y');
+        $datetime = date('Y-m-d H:i:s');
         $id_bukti_terima = htmlspecialchars($_POST['id_bukti_terima']);
         $id_inv_penerima = htmlspecialchars($_POST['id_inv_penerima']);   
         $id_inv = htmlspecialchars($_POST['id_inv']);   
@@ -41,12 +42,34 @@
 
         if($diterima_oleh == 'Customer'){
             // Memulai transaksi
-            mysqli_begin_transaction($connect);
+            mysqli_begin_transaction($connect); 
 
             try {
-                $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima_revisi (id_bukti_terima, id_komplain, bukti_satu) VALUES ('$id_bukti_terima', '$id_komplain_decrypt', '$newFileName')");
+                // Cek apakah data sudah ada di inv_bukti_terima
+                $cek_bukti = mysqli_query($connect, "SELECT id_komplain FROM inv_bukti_terima_revisi WHERE id_komplain = '$id_komplain_decrypt'");
+                if (mysqli_num_rows($cek_bukti) > 0) {
+                    // Jika data sudah ada, lakukan update
+                    $bukti_terima = mysqli_query($connect, "UPDATE inv_bukti_terima_revisi 
+                                                            SET bukti_satu = '$newFileName', lokasi = '$location', approval = '0', created_date = '$datetime', created_by = '$id_user'
+                                                            WHERE id_komplain = '$id_komplain_decrypt'");
+                } else {
+                    // Jika data belum ada, lakukan insert
+                    $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima_revisi (id_bukti_terima, id_komplain, bukti_satu, lokasi, created_date, created_by) 
+                                                            VALUES ('$id_bukti_terima', '$id_komplain_decrypt', '$newFileName', '$location', '$datetime', '$id_user')");
+                }
 
-                $query_diterima = mysqli_query($connect, "INSERT INTO inv_penerima_revisi (id_inv_penerima_revisi, id_komplain, nama_penerima, alamat, tgl_terima) VALUES ('$id_inv_penerima', '$id_komplain_decrypt', '$nama_penerima', '$alamat', '$tgl')");
+                // Cek apakah data sudah ada di inv_penerima
+                $cek_penerima = mysqli_query($connect, "SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id_komplain_decrypt'");
+                if (mysqli_num_rows($cek_penerima) > 0) {
+                    // Jika data sudah ada, lakukan update
+                    $query_diterima = mysqli_query($connect, "UPDATE inv_penerima_revisi 
+                                                            SET nama_penerima = '$nama_penerima', alamat = '$alamat', tgl_terima = '$tgl' 
+                                                            WHERE id_komplain = '$id_komplain_decrypt'");
+                } else {
+                    // Jika data belum ada, lakukan insert
+                    $query_diterima = mysqli_query($connect, "INSERT INTO inv_penerima_revisi (id_inv_penerima, id_komplain, nama_penerima, alamat, tgl_terima) 
+                                                            VALUES ('$id_inv_penerima', '$id_komplain_decrypt', '$nama_penerima', '$alamat', '$tgl')");
+                }
                 
                 $id_inv_substr = $id_inv_decrypt;
                 $inv_id = substr($id_inv_substr, 0, 3);
@@ -95,6 +118,7 @@
                 // Jika terjadi pengecualian (exception), rollback transaksi
                 mysqli_rollback($connect);
                 $_SESSION['info'] = "Data Gagal Disimpan";
+                // echo "Error: " . $e->getMessage(); // hindari tampilkan error ke user di production
                 header("Location:../list-invoice-revisi.php", true, 303);
                 exit;
             } finally {

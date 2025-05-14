@@ -1339,3 +1339,15 @@ Stack trace:
 [15-Apr-2025 13:57:30] PHP Deprecated: base64_encode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\finance\list-tagihan-penjualan.php on line 289
 [15-Apr-2025 13:57:30] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\list-tagihan-penjualan.php on line 391
 [15-Apr-2025 13:57:30] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\finance\list-tagihan-penjualan.php on line 391
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[14-May-2025 14:41:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[14-May-2025 14:41:15] PHP Warning: include(akses.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[14-May-2025 14:41:15] PHP Warning: include(): Failed opening 'akses.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45

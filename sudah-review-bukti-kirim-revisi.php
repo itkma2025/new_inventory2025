@@ -1,7 +1,7 @@
 <?php
 require_once "akses.php";
 $page  = 'review';
-$page2 = 'list-review';
+$page2 = 'list-review-revisi';
 require_once "function/function-enkripsi.php";
 ?>
 <!DOCTYPE html>
@@ -129,11 +129,11 @@ require_once "function/function-enkripsi.php";
 
     <main id="main" class="main">
         <!-- Loading -->
-        <div class="loader loader">
+        <!-- <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div>
+        </div> -->
         <!-- ENd Loading -->
         <div class="pagetitle">
             <h1>Data Review Bukti Kirim</h1>
@@ -156,22 +156,22 @@ require_once "function/function-enkripsi.php";
             <!-- END SWEET ALERT -->
             <div class="card">
                 <?php  
-                    require_once __DIR__ . "/query/badge-review-bukti-kirim.php";
-                    require_once __DIR__ . "/query/badge-menunggu-perbaikan.php";
-                    require_once __DIR__ . "/query/badge-sudah-review-bukti-kirim.php";
+                    // require_once __DIR__ . "/query/badge-review-bukti-kirim-revisi.php";
+                    // require_once __DIR__ . "/query/badge-menunggu-perbaikan-revisi.php";
+                    // require_once __DIR__ . "/query/badge-sudah-review-bukti-kirim-revisi.php";
                 ?>
                 <div class="card-body mt-3">
                     <!-- Bordered Tabs -->
                     <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a href="review-bukti-kirim.php?sort=baru" class="nav-link position-relative">
+                            <a href="review-bukti-kirim-revisi.php?sort=baru" class="nav-link position-relative">
                                 Perlu Direview
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="review">
                                 </span>
                             </a>
                         </li>
                         <li class="nav-item ms-3" role="presentation">
-                            <a href="menunggu-perbaikan-bukti-kirim.php?sort=baru&sort_data=bulan_ini" class="nav-link position-relative">
+                            <a href="menunggu-perbaikan-bukti-kirim-revisi.php?sort=baru&sort_data=bulan_ini" class="nav-link position-relative">
                                 Menunggu Perbaikan
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" id="perbaikan">
                                 </span>
@@ -234,38 +234,41 @@ require_once "function/function-enkripsi.php";
                                     }
                                     $no = 1;
                                     $sql = "SELECT DISTINCT
-                                                COALESCE(nonppn.id_inv_nonppn, ppn.id_inv_ppn, bum.id_inv_bum) AS id_inv,
+                                                ik.id_inv,
+                                                ik.id_komplain,
                                                 COALESCE(nonppn.no_inv, ppn.no_inv, bum.no_inv) AS no_inv,
                                                 COALESCE(nonppn.tgl_inv, ppn.tgl_inv, bum.tgl_inv) AS tgl_inv,
                                                 COALESCE(nonppn.kategori_inv, ppn.kategori_inv, bum.kategori_inv) AS kategori_inv,
                                                 COALESCE(nonppn.note_inv, ppn.note_inv, bum.note_inv) AS note_inv,
-                                                sr.no_po, 
-                                                cs.nama_cs, 
-                                                sk.jenis_inv,
+                                                COALESCE(nonppn.status_transaksi, ppn.status_transaksi, bum.status_transaksi) AS status_transaksi,
+                                                sr.no_po,
+                                                cs.nama_cs,
                                                 sk.jenis_pengiriman,
                                                 sk.dikirim_driver,
                                                 sk.dikirim_ekspedisi,
+                                                sk.status_review,
                                                 ip.nama_penerima,
+                                                ex.nama_ekspedisi,
                                                 us.nama_user AS nama_driver,
                                                 uc.nama_user AS user_created,
-                                                ex.nama_ekspedisi,
                                                 ibt.approval,
                                                 ibt.created_date
-                                            FROM spk_reg AS sr
-                                            LEFT JOIN inv_nonppn AS nonppn ON sr.id_inv = nonppn.id_inv_nonppn
-                                            LEFT JOIN inv_ppn AS ppn ON sr.id_inv = ppn.id_inv_ppn
-                                            LEFT JOIN inv_bum AS bum ON sr.id_inv = bum.id_inv_bum
-                                            LEFT JOIN tb_customer cs ON sr.id_customer = cs.id_cs
-                                            LEFT JOIN status_kirim sk ON sr.id_inv = sk.id_inv
-                                            LEFT JOIN ekspedisi ex ON sk.dikirim_ekspedisi = ex.id_ekspedisi
-                                            LEFT JOIN inv_bukti_terima ibt ON sk.id_inv = ibt.id_inv
-                                            LEFT JOIN inv_penerima ip ON sr.id_inv = ip.id_inv
+                                            FROM inv_komplain AS ik
+                                            LEFT JOIN inv_nonppn AS nonppn ON ik.id_inv = nonppn.id_inv_nonppn
+                                            LEFT JOIN inv_ppn AS ppn ON ik.id_inv = ppn.id_inv_ppn
+                                            LEFT JOIN inv_bum AS bum ON ik.id_inv = bum.id_inv_bum
+                                            LEFT JOIN spk_reg  AS sr ON ik.id_inv = sr.id_inv
+                                            LEFT JOIN tb_customer AS cs ON sr.id_customer = cs.id_cs
+                                            LEFT JOIN revisi_status_kirim AS sk ON ik.id_komplain = sk.id_komplain
+                                            LEFT JOIN inv_penerima_revisi ip ON ik.id_komplain = ip.id_komplain
+                                            LEFT JOIN ekspedisi AS ex ON sk.dikirim_ekspedisi = ex.id_ekspedisi
+                                            LEFT JOIN inv_bukti_terima_revisi AS ibt ON sk.id_komplain = ibt.id_komplain
                                             LEFT JOIN $database2.user AS us ON sk.dikirim_driver = us.id_user
                                             LEFT JOIN $database2.user AS uc ON ibt.created_by = uc.id_user
-                                            WHERE 
-                                                COALESCE(nonppn.status_transaksi, ppn.status_transaksi, bum.status_transaksi)
-                                                IN ('Diterima', 'Transaksi Selesai', 'Komplain Selesai')
-                                                AND sk.status_review = '1' AND ibt.approval = '2' AND $sort_data
+                                            WHERE ik.status_komplain = '0' 
+                                            AND sk.status_review = '1' 
+                                            AND ibt.approval = '2' 
+                                            AND $sort_data
                                             $filter";
                                     $query = mysqli_query($connect, $sql);
                                     $total_data_sudah_review = mysqli_num_rows($query);
@@ -353,7 +356,7 @@ require_once "function/function-enkripsi.php";
                                                                 ?>
                                                             </td>
                                                             <td class="text-center text-nowrap">
-                                                                <button type="button" data-id ="<?php echo encrypt($data['id_inv'], $key_global) ?>" class="btn btn-primary btn-sm mb-2 historyReview" data-bs-toggle="modal" data-bs-target="#modalHistory" title="Lihat History">
+                                                                <button type="button" data-id ="<?php echo encrypt($data['id_komplain'], $key_global) ?>" class="btn btn-primary btn-sm mb-2 historyReview" data-bs-toggle="modal" data-bs-target="#modalHistory" title="Lihat History">
                                                                     <i class="bi bi-info"></i>
                                                                 </button>
                                                             </td>
@@ -429,7 +432,7 @@ require_once "function/function-enkripsi.php";
         var id = $(this).data("id");
 
         $.ajax({
-            url: "ajax/history-bukti-kirim.php", 
+            url: "ajax/history-bukti-kirim-revisi.php", 
             type: "POST",
             data: { id: id },
             success: function (response) {
@@ -614,15 +617,15 @@ require_once "function/function-enkripsi.php";
 </script>
 
 <script>
-    $(document).ready(function() {
-        $("#sudah-review-ecat").on("click", function() {
-            window.location.href = "sudah-review-bukti-kirim-ecat.php?sort=baru&sort_data=bulan_ini"; // Ganti dengan URL tujuan
-        });
+    // $(document).ready(function() {
+    //     $("#sudah-review-ecat").on("click", function() {
+    //         window.location.href = "sudah-review-bukti-kirim-ecat.php?sort=baru&sort_data=bulan_ini"; // Ganti dengan URL tujuan
+    //     });
 
-        $("#sudah-review-pl").on("click", function() {
-            window.location.href = "sudah-review-bukti-kirim-ecat-pl.php?sort=baru&sort_data=bulan_ini"; // Ganti dengan URL tujuan
-        });
-    });
+    //     $("#sudah-review-pl").on("click", function() {
+    //         window.location.href = "sudah-review-bukti-kirim-ecat-pl.php?sort=baru&sort_data=bulan_ini"; // Ganti dengan URL tujuan
+    //     });
+    // });
 </script>
 
 
