@@ -24,7 +24,7 @@
                         LEFT JOIN inv_nonppn nonppn ON sk.id_inv = nonppn.id_inv_nonppn
                         LEFT JOIN inv_ppn ppn ON sk.id_inv = ppn.id_inv_ppn
                         LEFT JOIN inv_bum bum ON sk.id_inv = bum.id_inv_bum
-                        LEFT JOIN spk_reg spk_nonppn ON nonppn.id_inv_nonppn = spk_nonppn.id_inv 
+                        LEFT JOIN spk_reg spk_nonppn ON nonppn.id_inv_nonppn = spk_nonppn.id_inv  
                         LEFT JOIN spk_reg spk_ppn ON ppn.id_inv_ppn = spk_ppn.id_inv
                         LEFT JOIN spk_reg spk_bum ON bum.id_inv_bum = spk_bum.id_inv
                         LEFT JOIN tb_customer cs_spk_nonppn ON spk_nonppn.id_customer = cs_spk_nonppn.id_cs

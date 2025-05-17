@@ -105,7 +105,7 @@ $page2 = 'list-inv-rev';
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a href="menunggu-verif-invoice.php" class="nav-link">
+                                <a href="menunggu-verif-invoice-reg-revisi.php" class="nav-link">
                                     Menunggu Verifikasi PJT &nbsp;
                                     <span class="badge text-bg-secondary" id="verif"></span>
                                 </a>

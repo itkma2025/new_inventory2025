@@ -136,11 +136,11 @@ require_once "function/function-enkripsi.php";
         </div> -->
         <!-- ENd Loading -->
         <div class="pagetitle">
-            <h1>Data Review Bukti Kirim</h1>
+            <h1>Data Review Bukti Kirim Invoice Revisi</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-                    <li class="breadcrumb-item active">Review Bukti Terima</li>
+                    <li class="breadcrumb-item active">Review Bukti Terima Invoice Revisi</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->

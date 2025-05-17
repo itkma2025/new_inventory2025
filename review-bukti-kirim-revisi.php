@@ -207,7 +207,10 @@
                                                     LEFT JOIN $database2.user AS us ON sk.dikirim_driver = us.id_user
                                                     LEFT JOIN ekspedisi AS ex ON sk.dikirim_ekspedisi = ex.id_ekspedisi
                                                     LEFT JOIN inv_bukti_terima_revisi AS ibt ON sk.id_komplain = ibt.id_komplain
-                                                    WHERE ik.status_komplain = '0' AND sk.status_review = '0' 
+                                                    WHERE 
+                                                    ik.status_komplain = '0' 
+                                                    AND sk.status_review = '0' 
+                                                    AND COALESCE(nonppn.status_transaksi, ppn.status_transaksi, bum.status_transaksi) = 'Komplain Diterima'
                                                     GROUP BY ik.id_inv";
                                             $query = mysqli_query($connect, $sql);
                                             $total_perlu_review = mysqli_num_rows($query);

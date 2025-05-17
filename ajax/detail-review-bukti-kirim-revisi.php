@@ -1,8 +1,7 @@
 <?php
 include '../akses.php'; // Pastikan koneksi database tersedia
 require_once __DIR__ . "/../function/function-enkripsi.php";
-require_once __DIR__ . "/../function/format-tanggal.php";
-
+require_once __DIR__ . "/../function/format-tanggal.php"; 
 require_once __DIR__ . "/../function/CSRFToken.php";
 
 $csrf = new CSRFToken();
@@ -178,7 +177,7 @@ if (isset($_POST['id'])) {
                                 </div>
                             <?php
                         } else if ($data_bukti['jenis_penerima'] == "Customer"){
-                            ?>
+                            ?>  
                                 <div class="card-header text-dark">
                                     <div class="table-responsive">
                                         <table class="table table-borderless">

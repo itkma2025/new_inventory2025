@@ -379,12 +379,9 @@ include "../akses.php";
                 <div class="card-body p-3">
                     <div class="table-responsive">
                         <div class="text-start mb-3">
-                            <a href="list-invoice-revisi.php" class="btn btn-warning btn-detail mb-2">
+                            <a href="menunggu-verif-invoice-reg-revisi.php" class="btn btn-warning btn-detail mb-2">
                                 <i class="bi bi-arrow-left"></i>
                                 Halaman Sebelumnya
-                            </a>
-                            <a id="btnDiterima" href="form-diterima-revisi.php?id=<?php echo encrypt($id_inv, $key); ?>&&idk=<?php echo encrypt($id_komplain, $key) ?>&&ids=<?php echo encrypt($id_spk, $key) ?>&&ida=<?php echo encrypt($data['alamat'], $key) ?>&&nok=<?php echo encrypt($no_komplain, $key) ?>" class="btn btn-secondary btn-detail mb-2">
-                                <i class="bi bi-send-fill"></i> Diterima
                             </a>
                         </div>
                     </div>

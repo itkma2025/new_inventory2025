@@ -133,6 +133,8 @@
                 $id_inv = $data_kondisi['id_inv'];
                 $no_inv = $data_detail['no_inv'];
                 $alamat = $data_detail['alamat'];
+                $nama_driver = $data_driver_rev['nama_driver'] ?? '';
+                $nama_driver = str_replace(' ', '_', $nama_driver);
                 include "query/produk-komplain-tmp.php";
                 $cek_status_cancel = $connect->query("SELECT id_inv_nonppn, status_transaksi FROM inv_nonppn WHERE id_inv_nonppn = '$id_inv'");
                 $data_status_cancel = mysqli_fetch_array($cek_status_cancel);
@@ -335,7 +337,6 @@
                                                                     <?php
                                                                 }
                                                             ?>
-
                                                     </td>
                                                 </tr>
                                                 <?php  
@@ -1044,11 +1045,19 @@
             if (mysqli_num_rows($query_bukti) > 0) {
                 $data_bukti = mysqli_fetch_array($query_bukti);
                 $id_bukti_terima = $data_bukti['id_bukti_terima'];
-                $gambar1 = $data_bukti['bukti_satu'];
+                echo $gambar1 = $data_bukti['bukti_satu'];
                 $gambar_bukti1 = "gambar-revisi/bukti1/$gambar1";
                 $jenis_penerima = $data_bukti['jenis_penerima'];
                 $no_resi = $data_bukti['no_resi'];
                 $tgl_terima = $data_bukti['tgl_terima'];
+                $img = "";
+                if ($gambar1 && file_exists("gambar-revisi/bukti_kirim/" . $gambar1)) {
+                    $img = "gambar-revisi/bukti1/" . $gambar1;
+                } else if($gambar1 && file_exists("gambar/bukti_kirim/" . $nama_driver . "/" . $gambar1)){
+                    $img = "gambar-revisi/bukti_kirim/" . $nama_driver . "/" . $gambar1;
+                } else {
+                    $img = "assets/img/no_img.jpg";
+                }
             }
         ?>
         <div class="modal fade" id="bukti" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -2015,7 +2024,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                $id = $_GET['id'];
+                                $id = htmlspecialchars($_GET['id']);
                                 $selected_produk = [];
                                 $no = 1;
 

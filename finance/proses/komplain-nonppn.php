@@ -1,9 +1,9 @@
 <?php  
-    require_once __DIR__ . "/../akses.php";
+    require_once __DIR__ . "/../../akses.php";
     $id_user = decrypt($_SESSION['tiket_id'], $key_global);
 
     // Penghubung Library
-    require_once __DIR__ . '/../assets/vendor/autoload.php';
+    require_once __DIR__ . '/../../assets/vendor/autoload.php';
     // Library Tangal
     use Carbon\Carbon;
     $datetime_now = Carbon::now();
@@ -20,9 +20,9 @@
         $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
         $whoops->register();
     }
-    require_once __DIR__ . "/../function/uuid.php";
+    require_once __DIR__ . "/../../function/uuid.php";
     // Library sanitasi input data
-    require_once __DIR__ . "/../function/sanitasi_input.php";
+    require_once __DIR__ . "/../../function/sanitasi_input.php";
     $sanitasi_post = sanitizeInput($_POST);
 
     if(isset($sanitasi_post['komplain'])){

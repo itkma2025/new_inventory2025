@@ -103,111 +103,111 @@
 		} catch (exception $e){
 			$connect->rollback();
 			$_SESSION['info'] = "Data Gagal Disimpan";
-            echo $e->getMessage();
-			// header("Location: {$_SERVER['HTTP_REFERER']}");
+            // echo $e->getMessage();
+			header("Location: {$_SERVER['HTTP_REFERER']}");
             exit();
 		}
     } else if ($action === 'reject') {
-		// $id = urldecode($sanitasi_get['id']);
-		// $id_inv = decrypt($id, $key_global);
-		// $jenis = isset($sanitasi_get['jenis']) ? $sanitasi_get['jenis'] : null;
-		// if (!in_array($jenis, ['1', '2'], true)) {
-		// 	// Tidak valid → redirect atau tolak proses
-		// 	die("Akses ditolak. Parameter tidak valid.");
-		// }
+		$id = urldecode($sanitasi_get['id']);
+		$id_komplain = decrypt($id, $key_global);
+		$jenis = isset($sanitasi_get['jenis']) ? $sanitasi_get['jenis'] : null;
+		if (!in_array($jenis, ['1', '2'], true)) {
+			// Tidak valid → redirect atau tolak proses
+			die("Akses ditolak. Parameter tidak valid.");
+		}
 
-		// $alasan = $sanitasi_get['alasan'];
-		// $status_review = 1;
-		// $approval = 1;
-		// $sql_status_kirim = $connect->query("SELECT jenis_penerima FROM status_kirim WHERE id_inv = '$id_inv'");
-		// $data_status_kirim = $sql_status_kirim->fetch_assoc();
-		// $jenis_penerima = $data_status_kirim['jenis_penerima'];
+		$alasan = $sanitasi_get['alasan'];
+		$status_review = 1;
+		$approval = 1;
+		$sql_status_kirim = $connect->query("SELECT jenis_penerima FROM revisi_status_kirim WHERE id_komplain = '$id_komplain'");
+		$data_status_kirim = $sql_status_kirim->fetch_assoc();
+		$jenis_penerima = $data_status_kirim['jenis_penerima'];
 
-		// $update_jenis_penerima = '';
-		// if($jenis_penerima == 'Ekspedisi'){
-		// 	$update_jenis_penerima = $jenis_penerima;
-		// }
+		$update_jenis_penerima = '';
+		if($jenis_penerima == 'Ekspedisi'){
+			$update_jenis_penerima = $jenis_penerima;
+		}
 
-		// // Mulai Transaksi
-		// $connect->begin_transaction();
-		// try {
-		// 	// Blok kode jika ada kondisi dan tanpa double query
-		// 	// tentukan field yang selalu di update
-		// 	$query_status_kirim = "UPDATE status_kirim SET status_review = ?, review_date = ?";
+		// Mulai Transaksi
+		$connect->begin_transaction();
+		try {
+			// Blok kode jika ada kondisi dan tanpa double query
+			// tentukan field yang selalu di update
+			$query_status_kirim = "UPDATE revisi_status_kirim SET status_review = ?, review_date = ?";
 
-		// 	// Parameter awal
-		// 	$params = [
-		// 		$status_review, $datetime_now
-		// 	];
+			// Parameter awal
+			$params = [
+				$status_review, $datetime_now
+			];
 
-		// 	// Kondisi jenis reject
-		// 	if($jenis == '2'){
-		// 		$query_status_kirim .= ", jenis_penerima = ?";
-		// 		$params[] = $update_jenis_penerima;
-		// 	}
+			// Kondisi jenis reject
+			if($jenis == '2'){
+				$query_status_kirim .= ", jenis_penerima = ?";
+				$params[] = $update_jenis_penerima;
+			}
 
-		// 	// Tambahkan kondisi where
-		// 	$query_status_kirim .= " WHERE id_inv = ?";
-		// 	$params[] = $id_inv;
+			// Tambahkan kondisi where
+			$query_status_kirim .= " WHERE id_komplain = ?";
+			$params[] = $id_komplain;
 
-		// 	// Dapatkan tipe berdasarkan isi params
-		// 	$types = getParamTypes($params);
+			// Dapatkan tipe berdasarkan isi params
+			$types = getParamTypes($params);
 
-		// 	// Prepare dan bind
-		// 	$stmt = $connect->prepare($query_status_kirim);
-		// 	$stmt->bind_param($types, ...$params);
-		// 	$update_status_kirim = $stmt->execute();
+			// Prepare dan bind
+			$stmt = $connect->prepare($query_status_kirim);
+			$stmt->bind_param($types, ...$params);
+			$update_status_kirim = $stmt->execute();
 
-		// 	if (!$update_status_kirim) {
-		// 		throw new Exception("Gagal update status kirim");
-		// 	}
+			if (!$update_status_kirim) {
+				throw new Exception("Gagal update status kirim");
+			}
 
 
 
-		// 	// Update bukti terima
-		// 	$stmt = $connect->prepare("UPDATE inv_bukti_terima
-		// 								SET
-		// 									approval = ?,
-		// 									approval_date = ?,
-		// 									approval_by = ?,
-		// 									jenis_reject = ?,
-		// 									alasan = ? 	
-		// 								WHERE id_inv = ?
-		// 							");
+			// Update bukti terima
+			$stmt = $connect->prepare("UPDATE inv_bukti_terima_revisi
+										SET
+											approval = ?,
+											approval_date = ?,
+											approval_by = ?,
+											jenis_reject = ?,
+											alasan = ? 	
+										WHERE id_komplain = ?
+									");
 			
-		// 	$stmt->bind_param('ississ', $approval, $datetime_now, $id_user, $jenis, $alasan, $id_inv);
-		// 	$update_inv_bukti_terima = $stmt->execute();
+			$stmt->bind_param('ississ', $approval, $datetime_now, $id_user, $jenis, $alasan, $id_komplain);
+			$update_inv_bukti_terima = $stmt->execute();
 
-		// 	if (!$update_inv_bukti_terima) {
-		// 		throw new Exception("Gagal update status kirim");
-		// 	}
+			if (!$update_inv_bukti_terima) {
+				throw new Exception("Gagal update status kirim");
+			}
 
-		// 	// insert history bukti kirim
-		// 	$stmt = $connect->prepare("INSERT INTO history_inv_bukti_terima_revisi   
-		// 											(id_history, id_bukti_terima, id_inv, bukti_satu, bukti_dua, bukti_tiga, lokasi, approval, approval_date, approval_by, jenis_reject, alasan, created_date, created_by)
-		// 								SELECT ?, id_bukti_terima, id_inv, bukti_satu, bukti_dua, bukti_tiga, lokasi, approval, approval_date, approval_by, jenis_reject, alasan, created_date, created_by 
-		// 								FROM inv_bukti_terima
-		// 								WHERE id_inv = ?");
-		// 	// Bind parameter dan eksekusi
-		// 	$stmt->bind_param("ss", $id_history, $id_inv);
-		// 	$insert_history = $stmt->execute();
-		// 	if (!$insert_history) {
-		// 		throw new Exception("Gagal update status kirim");
-		// 	}
+			// insert history bukti kirim
+			$stmt = $connect->prepare("INSERT INTO history_inv_bukti_terima_revisi   
+													(id_history, id_bukti_terima, id_komplain, bukti_satu, bukti_dua, bukti_tiga, lokasi, approval, approval_date, approval_by, jenis_reject, alasan, created_date, created_by)
+										SELECT ?, id_bukti_terima, id_komplain, bukti_satu, bukti_dua, bukti_tiga, lokasi, approval, approval_date, approval_by, jenis_reject, alasan, created_date, created_by 
+										FROM inv_bukti_terima
+										WHERE id_komplain = ?");
+			// Bind parameter dan eksekusi
+			$stmt->bind_param("ss", $id_history, $id_komplain);
+			$insert_history = $stmt->execute();
+			if (!$insert_history) {
+				throw new Exception("Gagal update status kirim");
+			}
 
-		// 	// Jika semua berhasil, commit perubahan
-		// 	$connect->commit();
-		// 	$_SESSION['info'] = "Disimpan";
-		// 	header("Location: {$_SERVER['HTTP_REFERER']}");
-        //     exit();
-		// } catch (exception $e){
-		// 	// Jika ada kesalahan, rollback perubahan
-		// 	$connect->rollback();
-		// 	$_SESSION['info'] = "Data Gagal Disimpan";
-		// 	// echo $e->getMessage();
-		// 	header("Location: {$_SERVER['HTTP_REFERER']}");
-        //     exit();
-		// }
+			// Jika semua berhasil, commit perubahan
+			$connect->commit();
+			$_SESSION['info'] = "Disimpan";
+			header("Location: {$_SERVER['HTTP_REFERER']}");
+            exit();
+		} catch (exception $e){
+			// Jika ada kesalahan, rollback perubahan
+			$connect->rollback();
+			$_SESSION['info'] = "Data Gagal Disimpan";
+			// echo $e->getMessage();
+			header("Location: {$_SERVER['HTTP_REFERER']}");
+            exit();
+		}
     } else {
         header("Location:../404.php");
     }

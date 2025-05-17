@@ -312,10 +312,12 @@ require_once 'function/function-enkripsi.php';
                                                                             sk.dikirim_driver, 
                                                                             sk.dikirim_ekspedisi,
                                                                             sk.diambil_oleh,
+                                                                            ip.nama_penerima,
                                                                             COALESCE(us.nama_user, eks.nama_ekspedisi) AS pengirim
                                                                         FROM revisi_status_kirim AS sk
                                                                         LEFT JOIN $database2.user us ON(sk.dikirim_driver = us.id_user)
                                                                         LEFT JOIN ekspedisi eks ON(sk.dikirim_ekspedisi = eks.id_ekspedisi)
+                                                                        LEFT JOIN inv_penerima_revisi ip ON(sk.id_komplain = ip.id_komplain)
                                                                         WHERE sk.id_komplain = '$id_komplain'");
                                             
                                             if($driver && mysqli_num_rows($driver) > 0) {
@@ -323,6 +325,7 @@ require_once 'function/function-enkripsi.php';
                                                 $jenis_pengiriman = isset($data_pengiriman['jenis_pengiriman']) ? $data_pengiriman['jenis_pengiriman'] : '';
                                                 $pengirim = isset($data_pengiriman['pengirim']) ? $data_pengiriman['pengirim'] : '';
                                                 $diambil_oleh = isset($data_pengiriman['diambil_oleh']) ? $data_pengiriman['diambil_oleh'] : '';
+                                                $nama_penerima = isset($data_pengiriman['nama_penerima']) ? $data_pengiriman['nama_penerima'] : '';
                                             } else {
                                                 $jenis_pengiriman = '';
                                                 $pengirim = '';
@@ -332,6 +335,9 @@ require_once 'function/function-enkripsi.php';
                                             if($status_trx == "Komplain Dikirim"){
                                                 echo "<b>Dikirim - " . $jenis_pengiriman . "</b><br>";
                                                 echo "(". $pengirim .")";
+                                            } else if($status_trx == "Komplain Diterima"){
+                                                echo "<b>Diterima Oleh</b><br>";
+                                                echo "(". $nama_penerima .")";
                                             } else if($status_trx == "Komplain Diambil"){
                                                 echo "<b>" . $jenis_pengiriman . "</b><br>";
                                                 echo "(". $diambil_oleh .")";

@@ -1,6 +1,6 @@
 <?php 
     require_once "akses.php";
-    $sql_inv = "SELECT
+    $sql_inv = "SELECT DISTINCT
                         COALESCE(nonppn.id_inv_nonppn, ppn.id_inv_ppn, bum.id_inv_bum) AS id_inv,
                         COALESCE(nonppn.no_inv, ppn.no_inv, bum.no_inv) AS no_inv,
                         COALESCE(nonppn.tgl_inv, ppn.tgl_inv, bum.tgl_inv) AS tgl_inv,
@@ -59,7 +59,7 @@
     $detail2 = $connect->query($sql_inv . " GROUP BY sr.no_spk ORDER BY sr.no_spk ASC");
 
     // Data Untuk Menampilkan detail
-    $produk = $connect->query($sql_inv . " ORDER BY tpk.created_date ASC");
+    $produk = $connect->query($sql_inv . " GROUP BY tpk.id_produk ORDER BY tpk.created_date ASC");
 
 
 ?>
