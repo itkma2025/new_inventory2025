@@ -157,18 +157,10 @@
                                     <tr>
                                         <td style="display: none;"><?php echo $no++ ?></td>
                                         <td class="text-center text-nowrap align-middle">
-                                            <?php
-                                                    if($jenis_pengiriman = 'Driver' && $jenis_penerima == ''){
-                                                        ?>
-                                                            <a href="detail-invoice-revisi.php?id=<?php echo encrypt($data['id_inv'], $key)?>&&id_komplain=<?php echo $id_komplain ?>"
-                                                            class="btn btn-primary btn-sm">
-                                                                <i class="bi bi-arrow-repeat"></i> Proses
-                                                            </a>
-                                                        <?php
-                                                    } else {
-                                                       
-                                                    }
-                                                ?>
+                                            <a href="detail-invoice-revisi.php?id=<?php echo encrypt($data['id_inv'], $key)?>&&id_komplain=<?php echo $id_komplain ?>"
+                                            class="btn btn-primary btn-sm">
+                                                <i class="bi bi-arrow-repeat"></i> Proses
+                                            </a>   
                                         </td>
                                         <td class="text-nowrap text-center">
                                             <?php echo $no_inv_revisi ?>

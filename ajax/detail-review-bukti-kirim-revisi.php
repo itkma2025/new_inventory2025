@@ -10,7 +10,7 @@ $_SESSION['csrf'] = $token;
 
 if (isset($_POST['id'])) {
     $id = urldecode($_POST['id']);
-    echo $id_komplain = decrypt($id, $key_global); // Dekripsi ID 
+    $id_komplain = decrypt($id, $key_global); // Dekripsi ID 
     $id_komplain = mysqli_real_escape_string($connect, $id_komplain);
     $id_komplain_encrypt = encrypt($id_komplain, $key_global);
     $sql_bukti = "SELECT 
@@ -264,7 +264,7 @@ if (isset($_POST['id'])) {
                         }
                     ?>
                 </div>
-            </div>
+            </div> 
             <div class="card-footer">
                 <div class="d-flex justify-content-center">
                     <div>

@@ -186,7 +186,7 @@
 			$stmt = $connect->prepare("INSERT INTO history_inv_bukti_terima_revisi   
 													(id_history, id_bukti_terima, id_komplain, bukti_satu, bukti_dua, bukti_tiga, lokasi, approval, approval_date, approval_by, jenis_reject, alasan, created_date, created_by)
 										SELECT ?, id_bukti_terima, id_komplain, bukti_satu, bukti_dua, bukti_tiga, lokasi, approval, approval_date, approval_by, jenis_reject, alasan, created_date, created_by 
-										FROM inv_bukti_terima
+										FROM inv_bukti_terima_revisi
 										WHERE id_komplain = ?");
 			// Bind parameter dan eksekusi
 			$stmt->bind_param("ss", $id_history, $id_komplain);
@@ -204,8 +204,8 @@
 			// Jika ada kesalahan, rollback perubahan
 			$connect->rollback();
 			$_SESSION['info'] = "Data Gagal Disimpan";
-			// echo $e->getMessage();
-			header("Location: {$_SERVER['HTTP_REFERER']}");
+			echo $e->getMessage();
+			// header("Location: {$_SERVER['HTTP_REFERER']}");
             exit();
 		}
     } else {
