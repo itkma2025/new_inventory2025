@@ -268,7 +268,7 @@ require_once "function/function-enkripsi.php";
                                             WHERE ik.status_komplain = '0' 
                                             AND sk.status_review = '1' 
                                             AND ibt.approval = '2' 
-                                            AND $sort_data
+                                            AND $sort_data GROUP BY ik.id_komplain
                                             $filter";
                                     $query = mysqli_query($connect, $sql);
                                     $total_data_sudah_review = mysqli_num_rows($query);

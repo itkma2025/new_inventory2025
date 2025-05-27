@@ -473,7 +473,7 @@ require_once 'function/function-enkripsi.php';
                                 <div class="carousel-item active">
                                     <img src="<?php echo $gambar_bukti1 ?>" class="d-block w-100">
                                     <div class="text-center mt-3">
-                                        <h5>Bukti Terima 1</h5>
+                                        <h5>Bukti Terima</h5>
                                     </div>
                                 </div>
                             <?php endif; ?>
@@ -481,7 +481,7 @@ require_once 'function/function-enkripsi.php';
                                 <div class="carousel-item">
                                     <img src="<?php echo $gambar_bukti2 ?>" class="d-block w-100">
                                     <div class="text-center mt-3">
-                                        <h5>Bukti Terima 2</h5>
+                                        <h5>Bukti Terima</h5>
                                     </div>
                                 </div>
                             <?php endif; ?>
@@ -489,7 +489,7 @@ require_once 'function/function-enkripsi.php';
                                 <div class="carousel-item">
                                     <img src="<?php echo $gambar_bukti3 ?>" class="d-block w-100">
                                     <div class="text-center mt-3">
-                                        <h5>Bukti Terima 3</h5>
+                                        <h5>Bukti Terima</h5>
                                     </div>
                                 </div>
                             <?php endif; ?>

@@ -34,3 +34,4 @@
 2025-03-18 13:37:18 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.
 2025-03-18 13:37:43 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.
 2025-03-18 13:37:50 - ERROR: ID NONPPN-25031eb7dd265e4617 tidak ditemukan atau tidak ada perubahan dalam database.
+2025-05-26 16:32:25 - ERROR: Column 'total_inv' cannot be null

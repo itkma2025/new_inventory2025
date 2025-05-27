@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+// Simulasi set cookie di browser (dilakukan dari server atau JS manual)
+document.cookie = "jwt_token_test=ini.jwt.token; path=/;";
+
+// Kirim cookie ke server lain (8083)
+fetch('http://localhost:8083/', {
+  method: 'GET',
+  credentials: 'include' // penting agar cookie dikirim
+})
+.then(res => res.json())
+.then(data => {
+  console.log('Response dari 8083:', data);
+});
+</script>
+</body>
+</html>

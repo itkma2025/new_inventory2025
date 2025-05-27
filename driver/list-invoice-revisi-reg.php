@@ -151,7 +151,7 @@
                                         $alamat = $data['alamat'];
                                         $jenis_pengiriman = $data['jenis_pengiriman'];
                                         $jenis_penerima = $data['jenis_penerima'];
-                                        $no_inv_revisi = $data['no_inv_rev'];
+                                        $no_inv = empty($data['no_inv']) ? $data['no_inv_rev'] : $data['no_inv'];                                    
                                         $id_komplain = encrypt($data['id_komplain'], $key);
                                     ?>
                                     <tr>
@@ -163,7 +163,7 @@
                                             </a>   
                                         </td>
                                         <td class="text-nowrap text-center">
-                                            <?php echo $no_inv_revisi ?>
+                                            <?php echo $no_inv ?>
                                             <br>
                                             <?php echo date('H:i:s', strtotime($data['created_date'])) ?>
                                             <br>

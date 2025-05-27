@@ -13,7 +13,7 @@
         $id_inv = htmlspecialchars($_POST['id_inv']);   
         $id_inv_decrypt = decrypt($id_inv, $key);
         $id_komplain = htmlspecialchars($_POST['id_komplain']);   
-        $id_komplain_decrypt = decrypt($id_komplain, $key); 
+        echo $id_komplain_decrypt = decrypt($id_komplain, $key); 
         $id_spk = htmlspecialchars($_POST['id_spk']);   
         $id_spk_decrypt = decrypt($id_spk, $key);
         $alamat = htmlspecialchars(decrypt($_POST['alamat'], $key)); 
@@ -36,15 +36,14 @@
         $month = date('m');
         $year = date('Y');
         $fileName = $month . $year . uuid() .  $day;
-        $fileNameEncrypt = encrypt($fileName, $key);
-        $newFileName = 'IMG_' . $date_now . $fileNameEncrypt . '.png';
+        $newFileName = 'IMG_' . $date_now . $fileName . '.png';
 
         if($diterima_oleh == 'Customer'){
             // Memulai transaksi
             mysqli_begin_transaction($connect); 
 
             try {
-                // Cek apakah data sudah ada di inv_bukti_terima
+                // Cek apakah data sudah ada di inv_bukti_terima_revisi
                 $cek_bukti = mysqli_query($connect, "SELECT id_komplain FROM inv_bukti_terima_revisi WHERE id_komplain = '$id_komplain_decrypt'");
                 if (mysqli_num_rows($cek_bukti) > 0) {
                     // Jika data sudah ada, lakukan update
@@ -81,7 +80,7 @@
                     $query_update_inv = mysqli_query($connect, "UPDATE inv_bum SET status_transaksi = 'Komplain Diterima' WHERE id_inv_bum = '$id_inv_decrypt'");
                 }
 
-                $query_update_status = mysqli_query($connect, "UPDATE revisi_status_kirim SET jenis_penerima = 'Customer' WHERE id_komplain = '$id_komplain_decrypt'");
+                $query_update_status = mysqli_query($connect, "UPDATE revisi_status_kirim SET jenis_penerima = 'Customer', status_review = '0' WHERE id_komplain = '$id_komplain_decrypt'");
 
                 $query_inv_revisi = mysqli_query($connect, "UPDATE inv_revisi SET status_pengiriman = '1', status_trx_komplain = '0' WHERE id_inv = '$id_inv_decrypt'");
 
@@ -125,22 +124,43 @@
                 mysqli_close($connect);
             }
         } else if($diterima_oleh == 'Ekspedisi'){
+            // $cek_bukti = mysqli_query($connect, "SELECT id_komplain FROM inv_bukti_terima_revisi WHERE id_komplain = '$id_komplain_decrypt'");
+            // if (mysqli_num_rows($cek_bukti) > 0) {
+            //     // Data sudah ada, update saja
+            //     echo "<pre>";
+            //     echo "Data sudah ada, update saja";
+            //     echo $newFileName;
+            //     echo "</pre>";
+            // } else { 
+            //     // Data tidak ada, insert baru
+            //     echo "Data tidak ada, insert baru";
+            // }
             // Memulai transaksi
             mysqli_begin_transaction($connect);
 
             try {
                 // Cek apakah data sudah ada di inv_bukti_terima_revisi
-                $query = mysqli_query($connect, "SELECT * FROM inv_bukti_terima_revisi WHERE id_bukti_terima = '$id_bukti_terima' AND id_komplain = '$id_komplain_decrypt'");
-                $data_bukti_terima  = mysqli_fetch_assoc($query);
-                if ($data_bukti_terima ) {
+                $cek_bukti = mysqli_query($connect, "SELECT id_komplain FROM inv_bukti_terima_revisi WHERE id_komplain = '$id_komplain_decrypt'");
+                if (mysqli_num_rows($cek_bukti) > 0) {
                     // Data sudah ada, update saja
-                    $bukti_terima = mysqli_query($connect, "UPDATE inv_bukti_terima_revisi SET bukti_satu = '$newFileName' WHERE id_bukti_terima = '$id_bukti_terima' AND id_komplain = '$id_komplain_decrypt'");
-                } else {
+                    $bukti_terima = mysqli_query($connect, "UPDATE inv_bukti_terima_revisi SET bukti_satu = '$newFileName', approval = '0' WHERE id_komplain = '$id_komplain_decrypt'");
+                } else { 
                     // Data tidak ada, insert baru
                     $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima_revisi (id_bukti_terima, id_komplain, bukti_satu) VALUES ('$id_bukti_terima', '$id_komplain_decrypt', '$newFileName')");
                 }
 
-                $update_revisi_status_kirim = mysqli_query($connect, "UPDATE revisi_status_kirim SET jenis_penerima = 'Ekspedisi', dikirim_ekspedisi = '$id_ekspedisi', no_resi = '$resi', jenis_ongkir = '$jenis_ongkir', ongkir = '$ongkir' WHERE id_komplain = '$id_komplain_decrypt'");
+                $id_inv_substr = $id_inv_decrypt;
+                $inv_id = substr($id_inv_substr, 0, 3);
+                $query_update_inv = "";
+                if ($inv_id = "NON"){
+                    $query_update_inv = mysqli_query($connect, "UPDATE inv_nonppn SET status_transaksi = 'Komplain Dikirim' WHERE id_inv_nonppn = '$id_inv_decrypt'");
+                } else if ($inv_id = "PPN"){
+                    $query_update_inv = mysqli_query($connect, "UPDATE inv_ppn SET status_transaksi = 'Komplain Dikirim' WHERE id_inv_ppn = '$id_inv_decrypt'");
+                } else if ($inv_id = "BUM"){
+                    $query_update_inv = mysqli_query($connect, "UPDATE inv_bum SET status_transaksi = 'Komplain Dikirim' WHERE id_inv_bum = '$id_inv_decrypt'");
+                }
+
+                $update_revisi_status_kirim = mysqli_query($connect, "UPDATE revisi_status_kirim SET jenis_penerima = 'Ekspedisi', dikirim_ekspedisi = '$id_ekspedisi', no_resi = '$resi', jenis_ongkir = '$jenis_ongkir', ongkir = '$ongkir', status_kirim = '0', status_review = '0' WHERE id_komplain = '$id_komplain_decrypt'");
         
                 // Proses penyimpanan gambar
                 // Create ../../gambar-revisi/bukti_kirim/ folder if it doesn't exist
@@ -168,7 +188,6 @@
                 mysqli_commit($connect);
                 $_SESSION['info'] = "Disimpan";
                 header("Location:../list-invoice-revisi.php", true, 303);
-
             } catch (Exception $e) {
                 // Jika terjadi pengecualian (exception), rollback transaksi
                 mysqli_rollback($connect);

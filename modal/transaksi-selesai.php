@@ -49,6 +49,10 @@
             <div class="modal-body">
                 <form action="<?php echo $action_komplain ?>" method="POST">
                     <input type="hidden" name="id_inv" value="<?php echo encrypt($id_inv, $key_global); ?>">
+                    <input type="hidden" name="no_inv" value="<?php echo $data_inv['no_inv']; ?>">
+                    <input type="hidden" name="cs_inv" value="<?php echo $data_inv['cs_inv']; ?>">
+                    <input type="hidden" name="alamat" value="<?php echo $data_inv['alamat']; ?>">
+                    <input type="hidden" name="total_inv" value="<?php echo $data_inv['total_inv']; ?>">
                     <div id="tidak_sesuai_form">
                         <div class="mb-3">
                             <label><b>Tanggal Komplain</b></label>

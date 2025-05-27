@@ -1,6 +1,8 @@
 <?php
-$page = 'list-inv';
-include "../akses.php";
+require_once '../akses.php';
+$id_user = decrypt($_SESSION['tiket_id'], $key_global);
+$page = 'list-inv'; 
+$page2 = 'list-inv-rev'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -383,9 +385,30 @@ include "../akses.php";
                                 <i class="bi bi-arrow-left"></i>
                                 Halaman Sebelumnya
                             </a>
-                            <a id="btnDiterima" href="form-diterima-revisi.php?id=<?php echo encrypt($id_inv, $key); ?>&&idk=<?php echo encrypt($id_komplain, $key) ?>&&ids=<?php echo encrypt($id_spk, $key) ?>&&ida=<?php echo encrypt($data['alamat'], $key) ?>&&nok=<?php echo encrypt($no_komplain, $key) ?>" class="btn btn-secondary btn-detail mb-2">
-                                <i class="bi bi-send-fill"></i> Diterima
-                            </a>
+                            <?php  
+                                $sql_bukti_terima = $connect->query("SELECT jenis_reject FROM inv_bukti_terima_revisi WHERE id_komplain = '$id_komplain'");
+                                $data_bukti_terima = mysqli_fetch_assoc($sql_bukti_terima);
+                                $jenis_reject = (isset($data_bukti_terima['jenis_reject']) && $data_bukti_terima['jenis_reject'] === '1') ? '1' : '';
+                                if($jenis_reject == '1'){
+                                    ?>
+                                        <a id="btnDiterima" href="form-reupload-revisi.php?id=<?php echo encrypt($id_inv, $key); ?>&&idk=<?php echo encrypt($id_komplain, $key) ?>&&ids=<?php echo encrypt($id_spk, $key) ?>&&ida=<?php echo encrypt($data['alamat'], $key) ?>&&nok=<?php echo encrypt($no_komplain, $key) ?>" class="btn btn-secondary btn-detail mb-2">
+                                            <i class="bi bi-send-fill"></i> Reupload Bukti Kirim
+                                        </a>
+                                    <?php
+                                } else if ($jenis_reject == '2'){
+                                    ?>
+                                        <a id="btnDiterima" href="form-diterima-revisi.php?id=<?php echo encrypt($id_inv, $key); ?>&&idk=<?php echo encrypt($id_komplain, $key) ?>&&ids=<?php echo encrypt($id_spk, $key) ?>&&ida=<?php echo encrypt($data['alamat'], $key) ?>&&nok=<?php echo encrypt($no_komplain, $key) ?>" class="btn btn-secondary btn-detail mb-2">
+                                            <i class="bi bi-send-fill"></i> Diterima
+                                        </a>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <a id="btnDiterima" href="form-diterima-revisi.php?id=<?php echo encrypt($id_inv, $key); ?>&&idk=<?php echo encrypt($id_komplain, $key) ?>&&ids=<?php echo encrypt($id_spk, $key) ?>&&ida=<?php echo encrypt($data['alamat'], $key) ?>&&nok=<?php echo encrypt($no_komplain, $key) ?>" class="btn btn-secondary btn-detail mb-2">
+                                            <i class="bi bi-send-fill"></i> Diterima
+                                        </a>
+                                    <?php
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="table-responsive" id="dataProduk" style="display: block;">

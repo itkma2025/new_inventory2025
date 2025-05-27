@@ -182,6 +182,7 @@
 				throw new Exception("Gagal update status kirim");
 			}
 
+
 			// insert history bukti kirim
 			$stmt = $connect->prepare("INSERT INTO history_inv_bukti_terima_revisi   
 													(id_history, id_bukti_terima, id_komplain, bukti_satu, bukti_dua, bukti_tiga, lokasi, approval, approval_date, approval_by, jenis_reject, alasan, created_date, created_by)

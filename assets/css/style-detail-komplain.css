@@ -1,0 +1,115 @@
+ /* Atur ukuran maksimal untuk Fancybox */
+.fancybox__container {
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important; /* Fancybox selalu di depan */
+}
+
+.img-preview {
+    height: 300px !important; /* Sesuaikan tinggi sesuai kebutuhan */
+    width: 300px !important; /* Sesuaikan lebar sesuai kebutuhan */
+}
+
+.label-mobile {
+    display: none;
+}
+
+.disable-click {
+    pointer-events: none;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .mobile-text {
+        text-align: left !important;
+    }
+
+    /* Tambahkan aturan CSS khusus untuk tampilan mobile di bawah 767px */
+    .col-12.col-md-2 {
+        /* Contoh: Mengatur tinggi elemen select pada tampilan mobile */
+        height: 50px;
+    }
+
+    .card-mobile {
+        display: none;
+    }
+
+    .label-mobile {
+        display: block;
+    }
+
+        .w-100 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .p-2 {
+        flex: 1 1 calc(33.33% - 10px);
+        margin: 5px;
+        /* text-align: center; */
+    }
+
+    .text-end {
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .btn button {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+.btn.active {
+    background-color: black;
+    color: white;
+    border-color: 1px solid white;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Menghilangkan garis pada input */
+input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .mobile-text {
+        text-align: left !important;
+    }
+}

@@ -1,9 +1,9 @@
 <?php  
     require_once "../akses.php";
-    $id_user = decrypt($_SESSION['tiket_id'], $key_global);
+    echo $id_user = decrypt($_SESSION['tiket_id'], $key_global);
     $sql_rev = "
             (
-                SELECT 
+                SELECT DISTINCT
                     NULL AS no_inv_rev, -- dummy
                     ik.id_inv,
                     ik.id_komplain,
@@ -34,14 +34,16 @@
                 WHERE sk.dikirim_driver = '$id_user'
                 AND ir.status_pengiriman = '0'
                 AND sk.jenis_penerima = ''
+                AND COALESCE(nonppn.status_transaksi, ppn.status_transaksi, bum.status_transaksi) = 'Komplain Dikirim'
                 AND STR_TO_DATE(sk.tgl_kirim, '%d/%m/%Y') <= CURDATE()
+                OR COALESCE(nonppn.status_transaksi, ppn.status_transaksi, bum.status_transaksi) = 'Komplain'
                 GROUP BY no_inv
             )
 
             UNION ALL
 
             (
-                SELECT
+                SELECT DISTINCT
                     MAX(ir.no_inv_revisi) AS no_inv_rev,
                     COALESCE(nonppn.id_inv_nonppn, ppn.id_inv_ppn, bum.id_inv_bum) AS id_inv,
                     sk.id_komplain,

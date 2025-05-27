@@ -66,7 +66,7 @@ if (isset($_POST['id'])) {
                                     <script>
                                         fetch("view-nie.php")
                                             .then(response => response.blob())
-                                            .then(blob => {
+                                            .then(blob => { 
                                                 const url = URL.createObjectURL(blob);
                                                 document.getElementById("pdf-embed").src = url;
                                             })

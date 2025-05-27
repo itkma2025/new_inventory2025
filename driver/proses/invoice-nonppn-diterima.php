@@ -74,7 +74,7 @@ if (isset($_POST['diterima'])) {
 
             // Query untuk update jenis_penerima di status_kirim
             $query_update_status = mysqli_query($connect, "UPDATE status_kirim SET jenis_penerima = 'Customer', dikirim_ekspedisi = '', no_resi = '', status_review = '0' WHERE id_inv = '$id_inv_decrypt'");
-
+            
             // Proses penyimpanan gambar
             // Create ../../gambar/bukti_kirim/ folder if it doesn't exist
             $baseDir = '../../gambar/bukti_kirim/';

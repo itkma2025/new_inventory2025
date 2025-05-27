@@ -1,0 +1,55 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-5 {
+    flex: 0 0 50%; /* Gunakan 50% dari lebar kolom saat tampilan mobile */
+    max-width: 50%;
+}
+
+.col-7 {
+    flex: 0 0 50%; /* Gunakan 50% dari lebar kolom saat tampilan mobile */
+    max-width: 50%;
+}
+
+p {
+    white-space: nowrap; /* Mencegah teks berjalan ke baris baru */
+    text-overflow: ellipsis; /* Menggantikan teks yang terpotong dengan elipsis (...) jika terlalu panjang */
+}
+
+.col-12 {
+    padding: 0 0 0 0px !important;
+}
+
+/* Atur ukuran maksimal untuk Fancybox */
+.fancybox__container {
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important; /* Fancybox selalu di depan */
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+
+    .btn-mobile{
+        width: 100%;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .mobile-text {
+        text-align: left !important;
+    }
+
+    #dt-search-0 {
+        width: 100%;
+    }
+
+    .col-md-auto {
+        padding: 0;
+    }
+}

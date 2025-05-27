@@ -1839,3 +1839,15 @@ Stack trace:
 [17-May-2025 11:35:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
 [17-May-2025 11:35:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
 [17-May-2025 11:35:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[27-May-2025 08:23:12] PHP Warning: include(akses.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[27-May-2025 08:23:12] PHP Warning: include(): Failed opening 'akses.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45

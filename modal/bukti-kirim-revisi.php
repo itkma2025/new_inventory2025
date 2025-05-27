@@ -10,7 +10,7 @@ $_SESSION['csrf'] = $token;
 
 if (isset($_POST['id'])) {
     $id = urldecode($_POST['id']);
-    $id_komplain = decrypt($id, $key_global); // Dekripsi ID 
+    $id_komplain = decrypt($id, $key_spk); // Dekripsi ID 
     $id_komplain = mysqli_real_escape_string($connect, $id_komplain);
     $id_komplain_encrypt = encrypt($id_komplain, $key_global);
     $sql_bukti = "SELECT
@@ -266,19 +266,6 @@ if (isset($_POST['id'])) {
                     ?>
                 </div>
             </div> 
-            <div class="card-footer">
-                <div class="d-flex justify-content-center">
-                    <div>
-                    <a href="proses/review-revisi.php?id=<?php echo urlencode($id_komplain_encrypt) ?>&&action=approval&&token=<?php echo $_SESSION['csrf'] ?>" class="btn btn-primary btn-md approval-btn" onclick="disableButtons(this)">
-                            <i class="bi bi-check-circle"></i> Approve
-                        </a>
-
-                        <a href="proses/review-revisi.php?id=<?php echo urlencode($id_komplain_encrypt) ?>&&action=reject&&token=<?php echo $_SESSION['csrf'] ?>" class="btn btn-danger btn-md reject-data" onclick="disableButtons(this)">
-                            <i class="bi bi-x-circle"></i> Reject
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
         <?php
     } else {
@@ -291,109 +278,8 @@ if (isset($_POST['id'])) {
         location.reload(); // Reload halaman
     }
 </script>
-<script>
-    $(".reject-data").on("click", function (e) {
-        e.preventDefault();
-        var getLink = $(this).attr("href");
 
-        $(".modal").modal("hide");
 
-        setTimeout(() => {
-            let selectedJenis = null;
-            let alasanReject = "";
-
-            // STEP 1 - Pilih Jenis Reject
-            function showStep1() {
-                Swal.fire({
-                    title: "Pilih Jenis Reject",
-                    html: `
-                        <div class="text-start">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="jenisReject" id="gambar" value="1" ${selectedJenis === "1" ? "checked" : ""}>
-                                <label class="form-check-label" for="gambar">Gambar</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="jenisReject" id="data" value="2" ${selectedJenis === "2" ? "checked" : ""}>
-                                <label class="form-check-label" for="data">Data</label>
-                            </div>
-                        </div>
-                    `,
-                    showCancelButton: true,
-                    confirmButtonText: "Next",
-                    cancelButtonText: "Batal",
-                    preConfirm: () => {
-                        const selected = document.querySelector('input[name="jenisReject"]:checked');
-                        if (!selected) {
-                            Swal.showValidationMessage("Silakan pilih jenis reject terlebih dahulu!");
-                            return false;
-                        }
-                        selectedJenis = selected.value;
-                        return true;
-                    }
-                }).then((step1) => {
-                    if (step1.isConfirmed) {
-                        showStep2();
-                    }
-                });
-            }
-
-            // STEP 2 - Masukkan Alasan
-            function showStep2() {
-                Swal.fire({
-                    title: "Masukkan Alasan Reject",
-                    html: `
-                        <textarea id="textareaAlasan" placeholder="Masukkan alasan di sini..." class="form-control">${alasanReject}</textarea>
-                    `,
-                    showCancelButton: true,
-                    showDenyButton: true,
-                    confirmButtonText: "Submit",
-                    denyButtonText: "Kembali",
-                    cancelButtonText: "Batal",
-                    preConfirm: () => {
-                        const alasan = document.getElementById("textareaAlasan").value.trim();
-                        if (!alasan) {
-                            Swal.showValidationMessage("Alasan tidak boleh kosong!");
-                            return false;
-                        }
-                        alasanReject = alasan;
-                        return true;
-                    }
-                }).then((step2) => {
-                    if (step2.isDenied) {
-                        const textareaValue = document.getElementById("textareaAlasan").value.trim();
-                        if (textareaValue) {
-                            alasanReject = textareaValue;
-                        }
-                        showStep1();
-                    } else if (step2.isConfirmed) {
-                        const alasan = encodeURIComponent(alasanReject);
-                        const jenis = encodeURIComponent(selectedJenis);
-                        window.location.href = getLink + `&jenis=${jenis}&alasan=${alasan}`;
-                    }
-                });
-            }
-
-            // Mulai dari step 1
-            showStep1();
-
-        }, 300);
-    });
-</script>
-
-<script>
-    function disableButtons(btn) {
-        // Nonaktifkan tombol yang diklik
-        btn.classList.add('disabled');
-        btn.style.pointerEvents = 'none';
-        btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Processing...';
-
-        // Optional: nonaktifkan semua tombol lain juga
-        document.querySelectorAll('a.btn').forEach(function(button) {
-            button.classList.add('disabled');
-            button.style.pointerEvents = 'none';
-        });
-    }
-</script>
 
 
 
