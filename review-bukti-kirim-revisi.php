@@ -210,7 +210,7 @@
                                                     WHERE 
                                                     ik.status_komplain = '0' 
                                                     AND sk.status_review = '0' 
-                                                    AND COALESCE(nonppn.status_transaksi, ppn.status_transaksi, bum.status_transaksi) = 'Komplain Diterima'
+                                                    AND COALESCE(nonppn.status_transaksi, ppn.status_transaksi, bum.status_transaksi) IN ('Komplain Diterima', 'Komplain Diambil')
                                                     GROUP BY ik.id_inv";
                                             $query = mysqli_query($connect, $sql);
                                             $total_perlu_review = mysqli_num_rows($query);

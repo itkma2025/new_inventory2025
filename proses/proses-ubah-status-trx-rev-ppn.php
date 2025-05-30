@@ -1,6 +1,33 @@
 <?php
-include("../akses.php");
-require_once "../function/function-enkripsi.php";
+require_once __DIR__ . "/../akses.php";
+$id_user = decrypt($_SESSION['tiket_id'], $key_global);
+
+// Penghubung Library
+require_once __DIR__ . '/../assets/vendor/autoload.php';
+// Library Tangal
+use Carbon\Carbon;
+$datetime_now = Carbon::now();
+
+// Library Debugging
+use Whoops\Run;
+use Whoops\Handler\PrettyPageHandler;
+// Inisialisasi Whoops
+// Atur status aktif/non-aktif Whoops
+$whoops_enabled = false; // Ubah menjadi false untuk menonaktifkan
+
+if ($whoops_enabled) {
+    $whoops = new \Whoops\Run();
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
+    $whoops->register();
+}
+// Function encrypt dan decrypt
+require_once __DIR__ . "/../function/function-enkripsi.php";
+// Generate UUID
+require_once __DIR__ . "/../function/uuid.php";
+
+ // Library sanitasi input data
+require_once __DIR__ . "/../function/sanitasi_input.php";
+$sanitasi_post = sanitizeInput($_POST);
 if (isset($_POST['ubah-status'])) {
     $uuid = uuid();
     $day = date('d');
@@ -9,38 +36,28 @@ if (isset($_POST['ubah-status'])) {
     $id_status_kirim_revisi = "SKREV-" . $year . "" . $month . "" . $uuid . "" . $day;
     $id_trx_rev = "TRXREV-" . $year . "" . $month . "" . $uuid . "" . $day;
     $id_inv_rev = "INVREV-" . $year . "" . $month . "" . $uuid . "" . $day;
-    $status_kirim = htmlspecialchars($_POST['status_kirim']);
-    $id_komplain = htmlspecialchars($_POST['id_komplain']);
+    $status_kirim = $sanitasi_post['status_kirim'];
+    $id_komplain = $sanitasi_post['id_komplain'];
     $id_komplain_encrypt = encrypt($id_komplain, $key_spk);
-    $id_inv = htmlspecialchars($_POST['id_inv']);
-    $no_inv = htmlspecialchars($_POST['no_inv']);
-    $revisi_invoice = reviseInvoice($no_inv);
-    $tgl = htmlspecialchars($_POST['tgl']);
-    $cs_inv = htmlspecialchars($_POST['cs_inv']);
-    $alamat = htmlspecialchars($_POST['alamat'], ENT_QUOTES);
-    $total_inv = htmlspecialchars($_POST['total_inv']);
+    $id_inv = $sanitasi_post['id_inv'];
+    $no_inv = $sanitasi_post['no_inv'];
+    $tgl = $sanitasi_post['tgl'];
+    $cs_inv = $sanitasi_post['cs_inv'];
+    $alamat = $sanitasi_post['alamat'];
+    $total_inv = $sanitasi_post['total_inv'];
     if ($status_kirim == 'dikirim') {
-        $jenis_pengiriman = $_POST['jenis_pengiriman'];
+        $jenis_pengiriman = $sanitasi_post['jenis_pengiriman'];
         if ($jenis_pengiriman == 'Driver') {
-            $pengirim = $_POST['pengirim'];
+            $pengirim = $sanitasi_post['pengirim'];
+            // Begin transaction
+            $connect->begin_transaction();
             try {
-                // Begin transaction
-                mysqli_begin_transaction($connect);
                 // Simpan status kirim
                 $stmt = $connect->prepare("INSERT INTO revisi_status_kirim (id_status_kirim_revisi, id_komplain, jenis_pengiriman, dikirim_driver, tgl_kirim) VALUES (?, ?, ?, ?, ?)");
                 $stmt->bind_param('sssss', $id_status_kirim_revisi, $id_komplain, $jenis_pengiriman, $pengirim, $tgl);
                 $simpan_status_kirim = $stmt->execute();
 
                 if (!$simpan_status_kirim) {
-                    throw new Exception("Gagal simpan data: " . $stmt->error);
-                }
-
-                // Simpan Inv Revisi
-                $stmt =  $connect->prepare("INSERT INTO inv_revisi (id_inv_revisi, id_inv, no_inv_revisi, tgl_inv_revisi, pelanggan_revisi, alamat_revisi, total_inv, status_pengiriman, status_trx_komplain, status_trx_selesai) VALUES (?, ?, ?, ?, ?, ?, ?,  0, 0, 0)");
-                $stmt->bind_param('sssssss', $id_inv_rev, $id_inv, $revisi_invoice, $tgl, $cs_inv, $alamat, $total_inv);
-                $simpan_inv_rev = $stmt->execute();
-
-                if (!$simpan_inv_rev) {
                     throw new Exception("Gagal simpan data: " . $stmt->error);
                 }
 
@@ -68,17 +85,17 @@ if (isset($_POST['ubah-status'])) {
                 exit();
             }
         } else if ($jenis_pengiriman == 'Ekspedisi') {
-            $ekspedisi = htmlspecialchars($_POST['ekspedisi']);
-            $jenis_pengiriman = htmlspecialchars($_POST['jenis_pengiriman']);
+            $ekspedisi = $sanitasi_post['ekspedisi'];
+            $jenis_pengiriman = $sanitasi_post['jenis_pengiriman'];
             $jenis_penerima = 'Ekspedisi';
-            $resi = htmlspecialchars($_POST['resi']);
-            $jenis_ongkir = htmlspecialchars($_POST['jenis_ongkir']);
-            $ongkir = str_replace('.', '', $_POST['ongkir']); // Menghapus tanda ribuan (,)
+            $resi = $sanitasi_post['resi'];
+            $jenis_ongkir = $sanitasi_post['jenis_ongkir'];
+            $ongkir = str_replace('.', '', $sanitasi_post['ongkir']); // Menghapus tanda ribuan (,)
             $ongkir = intval($ongkir); // Mengubah string harga menjadi integer
-            $free_ongkir = htmlspecialchars($_POST['free_ongkir']);
-            $dikirim = htmlspecialchars($_POST['dikirim']);
-            $pj = htmlspecialchars($_POST['pj']);
-            $uuid = generate_uuid();
+            $free_ongkir = $sanitasi_post['free_ongkir'];
+            $dikirim = $sanitasi_post['dikirim'];
+            $pj = $sanitasi_post['pj'];
+            $uuid = uuid();
             $img_uuid = img_uuid();
             $year = date('y');
             $day = date('d');
@@ -105,8 +122,9 @@ if (isset($_POST['ubah-status'])) {
                 throw new Exception('Gagal mengupload file.');
             }
 
+            // Begin transaction
+            $connect->begin_transaction();
             try {
-                mysqli_begin_transaction($connect);
                 // Proses simpan status kirim revisi
                 $stmt = $connect->prepare("INSERT INTO revisi_status_kirim 
                                                                 (id_status_kirim_revisi, id_komplain, jenis_pengiriman, jenis_penerima, dikirim_ekspedisi, no_resi, jenis_ongkir, ongkir, free_ongkir, dikirim_oleh, penanggung_jawab, tgl_kirim) 
@@ -165,9 +183,9 @@ if (isset($_POST['ubah-status'])) {
                 exit();
             }
         } else if ($jenis_pengiriman == 'Diambil Langsung') {
-            $diambil_oleh = $_POST['diambil_oleh'];
+            $diambil_oleh = $sanitasi_post['diambil_oleh'];
             $diambil_oleh = ltrim($diambil_oleh, " \t"); // Menghapus spasi dan tab di awal teks
-            $uuid = generate_uuid();
+            $uuid = uuid();
             $img_uuid = img_uuid();
             $year = date('y');
             $day = date('d');
@@ -194,10 +212,9 @@ if (isset($_POST['ubah-status'])) {
                 throw new Exception('Gagal mengupload file.');
             }
 
+            // Begin transaction
+            $connect->begin_transaction();
             try {
-                // Begin transaction
-                mysqli_begin_transaction($connect);
-
                 $stmt = $connect->prepare("INSERT INTO revisi_status_kirim 
                                                                 (id_status_kirim_revisi, id_komplain, jenis_pengiriman, diambil_oleh, tgl_kirim) 
                                                         VALUES  (?, ?, ?, ?, ?)");
@@ -209,8 +226,8 @@ if (isset($_POST['ubah-status'])) {
                 }
 
                 $stmt = $connect->prepare("INSERT INTO inv_revisi 
-                                                                (id_inv_revisi, id_inv, no_inv_revisi, tgl_inv_revisi, pelanggan_revisi, alamat_revisi, total_inv, status_pengiriman, status_trx_komplain, status_trx_selesai) VALUES (?, ?, ?, ?, ?, ?, ?, 1, 1, 0)");
-                $stmt->bind_param('sssssss', $id_inv_rev, $id_inv, $revisi_invoice, $tgl, $cs_inv, $alamat, $total_inv);
+                                                                (id_inv_revisi, id_inv, tgl_inv_revisi, pelanggan_revisi, alamat_revisi, total_inv, status_pengiriman, status_trx_komplain, status_trx_selesai) VALUES (?, ?, ?, ?, ?, ?, 1, 1, 0)");
+                $stmt->bind_param('ssssss', $id_inv_rev, $id_inv, $tgl, $cs_inv, $alamat, $total_inv);
                 $simpan_inv_revisi = $stmt->execute();
 
                 if (!$simpan_inv_revisi) {
@@ -437,22 +454,22 @@ if (isset($_POST['ubah-status'])) {
     } else {
         header("Location:../404.php");
     }
-} else if (isset($_POST['ubah-pengiriman'])) {
-    $id_status_kirim_revisi = htmlspecialchars($_POST['id_status_kirim_revisi']);
-    $id_komplain = htmlspecialchars($_POST['id_komplain']);
+} else if (isset($sanitasi_post['ubah-pengiriman'])) {
+    $id_status_kirim_revisi = $sanitasi_post['id_status_kirim_revisi'];
+    $id_komplain = $sanitasi_post['id_komplain'];
     $id_komplain_encrypt = encrypt($id_komplain, $key_spk);
-    $id_inv = htmlspecialchars($_POST['id_inv']);
-    $id_inv_revisi = htmlspecialchars($_POST['id_inv_revisi']);
-    $id_bukti_terima = htmlspecialchars($_POST['id_bukti_terima']);
-    $jenis_pengiriman = htmlspecialchars($_POST['jenis_pengiriman']);
-    $alasan_ubah = htmlspecialchars($_POST['alasan_ubah']);
-    $tgl = htmlspecialchars($_POST['tgl']);
+    $id_inv = $sanitasi_post['id_inv'];
+    $id_inv_revisi = $sanitasi_post['id_inv_revisi'];
+    $id_bukti_terima = $sanitasi_post['id_bukti_terima'];
+    $jenis_pengiriman = $sanitasi_post['jenis_pengiriman'];
+    $alasan_ubah = $sanitasi_post['alasan_ubah'];
+    $tgl = $sanitasi_post['tgl'];
     $updated_date = date('d/m/Y H:i:s');
     $bukti_kirim_rev = $connect->query("SELECT bukti_satu FROM inv_bukti_terima WHERE id_bukti_terima = '$id_bukti_terima'");
     $data_bukti_kirim =  mysqli_fetch_array($bukti_kirim_rev);
     $cek_data_bukti = mysqli_num_rows($bukti_kirim_rev);
     if ($jenis_pengiriman == 'Driver') {
-        $pengirim = $_POST['pengirim'];
+        $pengirim = $sanitasi_post['pengirim'];
         $bukti_sebelumnya = $data_bukti_kirim['bukti_satu'];
         $path_unlink = "../gambar-revisi/bukti1/" . $bukti_sebelumnya;
         try {
@@ -684,7 +701,7 @@ if (isset($_POST['ubah-status'])) {
             $stmt = $connect->prepare("UPDATE revisi_status_kirim 
                                             SET 
                                                 jenis_pengiriman = ?, 
-                                                jenis_penerima = '',
+                                                jenis_penerima = 'Customer',
                                                 dikirim_driver = '', 
                                                 dikirim_ekspedisi = '',
                                                 no_resi = '',
@@ -696,6 +713,7 @@ if (isset($_POST['ubah-status'])) {
                                                 penanggung_jawab = '',
                                                 tgl_kirim = ?,
                                                 status_kirim = 0,
+                                                status_review = 0,
                                                 alasan = ?,
                                                 updated_date = ?
                                             WHERE id_status_kirim_revisi = ?");

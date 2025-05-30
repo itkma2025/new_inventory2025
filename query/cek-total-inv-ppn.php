@@ -64,7 +64,7 @@
 
         if ($data_inv['total_inv'] != $grand_total_ppn) {
             $stmt = $connect->prepare("UPDATE inv_ppn SET sub_total = ?, total_inv = ?, nominal_spdisc = ?, ppn_dpp = '0', nominal_ppn_dpp = '0', nominal_dpp = ?, ppn = '11', total_ppn = ? WHERE id_inv_ppn = ?");
-            $stmt->bind_param("iiiiis", $sub_total_spdisc, $grand_total, $nominal_sp_disc, $sub_total_spdisc, $grand_total, $id_inv);
+            $stmt->bind_param("iiiiis", $sub_total_spdisc, $grand_total, $nominal_sp_disc, $sub_total_spdisc, $nominal_ppn, $id_inv);
             $stmt->execute();
             
             // if ($stmt->execute()) {    

@@ -1,6 +1,7 @@
 {
     "require": {
-        "ezyang/htmlpurifier": "^4.17"
+        "ezyang/htmlpurifier": "^4.17",
+        "mpdf/mpdf": "^8.2"
     },
     "require-dev": {
         "phpstan/phpstan": "^2.1"

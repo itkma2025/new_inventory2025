@@ -20,7 +20,6 @@
 	require_once "../function/sanitasi_input.php";
 	$sanitasi_post = sanitizeInput($_POST);
     if (isset($sanitasi_post['diterima_ekspedisi'])) {
-        $connect->begin_transaction();
         $year = date('y');
         $day = date('d');
         $month = date('m');
@@ -32,6 +31,8 @@
         $nama_penerima = $sanitasi_post['nama_penerima'];
         $tgl = $sanitasi_post['tgl'];
 
+        // Mulai transaksi
+        $connect->begin_transaction();
         try {
             $query_diterima = mysqli_query($connect, "INSERT INTO inv_penerima_revisi (id_inv_penerima_revisi, id_komplain, nama_penerima, alamat, tgl_terima) VALUES ('$id_inv_penerima', '$id_komplain', '$nama_penerima', '$alamat', '$tgl')");
 

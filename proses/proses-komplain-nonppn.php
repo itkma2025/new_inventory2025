@@ -82,10 +82,6 @@
         $ket3 = date("Y");
         // Buat nomor komplain
         $no_komplain = sprintf("%03d", $total) . $ket1 . $bln . $ket2 . $ket3;
-
-        echo "<pre>";
-        print_r($sanitasi_post);
-        echo "</pre>"; 
         
         $connect->begin_transaction();
         try{
