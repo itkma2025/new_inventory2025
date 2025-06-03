@@ -1,3 +1,17 @@
+<style>
+  .logo-sidebar {
+      display: none !important; /* kasih !important kalau perlu override */
+  }
+  @media (max-width: 420px) {
+    .logo-sidebar {
+        display: block !important; /* kasih !important kalau perlu override */
+    }
+
+    .toggle-sidebar{
+      z-index: ; 9999;
+    }
+  }
+</style>
 <!-- Kode untuk role akses -->
 <?php
 include "akses.php";
@@ -30,6 +44,12 @@ if (isset($user_role)) {
   } else {
     ?>
       <aside id="sidebar" class="sidebar">
+        <div class="d-flex align-items-center justify-content-between mb-4 logo-sidebar">
+          <a href="#" class="logo d-flex align-items-center">
+            <img src="assets/img/logo-kma.png" alt="" style="width: 80px; height: auto;">
+            <span class="d-lg-block" style="text-decoration: none;">PT.KMA</span>
+          </a>
+        </div><!-- End Logo -->
         <ul class="sidebar-nav">
           <li class="nav-item">
             <a class="nav-link collapsed <?php echo (isset($page) && $page == 'dashboard') ? 'active-link' : ''; ?>" href="dashboard.php">

@@ -188,13 +188,15 @@
                                  $cek_jenis_pengiriman = mysqli_query($connect, "SELECT 
                                                                                     sk.id_status_kirim_revisi, 
                                                                                     sk.id_komplain, 
-                                                                                    sk.jenis_penerima, 
+                                                                                    sk.jenis_pengiriman, 
+                                                                                    sk.jenis_penerima,
                                                                                     sk.status_kirim, 
                                                                                     sk.status_review, 
                                                                                     sk.created_date,
                                                                                     ibt.id_bukti_terima,
                                                                                     ibt.bukti_satu,
-                                                                                    ibt.approval
+                                                                                    ibt.approval,
+                                                                                    ibt.jenis_reject
                                                                                 FROM revisi_status_kirim AS sk
                                                                                 LEFT JOIN inv_bukti_terima_revisi AS ibt ON sk.id_komplain = ibt.id_komplain
                                                                                 WHERE sk.id_komplain = '$id'
@@ -204,6 +206,7 @@
                                 $cek_data_jenis_pengiriman = mysqli_num_rows($cek_jenis_pengiriman);
                                 $status_review = $data_cek_jenis_pengiriman['status_review'];
                                 $approval = $data_cek_jenis_pengiriman['approval'];
+                                $jenis_reject = $data_cek_jenis_pengiriman['jenis_reject'];
                                 $id_status_kirim_revisi = $data_cek_jenis_pengiriman['id_status_kirim_revisi'];
                                 $id_bukti_terima = $data_cek_jenis_pengiriman['id_bukti_terima'];
                                 $bukti_satu = $data_cek_jenis_pengiriman['bukti_satu'];
@@ -224,23 +227,58 @@
                                                 </button>
                                             <?php
                                         }
-                            
-                                        if($data_cek_jenis_pengiriman['jenis_penerima'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0'){
+
+                                        if($approval == '1' && $jenis_reject == '1'){
+                                            $modalReupload = '';
+                                            $nama_penerima = '';
+                                            $no_resi = '';
+                                            $jenis_ongkir = '';
+                                            $nominal_ongkir  = '';
+                                            $free_ongkir = '';
+                                            $dikirim_oleh = '';
+                                            $penanggung_jawab = '';
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi'){
+                                                $modalReupload = 'reuploadEx';
+                                                $nama_penerima = $data_driver_rev['nama_ekspedisi'];
+                                                $no_resi = $data_driver_rev['no_resi'];
+                                                $jenis_ongkir = $data_driver_rev['jenis_ongkir'];
+                                                $nominal_ongkir  = $data_driver_rev['ongkir'];
+                                                $free_ongkir = $data_driver_rev['free_ongkir'];
+                                                $dikirim_oleh = $data_driver_rev['dikirim_oleh'];
+                                                $penanggung_jawab = $data_driver_rev['penanggung_jawab'];
+                                            } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Driver'){
+                                                $modalReupload = 'reuploadDriver';
+                                            } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung'){
+                                                $modalReupload = 'reuploadDiambil';
+                                            }
+                                            if($status_review != '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                        data-bs-target="#<?php echo $modalReupload ?>">
+                                                        <i class="bi bi-image"></i> Reupload Bukti Terima
+                                                    </button>
+                                                <?php
+                                            } 
+                                        } else if($approval == '1' && $jenis_reject == '2'){
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
+                                                    </button>
+                                                <?php
+                                            }
+
                                             ?>
-                                                <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#DiterimaEx">
-                                                <i class="bi bi-send"></i>
-                                                    Diterima
+                                                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                    <i class="bi bi-truck"></i>
+                                                    Proses Pengiriman
                                                 </button>
                                             <?php
-                                        }
 
-                                        ?>
-                                            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
-                                                <i class="bi bi-truck"></i>
-                                                Ubah Jenis Pengiriman
-                                            </button>
-                                        <?php
+                                        }
+                            
                                     }
                                 }
                             ?>
@@ -519,6 +557,12 @@
         require_once __DIR__ . "/modal-komplain/ubah-jenis-pengiriman-trx-komplain-nonppn.php";
     ?>
     <!-- End Modal Ubah Jenis Pengiriman-->
+
+    <!-- Modal Reupload-->
+    <?php  
+        require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-nonppn.php";
+    ?>
+    <!-- End Modal Reupload-->
 
     <!-- Footer -->
     <?php include "page/footer.php" ?>
@@ -831,8 +875,7 @@
             </div>
             <div class="modal-body">
                 <div class="card-body">
-                    <form action="proses/proses-invoice-diterima-revisi.php" method="POST"
-                        enctype="multipart/form-data">
+                    <form action="proses/proses-invoice-diterima-revisi.php" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="id_komplain" value="<?php echo $id; ?>">
                         <input type="hidden" name="id_inv" value="<?php echo $id_inv; ?>">
                         <input type="hidden" name="alamat" value="<?php echo $alamat; ?>">

@@ -461,9 +461,6 @@ $page2 = 'list-inv-rev';
                             <!-- Modal -->
                         </table>
                     </div>
-                    <div id="prosesDiterima" style="display: none;">
-                        aaaa
-                    </div>
                 </div>
             </div>
         </section>

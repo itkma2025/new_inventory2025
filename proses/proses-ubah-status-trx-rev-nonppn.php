@@ -4,9 +4,8 @@ $id_user = decrypt($_SESSION['tiket_id'], $key_global);
 
 // Penghubung Library
 require_once __DIR__ . '/../assets/vendor/autoload.php';
-// Library Tangal
-use Carbon\Carbon;
-$datetime_now = Carbon::now();
+
+$datetime_now = date('Y-m-d H:i:s');
 
 // Library Debugging
 use Whoops\Run;
@@ -625,16 +624,20 @@ if (isset($sanitasi_post['ubah-status'])) {
             if ($cek_data_bukti != 0) {
                 // Proses update bukti terima
                 $stmt = $connect->prepare("UPDATE inv_bukti_terima_revisi 
-                                                SET bukti_satu = ?
+                                            SET 
+                                                bukti_satu = ?,
+                                                lokasi = 'PT. Karsa Mandiri Alkesindo',
+                                                created_date = ?,
+                                                created_by = ?
                                                 WHERE id_bukti_terima = ?");
-                $stmt->bind_param('ss', $new_file_name, $id_bukti_terima);
+                $stmt->bind_param('ssss', $new_file_name, $datetime_now, $id_user, $id_bukti_terima);
                 $bukti_terima = $stmt->execute();
             } else {
                 // Proses simpan bukti terima
                 $stmt = $connect->prepare("INSERT INTO inv_bukti_terima_revisi 
-                                            (id_bukti_terima, id_komplain, bukti_satu) 
-                                    VALUES  (?, ?, ?)");
-                $stmt->bind_param('sss', $id_inv_bukti, $id_komplain, $new_file_name);
+                                            (id_bukti_terima, id_komplain, bukti_satu, lokasi, created_by) 
+                                    VALUES  (?, ?, ?, 'PT. Karsa Mandiri Alkesindo', ?)");
+                $stmt->bind_param('ssss', $id_inv_bukti, $id_komplain, $new_file_name, $id_user);
                 $bukti_terima = $stmt->execute();
             }
 
