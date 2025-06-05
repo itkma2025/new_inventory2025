@@ -92,7 +92,7 @@ if (isset($sanitasi_post['ubah-status'])) {
             $jenis_ongkir = $sanitasi_post['jenis_ongkir'];
             $ongkir = str_replace('.', '', $sanitasi_post['ongkir']); // Menghapus tanda ribuan (,)
             $ongkir = intval($ongkir); // Mengubah string harga menjadi integer
-            $free_ongkir = $sanitasi_post['free_ongkir'];
+            $free_ongkir = $sanitasi_post['free_ongkir'] ?? '0';
             $dikirim = $sanitasi_post['dikirim'];
             $pj = $sanitasi_post['pj'];
             $uuid = uuid();
@@ -138,9 +138,9 @@ if (isset($sanitasi_post['ubah-status'])) {
 
                 // Proses simpan inv revisi
                 $stmt = $connect->prepare("INSERT INTO inv_revisi 
-                                                                (id_inv_revisi, id_inv, no_inv_revisi, tgl_inv_revisi, pelanggan_revisi, alamat_revisi, total_inv, status_pengiriman, status_trx_komplain, status_trx_selesai) 
-                                                        VALUES  (?, ?, ?, ?, ?, ?, ?, 0, 0, 0)");
-                $stmt->bind_param('sssssss', $id_inv_rev, $id_inv, $revisi_invoice, $tgl, $cs_inv, $alamat, $total_inv);
+                                                                (id_inv_revisi, id_inv, tgl_inv_revisi, pelanggan_revisi, alamat_revisi, total_inv, status_pengiriman, status_trx_komplain, status_trx_selesai) 
+                                                        VALUES  (?, ?, ?, ?, ?, ?, 0, 0, 0)");
+                $stmt->bind_param('ssssss', $id_inv_rev, $id_inv, $tgl, $cs_inv, $alamat, $total_inv);
                 $simpan_inv_revisi = $stmt->execute();
 
                 if (!$simpan_inv_revisi) {
@@ -329,11 +329,11 @@ if (isset($sanitasi_post['ubah-status'])) {
 
             // Pengecekan data di tabel inv_revisi
             $cek_revisi = $connect->prepare("SELECT COUNT(*) FROM inv_revisi WHERE id_inv = ?");
-            $cek_revisi_stmt->bind_param('s', $id_inv);
-            $cek_revisi_stmt->execute();
-            $cek_revisi_stmt->bind_result($count);
-            $cek_revisi_stmt->fetch();
-            $cek_revisi_stmt->close();
+            $cek_revisi->bind_param('s', $id_inv);
+            $cek_revisi->execute();
+            $cek_revisi->bind_result($count);
+            $cek_revisi->fetch();
+            $cek_revisi->close();
 
             if ($count > 0) {
                 // Jika data ada, lakukan update
@@ -524,7 +524,6 @@ if (isset($sanitasi_post['ubah-status'])) {
 
             // Commit transaksi jika semua berhasil
             $connect->commit();
-            unlink($path_unlink);
             $_SESSION['info'] = "Diupdate";
             header("Location:../detail-komplain-revisi-nonppn.php?id=$id_komplain_encrypt");
             exit();
@@ -671,7 +670,6 @@ if (isset($sanitasi_post['ubah-status'])) {
 
             // Commit transaksi jika semua berhasil
             $connect->commit();
-            unlink($path_unlink);
             $_SESSION['info'] = "Disimpan";
             header("Location:../detail-komplain-revisi-nonppn.php?id=$id_komplain_encrypt");
             exit();

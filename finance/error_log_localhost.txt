@@ -1851,3 +1851,1292 @@ Stack trace:
 [27-May-2025 08:23:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
 [27-May-2025 08:23:12] PHP Warning: include(akses.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
 [27-May-2025 08:23:12] PHP Warning: include(): Failed opening 'akses.php' for inclusion (include_path='D:\xampp\php\PEAR') in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:02:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:02:50] PHP Warning: include(akses.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 11:02:50] PHP Warning: include(): Failed opening 'akses.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:02:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:02:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:03:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:03:06] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:03:06] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:03:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:32:10] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:33:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:33:32] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:33:32] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:36:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:36:09] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:36:09] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:37:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:37:30] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:37:30] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:44:42] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:44:42] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:44:42] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:44:46] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 11:44:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 11:44:59] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 11:44:59] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:31:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:31:15] PHP Warning: include(akses.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 14:31:15] PHP Warning: include(): Failed opening 'akses.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:32:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:32:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:33:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:33:06] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 14:33:06] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:35:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:35:09] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 14:35:09] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\modal\bukti-kirim.php on line 12
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:35:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:35:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:35:23] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:35:23] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:35:23 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'test_inventory.user' doesn't exist in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php:308
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php(308): mysqli->query('SELECT \n       ...')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 308
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:36:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:36:03] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:36:03] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:36:03 Asia/Jakarta] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'test_inventory.user' doesn't exist in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php:308
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php(308): mysqli->query('SELECT \n       ...')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 308
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:37:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:37:54] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:37:54] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:42:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:42:29] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:42:29] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:42:47] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:42:47] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 14:42:47] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:42:54] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:42:54] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:42:54] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:43:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:43:01] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 14:43:01] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:43:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:43:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:44:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:44:00] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:44:00] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:44:09] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:44:09] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 14:44:09] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:44:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:44:11] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:44:11] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:44:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:44:13] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:44:13] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:44:22] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:44:22] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 14:44:22] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:51:08] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:51:08] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:53:11] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:53:11] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:53:11] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-nonppn.php on line 491
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:54:00] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:54:00] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:54:00] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-nonppn.php on line 491
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 14:54:18] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:54:18] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 14:54:18] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-nonppn.php on line 491
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:03:32] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:03:32] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:03:32] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-nonppn.php on line 491
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:08:15] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:08:15] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:08:15] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-nonppn.php on line 491
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:08:32] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:08:32] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 15:08:32] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:08:48] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:08:48] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-ppn.php on line 440
+[04-Jun-2025 15:08:48] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-ppn.php on line 440
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:08:50] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 127
+[04-Jun-2025 15:08:50] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 127
+[04-Jun-2025 15:08:50] PHP Warning: Undefined array key "tiket_role" in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 128
+[04-Jun-2025 15:08:50] PHP Warning: Undefined variable $sql in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 130
+[04-Jun-2025 15:08:50] PHP Deprecated: mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 130
+[04-Jun-2025 15:08:50 Asia/Jakarta] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php:130
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php(130): mysqli_query(Object(mysqli), '')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 130
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:11:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:11:28] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:11:28] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:11:29] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 623
+[04-Jun-2025 15:11:29] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 630
+[04-Jun-2025 15:11:29] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 630
+[04-Jun-2025 15:11:29] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 646
+[04-Jun-2025 15:11:29] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 654
+[04-Jun-2025 15:11:29] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 654
+[04-Jun-2025 15:11:29] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 682
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:15:38] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:15:38] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:15:38] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:15:39] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 495
+[04-Jun-2025 15:15:39] PHP Warning: Undefined variable $id_inv_encrypt in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 497
+[04-Jun-2025 15:15:39] PHP Deprecated: urlencode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 497
+[04-Jun-2025 15:15:39] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 633
+[04-Jun-2025 15:15:39] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 640
+[04-Jun-2025 15:15:39] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 640
+[04-Jun-2025 15:15:39] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 656
+[04-Jun-2025 15:15:39] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 664
+[04-Jun-2025 15:15:39] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 664
+[04-Jun-2025 15:15:39] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 692
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:47:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:47:58] PHP Warning: include(akses.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 15:47:58] PHP Warning: include(): Failed opening 'akses.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:50:57] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:50:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:50:59] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 15:50:59] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:51:01] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:51:01] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 15:51:01] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:51:04] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:51:04] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 15:51:04] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:51:06] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:51:06] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-ppn.php on line 440
+[04-Jun-2025 15:51:06] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-ppn.php on line 440
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:51:08] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:51:08] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 495
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $id_inv_encrypt in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 497
+[04-Jun-2025 15:51:08] PHP Deprecated: urlencode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 497
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 633
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 640
+[04-Jun-2025 15:51:08] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 640
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 656
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 664
+[04-Jun-2025 15:51:08] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 664
+[04-Jun-2025 15:51:08] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 692
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:52:28] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:52:28] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 495
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $id_inv_encrypt in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 497
+[04-Jun-2025 15:52:28] PHP Deprecated: urlencode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 497
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 633
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 640
+[04-Jun-2025 15:52:28] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 640
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 656
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 664
+[04-Jun-2025 15:52:28] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 664
+[04-Jun-2025 15:52:28] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 692
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:52:30] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:52:30] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 495
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $id_inv_encrypt in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 497
+[04-Jun-2025 15:52:30] PHP Deprecated: urlencode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 497
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 633
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 640
+[04-Jun-2025 15:52:30] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 640
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 656
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 664
+[04-Jun-2025 15:52:30] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 664
+[04-Jun-2025 15:52:30] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 692
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:58:00] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:58:00] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 496
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 634
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 15:58:00] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 657
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 15:58:00] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 15:58:00] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 693
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:59:36] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:59:36] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 496
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 634
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 15:59:36] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 657
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 15:59:36] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 15:59:36] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 693
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 15:59:37] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:59:37] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 496
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 634
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 15:59:37] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 657
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 15:59:37] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 15:59:37] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 693
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 16:26:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 16:26:30] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:26:30] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:26:31] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 496
+[04-Jun-2025 16:26:31] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 634
+[04-Jun-2025 16:26:31] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 16:26:31] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 16:26:31] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 657
+[04-Jun-2025 16:26:31] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 16:26:31] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 16:26:31] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 693
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 16:32:51] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:32:51] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 496
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 634
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 16:32:51] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 657
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 16:32:51] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 16:32:51] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 693
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 16:33:03] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:33:03] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 496
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 634
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 16:33:03] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 657
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 16:33:03] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 16:33:03] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 693
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 16:33:05] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 16:33:05] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 16:33:05] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 16:33:15] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 16:33:15] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-bum.php on line 444
+[04-Jun-2025 16:33:15] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-bum.php on line 444
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 16:33:17] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 127
+[04-Jun-2025 16:33:17] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 127
+[04-Jun-2025 16:33:17] PHP Warning: Undefined array key "tiket_role" in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 128
+[04-Jun-2025 16:33:17] PHP Warning: Undefined variable $sql in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 130
+[04-Jun-2025 16:33:17] PHP Deprecated: mysqli_query(): Passing null to parameter #2 ($query) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 130
+[04-Jun-2025 16:33:17 Asia/Jakarta] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php:130
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php(130): mysqli_query(Object(mysqli), '')
+#1 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 130
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 16:33:55] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:33:55] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 621
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 16:33:55] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 644
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 16:33:55] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 16:33:55] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 681
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 16:50:53] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:50:53] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 621
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 16:50:53] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 644
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 16:50:53] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 16:50:53] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 681
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:37:59] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:37:59] PHP Warning: include(akses.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 19:37:59] PHP Warning: include(): Failed opening 'akses.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\dashboard.php on line 45
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:51:11] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:51:11] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 19:51:11] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:51:13] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:51:13] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 19:51:13] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-nonppn.php on line 441
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:51:14] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:51:14] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:51:14] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-nonppn.php on line 491
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:51:23] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:51:23] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:51:23] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-nonppn.php on line 491
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:51:25] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:51:25] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 19:51:25] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:51:29] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:51:29] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-ppn.php on line 440
+[04-Jun-2025 19:51:29] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-ppn.php on line 440
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:51:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:51:31] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:51:31] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:51:31] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 496
+[04-Jun-2025 19:51:31] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 634
+[04-Jun-2025 19:51:31] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 19:51:31] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 19:51:31] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 657
+[04-Jun-2025 19:51:31] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 19:51:31] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 19:51:31] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 693
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:53:16] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:53:16] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 496
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 634
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 19:53:16] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 641
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 657
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 19:53:16] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 665
+[04-Jun-2025 19:53:16] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-ppn.php on line 693
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:53:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:53:19] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 19:53:19] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:53:28] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:53:28] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-bum.php on line 444
+[04-Jun-2025 19:53:28] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-bum.php on line 444
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:53:30] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:53:30] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 621
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 19:53:30] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 644
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 19:53:30] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 19:53:30] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 681
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:58:52] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:58:52] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 621
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 19:58:52] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 644
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 19:58:52] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 19:58:52] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 681
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 19:59:19] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:59:19] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 621
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 19:59:19] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 628
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 644
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 19:59:19] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 652
+[04-Jun-2025 19:59:19] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 681
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:00:52] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:00:52] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 491
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 631
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:00:52] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 654
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:00:52] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:00:52] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 691
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:02:40] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:02:40] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:02:40] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 491
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 631
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:02:41] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 654
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:02:41] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 691
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:02:41] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:02:41] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 491
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 631
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:02:41] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 654
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:02:41] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:02:41] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 691
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:10:56] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:10:56] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 491
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 631
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:10:56] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 654
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:10:56] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:10:56] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 691
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:10:58] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:10:58] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 491
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 631
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:10:58] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 654
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:10:58] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:10:58] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 691
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:12:41] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:12:41] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 491
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 631
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:12:41] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 654
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:12:41] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:12:41] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 691
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:12:43] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:12:43] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 20:12:43] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:12:51] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:12:51] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-bum.php on line 444
+[04-Jun-2025 20:12:51] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-bum.php on line 444
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:12:52] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:12:52] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 491
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 631
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:12:52] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 654
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:12:52] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:12:52] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 691
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:12:58] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:12:58] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 20:12:58] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\invoice-komplain.php on line 276
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:13:12] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:13:12] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-bum.php on line 444
+[04-Jun-2025 20:13:12] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-bum.php on line 444
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 29
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 34
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 39
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 44
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 75
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 80
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 93
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 98
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 103
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $page2 in D:\laragon\www\SSO-KARSA\test-inventory\finance\page\sidebar.php on line 108
+[04-Jun-2025 20:13:14] PHP Warning: include(koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:13:14] PHP Warning: include(): Failed opening 'koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\produk-komplain-tmp.php on line 2
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $total_data in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 491
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 631
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:13:14] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 638
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $tgl_terima in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 654
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $data_bukti in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:13:14] PHP Warning: Trying to access array offset on null in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 662
+[04-Jun-2025 20:13:14] PHP Warning: Undefined variable $gambar_bukti1 in D:\laragon\www\SSO-KARSA\test-inventory\finance\detail-komplain-revisi-bum.php on line 691

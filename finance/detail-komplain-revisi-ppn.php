@@ -123,13 +123,6 @@
         </div> -->
         <!-- ENd Loading -->
         <section>
-            <?php  
-                include "koneksi.php";
-                $id_role = $_SESSION['tiket_role'];
-                $sql_role = "SELECT * FROM user_role WHERE id_user_role='$id_role'";
-                $query_role = mysqli_query($connect, $sql) or die(mysqli_error($connect));
-                $data_role = mysqli_fetch_array($query_role);
-            ?>
             <!-- SWEET ALERT -->
             <div class="info-data" data-infodata="<?php if (isset($_SESSION['info'])) { echo $_SESSION['info']; } unset($_SESSION['info']); ?>"></div>
             <!-- END SWEET ALERT -->
@@ -137,6 +130,7 @@
                 $id = decrypt($_GET['id'], $key_spk);
                 include "../query/detail-komplain-ppn.php";
                 $id_inv = $data_kondisi['id_inv'];
+                $id_inv_encrypt = encrypt($id_inv, $key_spk);
                 $no_inv = $data_detail['no_inv'];
                 $alamat = $data_detail['alamat'];
                 include "../query/produk-komplain-tmp.php";
@@ -495,6 +489,16 @@
                                         <button class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#bukti">
                                             <i class="bi bi-image"></i> Bukti Terima Revisi
                                         </button>
+                                    <?php
+                                }
+                            ?>
+                            <?php  
+                                if($total_data != '0'){
+                                    ?>
+                                        <a href="cetak-inv-revisi-ppn.php?id=<?php echo urlencode($id_inv_encrypt); ?>&&id_komplain= <?php echo urlencode($_GET['id']) ?>"
+                                            class="btn btn-primary mb-3">
+                                            <i class="bi bi-printer"></i> Cetak Invoice Revisi PPN
+                                        </a>
                                     <?php
                                 }
                             ?>

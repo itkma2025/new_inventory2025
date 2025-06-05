@@ -487,6 +487,16 @@
                                     <?php
                                 }
                             ?>
+                            <?php  
+                                if($total_data != '0'){
+                                    ?>
+                                        <a href="cetak-inv-revisi-nonppn.php?id=<?php echo encrypt($id_inv, $key_spk) ?>&&id_komplain= <?php echo encrypt($id, $key_spk)?>"
+                                            class="btn btn-primary mb-3">
+                                            <i class="bi bi-printer"></i> Cetak Invoice Revisi Non PPN
+                                        </a>
+                                    <?php
+                                }
+                            ?>
                         </div>
                         <div class="col-md-4">
                             <div class="text-end">
@@ -516,8 +526,6 @@
                                             </button>
                                         <?php
                                     }
-                                
-                                
                                 ?>
                             </div>
                         </div>

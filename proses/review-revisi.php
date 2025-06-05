@@ -194,7 +194,7 @@
 			$insert_history = $stmt->execute();
 			if (!$insert_history) {
 				throw new Exception("Gagal update status kirim");
-			}
+			}                
 
 			// Jika semua berhasil, commit perubahan
 			$connect->commit();

@@ -542,7 +542,7 @@
                                                 ' . $data_status_kirim['dikirim_oleh'] . '
                                             </div>
                                         </div>';
-                                    }
+                                    } 
                             ?>
                             <?php
                                 if (!empty($data_status_kirim['penanggung_jawab'])) {

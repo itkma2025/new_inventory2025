@@ -16,3 +16,5 @@
 2025-05-30 14:31:28 - Proses Simpan Data Untuk No.Inv: 106/KMA/IV/2025 Berhasil  
 2025-05-30 14:34:23 - Proses Simpan Data Untuk No.Inv: 103/KMA/III/2025 Berhasil  
 2025-05-30 20:34:48 - Proses Simpan Data Untuk No.Inv: 319/KM/II/2025 Berhasil  
+2025-06-05 13:08:31 - Proses Simpan Data Untuk No.Inv: 105/KMA/IV/2025 Berhasil  
+2025-06-05 15:38:18 - Proses Simpan Data Untuk No.Inv: 104/KMA/IV/2025 Berhasil  

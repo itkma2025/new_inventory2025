@@ -51,11 +51,11 @@
 
     <main id="main" class="main">
         <!-- Loading -->
-        <div class="loader loader">
+        <!-- <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div>
+        </div> -->
         <!-- ENd Loading -->
         <div class="pagetitle">
             <h1>Invoice Komplain</h1>
@@ -312,7 +312,7 @@
                                                                             sk.diambil_oleh,
                                                                             COALESCE(us.nama_user, eks.nama_ekspedisi) AS pengirim
                                                                         FROM revisi_status_kirim AS sk
-                                                                        LEFT JOIN user us ON(sk.dikirim_driver = us.id_user)
+                                                                        LEFT JOIN $database2.user us ON(sk.dikirim_driver = us.id_user)
                                                                         LEFT JOIN ekspedisi eks ON(sk.dikirim_ekspedisi = eks.id_ekspedisi)
                                                                         WHERE sk.id_komplain = '$id_komplain'");
                                             
@@ -358,9 +358,6 @@
                                                 <a href="detail-komplain-bum.php?id=<?php echo encrypt($id_komplain, $key_spk) ?>" class="btn btn-primary btn-sm" title="Detail"><i class="bi bi-eye"></i></a>
                                             <?php
                                         }
-
-
-                                    
                                     ?>
                                 </td>
                             </tr>

@@ -572,6 +572,13 @@ require_once "../function/function-enkripsi.php";
                              <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#buktiKirim">
                                 <i class="bi bi-file-earmark-image"></i> Bukti Terima
                             </button>
+                            <!-- Button Cetak Invoice -->
+                            <?php
+                                if ($role == "Finance") {
+                                    ?>
+                                        <a href="<?php echo $cetak_inv ?>?id=<?php echo encrypt($id_inv, $key_global)?>" class="btn btn-secondary mb-2 btn-mobile"><i class="bi bi-printer-fill"></i> Cetak Invoice</a>
+                            <?php } ?>
+                             <!-- End Button Cetak Invoice -->
                             <!-- End Button Modal Bukti Terima -->
                             <?php  
                                 $finance =  mysqli_query($connect, "SELECT id_inv, status_tagihan FROM finance WHERE id_inv = '$id_inv'");

@@ -74,7 +74,7 @@ if (isset($_POST['diterima'])) {
 
             // Query untuk update jenis_penerima di status_kirim
             $query_update_status = mysqli_query($connect, "UPDATE status_kirim SET jenis_penerima = 'Customer', dikirim_ekspedisi = '', no_resi = '', status_review = '0' WHERE id_inv = '$id_inv_decrypt'");
-
+            
             // Proses penyimpanan gambar
             // Create ../../gambar/bukti_kirim/ folder if it doesn't exist
             $baseDir = '../../gambar/bukti_kirim/';
@@ -117,15 +117,24 @@ if (isset($_POST['diterima'])) {
         mysqli_begin_transaction($connect);
 
         try {
-            // Query untuk insert ke inv_bukti_terima
-            $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima (id_bukti_terima, id_inv, bukti_satu, lokasi) 
-                                                         VALUES ('$id_bukti_terima', '$id_inv_decrypt', '$newFileName', '$location')");
+            // Cek apakah data sudah ada di inv_bukti_terima
+            $cek_bukti = mysqli_query($connect, "SELECT id_inv FROM inv_bukti_terima WHERE id_inv = '$id_inv_decrypt'");
+            if (mysqli_num_rows($cek_bukti) > 0) {
+                // Jika data sudah ada, lakukan update
+                $bukti_terima = mysqli_query($connect, "UPDATE inv_bukti_terima 
+                                                        SET bukti_satu = '$newFileName', lokasi = '$location', approval = '0'
+                                                        WHERE id_inv = '$id_inv_decrypt'");
+            } else {
+                // Jika data belum ada, lakukan insert
+                $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima (id_bukti_terima, id_inv, bukti_satu, lokasi) 
+                                                        VALUES ('$id_bukti_terima', '$id_inv_decrypt', '$newFileName', '$location')");
+            }
 
             // Query untuk update status_transaksi di inv_ppn
             $query_update_inv = mysqli_query($connect, "UPDATE inv_ppn SET ongkir = '$ongkir', status_transaksi = 'Dikirim' WHERE id_inv_ppn = '$id_inv_decrypt'");
 
             // Query untuk update jenis_penerima di status_kirim
-            $query_update_status = mysqli_query($connect, "UPDATE status_kirim SET jenis_penerima = 'Ekspedisi', dikirim_ekspedisi = '$id_ekspedisi', no_resi = '$resi', jenis_ongkir = '$jenis_ongkir'  WHERE id_inv = '$id_inv_decrypt'");
+            $query_update_status = mysqli_query($connect, "UPDATE status_kirim SET jenis_penerima = 'Ekspedisi', dikirim_ekspedisi = '$id_ekspedisi', no_resi = '$resi', jenis_ongkir = '$jenis_ongkir', status_review = '0'  WHERE id_inv = '$id_inv_decrypt'");
 
             // Proses penyimpanan gambar
             // Create ../../gambar/bukti_kirim/ folder if it doesn't exist
@@ -164,5 +173,7 @@ if (isset($_POST['diterima'])) {
             mysqli_close($connect);
         }
     }
+} else {
+    header("Location: ../list-invoice.php");
 }
 ob_end_flush();

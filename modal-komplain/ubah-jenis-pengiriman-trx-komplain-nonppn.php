@@ -2,18 +2,18 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ubah Jenis Pengiriman</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Update Jenis Pengiriman</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form action="proses/proses-ubah-status-trx-rev-nonppn.php" method="POST"
                     enctype="multipart/form-data">
-                    <input type="text" name="id_komplain" value="<?php echo $id ?>">
-                    <input type="text" name="id_status_kirim_revisi" value="<?php echo $id_status_kirim_revisi ?>">
-                    <input type="text" name="id_inv" value="<?php echo $id_inv ?>">
-                    <input type="text" name="id_inv_revisi" value="<?php echo $id_inv_revisi ?>">
-                    <input type="text" name="id_bukti_terima" value="<?php echo $id_bukti_terima ?>">
-                    <input type="text" name="bukti_sebelumnya" value="<?php echo $bukti_satu ?>">
+                    <input type="hidden" name="id_komplain" value="<?php echo $id ?>">
+                    <input type="hidden" name="id_status_kirim_revisi" value="<?php echo $id_status_kirim_revisi ?>">
+                    <input type="hidden" name="id_inv" value="<?php echo $id_inv ?>">
+                    <input type="hidden" name="id_inv_revisi" value="<?php echo $id_inv_revisi ?>">
+                    <input type="hidden" name="id_bukti_terima" value="<?php echo $id_bukti_terima ?>">
+                    <input type="hidden" name="bukti_sebelumnya" value="<?php echo $bukti_satu ?>">
                     <div id="trxKirim">
                         <div class="mb-3">
                             <label>Jenis Pengiriman</label>

@@ -13,7 +13,7 @@
         $id_inv = htmlspecialchars($_POST['id_inv']);   
         $id_inv_decrypt = decrypt($id_inv, $key);
         $id_komplain = htmlspecialchars($_POST['id_komplain']);   
-        echo $id_komplain_decrypt = decrypt($id_komplain, $key); 
+        $id_komplain_decrypt = decrypt($id_komplain, $key); 
         $id_spk = htmlspecialchars($_POST['id_spk']);   
         $id_spk_decrypt = decrypt($id_spk, $key);
         $alamat = htmlspecialchars(decrypt($_POST['alamat'], $key)); 
@@ -152,15 +152,23 @@
                 $id_inv_substr = $id_inv_decrypt;
                 $inv_id = substr($id_inv_substr, 0, 3);
                 $query_update_inv = "";
-                if ($inv_id = "NON"){
+                if ($inv_id == "NON"){
                     $query_update_inv = mysqli_query($connect, "UPDATE inv_nonppn SET status_transaksi = 'Komplain Dikirim' WHERE id_inv_nonppn = '$id_inv_decrypt'");
-                } else if ($inv_id = "PPN"){
+                } else if ($inv_id == "PPN"){
                     $query_update_inv = mysqli_query($connect, "UPDATE inv_ppn SET status_transaksi = 'Komplain Dikirim' WHERE id_inv_ppn = '$id_inv_decrypt'");
-                } else if ($inv_id = "BUM"){
+                } else if ($inv_id == "BUM"){
                     $query_update_inv = mysqli_query($connect, "UPDATE inv_bum SET status_transaksi = 'Komplain Dikirim' WHERE id_inv_bum = '$id_inv_decrypt'");
                 }
 
                 $update_revisi_status_kirim = mysqli_query($connect, "UPDATE revisi_status_kirim SET jenis_penerima = 'Ekspedisi', dikirim_ekspedisi = '$id_ekspedisi', no_resi = '$resi', jenis_ongkir = '$jenis_ongkir', ongkir = '$ongkir', status_kirim = '0', status_review = '0' WHERE id_komplain = '$id_komplain_decrypt'");
+
+                $sql_inv_penerima = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id_komplain_decrypt'");
+                $cek_data_penerima = $sql_inv_penerima->num_rows;
+                if($cek_data_penerima > 0){
+                    $stmt = $connect->prepare("DELETE FROM inv_penerima_revisi WHERE id_komplain = ?");
+                    $stmt->bind_param('s', $id_komplain_decrypt);
+                    $delete_penerima = $stmt->execute();
+                }
         
                 // Proses penyimpanan gambar
                 // Create ../../gambar-revisi/bukti_kirim/ folder if it doesn't exist

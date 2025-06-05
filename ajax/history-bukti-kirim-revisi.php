@@ -72,7 +72,7 @@ if (isset($_POST['id'])) {
                              while($data = mysqli_fetch_assoc($sql)){ 
                                     $no_inv = $data['no_inv'];
                                     $cs_inv = $data['cs_inv'];
-                                    $diupload_oleh = !empty($data['nama_driver']) ? $data['nama_driver'] : $data['user_created'];
+                                    $diupload_oleh = $data['nama_driver'] ?? $data['user_created'] ?? '-';
                                     $pengirim = '';
                                     if (!empty($data['nama_driver'])) {
                                         $pengirim = $data['nama_driver'];

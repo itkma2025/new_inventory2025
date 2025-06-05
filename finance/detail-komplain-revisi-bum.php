@@ -123,13 +123,7 @@
         </div> -->
         <!-- ENd Loading -->
         <section>
-            <?php  
-                include "koneksi.php";
-                $id_role = $_SESSION['tiket_role'];
-                $sql_role = "SELECT * FROM user_role WHERE id_user_role='$id_role'";
-                $query_role = mysqli_query($connect, $sql) or die(mysqli_error($connect));
-                $data_role = mysqli_fetch_array($query_role);
-              
+            <?php 
                 $id = decrypt($_GET['id'], $key_spk);
                 include "../query/detail-komplain-bum.php";
                 $id_inv = $data_kondisi['id_inv'];
@@ -490,6 +484,16 @@
                                         <button class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#bukti">
                                             <i class="bi bi-image"></i> Bukti Terima Revisi
                                         </button>
+                                    <?php
+                                }
+                            ?>
+                            <?php    
+                                if($total_data != '0'){
+                                    ?>
+                                        <a href="cetak-inv-revisi-bum.php?id=<?php echo encrypt($id_inv, $key_spk) ?>&&id_komplain= <?php echo encrypt($id, $key_spk)?>"
+                                            class="btn btn-primary mb-3">
+                                            <i class="bi bi-printer"></i> Cetak Invoice Revisi Bum
+                                        </a>
                                     <?php
                                 }
                             ?>

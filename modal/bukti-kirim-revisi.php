@@ -30,6 +30,8 @@ if (isset($_POST['id'])) {
                     sk.dikirim_ekspedisi, 
                     sk.dikirim_driver,
                     sk.no_resi, 
+                    sk.ongkir, 
+                    sk.free_ongkir,
                     STR_TO_DATE(sk.tgl_kirim, '%d/%m/%Y') AS tgl_kirim,
                     ex.nama_ekspedisi,
                     us.nama_user AS nama_user,
@@ -47,6 +49,7 @@ if (isset($_POST['id'])) {
     $query_bukti = mysqli_query($connect, $sql_bukti);
     $data_bukti = mysqli_fetch_array($query_bukti);   
     if ($data_bukti) {
+        $free_ongkir = ($data_bukti['free_ongkir'] == 1) ? "(Free Ongkir)" : "";
         $nama_driver = $data_bukti['nama_user'];
         $nama_driver = !empty($nama_driver) ? str_replace(' ', '_', $nama_driver) : '';
         $lokasi = $data_bukti['lokasi'];   
@@ -145,7 +148,7 @@ if (isset($_POST['id'])) {
                                             <tr>
                                                 <td class="text-nowrap" style="width:180px;">Nominal Ongkir</td>
                                                 <td>:</td>
-                                                <td class="text-nowrap"><?php echo number_format($data_bukti['ongkir'],0,'.','.'); ?></td>
+                                                  <td class="text-nowrap"><?php echo number_format($data_bukti['ongkir'],0,'.','.') . "&nbsp;" . $free_ongkir; ?></td>
                                             </tr>
                                             <tr>
                                                 <td class="text-nowrap" style="width:180px;">No Resi</td>
@@ -171,7 +174,9 @@ if (isset($_POST['id'])) {
                                             <tr>
                                                 <td class="text-nowrap" style="width:180px;">Tanggal Diterima</td>
                                                 <td>:</td>
-                                                <td class="text-nowrap"><?php echo formatTanggalIndonesia($data_bukti['tgl_terima']); ?></td>
+                                                <td class="text-nowrap">
+                                                    <?php echo $data_bukti['tgl_terima'] ? formatTanggalIndonesia($data_bukti['tgl_terima']) : '' ?>
+                                                </td>
                                             </tr>
                                         </table>
                                     </div>

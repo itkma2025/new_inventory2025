@@ -38,11 +38,11 @@
 
     <main id="main" class="main">
         <!-- Loading -->
-        <!-- <div class="loader loader">
+        <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div> -->
+        </div>
         <!-- ENd Loading -->
         <section>
             <!-- SWEET ALERT -->
@@ -206,7 +206,7 @@
                                 $cek_data_jenis_pengiriman = mysqli_num_rows($cek_jenis_pengiriman);
                                 $status_review = $data_cek_jenis_pengiriman['status_review'];
                                 $approval = $data_cek_jenis_pengiriman['approval'];
-                                $jenis_reject = $data_cek_jenis_pengiriman['jenis_reject'];
+                                $jenis_reject = $data_cek_jenis_pengiriman['jenis_reject']; 
                                 $id_status_kirim_revisi = $data_cek_jenis_pengiriman['id_status_kirim_revisi'];
                                 $id_bukti_terima = $data_cek_jenis_pengiriman['id_bukti_terima'];
                                 $bukti_satu = $data_cek_jenis_pengiriman['bukti_satu'];
@@ -260,7 +260,11 @@
                                                 <?php
                                             } 
                                         } else if($approval == '1' && $jenis_reject == '2'){
-                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0'){
+                                            // Kode untuk mengecek data invoice penerima revisi
+                                            $sql_penerima_rev = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id'");
+
+                                            $cek_data_penerima_rev = mysqli_num_rows($sql_penerima_rev);     
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0' && $cek_data_penerima_rev == '0'){
                                                 ?>
                                                     <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
                                                     data-bs-target="#DiterimaEx">
@@ -269,14 +273,14 @@
                                                     </button>
                                                 <?php
                                             }
-
-                                            ?>
-                                                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
-                                                    <i class="bi bi-truck"></i>
-                                                    Proses Pengiriman
-                                                </button>
-                                            <?php
-
+                                            if($status_review == '1' && $approval == '0'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Proses Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
                                         }
                             
                                     }
@@ -401,7 +405,7 @@
                                                     <div class="p-2 text-start">
                                                         <a href="cetak-inv-revisi-nonppn.php?id=<?php echo encrypt($id_inv, $key_spk) ?>&&id_komplain= <?php echo encrypt($id, $key_spk)?>"
                                                             class="btn btn-primary mb-3">
-                                                            <i></i> Cetak Invoice Revisi Non PPN
+                                                            <i class="bi bi-printer"></i> Cetak Invoice Revisi Non PPN
                                                         </a>
                                                     </div>
                                                 <?php

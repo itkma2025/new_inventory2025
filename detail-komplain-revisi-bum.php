@@ -740,13 +740,13 @@
                                             $total_data = mysqli_num_rows($sql_rev);
                                             
                                         ?>
-                                        <?php  
+                                        <?php    
                                             if($total_data != '0'){
                                                 ?>
                                                     <div class="p-2 text-start">
                                                         <a href="cetak-inv-revisi-bum.php?id=<?php echo encrypt($id_inv, $key_spk) ?>&&id_komplain= <?php echo encrypt($id, $key_spk)?>"
                                                             class="btn btn-primary mb-3">
-                                                            <i></i> Cetak Invoice Revisi Non PPN
+                                                            <i class="bi bi-printer"></i> Cetak Invoice Revisi Bum
                                                         </a>
                                                     </div>
                                                 <?php
