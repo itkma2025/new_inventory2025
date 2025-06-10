@@ -162,7 +162,17 @@
 				throw new Exception("Gagal update status kirim");
 			}
 
+			// Cek penerima
+			$sql_penerima = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id_komplain'");
+			$cek_total_inv_penerima = $sql_penerima->num_rows;
 
+			if ($cek_total_inv_penerima > 0) {
+				$del_inv_penerima = $connect->query("DELETE FROM inv_penerima_revisi WHERE id_komplain = '$id_komplain'");
+				
+				if (!$del_inv_penerima) {
+					throw new Exception("Gagal update status kirim (hapus penerima revisi)");
+				}
+			}
 
 			// Update bukti terima
 			$stmt = $connect->prepare("UPDATE inv_bukti_terima_revisi

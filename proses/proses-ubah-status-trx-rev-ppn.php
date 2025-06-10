@@ -710,10 +710,9 @@ if (isset($sanitasi_post['ubah-status'])) {
             throw new Exception('Gagal mengupload file.');
         }
 
+        // Mulai Transaksi
+        $connect->begin_transaction();
         try {
-            // Begin transaction
-            mysqli_begin_transaction($connect);
-
             // Proses update status kirim
             $stmt = $connect->prepare("UPDATE revisi_status_kirim 
                                             SET 
@@ -777,14 +776,36 @@ if (isset($sanitasi_post['ubah-status'])) {
                 throw new Exception("Gagal simpan data: " . $stmt->error);
             }
 
-            // Proses update inv penerima revisi
-            $stmt = $connect->prepare("UPDATE inv_penerima_revisi 
-                                                SET
-                                                    nama_penerima = ?, 
-                                                    tgl_terima = ? 
-                                                WHERE id_komplain = ?");
-            $stmt->bind_param("sss", $diambil_oleh, $tgl, $id_komplain);
-            $query_diterima = $stmt->execute();
+            // Cek inv penerima revisi
+            $cek_inv_penerima = $connect->query("SELECT id_inv_penerima_revisi FROM inv_penerima_revisi WHERE id_komplain = '$id_komplain'");
+            $cek_data_inv_penerima = mysqli_num_rows($cek_inv_penerima);
+            if ($cek_data_inv_penerima != 0) {
+                // Proses update inv penerima revisi
+                $stmt = $connect->prepare("UPDATE inv_penerima_revisi 
+                                                    SET
+                                                        nama_penerima = ?, 
+                                                        tgl_terima = ? 
+                                                    WHERE id_komplain = ?");
+                $stmt->bind_param("sss", $diambil_oleh, $tgl, $id_komplain);
+                $query_diterima = $stmt->execute();
+
+                if (!$query_diterima) {
+                    throw new Exception("Gagal hapus data: " . $stmt->error);
+                }
+            } else {
+                // Proses insert inv penerima revisi
+                $stmt = $connect->prepare("INSERT INTO inv_penerima_revisi 
+                                                                (id_inv_penerima_revisi, id_komplain, nama_penerima, alamat, tgl_terima) 
+                                                        VALUES (?, ?, ?, 'PT. Karsa Mandiri Alkesindo', ?)");
+                $stmt->bind_param("ssss", $id_inv_penerima_revisi, $id_komplain, $diambil_oleh, $tgl);
+                $query_diterima = $stmt->execute();
+
+                if (!$query_diterima) {
+                    throw new Exception("Gagal hapus data: " . $stmt->error);
+                }
+            }
+
+            
 
             if (!$query_diterima) {
                 throw new Exception("Gagal update data: " . $stmt->error);

@@ -596,7 +596,7 @@
                                         ?>
                                             <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
                                             data-bs-target="#DiterimaEx">
-                                            <i class="bi bi-send"></i>
+                                            <i class="bi bi-send"></i> 
                                             Diterima
                                             </button>
 
