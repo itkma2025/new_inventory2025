@@ -110,6 +110,11 @@ if (isset($user_role)) {
                 </a>
               </li>
               <li>
+                <a class="<?php echo (isset($page2) && $page2 == 'data-stock-safaco') ? 'active' : ''; ?>" href="stock-produk-safaco.php">
+                  <i class="bi bi-circle"></i><span>Stok Produk Safaco</span>
+                </a>
+              </li>
+              <li>
                 <a class="<?php echo (isset($page2) && $page2 == 'data-produk-set-marwa') ? 'active' : ''; ?>" href="data-produk-set-marwa.php">
                   <i class="bi bi-circle"></i><span>Produk Set Reguler</span>
                 </a>
@@ -117,6 +122,11 @@ if (isset($user_role)) {
               <li>
                 <a class="<?php echo (isset($page2) && $page2 == 'data-produk-set-ecat') ? 'active' : ''; ?>" href="data-produk-set-ecat.php">
                   <i class="bi bi-circle"></i><span>Produk Set Ecat</span>
+                </a>
+              </li>
+               <li>
+                <a class="<?php echo (isset($page2) && $page2 == 'data-produk-set-safaco') ? 'active' : ''; ?>" href="data-produk-set-safaco.php">
+                  <i class="bi bi-circle"></i><span>Produk Set Safaco</span>
                 </a>
               </li>
               <li>

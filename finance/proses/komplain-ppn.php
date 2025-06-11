@@ -1,9 +1,9 @@
 <?php  
-    require_once __DIR__ . "/../akses.php";
+    require_once __DIR__ . "/../../akses.php";
     $id_user = decrypt($_SESSION['tiket_id'], $key_global);
 
     // Penghubung Library
-    require_once __DIR__ . '/../assets/vendor/autoload.php';
+    require_once __DIR__ . '/../../assets/vendor/autoload.php';
     // Library Tangal
     use Carbon\Carbon;
     $datetime_now = Carbon::now();

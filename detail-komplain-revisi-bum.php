@@ -18,91 +18,12 @@
     <link rel="stylesheet" href="assets/css/wrap-text.css">
     <link rel="stylesheet" href="assets/css/button-file-upload.css">
     <link href="assets/vendor/lightbox/dist/css/lightgallery.css" rel="stylesheet" />
+    <!-- FancyBox CSS -->
+    <link rel="stylesheet" href="assets/vendor/fancybox/fancybox.css">
+    <link rel="stylesheet" href="assets/css/style-detail-komplain.css">
 
     <?php include "page/head.php"; ?>
     <?php include "page/style-button-filterdate.php"; ?>
-
-    <style>
-        .label-mobile {
-            display: none;
-        }
-
-        .disable-click {
-            pointer-events: none;
-        }
-
-        .disable-scroll {
-            overflow: hidden;
-        }
-
-        @media (max-width: 767px) {
-
-            body {
-                font-size: 14px;
-            }
-
-            .mobile {
-                display: none;
-            }
-
-            .mobile-text {
-                text-align: left !important;
-            }
-
-            /* Tambahkan aturan CSS khusus untuk tampilan mobile di bawah 767px */
-            .col-12.col-md-2 {
-                /* Contoh: Mengatur tinggi elemen select pada tampilan mobile */
-                height: 50px;
-            }
-
-            .card-mobile {
-                display: none;
-            }
-
-            .label-mobile {
-                display: block;
-            }
-
-        }
-
-        .btn.active {
-            background-color: black;
-            color: white;
-            border-color: 1px solid white;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Menghilangkan garis pada input */
-        input {
-            border: none;
-            outline: none;
-            background: none;
-            width: 100%;
-        }
-
-        @media only screen and (max-width: 500px) {
-            body {
-                font-size: 14px;
-            }
-
-            .mobile {
-                display: none;
-            }
-
-            .mobile-text {
-                text-align: left !important;
-            }
-        }
-    </style>
 </head>
 
 <body id="scroll">
@@ -117,32 +38,33 @@
 
     <main id="main" class="main">
         <!-- Loading -->
-        <!-- <div class="loader loader">
+        <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div> -->
+        </div>
         <!-- ENd Loading -->
         <section>
             <!-- SWEET ALERT -->
             <div class="info-data" data-infodata="<?php if (isset($_SESSION['info'])) { echo $_SESSION['info']; } unset($_SESSION['info']); ?>"></div>
             <!-- END SWEET ALERT -->
             <?php  
-                $id = decrypt($_GET['id'], $key_spk);
+                echo $id = decrypt($_GET['id'], $key_spk);
                 include "query/detail-komplain-bum.php";
                 $id_inv = $data_kondisi['id_inv'];
                 $no_inv = $data_detail['no_inv'];
                 $alamat = $data_detail['alamat'];
+                $nama_driver = $data_driver_rev['nama_driver'] ?? '';
+                $nama_driver = str_replace(' ', '_', $nama_driver);
                 include "query/produk-komplain-tmp.php";
                 $cek_status_cancel = $connect->query("SELECT id_inv_bum, status_transaksi FROM inv_bum WHERE id_inv_bum = '$id_inv'");
                 $data_status_cancel = mysqli_fetch_array($cek_status_cancel);
-                $status_transaksi = $data_status_cancel['status_transaksi'];
+                echo $status_transaksi = $data_status_cancel['status_transaksi'];
 
-                $id_inv_substr = $id_inv;
-                $inv_id = substr($id_inv_substr, 0, 3);
+                $inv_id = substr($id_inv, 0, 3);
                 $jenis_inv = "";
                 if ($inv_id == "NON"){
-                    $jenis_inv = "nonppn";
+                    $jenis_inv = "nonbum";
                 } else if ($inv_id == "PPN"){
                     $jenis_inv = "ppn";
                 } else if ($inv_id == "BUM"){
@@ -168,265 +90,12 @@
                 }
             ?>
             <div class="card p-2">
-                <div class="row mb-2">
-                    <!-- Kolom No Komplain (di atas) -->
-                    <div class="col-md-3">
-                        <button class="btn btn-secondary">No Komplain : <?php echo $data_detail['no_komplain'] ?></button>
-                    </div>
-                    <!-- Kolom Open (di tengah) -->
-                    <div class="col-md-6 text-center">
-                        <p><b>Detail Invoice Revisi</b></p>
-                    </div>
-                    <!-- Kolom Details (paling bawah) -->
-                    <div class="col-md-3 text-end">
-                        <button class="btn btn-secondary">
-                            <?php 
-                                if($data_detail['status_komplain'] == 0){
-                                    echo "Open";
-                                } else {
-                                    echo "Selesai";
-                                }
-                            ?>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <div class="border p-3">
-                            <div class="table-responsive">
-                                <table class="table table-borderless">
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">Tgl. Pesanan</td>
-                                        <td class="text-nowrap">: <?php echo $data_detail['tgl_pesanan'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">No. SPK</td>
-                                        <td class="text-nowrap">
-                                            : <?php 
-                                                    $no = 1;
-                                                    $total_rows = mysqli_num_rows($query_detail2); // Menghitung total baris data
-                                                    while ($data_detail2 = mysqli_fetch_array($query_detail2)) {
-                                                        $no_spk = $data_detail2['no_spk'];
-                                                        $tgl_pesanan = $data_detail2['tgl_pesanan'];
-                                                        $no_po = $data_detail2['no_po'];
-                                                        
-                                                        // Mengecek apakah ini adalah baris kedua atau lebih
-                                                        if ($no > 1) {
-                                                            echo "<br>"; // Menambahkan baris baru setelah baris pertama
-                                                        }
-                                                        
-                                                        echo $no . ". (" . $tgl_pesanan . ")";
-                                                        
-                                                        // Menampilkan nomor PO jika tersedia
-                                                        if (!empty($no_po)) {
-                                                            echo " / (" . $no_po . ")";
-                                                        }
-                                                        
-                                                        echo " / (" . $no_spk . ")";
-                                                        
-                                                        $no++;
-                                                    }
-                                                ?>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">No. Invoice</td>
-                                        <td class="text-nowrap">: <?php echo $no_inv_fix ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">Tgl.Invoice</td>
-                                        <td class="text-nowrap">: <?php echo $data_detail['tgl_inv'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">Jenis Invoice</td>
-                                        <td class="text-nowrap">: <?php echo $data_detail['kategori_inv'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">Order Via</td>
-                                        <td class="text-nowrap">: <?php echo $data_detail['order_by'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">Sales</td>
-                                        <td class="text-nowrap">: <?php echo $data_detail['nama_sales'] ?></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="border p-3">
-                            <div class="table-responsive">
-                                <table class="table table-borderless">
-                                    <?php  
-                                        $cek_inv_revisi = $connect->query("SELECT pelanggan_revisi, alamat_revisi FROM inv_revisi WHERE id_inv = '$id_inv' ORDER BY created_date DESC");
-                                        $total_data_inv_rev = mysqli_num_rows($cek_inv_revisi);
-                                        $data_cek_inv_rev = mysqli_fetch_array($cek_inv_revisi);
-                                        
-                                        $pelanggan = '';
-                                        $alamat = '';
-                                        if ($total_data_inv_rev > 0){
-                                            $pelanggan = $data_cek_inv_rev['pelanggan_revisi'];
-                                            $alamat = $data_cek_inv_rev['alamat_revisi'];
-                                        } else {
-                                            if($data_detail['alamat_inv'] == ''){
-                                                $pelanggan = $data_detail['cs_inv'];
-                                                $alamat = $data_detail['alamat'];
-                                            } else {
-                                                $pelanggan = $data_detail['cs_inv'];
-                                                $alamat = $data_detail['alamat_inv'];  
-                                            }
-                                            
-                                        }
-                                    ?>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">Pelanggan</td>
-                                        <td class="text-nowrap">: <?php echo $data_detail['nama_cs'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">Pelanggan Invoice</td>
-                                        <td class="text-nowrap">: <?php echo $pelanggan ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-6 text-nowrap">Alamat</td>
-                                        <td class="wrap-text">: <?php echo $alamat ?></td>
-                                    </tr>
-                                    <?php 
-                                        if($total_driver_rev != 0 && $data_driver_rev['jenis_pengiriman'] == 'Ekspedisi'){
-                                            ?>
-                                                <tr>
-                                                    <td class="col-md-6 text-nowrap">Ongkos Kirim</td>
-                                                    <td class="text-nowrap">: <?php 
-                                                            if($data_driver_rev['free_ongkir'] == 1){
-                                                                echo "0 (Free Ongkir)";
-                                                            } else  {
-                                                                if($data_driver_rev['jenis_ongkir'] == 1){
-                                                                    echo number_format($data_driver_rev['ongkir']) . " (COD)";
-                                                                } else {
-                                                                    echo number_format($data_driver_rev['ongkir']);
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </td>
-                                                </tr>
-                                            <?php
-                                        }
-                                    ?>
-                                    <?php  
-                                        if($total_driver_rev != 0){
-                                            ?>
-                                                <tr>
-                                                    <td class="col-md-6 text-nowrap">Jenis Pengiriman</td>
-                                                    <td class="text-nowrap">
-                                                        : <?php  
-                                                                if($data_driver_rev['jenis_pengiriman'] == 'Driver'){
-                                                                    ?>
-                                                                        <?php echo $data_driver_rev['jenis_pengiriman']?>
-                                                                        (<?php echo $data_driver_rev['nama_driver'] ?>)
-                                                                    <?php
-                                                                } else if($data_driver_rev['jenis_pengiriman'] == 'Ekspedisi'){
-                                                                    ?>
-                                                                        <?php echo $data_driver_rev['jenis_pengiriman']?>
-                                                                        <?php
-                                                                } else {
-                                                                    ?>
-                                                                        <?php echo $data_driver_rev['jenis_pengiriman']?>
-                                                                        (<?php echo $data_driver_rev['diambil_oleh'] ?>)
-                                                                    <?php
-                                                                }
-                                                            ?>
-
-                                                    </td>
-                                                </tr>
-                                                <?php  
-                                                    if(!empty($data_driver_rev['jenis_pengiriman'] && $data_driver_rev['jenis_penerima'])){
-                                                        ?>
-                                                            <tr>
-                                                                <td class="col-md-6 text-nowrap">Diterima Oleh</td>
-                                                                <td class="text-nowrap">
-                                                                    : <?php 
-                                                                            if($data_driver_rev['jenis_penerima'] == 'Customer'){
-                                                                                ?>
-                                                                                    <?php echo $data_driver_rev['jenis_penerima'] ?>
-                                                                                    <?php
-                                                                            } else {
-                                                                                ?>
-                                                                                    <?php echo $data_driver_rev['nama_ekspedisi'] ?>
-                                                                                <?php
-                                                                            }
-                                                                    
-                                                                        ?>
-                                                                </td>
-                                                            </tr>
-                                                        <?php
-                                                    }          
-                                                ?>
-                                                <?php  
-                                                    if(!empty($data_driver_rev['jenis_pengiriman'] && $data_driver_rev['jenis_penerima'])){
-                                                        if($data_driver_rev['jenis_penerima'] == 'Customer'){
-                                                        } else {
-                                                            ?>
-                                                                <tr>
-                                                                    <td class="col-md-6 text-nowrap">No. Resi</td>
-                                                                    <td class="text-nowrap">
-                                                                        : <?php echo $data_driver_rev['no_resi'] ?>
-                                                                    </td>
-                                                                </tr>
-                                                            <?php
-                                                        }
-                                                        ?>
-                                                            
-                                                        <?php
-                                                    }          
-                                                ?>
-                                                <?php   
-                                                    if(!empty($data_driver_rev['nama_penerima'])){
-                                                        ?>
-                                                            <tr>
-                                                                <td class="col-md-6 text-nowrap">Nama Penerima (CS)</td>
-                                                                <td class="text-nowrap">: <?php echo $data_driver_rev['nama_penerima'] ?></td>
-                                                            </tr>
-                                                        <?php
-                                                    }
-                                                ?>
-                                                <?php  
-                                                    if(!empty($data_driver_rev['dikirim_oleh']) && !empty($data_driver_rev['penanggung_jawab'])){
-                                                        ?>
-                                                            <tr>
-                                                                <td class="col-md-6 text-nowrap">Dikirim Oleh</td>
-                                                                <td class="text-nowrap">: <?php echo $data_driver_rev['dikirim_oleh'] ?></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="col-md-6 text-nowrap">PJ. Paket Kirim</td>
-                                                                <td class="text-nowrap">: <?php echo $data_driver_rev['penanggung_jawab'] ?>
-                                                                </td>
-                                                            </tr>
-                                                        <?php
-                                                    }
-                                                            
-                                                ?>
-                                            <?php  
-                                        } 
-                                    ?>
-                                    <?php  
-                                        if ($data_kondisi['catatan'] != ""){
-                                            ?>
-                                                <tr>
-                                                    <td class="col-md-6 text-nowrap">Catatan</td>
-                                                    <td class="text-nowrap">: <?php echo $data_kondisi['catatan'] ?></td>
-                                                </tr>
-                                            <?php 
-                                        } 
-                                    ?>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Detail Komplain -->
+                <?php include "page/detail-komplain-revisi-bum.php" ?>
+                <!-- End Detail Komplain -->
                 <!-- kode untuk status TRX Dikirim atau Selesai -->
                 <?php 
-                    $id_kmpl = $id;
-                    $sql_kmpl = mysqli_query($connect, "SELECT status_komplain FROM inv_komplain WHERE id_komplain = '$id_kmpl'");
+                    $sql_kmpl = mysqli_query($connect, "SELECT status_komplain FROM inv_komplain WHERE id_komplain = '$id'");
                     $data_kmpl = mysqli_fetch_array($sql_kmpl);
                     $sql_rev = mysqli_query($connect, "SELECT id_inv, status_pengiriman, status_trx_komplain, status_trx_selesai, created_date FROM inv_revisi WHERE id_inv = '$id_inv' ORDER BY created_date DESC LIMIT 1");
                     $data_rev = mysqli_fetch_array($sql_rev);
@@ -466,36 +135,7 @@
                     }
                 ?>
             </div>
-            <style>
-                /* CSS untuk layar kecil (misalnya, ukuran layar ponsel) */
-                @media (max-width: 767px) {
-                    .w-100 {
-                        flex-wrap: wrap;
-                        justify-content: center;
-                    }
-
-                    .p-2 {
-                        flex: 1 1 calc(33.33% - 10px);
-                        margin: 5px;
-                        /* text-align: center; */
-                    }
-
-                    .text-end {
-                        text-align: center;
-                    }
-
-                    .btn {
-                        width: 100%;
-                        white-space: nowrap;
-                    }
-
-                    .btn button {
-                        display: block;
-                        margin-top: 10px;
-                    }
-
-                }
-            </style>
+        
             <div class="card p-3">
                 <div class="row">
                     <div class="col-md-7 mb-2">
@@ -526,7 +166,7 @@
                                 $total_data_bukti = mysqli_num_rows($cek_bukti_terima);
                                 if($total_data_bukti != '0'){
                                     ?>
-                                        <button class="btn btn-info mb-3" data-bs-toggle="modal" data-bs-target="#bukti">
+                                       <button type="button" data-id ="<?php echo urlencode($_GET['id']); ?>" class="btn btn-primary mb-3 detailReview" id="detailReview" data-bs-toggle="modal" data-bs-target="#modalDetail" title="Lihat Bukti">
                                             <i class="bi bi-image"></i> Bukti Terima Revisi
                                         </button>
                                     <?php
@@ -545,93 +185,172 @@
                                 }   
                             ?>
                             <?php
-                                if ($total_data_rev != '0' && $status_kmpl == '0') {
-                                    $status_pengiriman = $data_rev['status_pengiriman'];
-                                    $status_trx_komplain = $data_rev['status_trx_komplain'];
-                                    $status_trx_selesai = $data_rev['status_trx_selesai'];
-                                    
-                                    if($status_pengiriman == "1" && $status_trx_komplain == "1" && $status_trx_selesai == "1") {
-                                        
-                                    } else if ($status_pengiriman == '1' && $status_trx_komplain == '0' && $status_trx_selesai == '0') {
-                                        ?>
-                                            <button href="#" class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#ubahStatus">
-                                                <i class="bi bi-arrow-left-right"></i> Ubah Status
-                                            </button>
-                                        <?php
-                                    } else if ($status_pengiriman == "1" && $status_trx_komplain == "1" && $status_trx_selesai == "0") {
-                                        ?>
-                                            <button href="#" class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#ubahStatus">
-                                                <i class="bi bi-arrow-left-right"></i> Ubah Status
-                                            </button>
-                                        <?php
-                                    } else if ($status_pengiriman == "0" && $status_trx_komplain == "0" && $status_trx_selesai == "0") {
-                                        ?>
-
-                                            <?php
-                                    } 
-                                        } else if ($total_data_rev == '0' && $status_kmpl == '0'){
-                                    ?>
-                                        <button href="#" class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                            data-bs-target="#ubahStatus">
-                                            <i class="bi bi-arrow-left-right"></i> Ubah Status
-                                        </button>
-                                    <?php
-                                }
-                            ?>
-                            <?php  
-                                $cek_jenis_pengiriman = mysqli_query($connect, "SELECT 
-                                                                                        id_status_kirim_revisi, id_komplain, jenis_penerima, status_kirim, created_date
-                                                                                    FROM revisi_status_kirim
-                                                                                    WHERE id_komplain = '$id'
-                                                                                    AND created_date = (SELECT MAX(created_date) FROM revisi_status_kirim WHERE id_komplain = '$id');
-                                                                                    ");
-                                $data_cek_jenis_pengiriman = mysqli_fetch_array($cek_jenis_pengiriman);
-                                $id_status_kirim_revisi = $data_cek_jenis_pengiriman['id_status_kirim_revisi'] ?? null; // Menggunakan null coalescing operator
-                                $total_cek_jenis_pengiriman = mysqli_num_rows($cek_jenis_pengiriman);
-
-                                if($total_cek_jenis_pengiriman != 0){
-                                    if($data_cek_jenis_pengiriman['jenis_penerima'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0'){
+                                 $cek_jenis_pengiriman = mysqli_query($connect, "SELECT 
+                                                                                    sk.id_status_kirim_revisi, 
+                                                                                    sk.id_komplain, 
+                                                                                    sk.jenis_pengiriman, 
+                                                                                    sk.jenis_penerima,
+                                                                                    sk.status_kirim, 
+                                                                                    sk.status_review, 
+                                                                                    sk.created_date,
+                                                                                    ibt.id_bukti_terima,
+                                                                                    ibt.bukti_satu,
+                                                                                    ibt.approval,
+                                                                                    ibt.jenis_reject,
+                                                                                    ibt.status_perbaikan
+                                                                                FROM revisi_status_kirim AS sk
+                                                                                LEFT JOIN inv_bukti_terima_revisi AS ibt ON sk.id_komplain = ibt.id_komplain
+                                                                                WHERE sk.id_komplain = '$id'
+                                                                                AND sk.created_date = (SELECT MAX(created_date) FROM revisi_status_kirim WHERE id_komplain = '$id');
+                                                                    ");
+                                $data_cek_jenis_pengiriman = $cek_jenis_pengiriman->fetch_assoc();
+                                $cek_data_jenis_pengiriman = mysqli_num_rows($cek_jenis_pengiriman);
+                                $status_review = $data_cek_jenis_pengiriman['status_review'];
+                                $approval = $data_cek_jenis_pengiriman['approval'];
+                                $jenis_reject = $data_cek_jenis_pengiriman['jenis_reject']; 
+                                $id_status_kirim_revisi = $data_cek_jenis_pengiriman['id_status_kirim_revisi'];
+                                $id_bukti_terima = $data_cek_jenis_pengiriman['id_bukti_terima'];
+                                $bukti_satu = $data_cek_jenis_pengiriman['bukti_satu'];
+                                if($status_kmpl == '0'){
+                                    if($cek_data_jenis_pengiriman == '0') {
                                         ?>
                                             <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                            data-bs-target="#DiterimaEx">
-                                            <i class="bi bi-send"></i> 
-                                            Diterima
+                                                data-bs-target="#ubahStatus">
+                                                <i class="bi bi-arrow-left-right"></i> Ubah Status
                                             </button>
-
                                         <?php
-                                    }
-                                }
-                            ?>
-                            <?php  
-                                $sql_ubah_pengiriman = $connect->query("SELECT id_komplain FROM revisi_status_kirim WHERE id_komplain = '$id'");
-                                $total_data_pengiriman = mysqli_num_rows($sql_ubah_pengiriman);
-                                if($total_data_pengiriman != 0 && $data_detail['status_komplain'] == 0) {
-                                    ?>
-                                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
-                                            <i class="bi bi-truck"></i>
-                                            Ubah Jenis Pengiriman
-                                        </button>
+                                    } else {
+                                        if($approval == '2'){
+                                            ?>
+                                                <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#ubahStatus">
+                                                    <i class="bi bi-arrow-left-right"></i> Ubah Status
+                                                </button>
+                                            <?php
+                                        }
 
-                                        <?php  
-                                            if($data_driver_rev['jenis_pengiriman'] == 'Ekspedisi'){
+                                        if($approval == '1' && $jenis_reject == '1'){
+                                            $modalReupload = '';
+                                            $nama_penerima = '';
+                                            $no_resi = '';
+                                            $jenis_ongkir = '';
+                                            $nominal_ongkir  = '';
+                                            $free_ongkir = '';
+                                            $dikirim_oleh = '';
+                                            $penanggung_jawab = '';
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi'){
+                                                $modalReupload = 'reuploadEx';
+                                                $nama_penerima = $data_driver_rev['nama_ekspedisi'];
+                                                $no_resi = $data_driver_rev['no_resi'];
+                                                $jenis_ongkir = $data_driver_rev['jenis_ongkir'];
+                                                $nominal_ongkir  = $data_driver_rev['ongkir'];
+                                                $free_ongkir = $data_driver_rev['free_ongkir'];
+                                                $dikirim_oleh = $data_driver_rev['dikirim_oleh'];
+                                                $penanggung_jawab = $data_driver_rev['penanggung_jawab'];
+                                            } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Driver'){
+                                                $modalReupload = 'reuploadDriver';
+                                            } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung'){
+                                                $modalReupload = 'reuploadDiambil';
+                                            }
+                                            if($status_review != '0'){
                                                 ?>
-                                                    <button type="button" class="btn btn-warning mb-3" data-bs-toggle="modal" data-bs-target="#ubahResi" data-id = "<?php echo encrypt($id_status_kirim_revisi, $key_spk) ?>">
-                                                        <i class="bi bi-truck"></i>
-                                                        Edit Resi dan Ongkir
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                        data-bs-target="#<?php echo $modalReupload ?>">
+                                                        <i class="bi bi-image"></i> Reupload Bukti Terima
+                                                    </button>
+                                                <?php
+                                            } 
+                                        } else if($approval == '1' && $jenis_reject == '2'){
+                                            // Kode untuk mengecek data invoice penerima revisi
+                                            $sql_penerima_rev = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id'");
+
+                                            $cek_data_penerima_rev = $sql_penerima_rev->num_rows;     
+                                             // Jenis pengiriman Ekspedisi
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
                                                     </button>
                                                 <?php
                                             }
-                                        ?>
-                                    <?php
-                                }                               
+
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '1'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                            // ==================================================================================
+                                            // Jenis pengiriman diambil langsung
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
+                                                    </button>
+                                                <?php
+                                            }
+
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '1'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                            
+                                            if($status_review == '1' && $approval == '0'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Proses Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                        } else if($approval == '0' && $jenis_reject == '2'){
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Driver' && $data_cek_jenis_pengiriman['jenis_penerima'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
+                                                    </button>
+
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                        } else {
+                                            ?>
+                                                <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#DiterimaEx">
+                                                <i class="bi bi-send"></i>
+                                                    Diterima
+                                                </button>
+
+                                                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                    <i class="bi bi-truck"></i>
+                                                    Ubah Pengiriman
+                                                </button>
+                                            <?php
+                                        }
+                            
+                                    }
+                                }
                             ?>
                         </div>
                         <div class="col-md-4">
                             <div class="text-end">
                                 <?php  
-                                    if($jenis_inv == 'ppn'){
+                                    if($jenis_inv == 'bum'){
                                         ?>
                                             <button class="btn border-dark">
                                                 <?php  
@@ -674,7 +393,7 @@
                         <!-- Default Tabs -->
                         <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a href="detail-komplain-bum.php?id=<?php echo encrypt($id, $key_spk) ?>"
+                                <a href="detail-komplain-bum.php?id=<?php echo urlencode($_GET['id']) ?>"
                                     class="nav-link">Original</a>
                             </li>
                             <li class="nav-item" role="presentation">
@@ -740,13 +459,13 @@
                                             $total_data = mysqli_num_rows($sql_rev);
                                             
                                         ?>
-                                        <?php    
+                                        <?php  
                                             if($total_data != '0'){
                                                 ?>
                                                     <div class="p-2 text-start">
                                                         <a href="cetak-inv-revisi-bum.php?id=<?php echo encrypt($id_inv, $key_spk) ?>&&id_komplain= <?php echo encrypt($id, $key_spk)?>"
                                                             class="btn btn-primary mb-3">
-                                                            <i class="bi bi-printer"></i> Cetak Invoice Revisi Bum
+                                                            <i class="bi bi-printer"></i> Cetak Invoice Revisi Non PPN
                                                         </a>
                                                     </div>
                                                 <?php
@@ -824,7 +543,7 @@
                                                                             data-merk="<?php echo $data_tmp['merk'] ?>"
                                                                             data-harga="<?php echo $data_tmp['harga']  ?>"
                                                                             data-disc="<?php echo $data_tmp['disc'] ?>"
-                                                                            data-stock="<?php if($data_tmp['stock'] == 0){echo '0';}else{echo $data_tmp['stock'];} ?>"
+                                                                            data-stock="<?php if($data_tmp['stock'] == 0){echo '0';}else{echo $data_tmp['stock']; } ?>"
                                                                             data-qty="<?php echo $data_tmp['qty'] ?>"
                                                                             data-qty-edit="<?php echo $data_tmp['qty'] ?>">
                                                                             <i class="bi bi-pencil"></i>
@@ -864,1030 +583,59 @@
                                 </div>
                             </div>
                         </div>
-                        <?php
-                            $no = 1;
-                            $sql = "SELECT DISTINCT
-                                        bum.id_inv_bum AS id_inv,
-                                        STR_TO_DATE(ik.tgl_komplain, '%d/%m/%Y') AS tanggal,
-                                        ik.id_komplain,
-                                        tpk.id_tmp,
-                                        tpk.id_produk,
-                                        tpk.nama_produk,
-                                        tpk.harga,
-                                        tpk.qty,
-                                        tpk.disc,
-                                        tpk.total_harga,
-                                        tpk.status_tmp,
-                                        spr.stock,
-                                        COALESCE(mr_produk.nama_merk, mr_set.nama_merk) AS merk
-                                    FROM inv_komplain AS ik 
-                                    LEFT JOIN inv_bum bum ON ik.id_inv = bum.id_inv_bum
-                                    LEFT JOIN tmp_produk_komplain tpk ON bum.id_inv_bum = tpk.id_inv
-                                    LEFT JOIN stock_produk_reguler spr ON tpk.id_produk = spr.id_produk_reg
-                                    LEFT JOIN tb_produk_reguler pr ON tpk.id_produk = pr.id_produk_reg
-                                    LEFT JOIN tb_produk_set_marwa tpsm ON tpk.id_produk = tpsm.id_set_marwa
-                                    LEFT JOIN tb_merk mr_produk ON pr.id_merk = mr_produk.id_merk -- JOIN untuk produk reguler
-                                    LEFT JOIN tb_merk mr_set ON tpsm.id_merk = mr_set.id_merk -- JOIN untuk produk set
-                                    WHERE (bum.id_inv_bum = '$id_inv') AND tpk.status_tmp = '0'";
-                            $query = mysqli_query($connect, $sql);
-                            $totalRows = mysqli_num_rows($query);
-                            if ($totalRows != 0) {
-                        ?>
-                        <div class="card">
-                            <br>
-                            <h5 class="text-center">Tambahan Produk Revisi</h5>
-                            <div class="card-body p-2 card-mobile">
-                                <div class="row p-1">
-                                    <div class="col-sm-1 mb-2">
-                                        <input type="text" class="form-control text-center mobile"
-                                            style="border: none;" value="No" readonly>
-                                    </div>
-                                    <div class="col-sm-3 mb-2">
-                                        <input type="text" class="form-control text-center" style="border: none;"
-                                            value="Nama Produk">
-                                    </div>
-                                    <div class="col-sm-1 mb-2">
-                                        <input type="text" class="form-control text-center mobile-text"
-                                            style="border: none;" value="Satuan" readonly>
-                                    </div>
-                                    <div class="col-sm-1 mb-2">
-                                        <input type="text" class="form-control text-center mobile-text"
-                                            style="border: none;" value="Merk" readonly>
-                                    </div>
-                                    <div class="col-sm-2 mb-2">
-                                        <input type="text" class="form-control text-center mobile-text"
-                                            style="border: none;" value="Harga">
-                                    </div>
-                                    <div class="col-sm-1 mb-2">
-                                        <input type="text" class="form-control text-center mobile-text"
-                                            style="border: none;" value="Stock" readonly>
-                                    </div>
-                                    <div class="col-sm-1 mb-2">
-                                        <input type="text" class="form-control text-center mobile-text"
-                                            style="border: none;" value="Qty" readonly>
-                                    </div>
-                                    <div class="col-sm-1 mb-2">
-                                        <input type="text" class="form-control text-center mobile-text"
-                                            style="border: none;" value="Diskon" readonly>
-                                    </div>
-                                    <div class="col-sm-1 mb-2 text-center">
-                                        <input type="text" class="form-control text-center mobile-text"
-                                            style="border: none;" value="Aksi" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php
-                                } else {
-                                }
-
-                            while ($data = mysqli_fetch_array($query)) {
-                                $id_inv = $data['id_inv'];
-                                $satuan = detailSpkFnc::getSatuan($data['id_produk']);  
-                                // $uuid = generate_uuid();
-                                $isEmpty = false; // Setel variabel pengecekan menjadi false jika ada data
-                            ?>
-                            <form action="proses/produk-tmp-revisi-bum.php" method="POST"
-                                enctype="multipart/form-data">
-                                <div class="card-body p-2">
-                                    <div class="row p-1">
-                                        <div class="col-sm-1 mb-2">
-                                            <input type="text" class="form-control text-center bg-light mobile"
-                                                value="<?php echo $no; ?>" readonly>
-                                            <?php $no++ ?>
-                                        </div>
-                                        <div class="col-sm-3 mb-2">
-                                            <label class="form-control mobile-text fw-bold label-mobile"
-                                                style="border: none;">Nama Produk</label>
-                                            <input type="hidden" name="id_komplain" value="<?php echo encrypt($id, $key_spk) ?>"
-                                                readonly>
-                                            <input type="hidden" name="id_tmp[]"
-                                                id="id_<?php echo $data['id_tmp'] ?>"
-                                                value="<?php echo $data['id_tmp'] ?>" readonly>
-                                            <input type="hidden" class="form-control" name="id_produk_tmp[]"
-                                                value="<?php echo $data['id_produk'] ?>" readonly>
-                                            <input type="text" class="form-control" name="nama_produk[]"
-                                                value="<?php echo $data['nama_produk']; ?>">
-                                        </div>
-                                        <div class="col-sm-1 mb-2">
-                                            <label class="form-control mobile-text fw-bold label-mobile"
-                                                style="border: none;">Satuan</label>
-                                            <input type="text" class="form-control bg-light text-center mobile-text"
-                                                value="<?php echo $satuan; ?>" readonly>
-                                        </div>
-                                        <div class="col-sm-1 mb-2">
-                                            <label class="form-control mobile-text fw-bold label-mobile"
-                                                style="border: none;">Merk</label>
-                                            <input type="text" class="form-control bg-light text-center mobile-text"
-                                                value="<?php echo $data['merk'] ?>" readonly>
-                                        </div>
-                                        <div class="col-sm-2 mb-2">
-                                            <label class="form-control mobile-text fw-bold label-mobile"
-                                                style="border: none;">Harga</label>
-                                            <input type="text" class="form-control text-end mobile-text"
-                                                name="harga[]" value="<?php echo number_format($data['harga']) ?>"
-                                                oninput="formatNumberHarga(this)">
-                                        </div>
-                                        <div class="col-sm-1 mb-2">
-                                            <label class="form-control mobile-text fw-bold label-mobile"
-                                                style="border: none;">Stock</label>
-                                            <input type="text" class="form-control bg-light text-end mobile-text"
-                                                name="stock[]" id="stock_<?php echo $data['id_tmp'] ?>"
-                                                value="<?php echo number_format($data['stock']) ?>" readonly>
-                                        </div>
-                                        <div class="col-sm-1 mb-2">
-                                            <label class="form-control mobile-text fw-bold label-mobile"
-                                                style="border: none;">Qty</label>
-                                            <input type="text" class="form-control text-end mobile-text"
-                                                name="qty_tmp[]" id="qtyInput_<?php echo $data['id_tmp'] ?>"
-                                                oninput="checkStock('<?php echo $data['id_tmp'] ?>')" required>
-                                        </div>
-                                        <div class="col-sm-1 mb-2">
-                                            <label class="form-control mobile-text fw-bold label-mobile"
-                                                style="border: none;">Diskon</label>
-                                            <input type="text" class="form-control text-end mobile-text"
-                                                name="disc[]" oninput="validasiDiskon(this)" required>
-                                        </div>
-                                        <div class="col-sm-1 mb-2 text-center">
-                                            <a href="proses/produk-tmp-revisi-bum.php?hapus_tmp=<?php echo encrypt($data['id_tmp'], $key_spk) ?>&&id_komplain=<?php echo encrypt($id, $key_spk) ?>"
-                                                class="btn btn-danger btn-sm delete-data"><i
-                                                    class="bi bi-trash"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php } ?>
-                                <div class="card-body mt-3 text-end">
-                                    <?php  
-                                        if ($totalRows != 0) {
-                                            echo '<button type="submit" class="btn btn-primary" name="simpan-tmp" id="simpan-data"><i class="bi bi-save"></i> Simpan</button>';
-                                        }
-                                    ?>
-                                </div>
-                            </form>
-                        </div>
+                        <!-- Form Tambah Produk Revisi -->
+                        <?php include "page/form-tambah-produk-revisi.php" ?>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Modal Bukti Terima -->
-        <?php
-            $sql_bukti = "  SELECT 
-                                ibt.id_bukti_terima, ibt.id_komplain, ibt.bukti_satu, ibt.created_date, ip.id_komplain, ip.nama_penerima, ip.tgl_terima, ip.created_date, sk.jenis_penerima, sk.dikirim_ekspedisi, sk.no_resi, sk.tgl_kirim, ex.nama_ekspedisi
-                            FROM inv_bukti_terima_revisi AS ibt
-                            LEFT JOIN inv_penerima_revisi ip ON (ibt.id_komplain = ip.id_komplain)
-                            LEFT JOIN revisi_status_kirim sk ON (ibt.id_komplain = sk.id_komplain)
-                            LEFT JOIN ekspedisi ex ON (ex.id_ekspedisi = sk.dikirim_ekspedisi) 
-                            WHERE ibt.id_komplain = '$id_komplain' ORDER BY ip.created_date  DESC LIMIT 1";
-            $query_bukti = mysqli_query($connect, $sql_bukti);
-            if (mysqli_num_rows($query_bukti) > 0) {
-                $data_bukti = mysqli_fetch_array($query_bukti);
-                $id_bukti_terima = $data_bukti['id_bukti_terima'];
-                $gambar1 = $data_bukti['bukti_satu'];
-                $gambar_bukti1 = "gambar-revisi/bukti1/$gambar1";
-                $jenis_penerima = $data_bukti['jenis_penerima'];
-                $no_resi = $data_bukti['no_resi'];
-                $tgl_terima = $data_bukti['tgl_terima'];
-            }
-        ?>
-        <div class="modal fade" id="bukti" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="modalDetail" tabindex="-1"  data-bs-backdrop="static" aria-labelledby="modalDetailLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="card-body">
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-6">
-                                        <img id="buktiTerimaImg" data-src="<?php echo $gambar_bukti1 ?>"
-                                            class="img-fluid" alt="...">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card-body p-5">
-                                            <div class="mb-3">
-                                                <?php  
-                                                if($data_bukti['nama_penerima'] != ''){
-                                                    ?>
-                                                <label class="fw-bold">Nama Penerima:</label>
-                                                <P><?php echo $data_bukti['nama_penerima']; ?></P>
-                                                <?php if ($jenis_penerima == 'Ekspedisi') {
-                                                            ?>
-                                                <label class="fw-bold">No Resi:</label>
-                                                <P><?php echo $no_resi; ?></P>
-                                                <?php
-                                                        }
-                                                        ?>
-                                                <?php
-                                                }
-                                            ?>
-                                                <?php  
-                                                if($tgl_terima){
-                                                    ?>
-                                                <label class="fw-bold">Tanggal Terima:</label>
-                                                <p><?php echo $data_bukti['tgl_terima']?></p>
-                                                <?php
-                                                } else {
-                                                    ?>
-                                                <label class="fw-bold">Tanggal Kirim:</label>
-                                                <p><?php echo $data_bukti['tgl_kirim']?></p>
-                                                <?php
-                                                }
-                                            ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="modal-body" id="contentReview">
+                        <!-- Data akan dimuat di sini -->
                     </div>
                 </div>
             </div>
         </div>
-            <!-- End Modal Bukti Terima -->
+        <!-- End Modal Bukti Terima -->
     </main><!-- End #main -->
     <!-- Modal edit detail -->
-    <div class="modal fade" id="edit-details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data Detail</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="proses/proses-ubah-detail-revisi.php" method="post">
-                        <?php  
-                            // Cek kondisi detail, jika data pada inv rev tidak ada maka harus ubah status dikirim terlebih dahulu
-                            $cek_detail = $connect->query("SELECT id_inv FROM inv_revisi WHERE id_inv = '$id_inv'");
-                            $total_cek_detail = mysqli_num_rows($cek_detail);
-                            if($total_cek_detail == 0){
-                                echo "Silahkan ubah status dikirim terlebih dahulu";
-                            } else {
-                                ?>  
-                                    <input type="hidden" value="<?php echo base64_encode($id) ?>" name="id_komplain">
-                                    <input type="hidden" value="<?php echo $no_inv_fix ?>" name="no_inv_rev">
-                                    <div class="mb3">
-                                        <label>Pelanggan Invoice</label>
-                                        <input type="text" class="form-control" name="cs_inv" value="<?php echo $pelanggan?>">
-                                    </div>
-                                    <div class="mb3">
-                                        <label>Alamat</label>
-                                        <textarea type="text" class="form-control" name="alamat" rows="3"><?php echo $alamat ?></textarea>
-                                    </div>
-                                <?php 
-                            }
-                        
-                        ?>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" class="btn btn-primary" name="ubah-detail-rev-bum">Ubah data</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php  
+        require_once __DIR__ . "/modal-komplain/edit-detail-trx-komplain-bum.php";
+    ?>
+    <!-- End Modal edit detail -->
+
     <!-- Modal Ubah Status -->
-    <div class="modal fade" id="ubahStatus">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ubah Status Transaksi Komplain</h1>
-                </div>
-                <div class="modal-body">
-                    <form action="proses/proses-ubah-status-trx-rev-bum.php" method="POST"
-                        enctype="multipart/form-data">
-                        <input type="hidden" name="id_komplain" value="<?php echo $id ?>">
-                        <input type="hidden" name="id_inv" value="<?php echo $id_inv ?>">
-                        <input type="hidden" name="no_inv" value="<?php echo $no_inv_fix ?>">
-                        <input type="hidden" name="cs_inv" value="<?php echo $data_detail['cs_inv'] ?>">
-                        <input type="hidden" name="alamat" value="<?php echo $data_detail['alamat'] ?>">
-                        <input type="hidden" name="total_inv" value="<?php echo $grand_total_revisi ?>">
-                        <input type="hidden" name="jenis_inv" value="<?php echo $jenis_inv ?>">
-                        <div class="mb-3">
-                            <p>Pilih aksi yang akan dilakukan untuk komplain pelanggan ini</p>
-                        </div>
-                        <div class="mb-3">
-                            <?php  
-                                // Menentukan apakah radio button "Dikirim" dan "Transaksi Selesai" harus ditampilkan atau disembunyikan
-                                if ($total_data_rev != '0' && $status_kmpl == '0') {
-                                    $status_pengiriman = $data_rev['status_pengiriman'];
-                                    $status_trx_komplain = $data_rev['status_trx_komplain'];
-                                    $status_trx_selesai = $data_rev['status_trx_selesai'];
-                                    
-                                    $show_dikirim = "";
-                                    $show_selesai = "";
-                                    $show_cancel = "";
-
-                                    if($status_pengiriman == "1" && $status_trx_komplain == "1" && $status_trx_selesai == "1"){
-                                        $show_dikirim = "none";
-                                        $show_selesai = "none";
-                                        $show_cancel = "none";
-                                    } else if($status_pengiriman == "1" && $status_trx_komplain == "1" && $status_trx_selesai == "0"){
-                                        $show_dikirim = "none";
-                                        $show_selesai = "inline-block";
-                                        $show_cancel = "inline-block";
-                                    } else if ($status_pengiriman == '1' && $status_trx_komplain == '0' && $status_trx_selesai == '0') {
-                                        $show_dikirim = "inline-block";
-                                        $show_selesai = "inline-block";
-                                        $show_cancel = "inline-block";
-                                    } else if ($status_pengiriman == "0" && $status_trx_komplain == "0" && $status_trx_selesai == "0") {
-                                        $show_dikirim = "inline-block";
-                                        $show_selesai = "inline-block";
-                                        $show_cancel = "inline-block";
-                                    } else {
-                                        $show_dikirim = "none";
-                                        $show_selesai = "none";
-                                        $show_cancel = "inline-block";
-                                    }
-                                } else if ($total_data_rev == '0' && $status_kmpl == '0'){
-                                    $show_dikirim = "inline-block";
-                                    $show_selesai = "inline-block";
-                                    $show_cancel = "inline-block";
-                                } else {
-                                    $show_dikirim = "none";
-                                    $show_selesai = "none";
-                                    $show_cancel = "inline-block";
-                                }
-                            ?>
-                            <!-- Display Dikirim -->
-                            <div class="form-check form-check-inline" style="display: <?php echo $show_dikirim ?>;">
-                                <input class="form-check-input" type="radio" name="status_kirim" id="dikirim" value="dikirim">
-                                <label class="form-check-label" for="dikirim">Dikirim</label>
-                            </div>
-
-                            <!-- Display Transaksi Selesai -->
-                            <div class="form-check form-check-inline" style="display: <?php echo $show_selesai ?>;">
-                                <input class="form-check-input" type="radio" name="status_kirim" id="selesai" value="selesai">
-                                <label class="form-check-label" for="selesai">Transaksi Selesai</label>
-                            </div>
-
-                            <!-- Display Transaksi Cancel (Always visible) -->
-                            <div class="form-check form-check-inline" style="display: <?php echo $show_cancel ?>;">
-                                <input class="form-check-input" type="radio" name="status_kirim" id="cancel" value="cancel">
-                                <label class="form-check-label" for="cancel">Transaksi Cancel</label>
-                            </div>
-                        </div>
-                        <div id="trxKirim" style="display: none;">
-                            <div class="mb-3">
-                                <label>Jenis Pengiriman</label>
-                                <select class="form-select" name="jenis_pengiriman" id="jenis_pengiriman">
-                                    <option value="">Pilih</option>
-                                    <option value="Driver">Driver</option>
-                                    <option value="Ekspedisi">Expedisi</option>
-                                    <option value="Diambil Langsung">Diambil Langsung</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-3" id="jenis_driver" style="display: none;">
-                            <label id="labelDriver">Pilih Driver</label>
-                            <select id="pengirim" name="pengirim" class="form-select" required>
-                                <option value="">Pilih...</option>
-                                <?php
-                                include "koneksi.php";
-                                 $sql_driver = mysqli_query($koneksi2, "SELECT us.id_user_role, us.id_user, us.nama_user, rl.nama_role FROM $database2.user AS us JOIN user_role rl ON (us.id_user_role = rl.id_user_role) WHERE rl.nama_role = 'Driver'");
-                                while ($data_driver_rev = mysqli_fetch_array($sql_driver)) {
-                                ?>
-                                <option value="<?php echo $data_driver_rev['id_user'] ?>">
-                                    <?php echo $data_driver_rev['nama_user'] ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                        <div class="mb-3" id="jenis_ekspedisi" style="display: none;">
-                            <div class="mb-3">
-                                <label id="labelEkspedisi">Pilih Ekspedisi</label>
-                                <select id="ekspedisi" name="ekspedisi" class="form-select selectize-js" required>
-                                    <option value="">Pilih...</option>
-                                    <?php
-                                    include "koneksi.php";
-                                    $sql_ekspedisi = mysqli_query($connect, "SELECT * FROM ekspedisi");
-                                    while ($data_ekspedisi = mysqli_fetch_array($sql_ekspedisi)) {
-                                    ?>
-                                    <option value="<?php echo $data_ekspedisi['id_ekspedisi'] ?>">
-                                        <?php echo $data_ekspedisi['nama_ekspedisi'] ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label id="labelResi">No. Resi</label>
-                                <input type="text" class="form-control" name="resi" id="resi">
-                            </div>
-                            <div class="mb-3">
-                                <label id="labelJenisOngkir">Jenis Ongkir</label>
-                                <select id="jenis_ongkir" name="jenis_ongkir" class="form-select">
-                                    <option>Pilih</option>
-                                    <option value="0">Non COD</option>
-                                    <option value="1">COD</option>
-                                </select>
-                            </div>
-                            <div class="mb-3" id="ongkir" style="display: block;">
-                                <div class="row">
-                                    <label>Nominal Ongkir</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" style="background-color: #f8f9fa;"
-                                            name="ongkir" id="ongkos_kirim" readonly>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="form-check mt-1">
-                                            <input class="form-check-input" name="free_ongkir" type="checkbox" value="1"
-                                                id="free_ongkir">
-                                            <label class="form-check-label" for="free_ongkir" id="free_ongkir_label">
-                                                Free Ongkir
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label id="labelDikirimOleh">Dikirim Oleh</label>
-                                <input type="text" class="form-control" name="dikirim" id="dikirim_oleh">
-                            </div>
-                            <div class="mb-3">
-                                <label id="labelPj">Penanggung Jawab</label>
-                                <input type="text" class="form-control" name="pj" id="penanggung_jawab">
-                            </div>
-                        </div>
-                        <div class="mb-3" id="jenis_diambil" style="display: none;">
-                            <label id="labelDiambil">Diambil Oleh</label>
-                            <input type="text" name="diambil_oleh" id="diambil" class="form-control">
-                        </div>
-                        <div class="mb-3" id="alasanCancel" style="display: none;">
-                            <label id="labelResi">Alasan Cancel</label>
-                            <input type="text" class="form-control" name="alasan_cancel" id="alasan_cancel">
-                        </div>
-                        <div class="mb-3" id="tanggal" style="display: none;">
-                            <label id="labelDate">Tanggal</label>
-                            <input type="text" style="background-color:white;" class="bg-white form-control" name="tgl"
-                                id="date" required>
-                        </div>
-                        <div class="mb-3" id="buktiTerima" style="display: none;">
-                            <div class="preview-image mb-3">
-                                <img id="imagePreviewAdd" src="#" alt="Preview Image" style="display:none;">
-                                <p id="imageSizeAdd" style="display:none;"></p>
-                            </div>
-                            <div class="mb-3">
-                                <div class="input-group">
-                                    <div class="fileUpload btn btn-primary">
-                                        <span id="uploadButtonTextAdd"><i class="bi bi-upload"></i> Upload Bukti Terima</span>
-                                        <input class="upload" type="file" name="fileku" id="formFileAdd" accept=".jpg, .png, .jpeg" onchange="compressImage(event, 'Add')">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                id="cancelDikirim">Tutup</button>
-                            <button type="submit" class="btn btn-primary" name="ubah-status"> Ubah Status</button>
-                        </div>
-                    </form>
-                </div>
-                <style>
-                .preview-image {
-                    max-width: 100%;
-                    height: auto;
-                }
-                </style>
-                <!-- Selectize JS -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        var dikirim = document.getElementById('dikirim');
-                        var selesai = document.getElementById('selesai');
-                        var cancel = document.getElementById('cancel');
-                        var trxKirim = document.getElementById('trxKirim');
-                        var jenisPengiriman = document.getElementById('jenis_pengiriman');
-                        var jenisEkspedisi = document.getElementById('jenis_ekspedisi');
-                        var jenisDriver = document.getElementById('jenis_driver');
-                        var jenisDiambil = document.getElementById('jenis_diambil');
-                        var ekspedisiSelectize = document.getElementById('ekspedisi-selectized');
-                        var pengirim = document.getElementById('pengirim');
-                        var resi = document.getElementById('resi');
-                        var jenis_ongkir = document.getElementById('jenis_ongkir');
-                        var bukti = document.getElementById('buktiTerima');
-                        var diambil = document.getElementById('diambil');
-                        var DivAlasanCancel = document.getElementById('alasanCancel');
-                        var alasanCancel = document.getElementById('alasan_cancel');
-                        var tanggal = document.getElementById('tanggal');
-                        var ongkos_kirim = document.getElementById('ongkos_kirim');
-                        var freeOngkirCheckbox = document.getElementById('free_ongkir');
-                        var freeOngkirLabel = document.getElementById('free_ongkir_label');
-                        var penanggung_jawab = document.getElementById('penanggung_jawab');
-                        var dikirim_oleh = document.getElementById('dikirim_oleh');
-                        var imgPreview = document.getElementById('imagePreviewAdd');
-                        var fileku = document.getElementById('formFileAdd');
-
-                        dikirim.addEventListener('change', updateVisibility);
-                        selesai.addEventListener('change', updateVisibility);
-                        cancel.addEventListener('change', updateVisibility);
-
-                        function updateVisibility() {
-                            if (dikirim.checked) {
-                                trxKirim.style.display = 'block';
-                                jenisPengiriman.style.display = 'block';
-                                jenisPengiriman.setAttribute('required', 'true');
-                                tanggal.style.display = 'none';
-                                DivAlasanCancel.style.display = 'none';
-                                alasanCancel.removeAttribute('required');
-                                jenisDiambil.style.display = 'none';
-                            } else if (selesai.checked) {
-                                trxKirim.style.display = 'none';
-                                jenisPengiriman.style.display = 'none';
-                                jenisPengiriman.value = '';
-                                jenisDriver.style.display = 'none';
-                                jenisEkspedisi.style.display = 'none';
-                                diambil.value = '';
-                                diambil.removeAttribute('required');
-                                imgPreview.src = '#';
-                                imgPreview.style.display = 'none';
-                                fileku.value = '';
-                                fileku.removeAttribute('required');
-                                bukti.style.display = 'none';
-                                tanggal.style.display = 'block';
-                                DivAlasanCancel.style.display = 'none';
-                                alasanCancel.removeAttribute('required');
-                                jenisPengiriman.removeAttribute('required');
-                                ekspedisiSelectize.removeAttribute('required');
-                                pengirim.removeAttribute('required');
-                                jenisDiambil.style.display = 'none';
-                            } else if (cancel.checked) {
-                                trxKirim.style.display = 'none';
-                                jenisPengiriman.style.display = 'none';
-                                jenisPengiriman.value = '';
-                                jenisDriver.style.display = 'none';
-                                jenisEkspedisi.style.display = 'none';
-                                diambil.value = '';
-                                diambil.removeAttribute('required');
-                                imgPreview.src = '#';
-                                imgPreview.style.display = 'none';
-                                fileku.value = '';
-                                fileku.removeAttribute('required');
-                                bukti.style.display = 'none';
-                                tanggal.style.display = 'block';
-                                DivAlasanCancel.style.display = 'block';
-                                alasanCancel.setAttribute('required', 'true');
-                                jenisPengiriman.removeAttribute('required');
-                                ekspedisiSelectize.removeAttribute('required');
-                                pengirim.removeAttribute('required');
-                                jenisDiambil.style.display = 'none';
-                            }
-                        }
-                        jenisPengiriman.addEventListener('change', function() {
-                            if (this.value === 'Driver') {
-                                jenisDriver.style.display = 'block';
-                                jenisEkspedisi.style.display = 'none';
-                                jenisDiambil.style.display = 'none';
-                                ekspedisi.selectize.clear();
-                                ekspedisiSelectize.removeAttribute('required');
-                                resi.value = '';
-                                resi.removeAttribute('required');
-                                ongkos_kirim.value = '';
-                                jenis_ongkir.value = '';
-                                jenis_ongkir.removeAttribute('required');
-                                freeOngkirCheckbox.checked = false; // Hilangkan centang jika ada
-                                diambil.value = '';
-                                diambil.removeAttribute('required');
-                                dikirim_oleh.value = '';
-                                penanggung_jawab.value = '';
-                                imgPreview.src = '#';
-                                imgPreview.style.display = 'none';
-                                fileku.value = '';
-                                fileku.removeAttribute('required');
-                                bukti.style.display = 'none';
-                                tanggal.removeAttribute('required');
-                                tanggal.style.display = 'block';
-                                pengirim.style.display = 'block';
-                                pengirim.setAttribute('required', 'true');
-                            } else if (this.value === 'Ekspedisi') {
-                                jenisEkspedisi.style.display = 'block';
-                                jenisDriver.style.display = 'none';
-                                pengirim.value = '';
-                                pengirim.removeAttribute('required');
-                                ekspedisiSelectize.setAttribute('required', 'true');
-                                resi.setAttribute('required', 'true');
-                                jenis_ongkir.setAttribute('required', 'true');
-                                tanggal.removeAttribute('required');
-                                tanggal.style.display = 'block';
-                                ongkos_kirim.removeAttribute('required');
-                                penanggung_jawab.removeAttribute('required');
-                                jenisDiambil.style.display = 'none';
-                                diambil.value = '';
-                                diambil.removeAttribute('required');
-                                bukti.style.display = 'block';
-                                dikirim_oleh.removeAttribute('required');
-                                fileku.setAttribute('required', 'true');
-                            } else if (this.value === 'Diambil Langsung') {
-                                jenisDriver.style.display = 'none';
-                                jenisDiambil.style.display = 'block';
-                                diambil.setAttribute('required', 'true');
-                                pengirim.removeAttribute('required');
-                                jenisEkspedisi.style.display = 'none';
-                                ekspedisi.selectize.clear();
-                                ekspedisiSelectize.removeAttribute('required');
-                                resi.value = '';
-                                resi.removeAttribute('required');
-                                ongkos_kirim.value = '';
-                                jenis_ongkir.value = '';
-                                jenis_ongkir.removeAttribute('required');
-                                freeOngkirCheckbox.checked = false; // Hilangkan centang jika ada
-                                dikirim_oleh.value = '';
-                                penanggung_jawab.value = '';
-                                tanggal.removeAttribute('required');
-                                pengirim.style.display = 'none';
-                                tanggal.style.display = 'block';
-                                bukti.style.display = 'block';
-                                fileku.setAttribute('required', 'true');
-                            } else {
-                                jenisEkspedisi.style.display = 'none';
-                                jenisDriver.style.display = 'none';
-                                ekspedisi.selectize.clear();
-                                ekspedisiSelectize.removeAttribute('required');
-                                bukti.removeAttribute('required');
-                                pengirim.removeAttribute('required');
-                                tanggal.style.display = 'none';
-                                bukti.style.display = 'none';
-                                jenisDiambil.style.display = 'none';
-                                diambil.value = '';
-                                diambil.removeAttribute('required');
-                            }
-                        });
-
-                        jenis_ongkir.addEventListener('change', function() {
-                            if (this.value === '0') {
-                                ongkos_kirim.style.display = 'block';
-                                ongkos_kirim.style.backgroundColor = '';
-                                ongkos_kirim.removeAttribute('readonly');
-                                ongkos_kirim.setAttribute('required', 'true');
-                                freeOngkirCheckbox.style.display = 'block'; // Hilangkan centang jika ada
-                                freeOngkirLabel.style.display = 'block'; // Hilangkan centang jika ada
-                            } else {
-                                ongkos_kirim.style.display = 'block';
-                                ongkos_kirim.style.backgroundColor = '#f8f9fa';
-                                ongkos_kirim.removeAttribute('required');
-                                ongkos_kirim.setAttribute('readonly', 'true');
-                                ongkos_kirim.value = '0';
-                                freeOngkirCheckbox.style.display = 'none'; // Hilangkan centang jika ada
-                                freeOngkirLabel.style.display = 'none'; // Hilangkan centang jika ada
-                            }
-                        });
-
-
-                        ongkos_kirim.addEventListener('input', function() {
-                            formatNumber(ongkos_kirim);
-                        });
-
-                        function formatNumber(input) {
-                            var value = input.value.replace(/\D/g, ''); // Menghapus karakter non-digit
-                            value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.'); // Menambahkan pemisah ribuan dengan titik
-                            input.value = value;
-                        }
-
-                        const cancelButton = document.getElementById('cancelDikirim');
-                            cancelButton.addEventListener('click', function() {
-                            location.reload();
-                        });
-                    });
-                    flatpickr("#date", {
-                        dateFormat: "d/m/Y",
-                        defaultDate: "today"
-                    });
-                </script>
-            </div>
-        </div>
-    </div>
+    <?php  
+        require_once __DIR__ . "/modal-komplain/ubah-status-trx-komplain-bum.php";
+    ?>
     <!-- End Modal Ubah Status -->
 
     <!-- Modal Ubah Jenis Pengiriman-->
-    <div class="modal fade" id="ubahJenisPengiriman" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Ubah Jenis Pengiriman</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="proses/proses-ubah-status-trx-rev-bum.php" method="POST"
-                        enctype="multipart/form-data">
-                        <input type="hidden" name="id_komplain" value="<?php echo $id ?>">
-                        <input type="hidden" name="id_status_kirim_revisi" value="<?php echo $id_status_kirim_revisi ?>">
-                        <input type="hidden" name="id_inv" value="<?php echo $id_inv ?>">
-                        <input type="hidden" name="id_inv_revisi" value="<?php echo $id_inv_revisi ?>">
-                        <input type="hidden" name="id_bukti_terima" value="<?php echo $id_bukti_terima ?>">
-                        <input type="hidden" name="bukti_sebelumnya" value="<?php echo $gambar1 ?>">
-                        <div id="trxKirim">
-                            <div class="mb-3">
-                                <label>Jenis Pengiriman</label>
-                                <select class="form-select" name="jenis_pengiriman" id="ubah_jenis_pengiriman" required>
-                                    <option value="">Pilih</option>
-                                    <option value="Driver">Driver</option>
-                                    <option value="Ekspedisi">Expedisi</option>
-                                    <option value="Diambil Langsung">Diambil Langsung</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-3" id="ubah_jenis_driver" style="display: none;">
-                            <label id="labelDriver">Pilih Driver</label>
-                            <select id="ubah-pengirim" name="pengirim" class="form-select" required>
-                                <option value="">Pilih...</option>
-                                <?php
-                                include "koneksi.php";
-                                 $sql_driver = mysqli_query($koneksi2, "SELECT us.id_user_role, us.id_user, us.nama_user, rl.nama_role FROM $database2.user AS us JOIN user_role rl ON (us.id_user_role = rl.id_user_role) WHERE rl.nama_role = 'Driver'");
-                                while ($data_driver_rev = mysqli_fetch_array($sql_driver)) {
-                                ?>
-                                <option value="<?php echo $data_driver_rev['id_user'] ?>">
-                                    <?php echo $data_driver_rev['nama_user'] ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                        <div class="mb-3" id="ubah_jenis_ekspedisi" style="display: none;">
-                            <div class="mb-3">
-                                <label id="labelEkspedisi">Pilih Ekspedisi</label>
-                                <select id="ekspedisi-ubah" name="ekspedisi" class="form-select selectize-js">
-                                    <option value="">Pilih...</option>
-                                    <?php
-                                    include "koneksi.php";
-                                    $sql_ekspedisi = mysqli_query($connect, "SELECT * FROM ekspedisi");
-                                    while ($data_ekspedisi = mysqli_fetch_array($sql_ekspedisi)) {
-                                    ?>
-                                    <option value="<?php echo $data_ekspedisi['id_ekspedisi'] ?>">
-                                        <?php echo $data_ekspedisi['nama_ekspedisi'] ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label id="labelResi">No. Resi</label>
-                                <input type="text" class="form-control" name="resi" id="ubah_resi">
-                            </div>
-                            <div class="mb-3">
-                                <label id="labelJenisOngkir">Jenis Ongkir</label>
-                                <select id="ubah_jenis_ongkir" name="jenis_ongkir" class="form-select">
-                                    <option>Pilih</option>
-                                    <option value="0">Non COD</option>
-                                    <option value="1">COD</option>
-                                </select>
-                            </div>
-                            <div class="mb-3" id="ubah_ongkir" style="display: block;">
-                                <div class="row">
-                                    <label>Nominal Ongkir</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" style="background-color: #f8f9fa;"
-                                            name="ongkir" id="ubah_ongkos_kirim" readonly>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="form-check mt-1">
-                                            <input class="form-check-input" name="free_ongkir" type="checkbox" value="1"
-                                                id="ubah_free_ongkir">
-                                            <label class="form-check-label" for="ubah_free_ongkir" id="ubah_free_ongkir_label">
-                                                Free Ongkir
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label id="labelDikirimOleh">Dikirim Oleh</label>
-                                <input type="text" class="form-control" name="dikirim" id="ubah_dikirim_oleh">
-                            </div>
-                            <div class="mb-3">
-                                <label id="labelPj">Penanggung Jawab</label>
-                                <input type="text" class="form-control" name="pj" id="ubah_penanggung_jawab">
-                            </div>
-                        </div>
-                        <div class="mb-3" id="ubah_jenis_diambil" style="display: none;">
-                            <label id="labelDiambil">Diambil Oleh</label>
-                            <input type="text" name="diambil_oleh" id="ubah_diambil" class="form-control">
-                        </div>
-                        <div class="mb-3" id="alasanCancel">
-                            <label id="labelResi">Alasan Perubahan</label>
-                            <input type="text" class="form-control" name="alasan_ubah" id="alasan_ubah" required>
-                        </div>
-                        <div class="mb-3" id="ubah_tanggal">
-                            <label id="labelDate">Tanggal</label>
-                            <input type="text" style="background-color:white;" class="bg-white form-control" name="tgl"
-                                id="ubah_date" required>
-                        </div>
-                        <div class="mb-3" id="buktiTerimaUbah" style="display: none;">
-                            <div class="preview-image mb-3">
-                                <img id="imagePreviewEdit" src="#" alt="Preview Image" style="display:none;">
-                                <p id="imageSizeEdit" style="display:none;"></p>
-                            </div>
-                            <div class="mb-3">
-                                <div class="input-group">
-                                    <div class="fileUpload btn btn-primary">
-                                        <span id="uploadButtonTextEdit"><i class="bi bi-upload"></i> Upload Bukti Terima</span>
-                                        <input class="upload" type="file" name="fileku" id="formFileEdit" accept=".jpg, .png, .jpeg" onchange="compressImage(event, 'Edit')">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                id="cancelDikirim">Tutup</button>
-                            <button type="submit" class="btn btn-primary" name="ubah-pengiriman"> Ubah Status</button>
-                        </div>
-                    </form>
-                </div>
-                <style>
-                .preview-image {
-                    max-width: 100%;
-                    height: auto;
-                }
-                </style>
-                <!-- Selectize JS -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        var jenisPengiriman = document.getElementById('ubah_jenis_pengiriman');
-                        var jenisEkspedisi = document.getElementById('ubah_jenis_ekspedisi');
-                        var jenisDriver = document.getElementById('ubah_jenis_driver');
-                        var jenisDiambil = document.getElementById('ubah_jenis_diambil');
-                        var ekspedisiSelectize = document.getElementById('ekspedisi-ubah');
-                        var pengirim = document.getElementById('ubah-pengirim');
-                        var resi = document.getElementById('ubah_resi');
-                        var jenis_ongkir = document.getElementById('ubah_jenis_ongkir');
-                        var bukti = document.getElementById('buktiTerimaUbah');
-                        var diambil = document.getElementById('ubah_diambil');
-                        var ongkos_kirim = document.getElementById('ubah_ongkos_kirim');
-                        var penanggung_jawab = document.getElementById('ubah_penanggung_jawab');
-                        var dikirim_oleh = document.getElementById('ubah_dikirim_oleh');
-                        var imgPreview = document.getElementById('imagePreviewEdit');
-                        var fileku = document.getElementById('formFileEdit');
-                        var alasanUbah = document.getElementById('alasan_ubah');
-                        var freeOngkirCheckbox = document.getElementById('ubah_free_ongkir');
-                        var freeOngkirLabel = document.getElementById('ubah_free_ongkir_label');
-                        
-                        jenisPengiriman.addEventListener('change', function() {
-                            if (this.value === 'Driver') {
-                                jenisDriver.style.display = 'block';
-                                jenisEkspedisi.style.display = 'none';
-                                jenisDiambil.style.display = 'none';
-                                ekspedisiSelectize.selectize.clear();
-                                ekspedisiSelectize.removeAttribute('required');
-                                resi.value = '';
-                                resi.removeAttribute('required');
-                                ongkos_kirim.value = '';
-                                jenis_ongkir.value = '';
-                                jenis_ongkir.removeAttribute('required');
-                                freeOngkirCheckbox.checked = false; // Hilangkan centang jika ada
-                                diambil.value = '';
-                                diambil.removeAttribute('required');
-                                dikirim_oleh.value = '';
-                                penanggung_jawab.value = '';
-                            
-                                imgPreview.style.display = 'none';
-                                fileku.value = '';
-                                fileku.removeAttribute('required');
-                                bukti.style.display = 'none';
-                                tanggal.removeAttribute('required');
-                                tanggal.style.display = 'block';
-                                pengirim.style.display = 'block';
-                                pengirim.setAttribute('required', 'true');
-                                alasanUbah.value = '';
-                            } else if (this.value === 'Ekspedisi') {
-                                jenisEkspedisi.style.display = 'block';
-                                jenisDriver.style.display = 'none';
-                                pengirim.value = '';
-                                pengirim.removeAttribute('required');
-                                ekspedisiSelectize.setAttribute('required', 'true');
-                                resi.setAttribute('required', 'true');
-                                jenis_ongkir.setAttribute('required', 'true');
-                                tanggal.removeAttribute('required');
-                                ongkos_kirim.removeAttribute('required');
-                                penanggung_jawab.removeAttribute('required');
-                                jenisDiambil.style.display = 'none';
-                                diambil.value = '';
-                                diambil.removeAttribute('required');
-                                bukti.style.display = 'block';
-                                dikirim_oleh.removeAttribute('required');
-                                fileku.setAttribute('required', 'true');
-                                alasanUbah.value = '';
-                            } else if (this.value === 'Diambil Langsung') {
-                                jenisDriver.style.display = 'none';
-                                jenisDiambil.style.display = 'block';
-                                diambil.setAttribute('required', 'true');
-                                pengirim.removeAttribute('required');
-                                jenisEkspedisi.style.display = 'none';
-                                ekspedisiSelectize.selectize.clear();
-                                ekspedisiSelectize.removeAttribute('required');
-                                resi.value = '';
-                                resi.removeAttribute('required');
-                                ongkos_kirim.value = '';
-                                jenis_ongkir.value = '';
-                                jenis_ongkir.removeAttribute('required');
-                                freeOngkirCheckbox.checked = false; // Hilangkan centang jika ada
-                                dikirim_oleh.value = '';
-                                penanggung_jawab.value = '';
-                                tanggal.removeAttribute('required');
-                                pengirim.style.display = 'none';
-                                tanggal.style.display = 'block';
-                                bukti.style.display = 'block';
-                                fileku.setAttribute('required', 'true');
-                                alasanUbah.value = '';
-                            } else {
-                                jenisEkspedisi.style.display = 'none';
-                                jenisDriver.style.display = 'none';
-                                ekspedisi.selectize.clear();
-                                ekspedisiSelectize.removeAttribute('required');
-                                bukti.removeAttribute('required');
-                                pengirim.removeAttribute('required');
-                                tanggal.style.display = 'none';
-                                bukti.style.display = 'none';
-                                jenisDiambil.style.display = 'none';
-                                diambil.value = '';
-                                diambil.removeAttribute('required');
-                            }
-                        });
+    <?php  
+        require_once __DIR__ . "/modal-komplain/ubah-jenis-pengiriman-trx-komplain-bum.php";
+    ?>
+    <!-- End Modal Ubah Jenis Pengiriman-->
 
-                        jenis_ongkir.addEventListener('change', function() {
-                            if (this.value === '0') {
-                                ongkos_kirim.style.display = 'block';
-                                ongkos_kirim.style.backgroundColor = '';
-                                ongkos_kirim.removeAttribute('readonly');
-                                ongkos_kirim.setAttribute('required', 'true');
-                                freeOngkirCheckbox.style.display = 'block'; // Hilangkan centang jika ada
-                                freeOngkirLabel.style.display = 'block'; // Hilangkan centang jika ada
-                            } else {
-                                ongkos_kirim.style.display = 'block';
-                                ongkos_kirim.style.backgroundColor = '#f8f9fa';
-                                ongkos_kirim.removeAttribute('required');
-                                ongkos_kirim.setAttribute('readonly', 'true');
-                                ongkos_kirim.value = '0';
-                                freeOngkirCheckbox.style.display = 'none'; // Hilangkan centang jika ada
-                                freeOngkirLabel.style.display = 'none'; // Hilangkan centang jika ada
-                            }
-                        });
-
-                        ongkos_kirim.addEventListener('input', function() {
-                            formatNumber(ongkos_kirim);
-                        });
-
-                        function formatNumber(input) {
-                            var value = input.value.replace(/\D/g, ''); // Menghapus karakter non-digit
-                            value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.'); // Menambahkan pemisah ribuan dengan titik
-                            input.value = value;
-                        }
-
-
-                        const cancelButton = document.getElementById('cancelDikirim');
-                            cancelButton.addEventListener('click', function() {
-                            location.reload();
-                        });
-
-                        flatpickr("#ubah_date", {
-                            dateFormat: "d/m/Y",
-                            defaultDate: "today"
-                        });
-                    });
-                </script>
-            </div>
-        </div>
-    </div>
+    <!-- Modal Reupload-->
+    <?php  
+        require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-bum.php";
+    ?>
+    <!-- End Modal Reupload-->
 
     <!-- Footer -->
     <?php include "page/footer.php" ?>
     <!-- End Footer -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
-    <!-- Selectize JS -->
     <?php include "page/script.php" ?>
-    <script>
-        $(document).ready(function() {
-            // Function untuk menampilkan modal bukti terima
-            $('#bukti').on('show.bs.modal', function(event) {
-                var imgSrc = '<?php echo $gambar_bukti1 ?>';
-                $('#buktiTerimaImg').attr('src', imgSrc).attr('data-src', imgSrc);
-            });
-
-            // Event handler saat gambar bukti terima diklik
-            $(document).on('click', '#buktiTerimaImg', function() {
-                // Sembunyikan modal bukti terima
-                $('#bukti').modal('hide');
-
-                // Inisialisasi lightGallery
-                $(this).lightGallery({
-                    dynamic: true,
-                    dynamicEl: [{
-                        src: $(this).data('src') // URL gambar yang akan ditampilkan
-                    }]
-                });
-
-                // Ubah atribut dan gaya CSS dari elemen body
-                $('body').attr('scroll', 'no').addClass('disable-scroll');
-            });
-
-            // Event handler saat lightGallery ditutup
-            $(document).on('onCloseAfter.lg', '#buktiTerimaImg', function() {
-                // Tampilkan kembali modal bukti terima
-                $('#bukti').modal('show');
-
-                // Hapus atribut dan gaya CSS dari elemen body
-                $('body').removeAttr('scroll').removeClass('disable-scroll');
-            });
-        });
-    </script>
-    <script src="assets/vendor/lightbox/dist/js/picturefill.min.js"></script>
-    <script src="assets/vendor/lightbox/dist/js/lightgallery-all.min.js"></script>
-    <script src="assets/vendor/lightbox/lib/jquery.mousewheel.min.js"></script>
+    <!-- Fancybox -->
+    <script src="assets/vendor/fancybox/fancybox.umd.js"></script>
 </body>
 
 </html>
@@ -2017,8 +765,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                include "koneksi.php";
-                                $id = $_GET['id'];
+                                $id = htmlspecialchars($_GET['id']);
                                 $selected_produk = [];
                                 $no = 1;
 
@@ -2157,12 +904,12 @@
                         <input type="text" class="form-control" name="disc" id="disc_edit"
                             oninput="validasiDiskon(this)" required>
                     </div>
-                    <div class="mb-3" style="display: none;">
+                    <div class="mb-3" style="display: block;">
                         <label for="stock_edit">Stock</label>
-                        <input type="hidden" class="form-control bg-light" name="stock" id="stock_edit" readonly>
+                        <input type="text" class="form-control bg-light" name="stock" id="stock_edit" readonly>
                     </div>
                     <div class="mb-3">
-                        <label for="qty_original">Qty Sebelumnya</label>
+                        <label for="qty_original">Qty Saat Ini</label>
                         <input type="text" class="form-control bg-light" name="qty" id="qty_original" readonly>
                     </div>
                     <div class="mb-3">
@@ -2192,8 +939,7 @@
             </div>
             <div class="modal-body">
                 <div class="card-body">
-                    <form action="proses/proses-invoice-diterima-revisi.php" method="POST"
-                        enctype="multipart/form-data">
+                    <form action="proses/proses-invoice-diterima-revisi.php" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="id_komplain" value="<?php echo $id; ?>">
                         <input type="hidden" name="id_inv" value="<?php echo $id_inv; ?>">
                         <input type="hidden" name="alamat" value="<?php echo $alamat; ?>">
@@ -2483,62 +1229,6 @@
     }
 </script>
 
-
-<!-- Format Number Harga -->
-<script>
-    function formatNumberHarga(input) {
-        // Mengambil nilai input
-        var inputValue = input.value;
-
-        // Menghapus semua karakter kecuali angka dan tanda koma (,)
-        var cleanedValue = inputValue.replace(/[^0-9,]/g, '');
-
-        // Menghapus tanda koma (,) tambahan yang mungkin ada
-        cleanedValue = cleanedValue.replace(/,/g, '');
-
-        // Mengubah nilai input menjadi format angka yang sesuai
-        var formattedValue = Number(cleanedValue).toLocaleString('en-US');
-
-        // Memasukkan kembali nilai yang telah diformat ke dalam input
-        input.value = formattedValue;
-    }
-</script>
-
-<!-- Kode Diskon -->
-<script>
-    function validasiDiskon(input) {
-        // Hapus karakter selain angka, titik (.), dan tanda persen (%)
-        input.value = input.value.replace(/[^0-9.%]/g, '');
-
-        // Hapus tanda persen (%) yang ada di akhir input
-        if (input.value.endsWith('%')) {
-            input.value = input.value.slice(0, -1);
-        }
-
-        // Pisahkan angka sebelum dan sesudah titik
-        var parts = input.value.split('.');
-        var angkaDepan = parts[0] || ""; // Bagian sebelum titik atau string kosong jika tidak ada
-        var angkaBelakang = parts[1] || ""; // Bagian setelah titik atau string kosong jika tidak ada
-
-        // Hanya tambahkan titik dan angka desimal jika angkaBelakang ada
-        if (angkaBelakang) {
-            // Format ulang nilai diskon dengan satu angka desimal
-            if (angkaBelakang.length > 1) {
-                angkaBelakang = angkaBelakang.substring(0, 1);
-            }
-            input.value = angkaDepan + "." + angkaBelakang;
-        }
-
-        // Konversi input ke dalam format angka dengan satu angka desimal
-        var nilaiDiskon = parseFloat(input.value);
-
-        // Batasi nilai diskon maksimum menjadi 100
-        if (!isNaN(nilaiDiskon) && nilaiDiskon > 100) {
-            input.value = "100";
-        }
-    }
-</script>
-
 <!-- date picker with flatpick -->
 <script type="text/javascript">
     flatpickr("#date", {
@@ -2550,6 +1240,7 @@
 
 <!-- Compress image  -->
 <script src="assets/js/new-compress-image.js"></script>
+
 <script>
     $(document).ready(function() {
         $('.cancel-order-btn').on('click', function() {
@@ -2597,6 +1288,24 @@
                     });
                 }
             });
+        });
+    });
+</script>
+
+<script>
+    $(document).on('click', '.detailReview', function() {
+        var id = $(this).data("id");
+
+        $.ajax({
+            url: "modal/bukti-kirim-revisi.php", 
+            type: "POST",
+            data: { id: id },
+            success: function (response) {
+                $("#contentReview").html(response);
+            },
+            error: function () {
+                $("#contentReview").html('<p class="text-danger">Gagal mengambil data.</p>');
+            }
         });
     });
 </script>

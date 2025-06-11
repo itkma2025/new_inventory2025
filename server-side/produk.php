@@ -13,7 +13,7 @@ $columns = array(
     5 => 'harga_produk',
     6 => 'stock',
     7 => 'stock_status',
-    7 => 'status_akl',
+    8 => 'status_akl',
     9 => 'aksi'
 );
 

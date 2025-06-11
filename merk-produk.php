@@ -57,6 +57,7 @@ include "akses.php";
                 <thead>
                   <tr class="text-white" style="background-color: #051683;">
                     <td class="text-center p-3 col-1">No</td>
+                    <td class="text-center p-3 col-4">Jenis Merk</td>
                     <td class="text-center p-3 col-4">Nama Merk</td>
                     <td class="text-center p-3 col-3">Dibuat Oleh</td>
                     <td class="text-center p-3 col-2">Dibuat Tanggal</td>
@@ -70,6 +71,7 @@ include "akses.php";
                   $no = 1;
                   $sql = "SELECT 
                             mr.id_merk,
+                            mr.jenis_merk,
                             mr.nama_merk,
                             mr.created_date,
                             mr.created_by,
@@ -90,41 +92,16 @@ include "akses.php";
                   ?>
                     <tr>
                       <td class="text-center"><?php echo $no; ?></td>
+                      <td class="text-nowrap text-center"><?php echo ucfirst($data['jenis_merk']); ?></td>
                       <td class="text-nowrap"><?php echo $data['nama_merk']; ?></td>
                       <td class="text-nowrap"><?php echo $data['user_created']; ?></td>
                       <td class="text-nowrap text-center"><?php echo $data['created_date']; ?></td>
-                      <td class="text-center">
-                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modal2" data-id="<?php echo encrypt($data['id_merk'], $key_global); ?>" data-nama="<?php echo $data['nama_merk']; ?>">
+                      <td class="text-center text-nowrap">
+                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modal2" data-id="<?php echo encrypt($data['id_merk'], $key_global); ?>" data-jenis="<?php echo $data['jenis_merk']; ?>" data-nama="<?php echo $data['nama_merk']; ?>">
                           <i class="bi bi-pencil"></i>
                         </button>
                         <a href="proses/proses-merk.php?hapus-merk=<?php echo encrypt($id_merk, $key_global); ?>" class="btn btn-danger btn-sm delete-data"><i class="bi bi-trash"></i></a>
                       </td>
-                      <!-- Modal Edit SP -->
-                      <div class="modal fade" id="modal2" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5">Edit Data Merk</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <form action="proses/proses-merk.php" method="POST">
-                              <div class="modal-body">
-                                <div class="mb-3">
-                                  <div class="mb-3">
-                                    <label class="form-label">Nama Merk</label>
-                                    <input type="hidden" class="form-control" name="id_merk" id="id_merk">
-                                    <input type="text" class="form-control" name="nama_merk" id="nama_merk" required>
-                                  </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="submit" name="edit-merk" id="simpan" class="btn btn-primary btn-md" disabled><i class="bx bx-save"></i> Simpan Perubahan</button>
-                                  <button type="button" class="btn btn-secondary btn-md" data-bs-dismiss="modal"><i class="bi bi-x"></i> Tutup</button>
-                                </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- End Modal Edit SP -->
                     </tr>
                     <?php $no++ ?>
                   <?php } ?>
@@ -135,6 +112,42 @@ include "akses.php";
         </div>
       </div>
     </section>
+    <!-- Modal Edit SP -->
+    <div class="modal fade" id="modal2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Edit Data Merk</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+            <div class="modal-body">
+            <form action="proses/proses-merk.php" method="POST">
+              <label class="form-label fw-bold">Jenis Merk</label>
+              <div class="mb-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="jenis_merk" id="inlineRadio1" value="local">
+                  <label class="form-check-label" for="inlineRadio1">Local</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="jenis_merk" id="inlineRadio2" value="import">
+                  <label class="form-check-label" for="inlineRadio2">Import</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Nama Merk</label>
+                <input type="hidden" class="form-control" name="id_merk" id="id_merk">
+                <input type="text" class="form-control" name="nama_merk" id="nama_merk" required>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" name="edit-merk" id="simpan" class="btn btn-primary btn-md" disabled><i class="bx bx-save"></i> Simpan Perubahan</button>
+                <button type="button" class="btn btn-secondary btn-md" data-bs-dismiss="modal"><i class="bi bi-x"></i> Tutup</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Edit SP -->
   </main><!-- End #main -->
   <!-- Modal SP -->
   <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
@@ -148,9 +161,20 @@ include "akses.php";
           <div class="modal-body">
             <div class="mb-3">
               <?php
-              $UUID = generate_uuid();
+                $UUID = generate_uuid();
               ?>
+              <label class="form-label fw-bold">Jenis Merk</label>
               <div class="mb-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="jenis_merk" id="inlineRadio1" value="local">
+                  <label class="form-check-label" for="inlineRadio1">Local</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="jenis_merk" id="inlineRadio2" value="import">
+                  <label class="form-check-label" for="inlineRadio2">Import</label>
+                </div>
+              </div>
+              <div class="mb-3 fw-bold">
                 <label class="form-label">Nama Merk</label>
                 <input type="hidden" class="form-control" name="id_merk" value="MERK<?php echo $UUID; ?>">
                 <input type="hidden" class="form-control" name="id_user" value="<?php echo $_SESSION['tiket_id']; ?>">
@@ -210,34 +234,55 @@ function generate_uuid()
 <!-- Script untuk modal edit -->
 <script>
   $('#modal2').on('show.bs.modal', function(event) {
-    // Menampilkan data
     var button = $(event.relatedTarget);
     var id = button.data('id');
+    var jenis = button.data('jenis');
     var nama = button.data('nama');
+
     var modal = $(this);
     var simpanBtn = modal.find('.modal-footer #simpan');
     var namaInput = modal.find('.modal-body #nama_merk');
 
+    // Set nilai awal
     modal.find('.modal-body #id_merk').val(id);
     namaInput.val(nama);
 
-    // Pengecekan data, dan buttun disable or enable saat data di ubah
-    // dan data kembali ke nilai awal
-    var originalNama = namaInput.val();
+    // Set radio button sesuai jenis
+    modal.find('input[name="jenis_merk"]').prop('checked', false);
+    modal.find('input[name="jenis_merk"][value="' + jenis + '"]').prop('checked', true);
 
-    namaInput.on('input', function() {
-      var currentNama = $(this).val();
+    // Simpan nilai awal untuk perbandingan
+    var originalNama = nama;
+    var originalJenis = jenis;
 
-      if (currentNama != originalNama) {
+    function checkIfChanged() {
+      var currentNama = namaInput.val();
+      var currentJenis = modal.find('input[name="jenis_merk"]:checked').val();
+
+      if (currentNama !== originalNama || currentJenis !== originalJenis) {
         simpanBtn.prop('disabled', false);
       } else {
         simpanBtn.prop('disabled', true);
       }
+    }
+
+    // Event listener untuk input nama_merk
+    namaInput.off('input').on('input', function() {
+      checkIfChanged();
     });
 
-    modal.find('form').on('reset', function() {
+    // Event listener untuk perubahan radio button
+    modal.find('input[name="jenis_merk"]').off('change').on('change', function() {
+      checkIfChanged();
+    });
+
+    // Reset tombol saat form di-reset
+    modal.find('form').off('reset').on('reset', function() {
       simpanBtn.prop('disabled', true);
     });
+
+    // Set default tombol simpan ke disabled
+    simpanBtn.prop('disabled', true);
   });
 </script>
 <!-- End Script modal edit -->

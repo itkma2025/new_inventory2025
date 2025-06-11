@@ -176,10 +176,10 @@ if (isset($sanitasi_post['ubah-status'])) {
             } catch (Exception $e) {
                 // Rollback transaksi jika terjadi kesalahan
                 $connect->rollback();
-                // $error_message = "Gagal saat proses data: " . $e->getMessage();
-                // echo $error_message;
+                $error_message = "Gagal saat proses data: " . $e->getMessage();
+                echo $error_message;
                 $_SESSION['info'] = "Data Gagal Disimpan";
-                header("Location:../detail-komplain-revisi-nonppn.php?id=$id_komplain_encrypt");
+                // header("Location:../detail-komplain-revisi-nonppn.php?id=$id_komplain_encrypt");
                 exit();
             }
         } else if ($jenis_pengiriman == 'Diambil Langsung') {
@@ -325,7 +325,6 @@ if (isset($sanitasi_post['ubah-status'])) {
             if (!$finance_stmt) {
                 throw new Exception("Gagal simpan/update finance: " . $finance_stmt->error);
             }
-            $finance_stmt->close();
 
             // Pengecekan data di tabel inv_revisi
             $cek_revisi = $connect->prepare("SELECT COUNT(*) FROM inv_revisi WHERE id_inv = ?");
@@ -711,10 +710,9 @@ if (isset($sanitasi_post['ubah-status'])) {
             throw new Exception('Gagal mengupload file.');
         }
 
+        // Mulai Transaksi
+        $connect->begin_transaction();
         try {
-            // Begin transaction
-            mysqli_begin_transaction($connect);
-
             // Proses update status kirim
             $stmt = $connect->prepare("UPDATE revisi_status_kirim 
                                             SET 
@@ -778,14 +776,36 @@ if (isset($sanitasi_post['ubah-status'])) {
                 throw new Exception("Gagal simpan data: " . $stmt->error);
             }
 
-            // Proses update inv penerima revisi
-            $stmt = $connect->prepare("UPDATE inv_penerima_revisi 
-                                                SET
-                                                    nama_penerima = ?, 
-                                                    tgl_terima = ? 
-                                                WHERE id_komplain = ?");
-            $stmt->bind_param("sss", $diambil_oleh, $tgl, $id_komplain);
-            $query_diterima = $stmt->execute();
+            // Cek inv penerima revisi
+            $cek_inv_penerima = $connect->query("SELECT id_inv_penerima_revisi FROM inv_penerima_revisi WHERE id_komplain = '$id_komplain'");
+            $cek_data_inv_penerima = mysqli_num_rows($cek_inv_penerima);
+            if ($cek_data_inv_penerima != 0) {
+                // Proses update inv penerima revisi
+                $stmt = $connect->prepare("UPDATE inv_penerima_revisi 
+                                                    SET
+                                                        nama_penerima = ?, 
+                                                        tgl_terima = ? 
+                                                    WHERE id_komplain = ?");
+                $stmt->bind_param("sss", $diambil_oleh, $tgl, $id_komplain);
+                $query_diterima = $stmt->execute();
+
+                if (!$query_diterima) {
+                    throw new Exception("Gagal hapus data: " . $stmt->error);
+                }
+            } else {
+                // Proses insert inv penerima revisi
+                $stmt = $connect->prepare("INSERT INTO inv_penerima_revisi 
+                                                                (id_inv_penerima_revisi, id_komplain, nama_penerima, alamat, tgl_terima) 
+                                                        VALUES (?, ?, ?, 'PT. Karsa Mandiri Alkesindo', ?)");
+                $stmt->bind_param("ssss", $id_inv_penerima_revisi, $id_komplain, $diambil_oleh, $tgl);
+                $query_diterima = $stmt->execute();
+
+                if (!$query_diterima) {
+                    throw new Exception("Gagal hapus data: " . $stmt->error);
+                }
+            }
+
+            
 
             if (!$query_diterima) {
                 throw new Exception("Gagal update data: " . $stmt->error);

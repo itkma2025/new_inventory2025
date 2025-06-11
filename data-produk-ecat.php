@@ -61,8 +61,9 @@ $page2 = 'data-produk';
           <div class="card-body p-3">
             <a href="tambah-data-produk.php" class="btn btn-primary btn-md ms-3"><i class="bi bi-plus-circle"></i> Tambah data produk</a>
             <div class="mt-3 ms-3">
-              <a href="data-produk-reg.php" class="btn btn-outline-success"><i class="bi bi-box-seam"></i> Produk Reguler</a>
-              <a href="#" class="btn btn-outline-success active"><i class="bi bi-box-seam-fill"></i> Produk E-Catalog</a>
+              <a href="data-produk-reg.php" class="btn btn-outline-success mobile"><i class="bi bi-box-seam"></i> Produk Reguler</a>
+              <a href="#" class="btn btn-outline-success active mobile"><i class="bi bi-box-seam-fill"></i> Produk E-Catalog</a>
+               <a href="data-produk-safaco.php" class="btn btn-outline-success mobile"><i class="bi bi-box-seam"></i> Produk Safaco</a>
             </div>
             <div class="table-responsive mt-3">
               <table class="table table-striped table-bordered" id="dataProduk">
@@ -76,6 +77,7 @@ $page2 = 'data-produk';
                     <td class="text-center text-nowrap p-3" style="width: 100px">Harga</td>
                     <td class="text-center text-nowrap p-3" style="width: 80px">Stock</td>
                     <td class="text-center text-nowrap p-3" style="width: 80px">Level</td>
+                      <td class="text-center text-nowrap p-3" style="width: 80px">Status AKL</td>
                     <td class="text-center text-nowrap p-3" style="width: 50px">Aksi</td>
                   </tr>
                 </thead>
@@ -383,7 +385,8 @@ function format_rupiah($angka)
                 { "data": "5" },
                 { "data": "6" },
                 { "data": "7" },
-                { "data": "8" }
+                { "data": "8" },
+                { "data": "9" }
             ],
             language: {
               searchPlaceholder: "Cari data",

@@ -3,23 +3,42 @@ require_once "../akses.php";
 require_once '../assets/Qrcode/qrlib.php';
 $id_user = decrypt($_SESSION['tiket_id'], $key_global);
 
+// Penghubung Library
+require_once '../assets/vendor/autoload.php';
+
+// Library Debugging
+use Whoops\Run;
+use Whoops\Handler\PrettyPageHandler;
+// Inisialisasi Whoops
+// Atur status aktif/non-aktif Whoops
+$whoops_enabled = false; // Ubah menjadi false untuk menonaktifkan
+
+if ($whoops_enabled) {
+	$whoops = new \Whoops\Run();
+	$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
+	$whoops->register();
+}
+// Library sanitasi input data
+require_once "../function/sanitasi_input.php";
+$sanitasi_post = sanitizeInput($_POST);
+
 // Simpan
-if (isset($_POST["simpan-produk-reg"])) {
-	$token_csrf = $_POST['csrf_token'];
-	$id_produk = $_POST['id_produk'];
-	$kode = $_POST['kode_produk'];
-	$nama = htmlspecialchars($_POST['nama_produk']);
-	$kode_katalog = htmlspecialchars($_POST['kode_katalog']);
-	$no_batch = htmlspecialchars($_POST['no_batch']);
-	$satuan = $_POST['satuan'];
-	$merk = $_POST['merk'];
-	$harga = $_POST['harga'];
-	$lokasi = htmlspecialchars($_POST['id_lokasi']);
-	$kat_produk = $_POST['kategori_produk'];
-	$kat_penjualan = htmlspecialchars($_POST['kategori_penjualan']);
-	$grade = htmlspecialchars($_POST['grade']);
-	$jenis_produk = $_POST['jenis_produk'];
-	$deskripsi = $_POST['deskripsi'];
+if (isset($sanitasi_post["simpan-produk-reg"])) {
+	$token_csrf = $sanitasi_post['csrf_token'];
+	$id_produk = $sanitasi_post['id_produk'];
+	$kode = $sanitasi_post['kode_produk'];
+	$nama = htmlspecialchars($sanitasi_post['nama_produk']);
+	$kode_katalog = htmlspecialchars($sanitasi_post['kode_katalog']);
+	$no_batch = htmlspecialchars($sanitasi_post['no_batch']);
+	$satuan = $sanitasi_post['satuan'];
+	$merk = $sanitasi_post['merk'];
+	$harga = $sanitasi_post['harga'];
+	$lokasi = htmlspecialchars($sanitasi_post['id_lokasi']);
+	$kat_produk = $sanitasi_post['kategori_produk'];
+	$kat_penjualan = htmlspecialchars($sanitasi_post['kategori_penjualan']);
+	$grade = htmlspecialchars($sanitasi_post['grade']);
+	$jenis_produk = $sanitasi_post['jenis_produk'];
+	$deskripsi = $sanitasi_post['deskripsi'];
 	// Cek token
 	$exp_token = $_SESSION['token_exp'];
 	$date_now = date('Y-m-d H:i:s');
@@ -101,6 +120,44 @@ if (isset($_POST["simpan-produk-reg"])) {
 					header("Location:../data-produk-ecat.php");
 				}
 			}
+		} else if ($jenis_produk == 'safaco') {
+			if ($date_now > $exp_token) {
+				$_SESSION['info'] = 'Token expired';
+				header("Location:../tambah-data-produk.php");
+			} else {
+				$cek_data = mysqli_query($connect, "SELECT * FROM tb_produk_safaco WHERE kode_produk = '$kode' AND nama_produk = '$nama' AND id_merk = '$merk' AND kode_katalog = '$kode_katalog'");
+
+				if ($cek_data->num_rows > 0) {
+					$_SESSION['info'] = 'Data sudah ada';
+					header("Location:../data-produk-safaco.php");
+				} else {
+					// Convert budget to integer
+					$harga = intval(preg_replace("/[^0-9]/", "", $harga));
+
+					// Mendapatkan informasi file
+					$nama_file = $_FILES["fileku"]["name"];
+					$tipe_file = $_FILES["fileku"]["type"];
+					$ukuran_file = $_FILES["fileku"]["size"];
+					$tmp_file = $_FILES["fileku"]["tmp_name"];
+
+					// Enkripsi nama file
+					$ubah_nama = 'IMG';
+					$nama_file_baru = $ubah_nama . uniqid() . '.jpg';
+
+					// Simpan file ke direktori tujuan
+					$direktori_tujuan = "../gambar/upload-produk-safaco/";
+					$target_file = $direktori_tujuan . $nama_file_baru;
+					move_uploaded_file($tmp_file, $target_file);
+					$sql = "INSERT INTO tb_produk_safaco
+						(id_produk_safaco, id_merk, id_kat_produk, id_kat_penjualan, id_grade, id_lokasi, kode_produk, nama_produk, no_batch, kode_katalog, satuan, harga_produk, gambar, deskripsi, created_by)
+						VALUES
+						('$id_produk', '$merk', '$kat_produk', '$kat_penjualan', '$grade', '$lokasi', '$kode', '$nama', '$no_batch', '$kode_katalog', '$satuan', '$harga', '$nama_file_baru', '$deskripsi', '$id_user')";
+					$query = mysqli_query($connect, $sql) or die(mysqli_error($connect, $sql));
+
+					$_SESSION['info'] = 'Disimpan';
+					header("Location:../data-produk-safaco.php");
+				}
+			}
 		}
 	} else {
 		$_SESSION['info'] = 'Token not found';
@@ -108,20 +165,20 @@ if (isset($_POST["simpan-produk-reg"])) {
 	}
 
 	//Edit
-} elseif (isset($_POST["edit-produk-reg"])) {
-	$id_produk = htmlspecialchars($_POST['id_produk']);
-	$kode = htmlspecialchars($_POST['kode_produk']);
-	$no_batch = htmlspecialchars($_POST['no_batch']);
-	$nama = htmlspecialchars($_POST['nama_produk']);
-	$kode_katalog = htmlspecialchars($_POST['kode_katalog']);
-	$satuan = $_POST['satuan'];
-	$merk = $_POST['merk'];
-	$harga = $_POST['harga'];
-	$lokasi = htmlspecialchars($_POST['id_lokasi']);
-	$kat_produk = htmlspecialchars($_POST['id_kat_produk']);
-	$kat_penjualan = htmlspecialchars($_POST['kategori_penjualan']);
-	$grade = htmlspecialchars($_POST['grade']);
-	$deskripsi = $_POST['deskripsi'];
+} elseif (isset($sanitasi_post["edit-produk-reg"])) {
+	$id_produk = htmlspecialchars($sanitasi_post['id_produk']);
+	$kode = htmlspecialchars($sanitasi_post['kode_produk']);
+	$no_batch = htmlspecialchars($sanitasi_post['no_batch']);
+	$nama = htmlspecialchars($sanitasi_post['nama_produk']);
+	$kode_katalog = htmlspecialchars($sanitasi_post['kode_katalog']);
+	$satuan = $sanitasi_post['satuan'];
+	$merk = $sanitasi_post['merk'];
+	$harga = $sanitasi_post['harga'];
+	$lokasi = htmlspecialchars($sanitasi_post['id_lokasi']);
+	$kat_produk = htmlspecialchars($sanitasi_post['id_kat_produk']);
+	$kat_penjualan = htmlspecialchars($sanitasi_post['kategori_penjualan']);
+	$grade = htmlspecialchars($sanitasi_post['grade']);
+	$deskripsi = $sanitasi_post['deskripsi'];
 	// Convert budget to integer
 	$harga = intval(preg_replace("/[^0-9]/", "", $harga));
 
@@ -209,20 +266,20 @@ if (isset($_POST["simpan-produk-reg"])) {
 		// echo "Terjadi kesalahan: " . $e->getMessage();
 	}
 	//Edit Ecat
-} elseif (isset($_POST["edit-produk-ecat"])) {
-	$id_produk = htmlspecialchars($_POST['id_produk']);
-	$kode = htmlspecialchars($_POST['kode_produk']);
-	$no_batch = htmlspecialchars($_POST['no_batch']);
-	$nama = htmlspecialchars($_POST['nama_produk']);
-	$kode_katalog = htmlspecialchars($_POST['kode_katalog']);
-	$satuan = $_POST['satuan'];
-	$merk = $_POST['merk'];
-	$harga = $_POST['harga'];
-	$lokasi = htmlspecialchars($_POST['id_lokasi']);
-	$kat_produk = htmlspecialchars($_POST['id_kat_produk']);
-	$kat_penjualan = htmlspecialchars($_POST['kategori_penjualan']);
-	$grade = htmlspecialchars($_POST['grade']);
-	$deskripsi = $_POST['deskripsi'];
+} elseif (isset($sanitasi_post["edit-produk-ecat"])) {
+	$id_produk = htmlspecialchars($sanitasi_post['id_produk']);
+	$kode = htmlspecialchars($sanitasi_post['kode_produk']);
+	$no_batch = htmlspecialchars($sanitasi_post['no_batch']);
+	$nama = htmlspecialchars($sanitasi_post['nama_produk']);
+	$kode_katalog = htmlspecialchars($sanitasi_post['kode_katalog']);
+	$satuan = $sanitasi_post['satuan'];
+	$merk = $sanitasi_post['merk'];
+	$harga = $sanitasi_post['harga'];
+	$lokasi = htmlspecialchars($sanitasi_post['id_lokasi']);
+	$kat_produk = htmlspecialchars($sanitasi_post['id_kat_produk']);
+	$kat_penjualan = htmlspecialchars($sanitasi_post['kategori_penjualan']);
+	$grade = htmlspecialchars($sanitasi_post['grade']);
+	$deskripsi = $sanitasi_post['deskripsi'];
 	// Convert budget to integer
 	$harga = intval(preg_replace("/[^0-9]/", "", $harga));
 
@@ -309,9 +366,109 @@ if (isset($_POST["simpan-produk-reg"])) {
 		// Tampilkan pesan error untuk debugging
 		// echo "Terjadi kesalahan: " . $e->getMessage();
 	}
+}else if (isset($sanitasi_post["edit-produk-safaco"])) {
+	$id_produk = htmlspecialchars($sanitasi_post['id_produk']);
+	$kode = htmlspecialchars($sanitasi_post['kode_produk']);
+	$no_batch = htmlspecialchars($sanitasi_post['no_batch']);
+	$nama = htmlspecialchars($sanitasi_post['nama_produk']);
+	$kode_katalog = htmlspecialchars($sanitasi_post['kode_katalog']);
+	$satuan = $sanitasi_post['satuan'];
+	$merk = $sanitasi_post['merk'];
+	$harga = $sanitasi_post['harga'];
+	$lokasi = htmlspecialchars($sanitasi_post['id_lokasi']);
+	$kat_produk = htmlspecialchars($sanitasi_post['id_kat_produk']);
+	$kat_penjualan = htmlspecialchars($sanitasi_post['kategori_penjualan']);
+	$grade = htmlspecialchars($sanitasi_post['grade']);
+	$deskripsi = $sanitasi_post['deskripsi'];
+	// Convert budget to integer
+	$harga = intval(preg_replace("/[^0-9]/", "", $harga));
+
+	// Mendapatkan informasi file
+	$nama_file = $_FILES["fileku"]["name"];
+	$tipe_file = $_FILES["fileku"]["type"];
+	$ukuran_file = $_FILES["fileku"]["size"];
+	$tmp_file = $_FILES["fileku"]["tmp_name"];
+
+	try {
+		// Mulai transaksi
+		$connect->begin_transaction();
+
+		 // Default nilai gambar
+		 $gambar_query = '';
+
+		 // Cek jika ada file gambar yang diunggah
+		 if (!empty($_FILES["fileku"]["name"])) {
+			 // Query untuk mendapatkan gambar lama
+			 $result = $connect->query("SELECT gambar FROM tb_produk_safaco WHERE id_produk_safaco = '$id_produk'");
+			 if (!$result) {
+				 throw new Exception("Gagal mendapatkan data gambar lama: " . $connect->error);
+			 }
+			 $row = $result->fetch_assoc();
+	 
+			 // Hapus file lama jika ada
+			 if (!empty($row['gambar'])) {
+				 $old_file_path = "../gambar/upload-produk-reg/{$row['gambar']}";
+				 if (file_exists($old_file_path)) {
+					 if (!unlink($old_file_path)) {
+						 throw new Exception("Gagal menghapus file lama: $old_file_path");
+					 }
+				 }
+			 }
+	 
+			 // Enkripsi nama file baru
+			 $ubah_nama = 'IMG';
+			 $nama_file_baru = $ubah_nama . uniqid() . '.jpg';
+	 
+			 // Simpan file ke direktori tujuan
+			 $direktori_tujuan = "../gambar/upload-produk-safaco/";
+			 $target_file = $direktori_tujuan . $nama_file_baru;
+			 if (!move_uploaded_file($_FILES["fileku"]["tmp_name"], $target_file)) {
+				 throw new Exception("Gagal mengunggah file ke direktori tujuan: $target_file");
+			 }
+	 
+			 // Tambahkan kolom gambar ke query update
+			 $gambar_query = ", gambar = '$nama_file_baru'";
+		 }
+	 
+		 // Query update
+		 $update_query = "UPDATE tb_produk_safaco 
+							SET 
+								id_merk = '$merk', 
+								id_kat_produk = '$kat_produk', 
+								id_kat_penjualan = '$kat_penjualan', 
+								id_grade = '$grade', 
+								id_lokasi = '$lokasi', 
+								kode_produk = '$kode', 
+								no_batch = '$no_batch', 
+								nama_produk = '$nama', 
+								kode_katalog = '$kode_katalog', 
+								satuan = '$satuan', 
+								harga_produk = '$harga', 
+								deskripsi = '$deskripsi', 
+								updated_by = '$id_user' 
+								$gambar_query 
+							WHERE id_produk_safaco = '$id_produk'
+						";
+	 
+		 if (!$connect->query($update_query)) {
+			 throw new Exception("Gagal memperbarui data produk: " . $connect->error);
+		 }
+	 
+		 // Commit transaksi jika semua berhasil
+		 $connect->commit();
+		 $_SESSION['info'] = 'Diupdate';
+		 header("Location:../data-produk-safaco.php");
+	} catch (Exception $e) {
+		// Rollback transaksi jika terjadi kesalahan
+		$connect->rollback();
+		$_SESSION['info'] = 'Data Gagal Diupdate';
+		header("Location:../data-produk-safaco.php");
+		// Tampilkan pesan error untuk debugging
+		// echo "Terjadi kesalahan: " . $e->getMessage();
+	}
 // Hapus 
-} elseif (isset($_POST['hapus-produk-reg'])) {
-	$idh = decrypt($_POST['id_produk'], $key_global);
+} else if (isset($sanitasi_post['hapus-produk-reg'])) {
+	$idh = decrypt($sanitasi_post['id_produk'], $key_global);
 
 	// Mengambil nama gambar yang terkait
 	$sql = "SELECT 
@@ -366,8 +523,8 @@ if (isset($_POST["simpan-produk-reg"])) {
 		header("Location:../data-produk-reg.php");
 	}
 	// Hapus Ecat
-} elseif (isset($_POST['hapus-produk-ecat'])) {
-	$idh = decrypt($_POST['id_produk'], $key_global);
+} else if (isset($sanitasi_post['hapus-produk-ecat'])) {
+	$idh = decrypt($sanitasi_post['id_produk'], $key_global);
 
 	// Mengambil nama gambar yang terkait
 	$sql = "SELECT 
@@ -421,5 +578,61 @@ if (isset($_POST["simpan-produk-reg"])) {
 		// Tangani pengecualian di sini, misalnya:
 		$_SESSION['info'] = 'Terjadi kesalahan: ' . $e->getMessage();
 		echo "<script>document.location.href='../data-produk-ecat.php'</script>";
+	}
+} else if (isset($sanitasi_post['hapus-produk-safaco'])) {
+	$idh = decrypt($sanitasi_post['id_produk'], $key_global);
+
+	// Mengambil nama gambar yang terkait
+	$sql = "SELECT 
+					pr.id_produk_safaco, pr.gambar, qr.id_produk_qr, qr.qr_img 
+				FROM tb_produk_safaco AS pr
+				LEFT JOIN qr_link_safaco qr ON (pr.id_produk_safaco = qr.id_produk_qr)
+				WHERE id_produk_safaco = '$idh'";
+
+	// Membuat prepared statement
+	$query = mysqli_query($connect, $sql);
+	$row = mysqli_fetch_array($query);
+	$gambar = $row['gambar'];
+	$gambar_qr = $row['qr_img'];
+
+	try {
+		// Memulai transaksi
+		mysqli_begin_transaction($connect);
+
+		// Menghapus data dari tabel tb_produk_safaco
+		$sql_delete_produk = "DELETE FROM tb_produk_safaco WHERE id_produk_safaco = '$idh'";
+		$stmt_delete_produk = mysqli_query($connect, $sql_delete_produk);
+
+		// Menghapus data dari tabel tb_produk_safaco
+		$sql_delete_produk = "DELETE FROM stock_produk_safaco WHERE id_produk_safaco = '$idh'";
+		$stmt_delete_stock = mysqli_query($connect, $sql_delete_produk);
+
+
+		// Menghapus data dari tabel qr_link
+		$sql_delete_qr = "DELETE FROM qr_link_safaco WHERE id_produk_qr = '$idh'";
+		$stmt_delete_qr = mysqli_query($connect, $sql_delete_qr);
+
+		// Menjalankan penghapusan
+		if ($stmt_delete_produk && $stmt_delete_qr && $stmt_delete_stock) {
+			// Hapus gambar terkait
+			unlink("../gambar/upload-produk-safaco/$gambar");
+			unlink("../gambar/QRcode-safaco/$gambar_qr");
+
+			// Commit transaksi
+			mysqli_commit($connect);
+
+			$_SESSION['info'] = 'Dihapus';
+			header("Location:../data-produk-safaco.php");
+		} else {
+			// Rollback transaksi jika ada kesalahan
+			mysqli_rollback($connect);
+
+			$_SESSION['info'] = 'Data Gagal Dihapus';
+			header("Location:../data-produk-safaco.php");
+		}
+	} catch (Exception $e) {
+		// Tangani pengecualian di sini, misalnya:
+		$_SESSION['info'] = 'Terjadi kesalahan: ' . $e->getMessage();
+		echo "<script>document.location.href='../data-produk-safaco.php'</script>";
 	}
 }

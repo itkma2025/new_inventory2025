@@ -89,6 +89,10 @@ $page2 = 'data-produk';
                         <input class="form-check-input" type="radio" name="jenis_produk" id="inlineRadio2" value="ecat" required>
                         <label class="form-check-label" for="inlineRadio2">E-Catalog</label>
                       </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="jenis_produk" id="inlineRadio3" value="safaco" required>
+                        <label class="form-check-label" for="inlineRadio2">Safaco</label>
+                      </div>
                     </div>
                     <input type="hidden" class="form-control" name="id_produk" id="id_produk">
                     <div class="mb-3">
@@ -231,6 +235,7 @@ $page2 = 'data-produk';
           document.addEventListener("DOMContentLoaded", function() {
             var regRadio = document.getElementById("inlineRadio1");
             var ecatRadio = document.getElementById("inlineRadio2");
+            var safacoRadio = document.getElementById("inlineRadio3");
             var idProdukInput = document.getElementById("id_produk");
 
             regRadio.addEventListener("change", function() {
@@ -243,6 +248,13 @@ $page2 = 'data-produk';
             ecatRadio.addEventListener("change", function() {
               if (ecatRadio.checked) {
                 idProdukInput.value = "BR-ECAT<?php echo $UUID;?>";
+                // console.log("Nilai id_produk diubah menjadi: " + idProdukInput.value);
+              }
+            });
+
+             safacoRadio.addEventListener("change", function() {
+              if (safacoRadio.checked) {
+                idProdukInput.value = "BR-SKM<?php echo $UUID;?>";
                 // console.log("Nilai id_produk diubah menjadi: " + idProdukInput.value);
               }
             });

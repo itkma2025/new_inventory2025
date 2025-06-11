@@ -64,7 +64,7 @@
                 $inv_id = substr($id_inv, 0, 3);
                 $jenis_inv = "";
                 if ($inv_id == "NON"){
-                    $jenis_inv = "nonppn";
+                    $jenis_inv = "nonnonppn";
                 } else if ($inv_id == "PPN"){
                     $jenis_inv = "ppn";
                 } else if ($inv_id == "BUM"){
@@ -196,7 +196,8 @@
                                                                                     ibt.id_bukti_terima,
                                                                                     ibt.bukti_satu,
                                                                                     ibt.approval,
-                                                                                    ibt.jenis_reject
+                                                                                    ibt.jenis_reject,
+                                                                                    ibt.status_perbaikan
                                                                                 FROM revisi_status_kirim AS sk
                                                                                 LEFT JOIN inv_bukti_terima_revisi AS ibt ON sk.id_komplain = ibt.id_komplain
                                                                                 WHERE sk.id_komplain = '$id'
@@ -263,8 +264,9 @@
                                             // Kode untuk mengecek data invoice penerima revisi
                                             $sql_penerima_rev = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id'");
 
-                                            $cek_data_penerima_rev = mysqli_num_rows($sql_penerima_rev);     
-                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0' && $cek_data_penerima_rev == '0'){
+                                            $cek_data_penerima_rev = $sql_penerima_rev->num_rows;     
+                                             // Jenis pengiriman Ekspedisi
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0'){
                                                 ?>
                                                     <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
                                                     data-bs-target="#DiterimaEx">
@@ -273,6 +275,36 @@
                                                     </button>
                                                 <?php
                                             }
+
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '1'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                            // ==================================================================================
+                                            // Jenis pengiriman diambil langsung
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
+                                                    </button>
+                                                <?php
+                                            }
+
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '1'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                            
                                             if($status_review == '1' && $approval == '0'){
                                                 ?>
                                                     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
@@ -281,6 +313,34 @@
                                                     </button>
                                                 <?php
                                             }
+                                        } else if($approval == '0' && $jenis_reject == '2'){
+                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Driver' && $data_cek_jenis_pengiriman['jenis_penerima'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
+                                                    </button>
+
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                        } else {
+                                            ?>
+                                                <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                data-bs-target="#DiterimaEx">
+                                                <i class="bi bi-send"></i>
+                                                    Diterima
+                                                </button>
+
+                                                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                    <i class="bi bi-truck"></i>
+                                                    Ubah Pengiriman
+                                                </button>
+                                            <?php
                                         }
                             
                                     }
@@ -290,7 +350,7 @@
                         <div class="col-md-4">
                             <div class="text-end">
                                 <?php  
-                                    if($jenis_inv == 'ppn'){
+                                    if($jenis_inv == 'nonppn'){
                                         ?>
                                             <button class="btn border-dark">
                                                 <?php  

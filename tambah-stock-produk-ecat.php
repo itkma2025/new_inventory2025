@@ -39,7 +39,7 @@ include "akses.php";
       <div class="container-fluid">
         <div class="card">
           <div class="card-header text-center">
-            <h4>Tambah Data Stock Produk Marwa</h4>
+            <h4>Tambah Data Stock Produk Ecat</h4>
           </div>
           <div class="card-body p-3">
             <form action="proses/proses-stock-ecat.php" method="POST">

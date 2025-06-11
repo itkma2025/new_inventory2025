@@ -27,6 +27,7 @@
 	// Simpan
 	if (isset($sanitasi_post["simpan-merk"])) {
 		$id_merk = $sanitasi_post['id_merk'];
+		$jenis_merk = $sanitasi_post['jenis_merk'];
 		$nama_merk = $sanitasi_post['nama_merk'];
 
 		$cek_kat = mysqli_query($connect, "SELECT nama_merk FROM tb_merk WHERE nama_merk = '$nama_merk'");
@@ -36,9 +37,9 @@
 			echo "<script>document.location.href='../merk-produk.php'</script>";
 		} else {
 			mysqli_query($connect, "INSERT INTO tb_merk
-						(id_merk, nama_merk, created_by) 
+						(id_merk, jenis_merk, nama_merk, created_by) 
 						VALUES 
-						('$id_merk', '$nama_merk', '$id_user')");
+						('$id_merk', '$jenis_merk', '$nama_merk', '$id_user')");
 
 			$_SESSION['info'] = 'Disimpan';
 			echo "<script>document.location.href='../merk-produk.php'</script>";
@@ -47,21 +48,22 @@
 		//Edit
 	} elseif (isset($sanitasi_post["edit-merk"])) {
 		$id_merk = decrypt($sanitasi_post['id_merk'], $key_global);
+		$jenis_merk = $sanitasi_post['jenis_merk'];
 		$nama_merk = $sanitasi_post['nama_merk'];
 
 		// menampilkan data
-		$query = "SELECT nama_merk FROM tb_merk WHERE id_merk = '$id_merk'";
+		$query = "SELECT jenis_merk, nama_merk FROM tb_merk WHERE id_merk = '$id_merk'";
 		$result = mysqli_query($connect, $query);
 		$data_lama = mysqli_fetch_assoc($result);
 
 		// Cek apakah nama merk sama dengan data lama
-		if ($data_lama['nama_merk'] == $nama_merk) {
+		if ($data_lama['nama_merk'] == $nama_merk && $data_lama['jenis_merk'] == $jenis_merk) {
 			// Nama tidak berubah, tidak perlu melakukan query pembaruan
 			$_SESSION['info'] = 'Tidak Ada Perubahan Data';
 			echo "<script>document.location.href='../merk-produk.php'</script>";
 		} else {
 			// Nama berubah, cek apakah ada nama yang sama di database
-			$cek_kat = mysqli_query($connect, "SELECT nama_merk FROM tb_merk WHERE nama_merk = '$nama_merk'");
+			$cek_kat = mysqli_query($connect, "SELECT nama_merk FROM tb_merk WHERE jenis_merk = '$jenis_merk' AND  nama_merk = '$nama_merk'");
 
 			if ($cek_kat->num_rows > 0) {
 				// Ada nama yang sama di database, tampilkan pesan error
@@ -69,7 +71,7 @@
 				echo "<script>document.location.href='../merk-produk.php'</script>";
 			} else {
 				// Nama belum ada yang sama, lakukan pembaruan
-				$update = mysqli_query($connect, "UPDATE tb_merk SET nama_merk = '$nama_merk' WHERE id_merk = '$id_merk'");
+				$update = mysqli_query($connect, "UPDATE tb_merk SET jenis_merk = '$jenis_merk', nama_merk = '$nama_merk' WHERE id_merk = '$id_merk'");
 
 				if ($update) {
 					$_SESSION['info'] = 'Diupdate';

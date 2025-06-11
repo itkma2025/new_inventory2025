@@ -13,7 +13,8 @@ $columns = array(
     5 => 'harga_produk',
     6 => 'stock',
     7 => 'stock_status',
-    8 => 'aksi'
+    8 => 'status_akl',
+    9 => 'aksi'
 );
 
 $sql = "SELECT 
@@ -24,12 +25,12 @@ $sql = "SELECT
             pr.kode_katalog,
             pr.satuan,
             pr.gambar,
-            DATE_FORMAT(pr.created_date, '%d/%m/%Y, %H:%i:%s') AS produk_created,  -- Format tanggal Indonesia
+            pr.deskripsi,
+            DATE_FORMAT(pr.created_date, '%d/%m/%Y, %H:%i:%s') AS produk_created,
             CASE 
                 WHEN pr.updated_date = '0000-00-00 00:00:00' THEN '-'
                 ELSE DATE_FORMAT(pr.updated_date, '%d/%m/%Y, %H:%i:%s')
             END AS produk_updated,
-            pr.id_produk_ecat as produk_id,    
             uc.nama_user as user_created, 
             COALESCE(uu.nama_user, '-') AS user_updated, 
             mr.nama_merk,
@@ -43,17 +44,18 @@ $sql = "SELECT
             lok.no_lantai,
             lok.nama_area,
             lok.no_rak,
-            COALESCE(spe.id_produk_ecat, 0) AS id_produk_spe,
-            spe.stock
+            COALESCE(spr.id_produk_ecat, 0) AS id_produk_spr,
+            spr.stock
         FROM tb_produk_ecat as pr
-        LEFT JOIN $database2.user AS uc ON (pr.created_by = uc.id_user)
-        LEFT JOIN $database2.user AS uu ON (pr.updated_by = uu.id_user)
-        LEFT JOIN tb_merk mr ON (pr.id_merk = mr.id_merk)
-        LEFT JOIN tb_kat_produk kp ON (pr.id_kat_produk = kp.id_kat_produk)
-        LEFT JOIN tb_kat_penjualan kj ON (pr.id_kat_penjualan = kj.id_kat_penjualan)
-        LEFT JOIN tb_produk_grade gr ON (pr.id_grade = gr.id_grade)
-        LEFT JOIN tb_lokasi_produk lok ON (pr.id_lokasi = lok.id_lokasi)
-        LEFT JOIN stock_produk_ecat spe ON (pr.id_produk_ecat = spe.id_produk_ecat)";
+        LEFT JOIN $database2.user AS uc ON pr.created_by = uc.id_user
+        LEFT JOIN $database2.user AS uu ON pr.updated_by = uu.id_user
+        LEFT JOIN tb_merk mr ON pr.id_merk = mr.id_merk
+        LEFT JOIN tb_kat_produk kp ON pr.id_kat_produk = kp.id_kat_produk
+        LEFT JOIN tb_kat_penjualan kj ON pr.id_kat_penjualan = kj.id_kat_penjualan
+        LEFT JOIN tb_produk_grade gr ON pr.id_grade = gr.id_grade
+        LEFT JOIN tb_lokasi_produk lok ON pr.id_lokasi = lok.id_lokasi
+        LEFT JOIN stock_produk_ecat spr ON pr.id_produk_ecat = spr.id_produk_ecat";
+
 // Proses filtering
 $whereClauses = array();
 if (!empty($_POST['search']['value'])) {
@@ -76,12 +78,12 @@ $orderColumn = isset($columns[$orderColumnIndex]) ? $columns[$orderColumnIndex] 
 $sql .= " ORDER BY $orderColumn $orderDir";
 
 // Total data tanpa filter
-$sqlTotal = "SELECT COUNT(*) as total FROM tb_produk_reguler";
+$sqlTotal = "SELECT COUNT(*) as total FROM tb_produk_ecat";
 $totalResult = mysqli_query($connect, $sqlTotal);
 $totalData = mysqli_fetch_assoc($totalResult)['total'];
 
 // Total data setelah filter
-$sqlFiltered = "SELECT COUNT(*) as total FROM tb_produk_reguler as pr";
+$sqlFiltered = "SELECT COUNT(*) as total FROM tb_produk_ecat as pr";
 if (!empty($whereClauses)) {
     $sqlFiltered .= " WHERE " . implode(" AND ", $whereClauses);
 }
@@ -124,6 +126,13 @@ while ($row = mysqli_fetch_assoc($query)) {
         $stockLevel = "Very High";
     }
 
+    $status_akl = "";
+    if($row['no_izin_edar'] == '--'){
+        $status_akl = '<span class="badge bg-danger" style="font-size:13px;">Tidak Ada</span>';
+    } else {
+        $status_akl = '<span class="badge bg-success" style="font-size:13px;">Ada</span>';
+    }
+
     $stockCell = "<div class='text-end text-nowrap p-1' style='background-color: " . $stockStatus[$stockLevel] . "; color: white;'>".number_format($stock)."</div>";
 
     $hapusProduk = ($row['id_produk_spr'] == 0) ? 
@@ -140,11 +149,12 @@ while ($row = mysqli_fetch_assoc($query)) {
         '<div class="text-end text-nowrap p-1">'.number_format($row['harga_produk']).'</div>',
         $stockCell,
         '<div class="text-end text-nowrap p-1">'.$stockLevel.'</div>',
+        '<div class="text-center text-nowrap p-1">'.$status_akl.'</div>',
         '<div class="p-1 text-center text-nowrap"> 
             <button class="btn btn-primary btn-sm" title="Detail" data-bs-toggle="modal" data-bs-target="#detailProduk"
                 data-kode-produk="'.$row['kode_produk'].'" 
                 data-nama-produk="'.$row['nama_produk'].'" 
-                data-kode-katalog="'.$row['kode_katalog'].'"
+                data-kode-katalog="'.$row['kode_katalog'].'" 
                 data-satuan="'.$row['satuan'].'" 
                 data-merk-produk="'.$row['nama_merk'].'" 
                 data-harga-produk="'.number_format($row['harga_produk'], 0,'.','.').'" 
@@ -164,7 +174,7 @@ while ($row = mysqli_fetch_assoc($query)) {
                 data-gambar-produk="'.$row['gambar'].'">
                 <i class="bi bi-info"></i>
             </button>
-            <a class="btn btn-warning btn-sm" href="edit-produk-reg.php?edit-data='.$id_produk.'" title="Edit">
+            <a class="btn btn-warning btn-sm" href="edit-produk-ecat.php?edit-data='.$id_produk.'" title="Edit">
                 <i class="bi bi-pencil"></i>
             </a>
             <br>'.$hapusProduk.'

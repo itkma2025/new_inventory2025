@@ -2,32 +2,6 @@
 require_once "akses.php";
 $page = 'produk';
 $page2 = 'data-produk';
-
-$sql_qr = $connect->query("SELECT id_link, url_qr, qr_img, created_date FROM qr_link"); 
-while ($data_qr = mysqli_fetch_array($sql_qr)){ 
-  $url = $data_qr['url_qr'];
-
-  $server_saat_ini = $_SERVER['SERVER_NAME'];
-  // Mendapatkan komponen-komponen dari URL
-  $parsedUrl = parse_url($url);
-  // Memisahkan domain
-  if ($parsedUrl && isset($parsedUrl['scheme'])) {
-      if ($parsedUrl['scheme'] === 'http' || $parsedUrl['scheme'] === 'https') {
-          $domain = $parsedUrl['scheme'] . '://';
-          if (isset($parsedUrl['host'])) {
-              $domain .= $parsedUrl['host'];
-          }
-      } else {
-          $domain = '';
-      }
-  } else {
-      $domain = '';
-  }
-
-  // if ($server_saat_ini != $domain) {
-  //   include "update-qr-code.php";
-  // }
-}
 ?>
 <!DOCTYPE text>
 <text lang="en">
@@ -109,6 +83,7 @@ while ($data_qr = mysqli_fetch_array($sql_qr)){
             <div class="mt-3">
               <a href="#" class="btn btn-outline-success active mobile"><i class="bi bi-box-seam"></i> Produk Reguler</a>
               <a href="data-produk-ecat.php" class="btn btn-outline-success mobile"><i class="bi bi-box-seam-fill"></i> Produk E-Catalog</a>
+              <a href="data-produk-safaco.php" class="btn btn-outline-success mobile"><i class="bi bi-box-seam-fill"></i> Produk Safaco</a>
             </div>
             <div class="table-responsive mt-3">
               <table class="table table-striped table-bordered" id="dataProduk">
