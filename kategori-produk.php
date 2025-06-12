@@ -16,114 +16,7 @@ $page2 = 'data-kat-prod';
   <?php include "page/head.php"; ?>
   <!-- FancyBox CSS -->
   <link rel="stylesheet" href="assets/vendor/fancybox/fancybox.css">
-  <style>
-    #modal2{
-      cursor: pointer;
-    }
-    /* Atur ukuran maksimal untuk Fancybox */
-    .fancybox__container {
-      width: 100vw !important;
-      height: 100vh !important;
-      z-index: 9999 !important; /* Fancybox selalu di depan */
-    }
-    .fancybox__content {
-      width: 95vw !important;
-      height: 95vh !important;
-    }
-    #pdf-container {
-      width: 90vw;
-      height: 90vh;
-    }
-    #pdf-container embed {
-      width: 100%;
-      height: 100%;
-    }
-
-    .upload-container {
-      text-align: center;
-      padding: 30px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      width: 100%;
-    }
-    .drop-zone {
-        border: 2px dashed #007bff;
-        padding: 20px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-    .drop-zone.dragover {
-        background-color: #e8f0ff;
-        border-color: #0056b3;
-    }
-    .drop-zone i {
-        font-size: 40px;
-        color: #007bff;
-    }
-    .drop-zone p {
-        margin: 10px 0;
-        font-weight: bold;
-        color: #333;
-    }
-    .btn-upload {
-        display: inline-block;
-        background: #00e3cc;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        margin-top: 10px;
-    }
-    .btn-upload:hover {
-        background: #00bfa5;
-    }
-    input[type="file"] {
-        display: none;
-    }
-    .preview-container {
-        display: none;
-        margin-top: 15px;
-    }
-    #imagePreview {
-        max-width: 100%;
-        height: auto;
-        display: none;
-    }
-    .file-info {
-        font-weight: bold;
-        color: #333;
-    }
-    #resetButton {
-        display: none;
-        background: red;
-        color: white;
-        border: none;
-        padding: 8px;
-        margin-top: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    #resetButton:hover {
-        background: darkred;
-    }
-
-    #resetButtonEdit {
-        display: none;
-        background: red;
-        color: white;
-        border: none;
-        padding: 8px;
-        margin-top: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    #resetButtonEdit:hover {
-        background: darkred;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/dropzone.css">
 </head>
 </head>
 
@@ -193,7 +86,7 @@ $page2 = 'data-kat-prod';
                 <tbody>
                   <?php
                   date_default_timezone_set('Asia/Jakarta');
-                  include "koneksi.php";
+                  require_once __DIR__ . "/function/sisa-waktu-perpanjangan.php";
                   $no = 1;
                   $sql = "  SELECT 
                                 tkp.id_kat_produk, 
@@ -260,96 +153,7 @@ $page2 = 'data-kat-prod';
                         ?>
                       
                       </td>
-                      <?php
-                        if ($data['berlaku_sampai'] == '') {
-                          ?>
-                             <td class="text-center text-nowrap">
-                                  Tanggal Berlaku Tidak Ada 
-                              </td>
-                          <?php
-                        } else if ($data['tanggal_berlaku_sampai'] < $tanggal_sekarang ) {
-                          ?>
-                            <td class="text-center text-nowrap text-white" style="background-color: red;">
-                              Expired <br>
-                              (<?php echo 'Lewat ' . $sisa_hari . ' Hari'; ?>)
-                            </td>
-                          <?php
-                        } else if ($sisa_tahun == '0' && $sisa_bulan == '0' && $sisa_hari == '0') {
-                          ?>
-                            <td class="text-center text-nowrap text-white" style="background-color: red;">
-                              Expired <br>
-                              (<?php echo $sisa_hari . ' Hari'; ?>)
-                            </td>
-                          <?php
-                        } else if ($sisa_tahun == '0' && $sisa_bulan == '0') {
-                            if($sisa_hari <= 20 ){
-                              ?>
-                                <td class="text-center text-nowrap" style="background-color: orange;">
-                                  Urgent <br>
-                                  (<?php echo $sisa_hari . ' Hari'; ?>)
-                                </td>
-                              <?php
-                            } else if ($sisa_hari > 20){
-                              ?>
-                                <td class="text-center text-nowrap" style="background-color: yellow;">
-                                  Darurat <br>
-                                  (<?php echo $sisa_hari . ' Hari'; ?>)
-                                </td>
-                              <?php
-                            }
-                        } else if ($sisa_tahun == '0' && $sisa_hari == '0') {
-                          ?>
-                            <td class="text-center text-nowrap" style="background-color: yellow;">
-                              Darurat <br>
-                              (<?php echo $sisa_bulan . ' Bulan '; ?>)
-                            </td>
-                          <?php
-                        } else if ($sisa_bulan == '0') {
-                          ?>
-                            <td class="text-center text-nowrap text-white" style="background-color: green;">
-                              Masih Aman <br>
-                              (<?php echo $sisa_tahun . ' Tahun ' . $sisa_hari . ' Hari'; ?>)
-                            </td>
-                          <?php
-                        } else if ($sisa_tahun != '0' && $sisa_bulan != '0' && $sisa_hari != '0') {
-                          ?>
-                            <td class="text-center text-nowrap text-white" style="background-color: green;">
-                              Masih Aman <br>
-                              (<?php  echo $sisa_tahun . ' Tahun ' . $sisa_bulan . ' Bulan ' . $sisa_hari . ' Hari'; ?>)
-                            </td>
-                          <?php
-                        } else if ($sisa_tahun != '0' && $sisa_bulan != '0' && $sisa_hari == '0') {
-                          ?>
-                            <td class="text-center text-nowrap text-white" style="background-color: green;">
-                              Masih Aman <br>
-                              (<?php  echo $sisa_tahun . ' Tahun ' . $sisa_bulan . ' Bulan '; ?>)
-                            </td>
-                          <?php
-                        } else {
-                          if($sisa_bulan == 1 && $sisa_hari > 10){
-                            ?>
-                              <td class="text-center text-nowrap text-white" style="background-color: green;">
-                                Masih Aman <br>
-                                (<?php echo $sisa_bulan . ' Bulan ' . $sisa_hari . ' Hari'; ?>)
-                              </td>
-                            <?php
-                          } else if ($sisa_bulan == 1 && $sisa_hari < 10){
-                            ?>
-                              <td class="text-center text-nowrap" style="background-color: yellow;">
-                                Darurat <br>
-                                (<?php echo $sisa_bulan . ' Bulan ' . $sisa_hari . ' Hari'; ?>)
-                              </td>
-                            <?php
-                          } else if ($sisa_bulan > 1 && $sisa_hari > 0){
-                            ?>
-                              <td class="text-center text-nowrap text-white" style="background-color: green;">
-                                Masih Aman <br>
-                                (<?php echo $sisa_bulan . ' Bulan ' . $sisa_hari . ' Hari'; ?>)
-                              </td>
-                            <?php
-                          }
-                        }
-                      ?>
+                      <?php echo tampilkanStatusBerlaku($data, $tanggal_sekarang, $sisa_tahun, $sisa_bulan, $sisa_hari); ?>
                       <?php  
                         if ($role == "Super Admin" || $role == "Manager Gudang") { 
                           ?>
@@ -458,79 +262,7 @@ $page2 = 'data-kat-prod';
 </div>
 
 <!-- Modal Input -->
-<div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5">Tambah Data Kategori Produk</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="proses/proses-kat-produk.php" method="POST" id="uploadForm" enctype="multipart/form-data">
-        <div class="modal-body">
-          <div class="mb-3">
-            <?php
-              require_once "function/uuid.php";
-              $uuid = uuid();
-            ?>
-            <div class="mb-3">
-              <label class="form-label">Nama Kategori Produk</label>
-              <input type="hidden" class="form-control" name="id_kat_produk" value="KATPROD<?php echo $uuid; ?>">
-              <input type="text" class="form-control" name="nama_kat_produk" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Merk</label>
-              <select class="form-select" name="merk" required>
-                <option value="">Pilih Merk...</option>
-                <?php
-                include "koneksi.php";
-                $sql = "SELECT * FROM tb_merk";
-                $query = mysqli_query($connect, $sql) or die(mysqli_error($connect, $sql));
-                while ($data = mysqli_fetch_array($query)) {
-                ?>
-                  <option value="<?php echo $data['id_merk'] ?>"><?php echo $data['nama_merk'] ?></option>
-                <?php } ?>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Nomor Izin Edar</label>
-              <input type="text" class="form-control" name="nie" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Tgl. Terbit</label>
-              <input type="date" class="form-control" name="tgl_terbit" id="terbit" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Berlaku Sampai</label>
-              <input type="date" class="form-control" name="expired_date" id="exp" required>
-            </div>
-            <div class="upload-container">
-              <div class="drop-zone" id="dropZone">
-                  <i class="bi bi-cloud-upload"></i>
-                  <p>Drag and Drop here</p>
-                  <p>or</p>
-                  <label class="btn-upload" for="fileInput">Select file</label>
-              </div>
-              <input type="file" id="fileInput" name="fileku" accept="image/png, image/jpg, image/jpeg, application/pdf" style="display: none;" required>
-
-              <div class="file-info" id="fileInfo" style="display: none;"></div>
-              <button type="button" id="resetButton">Reset File</button>
-            </div>
-
-            <!-- Fancybox PDF Container -->
-            <div style="display: none;">
-                <div id="pdf-container">
-                    <embed id="pdfEmbed" src="" type="application/pdf" width="100%" height="500px"/>
-                </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" name="simpan-kat-produk" class="btn btn-primary btn-md"><i class="bx bx-save"></i> Simpan Data</button>
-            <button type="button" class="btn btn-secondary btn-md" onclick="location.reload()"><i class="bi bi-x"></i> Tutup</button>
-          </div>
-      </form>
-    </div>
-  </div>
-</div>
+<?php require_once __DIR__ . "/modal/tambah-data-kategori.php" ?>
 <!-- End Modal input -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
 
@@ -616,13 +348,8 @@ $page2 = 'data-kat-prod';
     });
 </script>
 
-<!-- Script untuk modal edit -->
-
-<!-- End Script modal edit -->
-
-<script>
-  
-</script>
-
 <!-- Compress image  -->
 <script src="assets/js/upload-file-pdf.js"></script>
+
+
+

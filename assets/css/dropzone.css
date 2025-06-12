@@ -1,0 +1,106 @@
+ #modal2{
+    cursor: pointer;
+}
+/* Atur ukuran maksimal untuk Fancybox */
+.fancybox__container {
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important; /* Fancybox selalu di depan */
+}
+.fancybox__content {
+    width: 95vw !important;
+    height: 95vh !important;
+}
+#pdf-container {
+    width: 90vw;
+    height: 90vh;
+}
+#pdf-container embed {
+    width: 100%;
+    height: 100%;
+}
+
+.upload-container {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.drop-zone {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.drop-zone.dragover {
+    background-color: #e8f0ff;
+    border-color: #0056b3;
+}
+.drop-zone i {
+    font-size: 40px;
+    color: #007bff;
+}
+.drop-zone p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+.btn-upload {
+    display: inline-block;
+    background: #00e3cc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.btn-upload:hover {
+    background: #00bfa5;
+}
+input[type="file"] {
+    display: none;
+}
+.preview-container {
+    display: none;
+    margin-top: 15px;
+}
+#imagePreview {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+.file-info {
+    font-weight: bold;
+    color: #333;
+}
+#resetButton {
+    display: none;
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#resetButton:hover {
+    background: darkred;
+}
+
+#resetButtonEdit {
+    display: none;
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#resetButtonEdit:hover {
+    background: darkred;
+}
