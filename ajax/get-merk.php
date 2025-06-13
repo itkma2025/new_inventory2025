@@ -18,7 +18,7 @@ if (!in_array($jenis, ['local', 'import'])) {
     exit('<option value="">Jenis kategori tidak valid.</option>');
 }
 
-$sql = "SELECT * FROM tb_merk WHERE jenis_merk = ?";
+$sql = "SELECT id_merk, nama_merk FROM tb_merk WHERE jenis_merk = ?";
 $stmt = mysqli_prepare($connect, $sql);
 mysqli_stmt_bind_param($stmt, "s", $jenis);
 mysqli_stmt_execute($stmt);

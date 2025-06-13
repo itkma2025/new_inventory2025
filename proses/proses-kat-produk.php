@@ -26,159 +26,165 @@
 	$sanitasi_post = sanitizeInput($_POST);
 	$sanitasi_get = sanitizeInput($_GET);
 
-	use Rakit\Validation\Validator;
-
-	$validator = new Validator;
-
 	// Simpan
 	if (isset($sanitasi_post["simpan-kat-produk"])) {
-		// $id_kat_produk = $sanitasi_post['id_kat_produk'];
-		// $jenis_kategori = $sanitasi_post['jenis_kategori'];
-		// $nama_kategori = $sanitasi_post['nama_kat_produk'];
-		// $merk = $sanitasi_post['merk'];
-		// $nie = $sanitasi_post['nie'];
-		// $tgl_terbit = $sanitasi_post['tgl_terbit'];
-		// $expired_date = $sanitasi_post['expired_date'];
 
-		$validation = $validator->make($sanitasi_post, [
-			'status_nie'     => 'required|in:0,1',
-			'nie'            => 'required_if:status_nie,1',
-			'tgl_terbit'     => 'required_if:status_nie,1',
-			'expired_date'   => 'required_if:status_nie,1',
-		]);
+		$id_kat_produk  = $sanitasi_post['id_kat_produk'];
+		$jenis_kategori = $sanitasi_post['jenis_kategori'];
+		$nama_kategori  = $sanitasi_post['nama_kat_produk'];
+		$merk           = $sanitasi_post['merk'];
+		$status_nie     = $sanitasi_post['status_nie'];
+		$nie            = ($status_nie === '1') ? ($sanitasi_post['nie'] ?? '') : '';
+		$tgl_terbit     = ($status_nie === '1') ? ($sanitasi_post['tgl_terbit'] ?? '') : '';
+		$expired_date   = ($status_nie === '1') ? ($sanitasi_post['expired_date'] ?? '') : '';
 
-		$validation->validate();
+		// Validasi Data
+		$validasi_kategori = ['local', 'import'];
+		$validasi_status_nie = ['0', '1'];
 
-		if ($validation->fails()) {
-			$errors = $validation->errors();
-			echo "Validasi Gagal.";
-		} else {
-			echo "Validasi sukses.";
+		if (!in_array($jenis_kategori, $validasi_kategori)) {
+			// Penanganan jika jenis merk tidak valid
+			die('Jenis merk tidak valid.');
 		}
 
-		// $nama_kategori_replace = str_replace(' ', '_', $nama_kategori);  // Mengganti semua spasi dengan underscore
+		if (!in_array($status_nie, $validasi_status_nie)) {
+			// Penanganan jika jenis merk tidak valid
+			die('Jenis merk tidak valid.');
+		}
 
-		// $cek_kat = mysqli_query($connect, "SELECT nama_kategori FROM tb_kat_produk WHERE nama_kategori = '$nama_kategori' AND id_merk = '$merk'");
-		// $path = "../files/";
-		// if (!file_exists($path)) {
-		// 	// Folder belum ada, buat folder baru
-		// 	mkdir($path, 0777, true);
-		// }
+		$nama_kategori_replace = str_replace(' ', '_', $nama_kategori);  // Mengganti semua spasi dengan underscore
 
-		// if ($cek_kat->num_rows > 0) {
-		// 	$_SESSION['info'] = 'Data sudah ada';
-		// 	header("Location:../kategori-produk.php");
-		// } else {
-		// 	// Inisialisasi variabel sebelum digunakan
-		// 	$file_path = ''; 
-		// 	$pdf_path = '';
-		// 	$file_path_db = '';
-		// 	// Jika file diunggah
-        //     if (!empty($_FILES["fileku"]["tmp_name"])) {
-		// 		// Mendapatkan informasi file
-		// 		$allowed_images = ['image/png', 'image/jpg', 'image/jpeg'];
-		// 		$allowed_pdfs = ['application/pdf'];
-		// 		$file_type = $_FILES['fileku']['type'];
+		$cek_kat = mysqli_query($connect, "SELECT nama_kategori FROM tb_kat_produk WHERE nama_kategori = '$nama_kategori' AND id_merk = '$merk'");
+		$path = "../files/";
+		if (!file_exists($path)) {
+			// Folder belum ada, buat folder baru
+			mkdir($path, 0777, true);
+		}
+
+		if ($cek_kat->num_rows > 0) {
+			$_SESSION['info'] = 'Data sudah ada';
+			header("Location:../kategori-produk.php");
+		} else {
+			// Inisialisasi variabel sebelum digunakan
+			$file_path = ''; 
+			$pdf_path = '';
+			$file_path_db = '';
+			// Jika file diunggah
+            if (!empty($_FILES["fileku"]["tmp_name"])) {
+				// Mendapatkan informasi file
+				$allowed_images = ['image/png', 'image/jpg', 'image/jpeg'];
+				$allowed_pdfs = ['application/pdf'];
+				$file_type = $_FILES['fileku']['type'];
                 
-		// 		$upload_dir = __DIR__ . '/../files/';
+				$upload_dir = __DIR__ . '/../files/';
 				
-		// 		if (!is_dir($upload_dir)) {
-		// 			mkdir($upload_dir, 0777, true);
-		// 		}
+				if (!is_dir($upload_dir)) {
+					mkdir($upload_dir, 0777, true);
+				}
 
-		// 		$file_name = basename($_FILES['fileku']['name']);
-		// 		$new_file_name = $nama_kategori_replace . '_' .  time() . uniqid() . '.pdf';
-		// 		$file_path = $upload_dir . $new_file_name;
-		// 		// Untuk di simpan di table
-		// 		$file_path_db = 'files/' . $new_file_name;
-		// 		// Jika file adalah PDF, langsung simpan dan redirect
-		// 		if (in_array($file_type, $allowed_pdfs)) {
+				$file_name = basename($_FILES['fileku']['name']);
+				$new_file_name = $nama_kategori_replace . '_' .  time() . uniqid() . '.pdf';
+				$file_path = $upload_dir . $new_file_name;
+				// Untuk di simpan di table
+				$file_path_db = ($status_nie === '1') ? ('files/' . $new_file_name) : '';
+				// Jika file adalah PDF, langsung simpan dan redirect
+				if (in_array($file_type, $allowed_pdfs)) {
 					
-		// 			// Pindahkan file PDF ke folder tujuan sebelum enkripsi
-		// 			if (!move_uploaded_file($_FILES['fileku']['tmp_name'], $file_path)) {
-		// 				throw new Exception("Gagal memindahkan file PDF ke lokasi tujuan: " . $file_path);
-		// 			}
+					// Pindahkan file PDF ke folder tujuan sebelum enkripsi
+					if (!move_uploaded_file($_FILES['fileku']['tmp_name'], $file_path)) {
+						throw new Exception("Gagal memindahkan file PDF ke lokasi tujuan: " . $file_path);
+					}
 
-		// 			// Debugging: Pastikan file ada sebelum enkripsi
-		// 			if (!file_exists($file_path)) {
-		// 				throw new Exception("File tidak ditemukan sebelum enkripsi: " . $file_path);
-		// 			}
+					// Debugging: Pastikan file ada sebelum enkripsi
+					if (!file_exists($file_path)) {
+						throw new Exception("File tidak ditemukan sebelum enkripsi: " . $file_path);
+					}
 
-		// 			echo "PDF Moved Successfully - Path: " . $file_path . "<br>";
+					echo "PDF Moved Successfully - Path: " . $file_path . "<br>";
 
-		// 			// Enkripsi file PDF sebelum menyimpannya
-		// 			$encryptedFileContent = encryptFile($file_path, $fileKey);
-		// 			if (!$encryptedFileContent) {
-		// 				throw new Exception("Enkripsi gagal: File terenkripsi kosong.");
-		// 			}
+					// Enkripsi file PDF sebelum menyimpannya
+					$encryptedFileContent = encryptFile($file_path, $fileKey);
+					if (!$encryptedFileContent) {
+						throw new Exception("Enkripsi gagal: File terenkripsi kosong.");
+					}
 
-		// 			// Simpan file yang telah dienkripsi
-		// 			if (file_put_contents($file_path, $encryptedFileContent) === false) {
-		// 				throw new Exception('Gagal menyimpan file di server.');
-		// 			}
+					// Simpan file yang telah dienkripsi
+					if (file_put_contents($file_path, $encryptedFileContent) === false) {
+						throw new Exception('Gagal menyimpan file di server.');
+					}
 
-		// 			echo "Encryption Success - File Saved!<br>";
-		// 		} else if (in_array($file_type, $allowed_images)){
-		// 			// Konversi gambar ke PDF langsung dari tmp_name
-		// 			$pdf = new TCPDF();
-		// 			$pdf->SetCreator(PDF_CREATOR);
-		// 			$pdf->SetAuthor('Generated by PHP');
-		// 			$pdf->SetTitle('Converted Image to PDF');
-		// 			$pdf->SetMargins(10, 10, 10);
-		// 			$pdf->AddPage();
+					echo "Encryption Success - File Saved!<br>";
+				} else if (in_array($file_type, $allowed_images)){
+					// Konversi gambar ke PDF langsung dari tmp_name
+					$pdf = new TCPDF();
+					$pdf->SetCreator(PDF_CREATOR);
+					$pdf->SetAuthor('Generated by PHP');
+					$pdf->SetTitle('Converted Image to PDF');
+					$pdf->SetMargins(10, 10, 10);
+					$pdf->AddPage();
 
-		// 			// Tambahkan gambar ke dalam PDF langsung dari $_FILES['fileku']['tmp_name']
-		// 			$pdf->Image($_FILES['fileku']['tmp_name'], 10, 10, 190, '', '', '', '', false, 300);
+					// Tambahkan gambar ke dalam PDF langsung dari $_FILES['fileku']['tmp_name']
+					$pdf->Image($_FILES['fileku']['tmp_name'], 10, 10, 190, '', '', '', '', false, 300);
 
-		// 			// Simpan file PDF
-		// 			$pdf_name = $new_file_name;
-		// 			$pdf_path = $upload_dir . $pdf_name;
-		// 			$pdf->Output($pdf_path, 'F');
+					// Simpan file PDF
+					$pdf_name = $new_file_name;
+					$pdf_path = $upload_dir . $pdf_name;
+					$pdf->Output($pdf_path, 'F');
 
-		// 			// Enkripsi file PDF sebelum menyimpannya
-		// 			$encryptedFileContent = encryptFile($pdf_path, $fileKey);
+					// Enkripsi file PDF sebelum menyimpannya
+					$encryptedFileContent = encryptFile($pdf_path, $fileKey);
 
-		// 			// Menyimpan file yang telah dienkripsi
-		// 			if (file_put_contents($pdf_path, $encryptedFileContent) === false) {
-		// 				throw new Exception('Gagal menyimpan file di server.');
-		// 			}
-		// 		}
-        //     }
+					// Menyimpan file yang telah dienkripsi
+					if (file_put_contents($pdf_path, $encryptedFileContent) === false) {
+						throw new Exception('Gagal menyimpan file di server.');
+					}
+				}
+            }
+			$connect->begin_transaction();
+			try {
+				// Siapkan query menggunakan prepared statement
+				$stmt = $connect->prepare("INSERT INTO tb_kat_produk
+											(id_kat_produk, nama_kategori, jenis_kategori, id_merk, status_nie, no_izin_edar, tgl_terbit, berlaku_sampai, file_nie, created_by) 
+											VALUES 
+											(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+				// Bind parameter
+				$stmt->bind_param("ssssisssss", $id_kat_produk, $nama_kategori, $jenis_kategori, $merk, $status_nie, $nie, $tgl_terbit, $expired_date, $file_path_db, $id_user);
 			
-		// 	try {
-		// 		// Siapkan query menggunakan prepared statement
-		// 		$stmt = $connect->prepare("INSERT INTO tb_kat_produk
-		// 									(id_kat_produk, nama_kategori, jenis_kategori, id_merk, no_izin_edar, tgl_terbit, berlaku_sampai, file_nie, created_by) 
-		// 									VALUES 
-		// 									(?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		// 		// Bind parameter
-		// 		$stmt->bind_param("sssssssss", $id_kat_produk, $nama_kategori, $jenis_kategori, $merk, $nie, $tgl_terbit, $expired_date, $file_path_db, $id_user);
-			
-		// 		// Eksekusi query
-		// 		if ($stmt->execute()) {
-		// 			$_SESSION['info'] = 'Disimpan';
-		// 			header("Location: ../kategori-produk.php");
-		// 			exit;
-		// 		}
-		// 	} catch (mysqli_sql_exception $e) {
-		// 		if (!empty($file_path) && file_exists($file_path)) { // Cek sebelum unlink
-		// 			unlink($file_path);
-		// 		}
-		// 		echo "Terjadi kesalahan: " . $e->getMessage();
-		// 		// Tangani error jika terjadi kesalahan pada query
-		// 		$_SESSION['info'] = 'Data Gagal Disimpan';
-		// 		// header("Location: ../kategori-produk.php");
-		// 		exit;
-		// 	} finally {
-		// 		// Tutup statement jika sudah dibuat
-		// 		if (isset($stmt)) {
-		// 			$stmt->close();
-		// 		}
-		// 	}
-		// }
+				// Eksekusi query
+				if ($stmt->execute()) {
+					if ($status_nie === '0') {
+						if (!empty($file_path) && file_exists($file_path)) { // Cek sebelum unlink
+							unlink($file_path);
+						}
+					}
 
+					// Commit transaksi jika semua sukses
+					$connect->commit();
+					$_SESSION['info'] = 'Disimpan';
+					header("Location: ../kategori-produk.php");
+					exit;
+				}
+			} catch (mysqli_sql_exception $e) {
+				if (!empty($file_path) && file_exists($file_path)) { // Cek sebelum unlink
+					unlink($file_path);
+				}
+				// echo "Terjadi kesalahan: " . $e->getMessage();
+				// Tangani error jika terjadi kesalahan pada query
+				// Rollback transaksi jika ada error
+				$connect->rollback();
+				$_SESSION['info'] = 'Data Gagal Disimpan';
+				header("Location: ../kategori-produk.php");
+				exit;
+			} finally {
+				// Tutup statement jika sudah dibuat
+				if (isset($stmt)) {
+					$stmt->close();
+				}
+			}
+		}
 		//Edit
 	} elseif (isset($sanitasi_post["edit-kat-produk"])) {
+		print_r($sanitasi_post);
 		$id_kat_produk = decrypt($sanitasi_post['id_kat_produk'], $key_global);
 		$nama_kategori = $sanitasi_post['nama_kat_produk'];
 		$merk = $sanitasi_post['merk'];
@@ -186,67 +192,67 @@
 		$tgl_terbit = $sanitasi_post['tgl_terbit'];
 		$expired_date = $sanitasi_post['exp_date'];
 
-		$upload_dir = __DIR__ . '/../files/';
+		// $upload_dir = __DIR__ . '/../files/';
 
-		// Ambil file lama dari database
-		$query = "SELECT file_nie FROM tb_kat_produk WHERE id_kat_produk = '$id_kat_produk'";
-		$result = mysqli_query($connect, $query);
-		$row = mysqli_fetch_assoc($result);
-		$file_lama = $row['file_nie'] ?? '';
+		// // Ambil file lama dari database
+		// $query = "SELECT file_nie FROM tb_kat_produk WHERE id_kat_produk = '$id_kat_produk'";
+		// $result = mysqli_query($connect, $query);
+		// $row = mysqli_fetch_assoc($result);
+		// $file_lama = $row['file_nie'] ?? '';
 
-		$file_path_db = $file_lama; // Default: tetap pakai file lama
+		// $file_path_db = $file_lama; // Default: tetap pakai file lama
 
-		// **Cek apakah pengguna mengunggah file baru**
-		if (!empty($_FILES["fileku"]["tmp_name"])) {
-			$allowed_pdfs = ['application/pdf'];
-			$allowed_images = ['image/png', 'image/jpg', 'image/jpeg'];
-			$file_type = $_FILES['fileku']['type'];
+		// // **Cek apakah pengguna mengunggah file baru**
+		// if (!empty($_FILES["fileku"]["tmp_name"])) {
+		// 	$allowed_pdfs = ['application/pdf'];
+		// 	$allowed_images = ['image/png', 'image/jpg', 'image/jpeg'];
+		// 	$file_type = $_FILES['fileku']['type'];
 
-			$new_file_name = str_replace(' ', '_', $nama_kategori) . '_' . time() . uniqid() . '.pdf';
-			$file_path = $upload_dir . $new_file_name;
-			$file_path_db = 'files/' . $new_file_name;
+		// 	$new_file_name = str_replace(' ', '_', $nama_kategori) . '_' . time() . uniqid() . '.pdf';
+		// 	$file_path = $upload_dir . $new_file_name;
+		// 	$file_path_db = 'files/' . $new_file_name;
 
-			if (!is_dir($upload_dir)) {
-				mkdir($upload_dir, 0777, true);
-			}
+		// 	if (!is_dir($upload_dir)) {
+		// 		mkdir($upload_dir, 0777, true);
+		// 	}
 
-			// **Hapus file lama jika ada**
-			if (!empty($file_lama) && file_exists(__DIR__ . '/../' . $file_lama)) {
-				unlink(__DIR__ . '/../' . $file_lama);
-			}
+		// 	// **Hapus file lama jika ada**
+		// 	if (!empty($file_lama) && file_exists(__DIR__ . '/../' . $file_lama)) {
+		// 		unlink(__DIR__ . '/../' . $file_lama);
+		// 	}
 
-			if (in_array($file_type, $allowed_pdfs)) {
-				if (!move_uploaded_file($_FILES['fileku']['tmp_name'], $file_path)) {
-					throw new Exception("Gagal memindahkan file PDF");
-				}
-				// Enkripsi file
-				file_put_contents($file_path, encryptFile($file_path, $fileKey));
-			} elseif (in_array($file_type, $allowed_images)) {
-				// Konversi gambar ke PDF
-				$pdf = new TCPDF();
-				$pdf->AddPage();
-				$pdf->Image($_FILES['fileku']['tmp_name'], 10, 10, 190, '', '', '', '', false, 300);
-				$pdf->Output($file_path, 'F');
+		// 	if (in_array($file_type, $allowed_pdfs)) {
+		// 		if (!move_uploaded_file($_FILES['fileku']['tmp_name'], $file_path)) {
+		// 			throw new Exception("Gagal memindahkan file PDF");
+		// 		}
+		// 		// Enkripsi file
+		// 		file_put_contents($file_path, encryptFile($file_path, $fileKey));
+		// 	} elseif (in_array($file_type, $allowed_images)) {
+		// 		// Konversi gambar ke PDF
+		// 		$pdf = new TCPDF();
+		// 		$pdf->AddPage();
+		// 		$pdf->Image($_FILES['fileku']['tmp_name'], 10, 10, 190, '', '', '', '', false, 300);
+		// 		$pdf->Output($file_path, 'F');
 
-				// Enkripsi file
-				file_put_contents($file_path, encryptFile($file_path, $fileKey));
-			}
-		}
+		// 		// Enkripsi file
+		// 		file_put_contents($file_path, encryptFile($file_path, $fileKey));
+		// 	}
+		// }
 
-		// **Update database tanpa mengubah file jika tidak ada file baru**
-		$stmt = $connect->prepare("UPDATE tb_kat_produk 
-			SET nama_kategori = ?, id_merk = ?, no_izin_edar = ?, tgl_terbit = ?, berlaku_sampai = ?, file_nie = ? , updated_by = ?
-			WHERE id_kat_produk = ?");
-		$stmt->bind_param("ssssssss", $nama_kategori, $merk, $nie, $tgl_terbit, $expired_date, $file_path_db, $id_user, $id_kat_produk);
+		// // **Update database tanpa mengubah file jika tidak ada file baru**
+		// $stmt = $connect->prepare("UPDATE tb_kat_produk 
+		// 	SET nama_kategori = ?, id_merk = ?, no_izin_edar = ?, tgl_terbit = ?, berlaku_sampai = ?, file_nie = ? , updated_by = ?
+		// 	WHERE id_kat_produk = ?");
+		// $stmt->bind_param("ssssssss", $nama_kategori, $merk, $nie, $tgl_terbit, $expired_date, $file_path_db, $id_user, $id_kat_produk);
 
-		if ($stmt->execute()) {
-			$_SESSION['info'] = 'Diupdate';
-			header("Location: ../kategori-produk.php");
-			exit;
-		} else {
-			$_SESSION['info'] = 'Data Gagal Diupdate';
-			exit;
-		}
+		// if ($stmt->execute()) {
+		// 	$_SESSION['info'] = 'Diupdate';
+		// 	header("Location: ../kategori-produk.php");
+		// 	exit;
+		// } else {
+		// 	$_SESSION['info'] = 'Data Gagal Diupdate';
+		// 	exit;
+		// }
 	// Hapus 
 	} elseif ($sanitasi_get['hapus-kat-produk']) {
 		//tangkap URL dengan $sanitasi_get

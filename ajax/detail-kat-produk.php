@@ -29,6 +29,9 @@ if (isset($_POST['id'])) {
                                 tkp.nama_kategori ASC
                             ");
     $data = mysqli_fetch_assoc($sql_kat_produk);
+    $nie = (!empty($data['no_izin_edar'])) ? $data['no_izin_edar'] : '-';
+    $tgl_terbit = (!empty($data['tgl_terbit'])) ? $data['tgl_terbit'] : '-';
+    $berlaku_sampai = (!empty($data['berlaku_sampai'])) ? $data['berlaku_sampai'] : '-';
     $file_nie = $data['file_nie'];
     $nama_kategori = $data['nama_kategori'];
     $_SESSION['data_file_nie'] = $file_nie;
@@ -39,8 +42,17 @@ if (isset($_POST['id'])) {
     } else {
         $view_file = '<span class="text-danger">File NPWP tidak ada</span>';
     }
-    
 
+    $updated = $data['updated_date'];
+    $updated_date = '';
+    if (!empty($updated) && $updated != '0000-00-00 00:00:00') {
+        $updated_date = htmlspecialchars(date('d/m/Y H:i:s', strtotime($updated)));
+    } else {
+         $updated_date = '-';
+    }
+
+    $user_update =  $data['updated'] ?? '-';
+    
     if ($data) {
         ?>
         <div class="card shadow-sm border-0">
@@ -52,7 +64,7 @@ if (isset($_POST['id'])) {
                     </tr>
                     <tr>
                         <th class="text-bold col-4">No Izin Edar</th>
-                        <td><?php echo htmlspecialchars($data['no_izin_edar']); ?></td>
+                        <td><?php echo $nie; ?></td>
                     </tr>
                     <tr>
                         <th class="text-bold col-4">File No Izin Edar</th>
@@ -78,11 +90,11 @@ if (isset($_POST['id'])) {
                     </tr>
                     <tr>
                         <th class="text-bold col-4">Tanggal Terbit</th>
-                        <td><?php echo htmlspecialchars($data['tgl_terbit']); ?></td>
+                        <td><?php echo $tgl_terbit; ?></td>
                     </tr>
                     <tr>
                         <th class="text-bold col-4">Berlaku Sampai</th>
-                        <td><?php echo htmlspecialchars($data['berlaku_sampai']); ?></td>
+                        <td><?php echo $berlaku_sampai; ?></td>
                     </tr>
                     <tr>
                         <th class="text-bold col-4">Merk</th>
@@ -98,11 +110,11 @@ if (isset($_POST['id'])) {
                     </tr>
                     <tr>
                         <th class="text-bold col-4">Diubah Tangal</th>
-                        <td><?php echo htmlspecialchars(date('d/m/Y H:i:s', strtotime($data['updated_date']))); ?></td>
+                        <td><?php echo $updated_date; ?></td>
                     </tr>
                     <tr>
                         <th class="text-bold col-4">Diubah Oleh</th>
-                        <td><?php echo $data['updated']; ?></td>
+                        <td><?php echo $user_update; ?></td>
                     </tr>
                 </table>
             </div>

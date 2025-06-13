@@ -68,6 +68,7 @@ $page2 = 'data-kat-prod';
                   <tr class="text-white" style="background-color: #051683;">
                     <td class="text-center p-3 text-nowrap">No</td>
                     <td class="text-center p-3 text-nowrap">Nama Kategori Produk</td>
+                    <td class="text-center p-3 text-nowrap">Jenis Kategori</td>
                     <td class="text-center p-3 text-nowrap">Merk</td>
                     <td class="text-center p-3 text-nowrap">Nomor Izin Edar</td>
                     <td class="text-center p-3 text-nowrap">Tgl. Terbit</td>
@@ -91,6 +92,7 @@ $page2 = 'data-kat-prod';
                   $sql = "  SELECT 
                                 tkp.id_kat_produk, 
                                 tkp.nama_kategori, 
+                                tkp.jenis_kategori,
                                 tkp.no_izin_edar, 
                                 tkp.tgl_terbit,
                                 tkp.berlaku_sampai,
@@ -132,6 +134,7 @@ $page2 = 'data-kat-prod';
                     <tr>
                       <td class="text-center text-nowrap"><?php echo $no; ?></td>
                       <td class="text-nowrap"><?php echo $data['nama_kategori'] ?></td>
+                      <td class="text-nowrap text-center"><?php echo $data['jenis_kategori'] ?></td>
                       <td class="text-center text-nowrap"><?php echo $data['nama_merk'] ?></td>
                       <td class="text-center text-nowrap"><?php echo $data['no_izin_edar'] ?></td>
                       <td class="text-center text-nowrap">
@@ -191,152 +194,17 @@ $page2 = 'data-kat-prod';
 </body>
 </html>
 <!-- Modal Detail -->
-<div class="modal fade" id="modalDetail" tabindex="-1"  data-bs-backdrop="static" aria-labelledby="modalDetailLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalDetailLabel">Detail Kategori Produk</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="detailContent">
-                <!-- Data akan dimuat di sini -->
-            </div>
-        </div>
-    </div>
-</div>
+<?php require_once __DIR__ . "/modal/detail-kategori-produk.php" ?>
 <!-- End Modal Detail -->
 
 <!-- Modal Edit -->
-<div class="modal fade" id="modalEdit" tabindex="-1"  data-bs-backdrop="static" aria-labelledby="modalDetailLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalDetailLabel">Edit Kategori Produk</h5>
-            </div>
-            <div class="modal-body" id="editContent">
-                <!-- Data akan dimuat di sini -->
-            </div>
-        </div>
-    </div>
-</div>
+<?php require_once __DIR__ . "/modal/edit-kategori-produk.php" ?>
 <!-- End Modal Edit -->
-
-
-
-<!-- Modal pilih merk -->
-<div class="modal fade" id="ubahMerk" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Pilih Merk</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped" id="table2">
-                <thead>
-                    <tr>
-                        <th>Merk</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php  
-                      include "koneksi.php";
-                      $no = 1;
-                      $sql_merk = mysqli_query($connect, "SELECT nama_merk FROM tb_merk");
-                      while($data_merk = mysqli_fetch_array($sql_merk)){
-                    ?>
-                    <tr data-merk="<?php echo $data_merk['nama_merk']; ?>">
-                        <td><?php echo $data_merk['nama_merk']; ?></td>
-                    </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Modal Input -->
 <?php require_once __DIR__ . "/modal/tambah-data-kategori.php" ?>
 <!-- End Modal input -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-
-<!-- Script Untuk Modal Detail -->
-<script>
-  $(document).ready(function () {
-    $(document).on('click', '.btnDetail', function() {
-        var id = $(this).data("id");
-
-        $.ajax({
-            url: "ajax/detail-kat-produk.php", 
-            type: "POST",
-            data: { id: id },
-            success: function (response) {
-                $("#detailContent").html(response);
-            },
-            error: function () {
-                $("#detailContent").html('<p class="text-danger">Gagal mengambil data.</p>');
-            }
-        });
-    });
-  });
-</script>
-
-<!-- Script Untuk Modal Edit -->
-<script>
-  $(document).ready(function () {
-    $(document).on('click', '.btnEdit', function() {
-        var id = $(this).data("id");
-
-        $.ajax({
-            url: "ajax/edit-kat-produk.php", 
-            type: "POST",
-            data: { id: id },
-            success: function (response) {
-                $("#editContent").html(response);
-            },
-            error: function () {
-                $("#editContent").html('<p class="text-danger">Gagal mengambil data.</p>');
-            }
-        });
-    });
-  });
-</script>
-
-<!-- Script Untuk Modal Edit -->
-<script>
-    $('#ubahMerk').on('show.bs.modal', function () {
-        // Check if modal2 is open, if yes, hide it
-        if ($('#modalDedail').hasClass('show')) {
-            $('#modalDedail').modal('hide');
-        }
-    });
-
-    $('#modalDedail').on('hide.bs.modal', function (e) {
-        // Prevent #modalDedail from closing
-        e.preventDefault();
-    });
-
-    $('#ubahMerk').on('hidden.bs.modal', function () {
-        // Show modalDedail when ubahMerk is hidden
-        $('#modalDedail').modal('show');
-    });
-
-   
-   
-
-    // select lokasi
-    $(document).on('click', '#modalDedail tbody tr', function (e) {
-      var selectedMerk = $(this).data('merk');
-      $('#merk').val(selectedMerk).trigger('input'); // Trigger event input setelah mengubah nilai
-      $('#ubahMerk').modal('hide');
-    });
-</script>
 
 
 <script>

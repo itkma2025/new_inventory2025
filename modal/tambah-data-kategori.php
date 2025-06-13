@@ -11,6 +11,11 @@
                     require_once "function/uuid.php";
                     $uuid = uuid();
                     ?>
+                    <div class="mb-3">
+                        <label class="form-label">Nama Kategori Produk</label>
+                        <input type="hidden" class="form-control" name="id_kat_produk" value="KATPROD<?php echo $uuid; ?>">
+                        <input type="text" class="form-control" name="nama_kat_produk" required>
+                    </div>
                     <label class="form-label">Jenis Kategori</label>
                     <div class="mb-3">
                         <div class="form-check form-check-inline">
@@ -21,11 +26,6 @@
                             <input class="form-check-input" type="radio" name="jenis_kategori" id="inlineRadio2" value="import" required>
                             <label class="form-check-label" for="inlineRadio2">Import</label>
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Nama Kategori Produk</label>
-                        <input type="hidden" class="form-control" name="id_kat_produk" value="KATPROD<?php echo $uuid; ?>">
-                        <input type="text" class="form-control" name="nama_kat_produk" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Merk</label>
@@ -106,28 +106,35 @@
         });
     });
 
-  $(document).ready(function() {
-    // Saat salah satu radio button diklik
-    $('input[name="status_nie"]').on('change', function() {
-        let statusNie = $('input[name="status_nie"]:checked').val();
-        let divNie = $('#divNie');
-        let nieInput = $('#nie');
-        let terbitInput = $('#terbit');
-        let expInput = $('#exp');
-        let fileInput = $('#fileInput');
-        if(statusNie == '1'){
-            divNie.removeClass('d-none');
-            nieInput.prop('required', true);  // Tambahkan required
-            terbitInput.prop('required', true);
-            expInput.prop('required', true);
-            fileInput.prop('required', true);
-        } else {
-            divNie.addClass('d-none');
-            nieInput.prop('required', false);  // Tambahkan required
-            terbitInput.prop('required', false);
-            expInput.prop('required', false);
-            fileInput.prop('required', false);
-        }
+    $(document).ready(function() {
+        // Saat salah satu radio button diklik
+        $('input[name="status_nie"]').on('change', function() {
+            let statusNie = $('input[name="status_nie"]:checked').val();
+            let divNie = $('#divNie');
+            let nieInput = $('#nie');
+            let terbitInput = $('#terbit');
+            let expInput = $('#exp');
+            let fileInput = $('#fileInput');
+            if(statusNie == '1'){
+                divNie.removeClass('d-none');
+                // Tambahkan required
+                nieInput.prop('required', true);
+                terbitInput.prop('required', true);
+                expInput.prop('required', true);
+                fileInput.prop('required', true);
+            } else {
+                divNie.addClass('d-none');
+                // Hapus required
+                nieInput.prop('required', false); 
+                terbitInput.prop('required', false);
+                expInput.prop('required', false);
+                fileInput.prop('required', false);
+                // Reset Value
+                nieInput.val('');
+                terbitInput.val('');
+                expInput.val('');
+                fileInput.val('');
+            }
+        });
     });
-});
 </script>

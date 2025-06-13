@@ -30,6 +30,14 @@
 		$jenis_merk = $sanitasi_post['jenis_merk'];
 		$nama_merk = $sanitasi_post['nama_merk'];
 
+		// Validasi Data
+		$jenis_valid = ['local', 'import'];
+
+		if (!in_array($jenis_merk, $jenis_valid)) {
+			// Penanganan jika jenis merk tidak valid
+			die('Jenis merk tidak valid.');
+		}
+
 		$cek_kat = mysqli_query($connect, "SELECT nama_merk FROM tb_merk WHERE nama_merk = '$nama_merk'");
 
 		if ($cek_kat->num_rows > 0) {
@@ -50,6 +58,14 @@
 		$id_merk = decrypt($sanitasi_post['id_merk'], $key_global);
 		$jenis_merk = $sanitasi_post['jenis_merk'];
 		$nama_merk = $sanitasi_post['nama_merk'];
+
+		// Validasi Data
+		$jenis_valid = ['local', 'import'];
+
+		if (!in_array($jenis_merk, $jenis_valid)) {
+			// Penanganan jika jenis merk tidak valid
+			die('Jenis merk tidak valid.');
+		}
 
 		// menampilkan data
 		$query = "SELECT jenis_merk, nama_merk FROM tb_merk WHERE id_merk = '$id_merk'";

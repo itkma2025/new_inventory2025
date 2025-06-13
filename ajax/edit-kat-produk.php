@@ -9,7 +9,9 @@ if (isset($_POST['id'])) {
     $sql_kat_produk = $connect->query("SELECT 
                                             tkp.id_kat_produk,
                                             tkp.nama_kategori,
+                                            tkp.jenis_kategori,
                                             tkp.id_merk,
+                                            tkp.status_nie,
                                             tkp.no_izin_edar,
                                             tkp.tgl_terbit,
                                             tkp.berlaku_sampai,
@@ -25,98 +27,111 @@ if (isset($_POST['id'])) {
                                         ORDER BY tkp.nama_kategori ASC
                                         ");
     $data = mysqli_fetch_assoc($sql_kat_produk);
+    $jenis_kategori_local = ($data['jenis_kategori'] == 'local') ? 'checked' : '';
+    $jenis_kategori_import = ($data['jenis_kategori'] == 'import') ? 'checked' : '';
+    $status_nie_ada = ($data['status_nie'] ==  '1') ? 'checked' : '';
+    $status_nie_tidak_ada = ($data['status_nie'] == '0') ? 'checked' : '';
+    $id_merk = $data['id_merk'];
+    
     if ($data) {
         $file_nie = $data['file_nie'];
         $nama_kategori = $data['nama_kategori'];
         $_SESSION['data_file_nie'] = $file_nie;
         $_SESSION['data_nama_kategori'] = $nama_kategori;
         ?>
-        <div class="card shadow-sm border-0">
-            <div class="card-body">
-                <form action="proses/proses-kat-produk.php" method="POST" enctype="multipart/form-data">
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Nama Kategori Produk</label>
-                            <input type="hidden" class="form-control" name="id_kat_produk" id="id_kat_produk" value="<?php echo $_POST['id'] ?>">
-                            <input type="text" class="form-control" name="nama_kat_produk" id="nama_kategori" value="<?php echo $data['nama_kategori'] ?>" required>
-                        </div>
-                        <div class="mb-3">
-                            <label>Merk</label>
-                            <select class="form-select" name="merk" id="merk" required>
-                                <option value="">Pilih Merk...</option>
-                                <?php
-                                    $sql = "SELECT * FROM tb_merk";
-                                    $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
-                                    while ($row = mysqli_fetch_array($query)) {
-                                        $selected = ($row['id_merk'] == $data['id_merk']) ? 'selected' : '';
-                                ?>
-                                    <option value="<?php echo $row['id_merk']; ?>" <?php echo $selected; ?>>
-                                        <?php echo $row['nama_merk']; ?>
-                                    </option>
-                                <?php } ?>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Izin Edar</label>
-                            <input type="text" class="form-control" name="no_izin_edar" id="nie" value="<?php echo $data['no_izin_edar'] ?>" required>
-                        </div>
-                        <div class="mb-3 mt-2">
-                            <label class="form-label">Tgl. Terbit</label>
-                            <div class="input-group flex-nowrap">
-                            <input type="text" class="form-control" name="tgl_terbit" id="terbit" value="<?php echo $data['tgl_terbit'] ?>">
-                            <button type="button" class="input-group-text bg-danger text-white" id="resetTerbit"> X </button>
-                            </div>
-                        </div>
-                        <div class="mb-3 mt-2">
-                            <label class="form-label">Tgl. Berlaku Sampai</label>
-                            <div class="input-group flex-nowrap">
-                            <input type="text" class="form-control" name="exp_date" id="exp" value="<?php echo $data['berlaku_sampai'] ?>">
-                            <button type="button" class="input-group-text bg-danger text-white" id="resetExp"> X </button>
-                            </div>
-                        </div>
-                        <div class="upload-container">
-                            <div class="drop-zone" id="dropZoneEdit">
-                                <i class="bi bi-cloud-upload"></i>
-                                <p>Drag and Drop here</p>
-                                <p>or</p>
-                                <label class="btn-upload" for="fileInputEdit">Select file</label>
-                            </div>
-                            <input type="file" id="fileInputEdit" name="fileku" accept="image/png, image/jpg, image/jpeg, application/pdf" style="display: none;" >
-
-                            <div class="file-info" id="fileInfoEdit" style="display: none;"></div>
-                            <button type="button" id="resetButtonEdit">Reset File</button>
-                        </div>
-
-                        <!-- Fancybox PDF Container -->
-                        <div style="display: none;">
-                            <div id="pdf-container-edit">
-                                <embed id="pdfEmbedEdit" src="" type="application/pdf" width="100%" height="500px"/>
-                            </div>
-                        </div>
-                        <!-- Kontainer Show File Saat ini -->
-                        <div style="display: none;">
-                            <div id="pdf-container">
-                                <embed id="pdf-embed" type="application/pdf" style="width:100%; height:600px;">
-                                <script>
-                                    fetch("view-nie.php")
-                                        .then(response => response.blob())
-                                        .then(blob => {
-                                            const url = URL.createObjectURL(blob);
-                                            document.getElementById("pdf-embed").src = url;
-                                        })
-                                        .catch(error => console.error("Gagal memuat PDF:", error));
-                                </script>
-                            </div>
+            <form action="proses/proses-kat-produk.php" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label">Nama Kategori Produk</label>
+                    <input type="hidden" class="form-control" name="id_kat_produk" id="id_kat_produk" value="<?php echo $_POST['id'] ?>">
+                    <input type="text" class="form-control" name="nama_kat_produk" id="nama_kategori" value="<?php echo $data['nama_kategori'] ?>" required>
+                </div>
+                <label class="form-label">Jenis Kategori</label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="jenis_kategori" id="inlineRadio1" value="local" <?php echo $jenis_kategori_local; ?> required>
+                        <label class="form-check-label" for="inlineRadio1">Local</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="jenis_kategori" id="inlineRadio2" value="import" <?php $jenis_kategori_import; ?> required>
+                        <label class="form-check-label" for="inlineRadio2">Import</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Merk</label>
+                    <select class="form-select" name="merk" id="merkSelect" data-selected="<?= $data['id_merk'] ?>" required>
+                        <!-- Data dari ajax -->
+                    </select>
+                </div>
+                <label class="form-label">Status NIE</label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="status_nie" id="statusNie1" value="1" <?php echo $status_nie_ada ?> required>
+                        <label class="form-check-label" for="statusNie1">Ada</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="status_nie" id="statusNie2" value="0" <?php echo $status_nie_tidak_ada ?> required>
+                        <label class="form-check-label" for="statusNie2">Tidak</label>
+                    </div>
+                </div>
+                <div id="divNie" class="d-none">
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Izin Edar</label>
+                        <input type="text" class="form-control" name="no_izin_edar" id="nie" value="<?php echo $data['no_izin_edar'] ?>" required>
+                    </div>
+                    <div class="mb-3 mt-2">
+                        <label class="form-label">Tgl. Terbit</label>
+                        <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" name="tgl_terbit" id="terbit" value="<?php echo $data['tgl_terbit'] ?>">
+                        <button type="button" class="input-group-text bg-danger text-white" id="resetTerbit"> X </button>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="edit-kat-produk" id="simpan" class="btn btn-primary btn-md" disabled><i class="bx bx-save"></i> Simpan Perubahan</button>
-                        <button type="button" class="btn btn-secondary btn-md" id="tutupModalDetail"><i class="bi bi-x"></i> Tutup</button>
+                    <div class="mb-3 mt-2">
+                        <label class="form-label">Tgl. Berlaku Sampai</label>
+                        <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" name="exp_date" id="exp" value="<?php echo $data['berlaku_sampai'] ?>">
+                        <button type="button" class="input-group-text bg-danger text-white" id="resetExp"> X </button>
+                        </div>
                     </div>
-                </form>
-            </div>
-        </div>
+                    <div class="upload-container">
+                        <div class="drop-zone" id="dropZoneEdit">
+                            <i class="bi bi-cloud-upload"></i>
+                            <p>Drag and Drop here</p>
+                            <p>or</p>
+                            <label class="btn-upload" for="fileInputEdit">Select file</label>
+                        </div>
+                        <input type="file" id="fileInputEdit" name="fileku" accept="image/png, image/jpg, image/jpeg, application/pdf" style="display: none;" >
+
+                        <div class="file-info" id="fileInfoEdit" style="display: none;"></div>
+                        <button type="button" id="resetButtonEdit">Reset File</button>
+                    </div>
+
+                    <!-- Fancybox PDF Container -->
+                    <div style="display: none;">
+                        <div id="pdf-container-edit">
+                            <embed id="pdfEmbedEdit" src="" type="application/pdf" width="100%" height="500px"/>
+                        </div>
+                    </div>
+                    <!-- Kontainer Show File Saat ini -->
+                    <div style="display: none;">
+                        <div id="pdf-container">
+                            <embed id="pdf-embed" type="application/pdf" style="width:100%; height:600px;">
+                            <script>
+                                fetch("view-nie.php")
+                                    .then(response => response.blob())
+                                    .then(blob => {
+                                        const url = URL.createObjectURL(blob);
+                                        document.getElementById("pdf-embed").src = url;
+                                    })
+                                    .catch(error => console.error("Gagal memuat PDF:", error));
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="edit-kat-produk" id="simpan" class="btn btn-primary btn-md"><i class="bx bx-save"></i> Simpan Perubahan</button>
+                    <button type="button" class="btn btn-secondary btn-md" id="tutupModalDetail"><i class="bi bi-x"></i> Tutup</button>
+                </div>
+            </form>
         <?php
     } else {
         echo "<div class='alert alert-danger text-center'>Data tidak ditemukan.</div>";
@@ -332,89 +347,162 @@ if (isset($_POST['id'])) {
 </script>
 
 <script>
-    $(document).ready(function() {
-        // Simpan nilai awal dari input
-        var originalFile = $("#fileInputEdit")[0].files[0]; // Simpan file awal, jika ada
-        var originalNama = $("#nama_kategori").val();
-        var originalMerk = $("#merk").val();
-        var originalNie = $("#nie").val();
-        var originalTerbit = $("#terbit").val();
-        var originalExp = $("#exp").val();
+    // $(document).ready(function() {
+    //     // Simpan nilai awal dari input
+    //     var originalFile = $("#fileInputEdit")[0].files[0]; // Simpan file awal, jika ada
+    //     var originalNama = $("#nama_kategori").val();
+    //     var originalMerk = $("#merk").val();
+    //     var originalNie = $("#nie").val();
+    //     var originalTerbit = $("#terbit").val();
+    //     var originalExp = $("#exp").val();
 
-        // Tombol simpan
-        var simpanBtn = $("#simpan");
+    //     // Tombol simpan
+    //     var simpanBtn = $("#simpan");
 
-        // Fungsi untuk memeriksa perubahan dan mengaktifkan/menonaktifkan tombol simpan
-        function checkChanges() {
-            var currentFile = $("#fileInputEdit")[0].files[0]; // Ambil file yang dipilih saat ini
-            var currentNama = $("#nama_kategori").val();
-            var currentMerk = $("#merk").val();
-            var currentNie = $("#nie").val();
-            var currentTerbit = $("#terbit").val();
-            var currentExp = $("#exp").val();
+    //     // Fungsi untuk memeriksa perubahan dan mengaktifkan/menonaktifkan tombol simpan
+    //     function checkChanges() {
+    //         var currentFile = $("#fileInputEdit")[0].files[0]; // Ambil file yang dipilih saat ini
+    //         var currentNama = $("#nama_kategori").val();
+    //         var currentMerk = $("#merk").val();
+    //         var currentNie = $("#nie").val();
+    //         var currentTerbit = $("#terbit").val();
+    //         var currentExp = $("#exp").val();
 
-            // Periksa apakah ada perubahan pada input atau file
-            if (currentFile !== originalFile || currentNama !== originalNama || currentMerk !== originalMerk || currentNie !== originalNie || currentTerbit !== originalTerbit || currentExp !== originalExp) {
-                simpanBtn.prop('disabled', false); // Aktifkan tombol simpan jika ada perubahan
-            } else {
-                simpanBtn.prop('disabled', true); // Nonaktifkan tombol simpan jika tidak ada perubahan
-            }
-        }
+    //         // Periksa apakah ada perubahan pada input atau file
+    //         if (currentFile !== originalFile || currentNama !== originalNama || currentMerk !== originalMerk || currentNie !== originalNie || currentTerbit !== originalTerbit || currentExp !== originalExp) {
+    //             simpanBtn.prop('disabled', false); // Aktifkan tombol simpan jika ada perubahan
+    //         } else {
+    //             simpanBtn.prop('disabled', true); // Nonaktifkan tombol simpan jika tidak ada perubahan
+    //         }
+    //     }
 
-        // Deteksi perubahan pada input form
-        $("#nama_kategori, #merk, #nie, #terbit, #exp").on('input', function() {
-            checkChanges(); // Cek perubahan setiap kali input berubah
-        });
+    //     // Deteksi perubahan pada input form
+    //     $("#nama_kategori, #merk, #nie, #terbit, #exp").on('input', function() {
+    //         checkChanges(); // Cek perubahan setiap kali input berubah
+    //     });
 
-        // Reset nilai "Tgl. Terbit" dan "Tgl. Berlaku Sampai"
-        $("#resetTerbit").on('click', function() {
-            // Reset input "Tgl. Terbit" ke nilai awal
-            $("#terbit").val('');  
-            checkChanges(); // Cek perubahan setelah reset
-        });
+    //     // Reset nilai "Tgl. Terbit" dan "Tgl. Berlaku Sampai"
+    //     $("#resetTerbit").on('click', function() {
+    //         // Reset input "Tgl. Terbit" ke nilai awal
+    //         $("#terbit").val('');  
+    //         checkChanges(); // Cek perubahan setelah reset
+    //     });
 
-        $("#resetExp").on('click', function() {
-            // Reset input "Tgl. Berlaku Sampai" ke nilai awal
-            $("#exp").val('');  
-            checkChanges(); // Cek perubahan setelah reset
-        });
+    //     $("#resetExp").on('click', function() {
+    //         // Reset input "Tgl. Berlaku Sampai" ke nilai awal
+    //         $("#exp").val('');  
+    //         checkChanges(); // Cek perubahan setelah reset
+    //     });
 
-        $('#tutupModalDetail').on('click', function() {
-            // Reload halaman
-            location.reload();
-        });
+    //     $('#tutupModalDetail').on('click', function() {
+    //         // Reload halaman
+    //         location.reload();
+    //     });
 
-        // Deteksi perubahan pada file input
-        $("#fileInputEdit").on('change', function() {
-            var file = this.files[0];
-            if (file) {
-                // Menampilkan informasi file
-                // $("#fileInfoEdit").text(file.name).show();
-            } else {
-                $("#fileInfoEdit").hide();
-            }
-            checkChanges(); // Cek perubahan setelah file dipilih
-        });
+    //     // Deteksi perubahan pada file input
+    //     $("#fileInputEdit").on('change', function() {
+    //         var file = this.files[0];
+    //         if (file) {
+    //             // Menampilkan informasi file
+    //             // $("#fileInfoEdit").text(file.name).show();
+    //         } else {
+    //             $("#fileInfoEdit").hide();
+    //         }
+    //         checkChanges(); // Cek perubahan setelah file dipilih
+    //     });
 
-        // Reset file
-        $("#resetButtonEdit").on('click', function() {
-            // Reset input file
-            $("#fileInputEdit").val('');
-            $("#fileInfoEdit").hide(); // Sembunyikan info file
-            originalFile = null; // Set file asli ke null setelah reset
-            checkChanges(); // Cek perubahan setelah reset
+    //     // Reset file
+    //     $("#resetButtonEdit").on('click', function() {
+    //         // Reset input file
+    //         $("#fileInputEdit").val('');
+    //         $("#fileInfoEdit").hide(); // Sembunyikan info file
+    //         originalFile = null; // Set file asli ke null setelah reset
+    //         checkChanges(); // Cek perubahan setelah reset
 
-            // Memperbarui originalFile ke null setelah reset
-            originalFile = $("#fileInputEdit")[0].files[0]; // Pastikan originalFile kosong setelah reset
-        });
+    //         // Memperbarui originalFile ke null setelah reset
+    //         originalFile = $("#fileInputEdit")[0].files[0]; // Pastikan originalFile kosong setelah reset
+    //     });
 
-        // Inisialisasi dengan nilai awal
-        checkChanges();
-    });
+    //     // Inisialisasi dengan nilai awal
+    //     checkChanges();
+    // });
     flatpickr("#exp", {
         dateFormat: "d/m/Y"
     });
     flatpickr("#terbit", {
         dateFormat: "d/m/Y"
+    });
+</script>
+<script>
+   $(document).ready(function () {
+    const selectedMerkId = $('#merkSelect').data('selected');
+    let isFirstLoad = true;
+
+    function loadMerk(jenis, merkId = null) {
+        $.ajax({
+            url: 'ajax/get-merk.php',
+            type: 'GET',
+            data: { jenis: jenis },
+            success: function (data) {
+                $('#merkSelect').html(data);
+
+                // Jika ada merkId, maka tandai option yang sesuai
+                if (merkId) {
+                    $('#merkSelect').val(merkId);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Terjadi kesalahan: ' + error);
+            }
+        });
+    }
+
+    // Saat user mengubah jenis_kategori
+    $('input[name="jenis_kategori"]').on('change', function () {
+        const jenis = $(this).val();
+        // Pada saat user mengubah, kita TIDAK ingin memilih merk awal
+        loadMerk(jenis); // tanpa merkId
+    });
+
+    // Saat halaman pertama kali dimuat (edit)
+    const jenisTerpilih = $('input[name="jenis_kategori"]:checked').val();
+    if (jenisTerpilih) {
+        loadMerk(jenisTerpilih, selectedMerkId);
+    }
+});
+
+
+
+
+    $(document).ready(function() {
+        // Saat salah satu radio button diklik
+        $('input[name="status_nie"]').on('change', function() {
+            let statusNie = $('input[name="status_nie"]:checked').val();
+            let divNie = $('#divNie');
+            let nieInput = $('#nie');
+            let terbitInput = $('#terbit');
+            let expInput = $('#exp');
+            let fileInput = $('#fileInput');
+            if(statusNie == '1'){
+                divNie.removeClass('d-none');
+                // Tambahkan required
+                nieInput.prop('required', true);
+                terbitInput.prop('required', true);
+                expInput.prop('required', true);
+                fileInput.prop('required', true);
+            } else {
+                divNie.addClass('d-none');
+                // Hapus required
+                nieInput.prop('required', false); 
+                terbitInput.prop('required', false);
+                expInput.prop('required', false);
+                fileInput.prop('required', false);
+                // Reset Value
+                nieInput.val('');
+                terbitInput.val('');
+                expInput.val('');
+                fileInput.val('');
+            }
+        });
     });
 </script>
