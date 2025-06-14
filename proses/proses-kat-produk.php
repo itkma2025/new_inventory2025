@@ -184,75 +184,85 @@
 		}
 		//Edit
 	} elseif (isset($sanitasi_post["edit-kat-produk"])) {
-		print_r($sanitasi_post);
 		$id_kat_produk = decrypt($sanitasi_post['id_kat_produk'], $key_global);
-		$nama_kategori = $sanitasi_post['nama_kat_produk'];
-		$merk = $sanitasi_post['merk'];
-		$nie = $sanitasi_post['no_izin_edar'];
-		$tgl_terbit = $sanitasi_post['tgl_terbit'];
-		$expired_date = $sanitasi_post['exp_date'];
+		$jenis_kategori = $sanitasi_post['jenis_kategori'];
+		$nama_kategori  = $sanitasi_post['nama_kat_produk'];
+		$merk           = $sanitasi_post['merk'];
+		$status_nie     = $sanitasi_post['status_nie'];
+		$nie            = ($status_nie === '1') ? ($sanitasi_post['nie'] ?? '') : '';
+		$tgl_terbit     = ($status_nie === '1') ? ($sanitasi_post['tgl_terbit'] ?? '') : '';
+		$expired_date   = ($status_nie === '1') ? ($sanitasi_post['expired_date'] ?? '') : '';
+		$upload_dir = __DIR__ . '/../files/';
 
-		// $upload_dir = __DIR__ . '/../files/';
+		// Ambil file lama dari database
+		$query = "SELECT file_nie FROM tb_kat_produk WHERE id_kat_produk = '$id_kat_produk'";
+		$result = mysqli_query($connect, $query);
+		$row = mysqli_fetch_assoc($result);
+		$file_lama = $row['file_nie'] ?? '';
 
-		// // Ambil file lama dari database
-		// $query = "SELECT file_nie FROM tb_kat_produk WHERE id_kat_produk = '$id_kat_produk'";
-		// $result = mysqli_query($connect, $query);
-		// $row = mysqli_fetch_assoc($result);
-		// $file_lama = $row['file_nie'] ?? '';
+		$file_path_db = $file_lama; // Default: tetap pakai file lama
 
-		// $file_path_db = $file_lama; // Default: tetap pakai file lama
+		// **Cek apakah pengguna mengunggah file baru**
+		if (!empty($_FILES["fileku"]["tmp_name"])) {
+			$allowed_pdfs = ['application/pdf'];
+			$allowed_images = ['image/png', 'image/jpg', 'image/jpeg'];
+			$file_type = $_FILES['fileku']['type'];
 
-		// // **Cek apakah pengguna mengunggah file baru**
-		// if (!empty($_FILES["fileku"]["tmp_name"])) {
-		// 	$allowed_pdfs = ['application/pdf'];
-		// 	$allowed_images = ['image/png', 'image/jpg', 'image/jpeg'];
-		// 	$file_type = $_FILES['fileku']['type'];
+			$new_file_name = str_replace(' ', '_', $nama_kategori) . '_' . time() . uniqid() . '.pdf';
+			$file_path = $upload_dir . $new_file_name;
+			$file_path_db = 'files/' . $new_file_name;
 
-		// 	$new_file_name = str_replace(' ', '_', $nama_kategori) . '_' . time() . uniqid() . '.pdf';
-		// 	$file_path = $upload_dir . $new_file_name;
-		// 	$file_path_db = 'files/' . $new_file_name;
+			if (!is_dir($upload_dir)) {
+				mkdir($upload_dir, 0777, true);
+			}
 
-		// 	if (!is_dir($upload_dir)) {
-		// 		mkdir($upload_dir, 0777, true);
-		// 	}
+			// **Hapus file lama jika ada**
+			if (!empty($file_lama) && file_exists(__DIR__ . '/../' . $file_lama)) {
+				unlink(__DIR__ . '/../' . $file_lama);
+			}
 
-		// 	// **Hapus file lama jika ada**
-		// 	if (!empty($file_lama) && file_exists(__DIR__ . '/../' . $file_lama)) {
-		// 		unlink(__DIR__ . '/../' . $file_lama);
-		// 	}
+			if (in_array($file_type, $allowed_pdfs)) {
+				if (!move_uploaded_file($_FILES['fileku']['tmp_name'], $file_path)) {
+					throw new Exception("Gagal memindahkan file PDF");
+				}
+				// Enkripsi file
+				file_put_contents($file_path, encryptFile($file_path, $fileKey));
+			} elseif (in_array($file_type, $allowed_images)) {
+				// Konversi gambar ke PDF
+				$pdf = new TCPDF();
+				$pdf->AddPage();
+				$pdf->Image($_FILES['fileku']['tmp_name'], 10, 10, 190, '', '', '', '', false, 300);
+				$pdf->Output($file_path, 'F');
 
-		// 	if (in_array($file_type, $allowed_pdfs)) {
-		// 		if (!move_uploaded_file($_FILES['fileku']['tmp_name'], $file_path)) {
-		// 			throw new Exception("Gagal memindahkan file PDF");
-		// 		}
-		// 		// Enkripsi file
-		// 		file_put_contents($file_path, encryptFile($file_path, $fileKey));
-		// 	} elseif (in_array($file_type, $allowed_images)) {
-		// 		// Konversi gambar ke PDF
-		// 		$pdf = new TCPDF();
-		// 		$pdf->AddPage();
-		// 		$pdf->Image($_FILES['fileku']['tmp_name'], 10, 10, 190, '', '', '', '', false, 300);
-		// 		$pdf->Output($file_path, 'F');
+				// Enkripsi file
+				file_put_contents($file_path, encryptFile($file_path, $fileKey));
+			}
+		}
 
-		// 		// Enkripsi file
-		// 		file_put_contents($file_path, encryptFile($file_path, $fileKey));
-		// 	}
-		// }
+		// **Update database tanpa mengubah file jika tidak ada file baru**
+		$stmt = $connect->prepare("UPDATE tb_kat_produk 
+			SET nama_kategori = ?, jenis_kategori = ?, id_merk = ?, no_izin_edar = ?, tgl_terbit = ?, berlaku_sampai = ?, file_nie = ? , status_nie = ?, updated_by = ?
+			WHERE id_kat_produk = ?");
+		$stmt->bind_param("sssssssiss", $nama_kategori, $jenis_kategori, $merk, $nie, $tgl_terbit, $expired_date, $file_path_db, $status_nie, $id_user, $id_kat_produk);
 
-		// // **Update database tanpa mengubah file jika tidak ada file baru**
-		// $stmt = $connect->prepare("UPDATE tb_kat_produk 
-		// 	SET nama_kategori = ?, id_merk = ?, no_izin_edar = ?, tgl_terbit = ?, berlaku_sampai = ?, file_nie = ? , updated_by = ?
-		// 	WHERE id_kat_produk = ?");
-		// $stmt->bind_param("ssssssss", $nama_kategori, $merk, $nie, $tgl_terbit, $expired_date, $file_path_db, $id_user, $id_kat_produk);
-
-		// if ($stmt->execute()) {
-		// 	$_SESSION['info'] = 'Diupdate';
-		// 	header("Location: ../kategori-produk.php");
-		// 	exit;
-		// } else {
-		// 	$_SESSION['info'] = 'Data Gagal Diupdate';
-		// 	exit;
-		// }
+		if ($stmt->execute()) {
+			if ($status_nie === '0') {
+				if (!empty($file_path) && file_exists($file_path)) { // Cek sebelum unlink
+					unlink($file_path);
+				}
+			}
+			$_SESSION['info'] = 'Diupdate';
+			header("Location: ../kategori-produk.php");
+			exit;
+		} else {
+			if ($status_nie === '0') {
+				if (!empty($file_path) && file_exists($file_path)) { // Cek sebelum unlink
+					unlink($file_path);
+				}
+			}
+			$_SESSION['info'] = 'Data Gagal Diupdate';
+			exit;
+		}
 	// Hapus 
 	} elseif ($sanitasi_get['hapus-kat-produk']) {
 		//tangkap URL dengan $sanitasi_get

@@ -434,75 +434,82 @@ if (isset($_POST['id'])) {
     });
 </script>
 <script>
-   $(document).ready(function () {
-    const selectedMerkId = $('#merkSelect').data('selected');
-    let isFirstLoad = true;
+    $(document).ready(function () {
+        const selectedMerkId = $('#merkSelect').data('selected');
+        let isFirstLoad = true;
 
-    function loadMerk(jenis, merkId = null) {
-        $.ajax({
-            url: 'ajax/get-merk.php',
-            type: 'GET',
-            data: { jenis: jenis },
-            success: function (data) {
-                $('#merkSelect').html(data);
+        function loadMerk(jenis, merkId = null) {
+            $.ajax({
+                url: 'ajax/get-merk.php',
+                type: 'GET',
+                data: { jenis: jenis },
+                success: function (data) {
+                    $('#merkSelect').html(data);
 
-                // Jika ada merkId, maka tandai option yang sesuai
-                if (merkId) {
-                    $('#merkSelect').val(merkId);
+                    // Jika ada merkId, maka tandai option yang sesuai
+                    if (merkId) {
+                        $('#merkSelect').val(merkId);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Terjadi kesalahan: ' + error);
                 }
-            },
-            error: function (xhr, status, error) {
-                console.error('Terjadi kesalahan: ' + error);
-            }
-        });
-    }
+            });
+        }
 
-    // Saat user mengubah jenis_kategori
-    $('input[name="jenis_kategori"]').on('change', function () {
-        const jenis = $(this).val();
-        // Pada saat user mengubah, kita TIDAK ingin memilih merk awal
-        loadMerk(jenis); // tanpa merkId
+        // Saat user mengubah jenis_kategori
+        $('input[name="jenis_kategori"]').on('change', function () {
+            const jenis = $(this).val();
+            // Pada saat user mengubah, kita TIDAK ingin memilih merk awal
+            loadMerk(jenis); // tanpa merkId
+        });
+
+        // Saat halaman pertama kali dimuat (edit)
+        const jenisTerpilih = $('input[name="jenis_kategori"]:checked').val();
+        if (jenisTerpilih) {
+            loadMerk(jenisTerpilih, selectedMerkId);
+        }
     });
 
-    // Saat halaman pertama kali dimuat (edit)
-    const jenisTerpilih = $('input[name="jenis_kategori"]:checked').val();
-    if (jenisTerpilih) {
-        loadMerk(jenisTerpilih, selectedMerkId);
-    }
-});
+    $(document).ready(function () {
+        let divNie = $('#divNie');
+        let nieInput = $('#nie');
+        let terbitInput = $('#terbit');
+        let expInput = $('#exp');
+        let fileInput = $('#fileInput');
 
-
-
-
-    $(document).ready(function() {
-        // Saat salah satu radio button diklik
-        $('input[name="status_nie"]').on('change', function() {
-            let statusNie = $('input[name="status_nie"]:checked').val();
-            let divNie = $('#divNie');
-            let nieInput = $('#nie');
-            let terbitInput = $('#terbit');
-            let expInput = $('#exp');
-            let fileInput = $('#fileInput');
-            if(statusNie == '1'){
+        function toggleNieFields(statusNie) {
+            if (statusNie === '1') {
                 divNie.removeClass('d-none');
-                // Tambahkan required
                 nieInput.prop('required', true);
                 terbitInput.prop('required', true);
                 expInput.prop('required', true);
                 fileInput.prop('required', true);
             } else {
                 divNie.addClass('d-none');
-                // Hapus required
-                nieInput.prop('required', false); 
+                nieInput.prop('required', false);
                 terbitInput.prop('required', false);
                 expInput.prop('required', false);
                 fileInput.prop('required', false);
-                // Reset Value
                 nieInput.val('');
                 terbitInput.val('');
                 expInput.val('');
                 fileInput.val('');
             }
+        }
+
+        // Ambil nilai awal radio yang dicentang (dari PHP)
+        let statusNieInit = $('input[name="status_nie"]:checked').val();
+        toggleNieFields(statusNieInit); // Inisialisasi saat halaman dimuat
+
+        // Event listener saat radio button diubah
+        $('input[name="status_nie"]').on('change', function () {
+            let statusNie = $(this).val();
+            toggleNieFields(statusNie);
         });
+    });
+
+    $('#tutupModalDetail').on('click', function () {
+        location.reload();
     });
 </script>
