@@ -77,14 +77,14 @@ include "../akses.php";
                     
                         ?>
                         <form action="proses/invoice-revisi.php" method="post" enctype="multipart/form-data" id="form">
-                            <input type="text" class="form-control" name="location" value="<?php echo $location_encrypt; ?>">
-                            <input type="text" class="form-control" name="id_bukti_terima" value="<?php echo $id_bukti_terima; ?>">
-                            <input type="text" class="form-control" name="id_inv_penerima" value="<?php echo $id_inv_penerima; ?>">
-                            <input type="text" class="form-control" name="id_komplain" value="<?php echo $id_komplain; ?>">
-                            <input type="text" class="form-control"  name="id_inv" value="<?php echo $id_inv; ?>">
-                            <input type="text" class="form-control"  name="id_spk" value="<?php echo $id_spk; ?>">
-                            <input type="text" class="form-control"  name="alamat" value="<?php echo $alamat; ?>">
-                            <input type="text" class="form-control"  name="no_komplain" value="<?php echo $no_komplain; ?>">
+                            <input type="hidden" class="form-control" name="location" value="<?php echo $location_encrypt; ?>">
+                            <input type="hidden" class="form-control" name="id_bukti_terima" value="<?php echo $id_bukti_terima; ?>">
+                            <input type="hidden" class="form-control" name="id_inv_penerima" value="<?php echo $id_inv_penerima; ?>">
+                            <input type="hidden" class="form-control" name="id_komplain" value="<?php echo $id_komplain; ?>">
+                            <input type="hidden" class="form-control"  name="id_inv" value="<?php echo $id_inv; ?>">
+                            <input type="hidden" class="form-control"  name="id_spk" value="<?php echo $id_spk; ?>">
+                            <input type="hidden" class="form-control"  name="alamat" value="<?php echo $alamat; ?>">
+                            <input type="hidden" class="form-control"  name="no_komplain" value="<?php echo $no_komplain; ?>">
                             <div class="mb-3">
                                 <div class="mb-3">
                                     <label><b>No. Invoice</b></label>

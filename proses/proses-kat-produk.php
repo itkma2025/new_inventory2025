@@ -188,10 +188,10 @@
 		$jenis_kategori = $sanitasi_post['jenis_kategori'];
 		$nama_kategori  = $sanitasi_post['nama_kat_produk'];
 		$merk           = $sanitasi_post['merk'];
-		$status_nie     = $sanitasi_post['status_nie'];
-		$nie            = ($status_nie === '1') ? ($sanitasi_post['nie'] ?? '') : '';
+		echo $status_nie     = $sanitasi_post['status_nie'];
+		echo $nie            = ($status_nie === '1') ? ($sanitasi_post['no_izin_edar'] ?? '') : 'Test';
 		$tgl_terbit     = ($status_nie === '1') ? ($sanitasi_post['tgl_terbit'] ?? '') : '';
-		$expired_date   = ($status_nie === '1') ? ($sanitasi_post['expired_date'] ?? '') : '';
+		$expired_date   = ($status_nie === '1') ? ($sanitasi_post['exp_date'] ?? '') : '';
 		$upload_dir = __DIR__ . '/../files/';
 
 		// Ambil file lama dari database
@@ -200,14 +200,18 @@
 		$row = mysqli_fetch_assoc($result);
 		$file_lama = $row['file_nie'] ?? '';
 
-		$file_path_db = $file_lama; // Default: tetap pakai file lama
+		if($status_nie === '0'){
+			$file_path_db = ''; // Default: tetap pakai file lama
+		} else {
+			$file_path_db = $file_lama; // Default: tetap pakai file lama
+		}
+
 
 		// **Cek apakah pengguna mengunggah file baru**
 		if (!empty($_FILES["fileku"]["tmp_name"])) {
 			$allowed_pdfs = ['application/pdf'];
 			$allowed_images = ['image/png', 'image/jpg', 'image/jpeg'];
 			$file_type = $_FILES['fileku']['type'];
-
 			$new_file_name = str_replace(' ', '_', $nama_kategori) . '_' . time() . uniqid() . '.pdf';
 			$file_path = $upload_dir . $new_file_name;
 			$file_path_db = 'files/' . $new_file_name;
@@ -239,6 +243,7 @@
 			}
 		}
 
+
 		// **Update database tanpa mengubah file jika tidak ada file baru**
 		$stmt = $connect->prepare("UPDATE tb_kat_produk 
 			SET nama_kategori = ?, jenis_kategori = ?, id_merk = ?, no_izin_edar = ?, tgl_terbit = ?, berlaku_sampai = ?, file_nie = ? , status_nie = ?, updated_by = ?
@@ -250,6 +255,10 @@
 				if (!empty($file_path) && file_exists($file_path)) { // Cek sebelum unlink
 					unlink($file_path);
 				}
+				// **Hapus file lama jika ada**
+				if (!empty($file_lama) && file_exists(__DIR__ . '/../' . $file_lama)) {
+					unlink(__DIR__ . '/../' . $file_lama);
+				}
 			}
 			$_SESSION['info'] = 'Diupdate';
 			header("Location: ../kategori-produk.php");
@@ -259,8 +268,13 @@
 				if (!empty($file_path) && file_exists($file_path)) { // Cek sebelum unlink
 					unlink($file_path);
 				}
+				// **Hapus file lama jika ada**
+				if (!empty($file_lama) && file_exists(__DIR__ . '/../' . $file_lama)) {
+					unlink(__DIR__ . '/../' . $file_lama);
+				}
 			}
 			$_SESSION['info'] = 'Data Gagal Diupdate';
+			header("Location: ../kategori-produk.php");
 			exit;
 		}
 	// Hapus 

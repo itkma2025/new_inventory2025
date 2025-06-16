@@ -38,11 +38,11 @@
 
     <main id="main" class="main">
         <!-- Loading -->
-        <div class="loader loader">
+        <!-- <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div>
+        </div> -->
         <!-- ENd Loading -->
         <section>
             <!-- SWEET ALERT -->
@@ -64,7 +64,7 @@
                 $inv_id = substr($id_inv, 0, 3);
                 $jenis_inv = "";
                 if ($inv_id == "NON"){
-                    $jenis_inv = "nonnonppn";
+                    $jenis_inv = "nonppn";
                 } else if ($inv_id == "PPN"){
                     $jenis_inv = "ppn";
                 } else if ($inv_id == "BUM"){
@@ -238,6 +238,7 @@
                                             $free_ongkir = '';
                                             $dikirim_oleh = '';
                                             $penanggung_jawab = '';
+                                            $none = '';
                                             if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi'){
                                                 $modalReupload = 'reuploadEx';
                                                 $nama_penerima = $data_driver_rev['nama_ekspedisi'];
@@ -247,24 +248,27 @@
                                                 $free_ongkir = $data_driver_rev['free_ongkir'];
                                                 $dikirim_oleh = $data_driver_rev['dikirim_oleh'];
                                                 $penanggung_jawab = $data_driver_rev['penanggung_jawab'];
+                                                $none = '';
                                             } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Driver'){
                                                 $modalReupload = 'reuploadDriver';
+                                                $none = 'd-none';
                                             } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung'){
                                                 $modalReupload = 'reuploadDiambil';
+                                                $none = '';
                                             }
                                             if($status_review != '0'){
                                                 ?>
-                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    <button class="btn btn-secondary mb-3 <?php echo $none ?>" data-bs-toggle="modal"
                                                         data-bs-target="#<?php echo $modalReupload ?>">
                                                         <i class="bi bi-image"></i> Reupload Bukti Terima
                                                     </button>
                                                 <?php
                                             } 
-                                        } else if($approval == '1' && $jenis_reject == '2'){
+                                        } else if($approval == '0' && $jenis_reject == '2'){
                                             // Kode untuk mengecek data invoice penerima revisi
                                             $sql_penerima_rev = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id'");
 
-                                            $cek_data_penerima_rev = $sql_penerima_rev->num_rows;     
+                                            echo $cek_data_penerima_rev = $sql_penerima_rev->num_rows;     
                                              // Jenis pengiriman Ekspedisi
                                             if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0'){
                                                 ?>
@@ -328,21 +332,7 @@
                                                     </button>
                                                 <?php
                                             }
-                                        } else {
-                                            ?>
-                                                <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#DiterimaEx">
-                                                <i class="bi bi-send"></i>
-                                                    Diterima
-                                                </button>
-
-                                                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
-                                                    <i class="bi bi-truck"></i>
-                                                    Ubah Pengiriman
-                                                </button>
-                                            <?php
                                         }
-                            
                                     }
                                 }
                             ?>
@@ -940,10 +930,10 @@
             <div class="modal-body">
                 <div class="card-body">
                     <form action="proses/proses-invoice-diterima-revisi.php" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="id_komplain" value="<?php echo $id; ?>">
-                        <input type="hidden" name="id_inv" value="<?php echo $id_inv; ?>">
-                        <input type="hidden" name="alamat" value="<?php echo $alamat; ?>">
-                        <input type="hidden" name="jenis_inv" value="<?php echo $jenis_inv; ?>">
+                        <input type="text" name="id_komplain" value="<?php echo $id; ?>">
+                        <input type="text" name="id_inv" value="<?php echo $id_inv; ?>">
+                        <input type="text" name="alamat" value="<?php echo $alamat; ?>">
+                        <input type="text" name="jenis_inv" value="<?php echo $jenis_inv; ?>">
                         <div class="mb-3">
                             <label>Nama Penerima</label>
                             <input type="text" class="form-control" name="nama_penerima" autocomplete="off" required>
@@ -954,8 +944,9 @@
                                 id="date" required="required">
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary" name="diterima_ekspedisi"><i
-                                    class="bi bi-arrow-left-right"></i> Ubah Status</button>
+                            <button type="submit" class="btn btn-primary" name="diterima_ekspedisi">
+                                <i class="bi bi-arrow-left-right"></i> Ubah Status
+                            </button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                                 id="cancelEkspedisi"><i class="bi bi-x-circle"></i> Cancel</button>
                         </div>

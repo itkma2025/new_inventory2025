@@ -38,11 +38,11 @@
 
     <main id="main" class="main">
         <!-- Loading -->
-        <div class="loader loader">
+        <!-- <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div>
+        </div> -->
         <!-- ENd Loading -->
         <section>
             <!-- SWEET ALERT -->
@@ -64,7 +64,7 @@
                 $inv_id = substr($id_inv, 0, 3);
                 $jenis_inv = "";
                 if ($inv_id == "NON"){
-                    $jenis_inv = "nonbum";
+                    $jenis_inv = "nonppn";
                 } else if ($inv_id == "PPN"){
                     $jenis_inv = "ppn";
                 } else if ($inv_id == "BUM"){
@@ -238,6 +238,7 @@
                                             $free_ongkir = '';
                                             $dikirim_oleh = '';
                                             $penanggung_jawab = '';
+                                            $none = '';
                                             if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi'){
                                                 $modalReupload = 'reuploadEx';
                                                 $nama_penerima = $data_driver_rev['nama_ekspedisi'];
@@ -247,14 +248,17 @@
                                                 $free_ongkir = $data_driver_rev['free_ongkir'];
                                                 $dikirim_oleh = $data_driver_rev['dikirim_oleh'];
                                                 $penanggung_jawab = $data_driver_rev['penanggung_jawab'];
+                                                $none = '';
                                             } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Driver'){
                                                 $modalReupload = 'reuploadDriver';
+                                                $none = 'd-none';
                                             } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung'){
                                                 $modalReupload = 'reuploadDiambil';
+                                                $none = '';
                                             }
                                             if($status_review != '0'){
                                                 ?>
-                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    <button class="btn btn-secondary mb-3 <?php echo $none ?>" data-bs-toggle="modal"
                                                         data-bs-target="#<?php echo $modalReupload ?>">
                                                         <i class="bi bi-image"></i> Reupload Bukti Terima
                                                     </button>
@@ -328,21 +332,7 @@
                                                     </button>
                                                 <?php
                                             }
-                                        } else {
-                                            ?>
-                                                <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#DiterimaEx">
-                                                <i class="bi bi-send"></i>
-                                                    Diterima
-                                                </button>
-
-                                                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
-                                                    <i class="bi bi-truck"></i>
-                                                    Ubah Pengiriman
-                                                </button>
-                                            <?php
                                         }
-                            
                                     }
                                 }
                             ?>

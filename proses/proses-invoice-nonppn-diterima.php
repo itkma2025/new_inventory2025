@@ -92,7 +92,7 @@ if (isset($_POST['diterima_ekspedisi'])){
         $connect->rollback();
         $_SESSION['info'] = "Data Gagal Disimpan";
         echo $e->getMessage();
-        // header("Location:../invoice-reguler-dikirim.php?sort=baru");
+        header("Location:../invoice-reguler-dikirim.php?sort=baru");
         exit();
     }
 }

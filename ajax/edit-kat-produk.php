@@ -52,7 +52,7 @@ if (isset($_POST['id'])) {
                         <label class="form-check-label" for="inlineRadio1">Local</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="jenis_kategori" id="inlineRadio2" value="import" <?php $jenis_kategori_import; ?> required>
+                        <input class="form-check-input" type="radio" name="jenis_kategori" id="inlineRadio2" value="import" <?php echo $jenis_kategori_import; ?> required>
                         <label class="form-check-label" for="inlineRadio2">Import</label>
                     </div>
                 </div>

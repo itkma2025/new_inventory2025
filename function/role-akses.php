@@ -77,12 +77,3 @@
     }
 
 ?>
-
-<!-- 'Super Admin' 
-    'Admin Penjualan'
-    'Admin Gudang' 
-    'Driver'
-    'Operator Gudang'
-    'Pimpinan'
-    'Manager Gudang'
-    'Finance' -->

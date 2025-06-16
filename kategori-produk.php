@@ -132,12 +132,12 @@ $page2 = 'data-kat-prod';
 
                   ?>
                     <tr>
-                      <td class="text-center text-nowrap"><?php echo $no; ?></td>
-                      <td class="text-nowrap"><?php echo $data['nama_kategori'] ?></td>
-                      <td class="text-nowrap text-center"><?php echo $data['jenis_kategori'] ?></td>
-                      <td class="text-center text-nowrap"><?php echo $data['nama_merk'] ?></td>
-                      <td class="text-center text-nowrap"><?php echo $data['no_izin_edar'] ?></td>
-                      <td class="text-center text-nowrap">
+                      <td class="text-center text-nowrap align-middle"><?php echo $no; ?></td>
+                      <td class="text-nowrap align-middle"><?php echo $data['nama_kategori'] ?></td>
+                      <td class="text-nowrap align-middle text-center"><?php echo $data['jenis_kategori'] ?></td>
+                      <td class="text-center text-nowrap align-middle"><?php echo $data['nama_merk'] ?></td>
+                      <td class="text-center text-nowrap align-middle"><?php echo $data['no_izin_edar'] ?></td>
+                      <td class="text-center text-nowrap align-middle">
                         <?php
                           if($data['tgl_terbit'] == ''){
                             echo 'Tanggal Terbit Tidak Ada';
@@ -146,7 +146,7 @@ $page2 = 'data-kat-prod';
                           }
                         ?>
                       </td>
-                      <td class="text-center text-nowrap">
+                      <td class="text-center text-nowrap align-middle">
                         <?php 
                           if ($data['berlaku_sampai'] == '') {
                             echo 'Tanggal Berlaku Tidak Ada';
@@ -160,7 +160,7 @@ $page2 = 'data-kat-prod';
                       <?php  
                         if ($role == "Super Admin" || $role == "Manager Gudang") { 
                           ?>
-                            <td class="text-center text-nowrap">
+                            <td class="text-center text-nowrap align-middle">
                               <button class="btn btn-primary btn-sm btnDetail" data-bs-toggle="modal" data-bs-target="#modalDetail" data-id="<?php echo encrypt($data['id_kat_produk'], $key_global); ?>">
                                 <i class="bi bi-eye"></i>
                               </button>

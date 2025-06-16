@@ -20,12 +20,13 @@
 	require_once "../function/sanitasi_input.php";
 	$sanitasi_post = sanitizeInput($_POST);
     if (isset($sanitasi_post['diterima_ekspedisi'])) {
+        echo "Oke";
         $year = date('y');
         $day = date('d');
         $month = date('m');
         $id_inv_penerima = "PNMR" . $year . "" . $month . "" . uuid() . "" . $day;
         $id_inv = $sanitasi_post['id_inv'];
-        $jenis_inv = $sanitasi_post['jenis_inv'];
+        echo $jenis_inv = $sanitasi_post['jenis_inv'];
         $id_komplain = decrypt($sanitasi_post['id_komplain'], $key_spk);
         $alamat = $sanitasi_post['alamat'];
         $nama_penerima = $sanitasi_post['nama_penerima'];
@@ -55,14 +56,15 @@
                 // Commit transaksi
                 $connect->commit();
                 $_SESSION['info'] = "Disimpan";
-			    header("Location: {$_SERVER['HTTP_REFERER']}");
+                // echo $error_message = "Terjadi kesalahan saat melakukan transaksi: " . $e->getMessage();
+			    header("Location: index.php");
             }
         } catch (Exception $e) {
             // Rollback transaksi jika terjadi exception
             $connect->rollback();
-            // $error_message = "Terjadi kesalahan saat melakukan transaksi: " . $e->getMessage();
+            // echo $error_message = "Terjadi kesalahan saat melakukan transaksi: " . $e->getMessage();
             $_SESSION['info'] = "Data Gagal Disimpan";
-			header("Location: {$_SERVER['HTTP_REFERER']}");
+			header("Location: index.php");
         }
     }
 ?>

@@ -219,12 +219,12 @@
                                                $id_komplain = encrypt($data['id_komplain'], $key_global);
                                             ?>
                                                 <tr>
-                                                    <td class="text-center text-nowrap"><?php echo $no; ?></td>
-                                                    <td class="text-center text-nowrap">
+                                                    <td class="text-center text-nowrap align-middle"><?php echo $no; ?></td>
+                                                    <td class="text-center text-nowrap align-middle">
                                                         <div><?php echo $data['no_inv'] ?></div>
                                                         <div>(<?php echo $data['tgl_inv'] ?>)</div>
                                                     </td>
-                                                    <td class="text-center text-nowrap">
+                                                    <td class="text-center text-nowrap align-middle">
                                                         <?php 
                                                             if(!empty($data['no_po'])){
                                                                 echo $data['no_po'];
@@ -233,9 +233,9 @@
                                                             }
                                                         ?>
                                                     </td>
-                                                    <td class="text-nowrap"><?php echo $data['nama_cs'] ?></td>
-                                                    <td class="text-center text-nowrap"><?php echo $data['kategori_inv'] ?></td>
-                                                    <td>
+                                                    <td class="text-nowrap align-middle"><?php echo $data['nama_cs'] ?></td>
+                                                    <td class="text-center text-nowrap align-middle"><?php echo $data['kategori_inv'] ?></td>
+                                                    <td class="text-center text-nowrap align-middle">
                                                         <?php
                                                             $note = $data['note_inv'];
 
@@ -250,7 +250,7 @@
                                                             }
                                                         ?>
                                                     </td>
-                                                    <td class="text-center text-nowrap">
+                                                    <td class="text-center text-nowrap align-middle">
                                                         <?php 
                                                             if($data['jenis_pengiriman'] == "Driver"){
                                                                 echo $data['jenis_pengiriman']."<br>";
@@ -264,7 +264,7 @@
                                                             }
                                                         ?>
                                                     </td>
-                                                    <td class="text-center text-nowrap">
+                                                    <td class="text-center text-nowrap align-middle">
                                                         <button type="button" data-id ="<?php echo urlencode($id_komplain); ?>" class="btn btn-primary btn-sm mb-2 detailReview" id="detailReview" data-bs-toggle="modal" data-bs-target="#modalDetail" title="Lihat Bukti"><i class="bi bi-eye-fill"></i></buuton>
                                                     </td>
                                                 </tr>
