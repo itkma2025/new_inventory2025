@@ -20,13 +20,12 @@
 	require_once "../function/sanitasi_input.php";
 	$sanitasi_post = sanitizeInput($_POST);
     if (isset($sanitasi_post['diterima_ekspedisi'])) {
-        echo "Oke";
         $year = date('y');
         $day = date('d');
         $month = date('m');
         $id_inv_penerima = "PNMR" . $year . "" . $month . "" . uuid() . "" . $day;
         $id_inv = $sanitasi_post['id_inv'];
-        echo $jenis_inv = $sanitasi_post['jenis_inv'];
+        $jenis_inv = $sanitasi_post['jenis_inv'];
         $id_komplain = decrypt($sanitasi_post['id_komplain'], $key_spk);
         $alamat = $sanitasi_post['alamat'];
         $nama_penerima = $sanitasi_post['nama_penerima'];
@@ -35,7 +34,21 @@
         // Mulai transaksi
         $connect->begin_transaction();
         try {
-            $query_diterima = mysqli_query($connect, "INSERT INTO inv_penerima_revisi (id_inv_penerima_revisi, id_komplain, nama_penerima, alamat, tgl_terima) VALUES ('$id_inv_penerima', '$id_komplain', '$nama_penerima', '$alamat', '$tgl')");
+            $cek_data = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id_komplain'");
+
+            if ($cek_data->num_rows > 0) {
+                // Jika data sudah ada, lakukan UPDATE
+                $query_update = $connect->query("UPDATE inv_penerima_revisi 
+                    SET nama_penerima = '$nama_penerima', 
+                        alamat = '$alamat', 
+                        tgl_terima = '$tgl' 
+                    WHERE id_komplain = '$id_komplain'");
+            } else {
+                // Jika data belum ada, lakukan INSERT
+                $query_diterima = $connect->query("INSERT INTO inv_penerima_revisi 
+                    (id_inv_penerima_revisi, id_komplain, nama_penerima, alamat, tgl_terima) 
+                    VALUES ('$id_inv_penerima', '$id_komplain', '$nama_penerima', '$alamat', '$tgl')");
+            }
 
             $query_update_inv = '';
             if ($jenis_inv == 'nonppn') {
@@ -57,14 +70,18 @@
                 $connect->commit();
                 $_SESSION['info'] = "Disimpan";
                 // echo $error_message = "Terjadi kesalahan saat melakukan transaksi: " . $e->getMessage();
-			    header("Location: index.php");
+			    header("Location: $_SERVER[HTTP_REFERER]");
+            } else {
+                // Rollback transaksi jika ada query yang gagal
+                $connect->rollback();
+                $_SESSION['info'] = "Data Gagal Disimpan";
             }
         } catch (Exception $e) {
             // Rollback transaksi jika terjadi exception
             $connect->rollback();
             // echo $error_message = "Terjadi kesalahan saat melakukan transaksi: " . $e->getMessage();
             $_SESSION['info'] = "Data Gagal Disimpan";
-			header("Location: index.php");
+			header("Location: $_SERVER[HTTP_REFERER]");
         }
     }
 ?>

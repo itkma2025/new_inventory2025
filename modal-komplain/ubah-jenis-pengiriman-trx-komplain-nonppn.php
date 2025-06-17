@@ -19,9 +19,9 @@
                             <label>Jenis Pengiriman</label>
                             <select class="form-select" name="jenis_pengiriman" id="ubah_jenis_pengiriman" required>
                                 <option value="">Pilih</option>
-                                <option value="Driver">Driver</option>
-                                <option value="Ekspedisi">Expedisi</option>
-                                <option value="Diambil Langsung">Diambil Langsung</option>
+                                <option value="Driver" <?= $jenis_pengiriman == "Driver" ? 'selected' : '' ?>>Driver</option>
+                                <option value="Ekspedisi" <?= $jenis_pengiriman == "Ekspedisi" ? 'selected' : '' ?>>Expedisi</option>
+                                <option value="Diambil Langsung" <?= $jenis_pengiriman == "Diambil Langsung" ? 'selected' : '' ?>>Diambil Langsung</option>
                             </select>
                         </div>
                     </div>
@@ -30,11 +30,18 @@
                         <select id="ubah-pengirim" name="pengirim" class="form-select" required>
                             <option value="">Pilih...</option>
                             <?php
-                            $sql_driver = mysqli_query($koneksi2, "SELECT us.id_user_role, us.id_user, us.nama_user, rl.nama_role FROM $database2.user AS us JOIN user_role rl ON (us.id_user_role = rl.id_user_role) WHERE rl.nama_role = 'Driver'");
-                            while ($data_driver_rev = mysqli_fetch_array($sql_driver)) {
+                            $sql_driver = mysqli_query($koneksi2, "
+                                SELECT us.id_user_role, us.id_user, us.nama_user, rl.nama_role 
+                                FROM $database2.user AS us 
+                                JOIN user_role rl ON us.id_user_role = rl.id_user_role 
+                                WHERE rl.nama_role = 'Driver'
+                            ");
+                            while ($data_driver = mysqli_fetch_array($sql_driver)) {
+                                $selected = ($data_driver['id_user'] == $id_driver) ? 'selected' : '';
                             ?>
-                            <option value="<?php echo $data_driver_rev['id_user'] ?>">
-                                <?php echo $data_driver_rev['nama_user'] ?></option>
+                                <option value="<?php echo $data_driver['id_user']; ?>" <?php echo $selected; ?>>
+                                    <?php echo $data_driver['nama_user']; ?>
+                                </option>
                             <?php } ?>
                         </select>
                     </div>
@@ -153,25 +160,26 @@
                     var alasanUbah = document.getElementById('alasan_ubah');
                     var freeOngkirCheckbox = document.getElementById('ubah_free_ongkir');
                     var freeOngkirLabel = document.getElementById('ubah_free_ongkir_label');
-                    
+                    var tanggal = document.getElementById('ubah_date'); // tambahkan ini karena digunakan
+
+                    // Event listener saat user mengubah jenis pengiriman
                     jenisPengiriman.addEventListener('change', function() {
                         if (this.value === 'Driver') {
                             jenisDriver.style.display = 'block';
                             jenisEkspedisi.style.display = 'none';
                             jenisDiambil.style.display = 'none';
-                            ekspedisiSelectize.selectize.clear();
+                            ekspedisiSelectize.selectize?.clear?.();
                             ekspedisiSelectize.removeAttribute('required');
                             resi.value = '';
                             resi.removeAttribute('required');
                             ongkos_kirim.value = '';
                             jenis_ongkir.value = '';
                             jenis_ongkir.removeAttribute('required');
-                            freeOngkirCheckbox.checked = false; // Hilangkan centang jika ada
+                            freeOngkirCheckbox.checked = false;
                             diambil.value = '';
                             diambil.removeAttribute('required');
                             dikirim_oleh.value = '';
                             penanggung_jawab.value = '';
-                        
                             imgPreview.style.display = 'none';
                             fileku.value = '';
                             fileku.removeAttribute('required');
@@ -205,14 +213,14 @@
                             diambil.setAttribute('required', 'true');
                             pengirim.removeAttribute('required');
                             jenisEkspedisi.style.display = 'none';
-                            ekspedisiSelectize.selectize.clear();
+                            ekspedisiSelectize.selectize?.clear?.();
                             ekspedisiSelectize.removeAttribute('required');
                             resi.value = '';
                             resi.removeAttribute('required');
                             ongkos_kirim.value = '';
                             jenis_ongkir.value = '';
                             jenis_ongkir.removeAttribute('required');
-                            freeOngkirCheckbox.checked = false; // Hilangkan centang jika ada
+                            freeOngkirCheckbox.checked = false;
                             dikirim_oleh.value = '';
                             penanggung_jawab.value = '';
                             tanggal.removeAttribute('required');
@@ -224,7 +232,7 @@
                         } else {
                             jenisEkspedisi.style.display = 'none';
                             jenisDriver.style.display = 'none';
-                            ekspedisi.selectize.clear();
+                            ekspedisiSelectize.selectize?.clear?.();
                             ekspedisiSelectize.removeAttribute('required');
                             bukti.removeAttribute('required');
                             pengirim.removeAttribute('required');
@@ -242,16 +250,16 @@
                             ongkos_kirim.style.backgroundColor = '';
                             ongkos_kirim.removeAttribute('readonly');
                             ongkos_kirim.setAttribute('required', 'true');
-                            freeOngkirCheckbox.style.display = 'block'; // Hilangkan centang jika ada
-                            freeOngkirLabel.style.display = 'block'; // Hilangkan centang jika ada
+                            freeOngkirCheckbox.style.display = 'block';
+                            freeOngkirLabel.style.display = 'block';
                         } else {
                             ongkos_kirim.style.display = 'block';
                             ongkos_kirim.style.backgroundColor = '#f8f9fa';
                             ongkos_kirim.removeAttribute('required');
                             ongkos_kirim.setAttribute('readonly', 'true');
                             ongkos_kirim.value = '0';
-                            freeOngkirCheckbox.style.display = 'none'; // Hilangkan centang jika ada
-                            freeOngkirLabel.style.display = 'none'; // Hilangkan centang jika ada
+                            freeOngkirCheckbox.style.display = 'none';
+                            freeOngkirLabel.style.display = 'none';
                         }
                     });
 
@@ -260,14 +268,13 @@
                     });
 
                     function formatNumber(input) {
-                        var value = input.value.replace(/\D/g, ''); // Menghapus karakter non-digit
-                        value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.'); // Menambahkan pemisah ribuan dengan titik
+                        var value = input.value.replace(/\D/g, '');
+                        value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
                         input.value = value;
                     }
 
-
                     const cancelButton = document.getElementById('cancelDikirim');
-                        cancelButton.addEventListener('click', function() {
+                    cancelButton.addEventListener('click', function() {
                         location.reload();
                     });
 
@@ -275,8 +282,12 @@
                         dateFormat: "d/m/Y",
                         defaultDate: "today"
                     });
+
+                    // 🔥 Inisialisasi awal berdasarkan value dari PHP
+                    jenisPengiriman.dispatchEvent(new Event('change'));
                 });
             </script>
+
         </div>
     </div>
 </div>
