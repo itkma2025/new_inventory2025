@@ -279,13 +279,12 @@
                                                 $dikirim_oleh = $data_driver_rev['dikirim_oleh'];
                                                 $penanggung_jawab = $data_driver_rev['penanggung_jawab'];
                                                 $none = '';
-                                            } else if($jenis_pengiriman == 'Driver'){
-                                                $modalReupload = 'reuploadDriver';
-                                                $none = 'd-none';
                                             } else if($jenis_pengiriman == 'Diambil Langsung'){
                                                 $modalReupload = 'reuploadDiambil';
                                                 $none = '';
                                             }
+
+                                            echo $modalReupload;
                                             if($status_review != '0'){
                                                 ?>
                                                     <button class="btn btn-secondary mb-3 <?php echo $none ?>" data-bs-toggle="modal"
@@ -632,27 +631,21 @@
 
     <!-- Modal Ubah Status -->
     <?php  
-        require_once __DIR__ . "/modal-komplain/ubah-status-trx-komplain-nonppn.php";
+        // require_once __DIR__ . "/modal-komplain/ubah-status-trx-komplain-nonppn.php";
     ?>
     <!-- End Modal Ubah Status -->
 
     <!-- Modal Alert Ubah Jenis Pengiriman-->
     <?php  
-        require_once __DIR__ . "/modal-komplain/alert-ubah-pengiriman-nonppn.php";
+        // require_once __DIR__ . "/modal-komplain/alert-ubah-pengiriman-nonppn.php";
     ?>
     <!-- End Modal Alert Ubah Jenis Pengiriman-->
 
     <!-- Modal Ubah Jenis Pengiriman-->
     <?php  
-        require_once __DIR__ . "/modal-komplain/ubah-jenis-pengiriman-trx-komplain-nonppn.php";
+        // require_once __DIR__ . "/modal-komplain/ubah-jenis-pengiriman-trx-komplain-nonppn.php";
     ?>
     <!-- End Modal Ubah Jenis Pengiriman-->
-
-    <!-- Modal Reupload-->
-    <?php  
-        require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-nonppn.php";
-    ?>
-    <!-- End Modal Reupload-->
 
     <!-- Footer -->
     <?php include "page/footer.php" ?>
@@ -665,6 +658,17 @@
 </body>
 
 </html>
+<!-- Modal Reupload-->
+<?php  
+    require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-diambil-nonppn.php";
+?>
+<!-- End Modal Reupload-->
+
+<!-- Modal Reupload-->
+<?php  
+    // require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-ekspedisi-nonppn.php";
+?>
+<!-- End Modal Reupload-->
 
 <!-- Modal Refund -->
 <div class="modal fade" id="bayarRefund" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

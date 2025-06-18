@@ -87,7 +87,6 @@ function compressImage(event, modalType) {
   const fileInput = event.target;
   const file = fileInput.files[0];
 
-  // Tentukan ID berdasarkan tipe modal
   let imagePreviewId, imageSizeId, fileInputId;
   if (modalType === "Edit") {
     imagePreviewId = "imagePreviewEdit";
@@ -101,19 +100,29 @@ function compressImage(event, modalType) {
     imagePreviewId = "imagePreviewReupload";
     imageSizeId = "imageSizeReupload";
     fileInputId = "formFileReupload";
+  } else if (modalType === "DiambilLangsung") {
+    imagePreviewId = "imagePreviewDiambil";
+    imageSizeId = "imageSizeDiambil";
+    fileInputId = "formFileDiambil";
+    // 🔍 Debug khusus kondisi Diambil
+    console.log(">> Kondisi 'DiambilLangsung' dipilih");
+    console.log("Preview ID:", imagePreviewId);
+    console.log("Size ID:", imageSizeId);
+    console.log("File Input ID:", fileInputId);
   }
 
   const imageSizeElement = document.getElementById(imageSizeId);
   if (file) {
     const fileSizeInKB = (file.size / 1024).toFixed(2);
     console.log("Original File Size:", fileSizeInKB + " KB");
-    imageSizeElement.textContent = `File Size: ${fileSizeInKB} KB`;
-    imageSizeElement.style.display = "none";
+    if (imageSizeElement) {
+      imageSizeElement.textContent = `File Size: ${fileSizeInKB} KB`;
+      imageSizeElement.style.display = "none";
+    }
   }
 
   if (file.size > 1 * 1024 * 1024) {
     const reader = new FileReader();
-
     reader.onload = function (e) {
       const img = new Image();
       img.src = e.target.result;
@@ -132,17 +141,17 @@ function compressImage(event, modalType) {
               type: file.type,
             });
 
-            const compressedFileSizeInKB = (blob.size / 1024).toFixed(2);
-            console.log("Compressed File Size:", compressedFileSizeInKB + " KB");
-
             const dataTransfer = new DataTransfer();
             dataTransfer.items.add(compressedFile);
             fileInput.files = dataTransfer.files;
 
             const previewURL = URL.createObjectURL(compressedFile);
             console.log("Compressed File Preview URL:", previewURL);
-            document.getElementById(imagePreviewId).src = previewURL;
-            document.getElementById(imagePreviewId).style.display = "block";
+            const previewElement = document.getElementById(imagePreviewId);
+            if (previewElement) {
+              previewElement.src = previewURL;
+              previewElement.style.display = "block";
+            }
           },
           file.type,
           0.7
@@ -153,8 +162,13 @@ function compressImage(event, modalType) {
   } else {
     const previewURL = URL.createObjectURL(file);
     console.log("Original File Preview URL:", previewURL);
-    document.getElementById(imagePreviewId).src = previewURL;
-    document.getElementById(imagePreviewId).style.display = "block";
+    const previewElement = document.getElementById(imagePreviewId);
+    if (previewElement) {
+      previewElement.src = previewURL;
+      previewElement.style.display = "block";
+    }
   }
 }
+
+
 

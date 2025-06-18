@@ -8,7 +8,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ubah Jenis Pengiriman</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Reupload Bukti Pengiriman</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -101,10 +101,11 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                             id="cancelDikirim">Tutup</button>
-                        <button type="submit" class="btn btn-primary" name="reupload"> Reupload Bukti Terima</button>
+                        <button type="submit" class="btn btn-primary" name="reupload-ex"> Reupload Bukti Terima</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+

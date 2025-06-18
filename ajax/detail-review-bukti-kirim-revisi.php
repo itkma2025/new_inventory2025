@@ -322,7 +322,7 @@ if (isset($_POST['id'])) {
                     `,
                     showCancelButton: true,
                     confirmButtonText: "Next",
-                    cancelButtonText: "Batal",
+                    cancelButtonText: "Tutup",
                     preConfirm: () => {
                         const selected = document.querySelector('input[name="jenisReject"]:checked');
                         if (!selected) {
@@ -350,7 +350,7 @@ if (isset($_POST['id'])) {
                     showDenyButton: true,
                     confirmButtonText: "Submit",
                     denyButtonText: "Kembali",
-                    cancelButtonText: "Batal",
+                    cancelButtonText: "Tutup",
                     preConfirm: () => {
                         const alasan = document.getElementById("textareaAlasan").value.trim();
                         if (!alasan) {
