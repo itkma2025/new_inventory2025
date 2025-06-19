@@ -60,6 +60,7 @@
                 $nama_ekspedisi = $data_driver_rev['nama_ekspedisi'] ?? '';
                 $alasan = $data_driver_rev['alasan'] ?? '';
                 $tgl_kirim = $data_driver_rev['tgl_kirim'] ?? '';
+                $diambil_oleh = $data_driver_rev['diambil_oleh'] ?? '';
                 include "query/produk-komplain-tmp.php";
                 $cek_status_cancel = $connect->query("SELECT id_inv_nonppn, status_transaksi FROM inv_nonppn WHERE id_inv_nonppn = '$id_inv'");
                 $data_status_cancel = mysqli_fetch_array($cek_status_cancel);
@@ -210,6 +211,7 @@
                                 $data_cek_jenis_pengiriman = $cek_jenis_pengiriman->fetch_assoc();
                                 $cek_data_jenis_pengiriman = mysqli_num_rows($cek_jenis_pengiriman);
                                 $status_review = $data_cek_jenis_pengiriman['status_review'];
+                                $status_kirim = $data_cek_jenis_pengiriman['status_kirim'];
                                 $jenis_pengiriman = $data_cek_jenis_pengiriman['jenis_pengiriman'] ?? '';
                                 $jenis_penerima = $data_cek_jenis_pengiriman['jenis_penerima'];
                                 $approval = $data_cek_jenis_pengiriman['approval'];
@@ -284,7 +286,6 @@
                                                 $none = '';
                                             }
 
-                                            echo $modalReupload;
                                             if($status_review != '0'){
                                                 ?>
                                                     <button class="btn btn-secondary mb-3 <?php echo $none ?>" data-bs-toggle="modal"
@@ -353,6 +354,25 @@
                                                 <?php
                                             }
                                             if($jenis_pengiriman == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
+                                                    </button>
+                                                <?php
+                                            }
+
+                                            if($jenis_pengiriman == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '1'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                        } else if ($approval == '0' && $jenis_reject == '0') {
+                                             if($jenis_penerima == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0' && $status_kirim == '0'){
                                                 ?>
                                                     <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
                                                     data-bs-target="#DiterimaEx">
@@ -631,19 +651,19 @@
 
     <!-- Modal Ubah Status -->
     <?php  
-        // require_once __DIR__ . "/modal-komplain/ubah-status-trx-komplain-nonppn.php";
+        require_once __DIR__ . "/modal-komplain/ubah-status-trx-komplain-nonppn.php";
     ?>
     <!-- End Modal Ubah Status -->
 
     <!-- Modal Alert Ubah Jenis Pengiriman-->
     <?php  
-        // require_once __DIR__ . "/modal-komplain/alert-ubah-pengiriman-nonppn.php";
+        require_once __DIR__ . "/modal-komplain/alert-ubah-pengiriman-nonppn.php";
     ?>
     <!-- End Modal Alert Ubah Jenis Pengiriman-->
 
     <!-- Modal Ubah Jenis Pengiriman-->
     <?php  
-        // require_once __DIR__ . "/modal-komplain/ubah-jenis-pengiriman-trx-komplain-nonppn.php";
+        require_once __DIR__ . "/modal-komplain/ubah-jenis-pengiriman-trx-komplain-nonppn.php";
     ?>
     <!-- End Modal Ubah Jenis Pengiriman-->
 
@@ -666,7 +686,7 @@
 
 <!-- Modal Reupload-->
 <?php  
-    // require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-ekspedisi-nonppn.php";
+    require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-ekspedisi-nonppn.php";
 ?>
 <!-- End Modal Reupload-->
 

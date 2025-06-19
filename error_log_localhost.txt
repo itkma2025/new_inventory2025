@@ -25584,3 +25584,775 @@ Stack trace:
   thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
 [18-Jun-2025 16:30:29] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
 [18-Jun-2025 16:30:29] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:32:27] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:32:27] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 11:32:32] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 11:47:45] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 11:47:48] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 11:47:52] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 11:47:55] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:47:55] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:47:56] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:47:56] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:48:36] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:48:36] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:49:02] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:49:02] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:49:03] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:49:03] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:49:03 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 11:49:33] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:49:33] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:58:32] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:58:32] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:58:32 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 11:58:46] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:58:46] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:58:46] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:58:46] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:58:52] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:58:52] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:59:25] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:59:25] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:59:53] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:59:53] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 11:59:53 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:21:19] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:21:19] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:21:21] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:21:21] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:21:21 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:23:22] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:23:22] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:23:22 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:23:52] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:23:52] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:23:52 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:30:34] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:30:34] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:30:34 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:33:12] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:33:12] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:33:12 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(670): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:33:37] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:33:37] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:33:37 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(670): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:34:15] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:34:15] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:34:15 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:35:44] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:35:44] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:35:44 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:37:43] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:37:43] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:37:44 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:37:47] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:37:47] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:37:47 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:37:59] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:37:59] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:37:59 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 13:38:05] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 13:38:19] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 13:38:22] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:38:22] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:38:22 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:38:30] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:38:30] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:38:30 Asia/Jakarta] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type int|float, string given in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php:53
+Stack trace:
+#0 D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php(53): number_format('', 0, '.', '.')
+#1 D:\laragon\www\SSO-KARSA\test-inventory\detail-komplain-revisi-nonppn.php(669): require_once('D:\\laragon\\www\\...')
+#2 {main}
+  thrown in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 13:38:35] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 13:38:53] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 13:38:57] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:38:57] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:38:57] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 13:38:57] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 13:38:57] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 13:38:57] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:38:57] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:38:57] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 13:38:57] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 13:38:57] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 447
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 447
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 447
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 448
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 448
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 448
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 449
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 449
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 449
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 450
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 451
+[19-Jun-2025 13:39:03] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\menunggu-perbaikan-bukti-kirim-revisi.php on line 452
+[19-Jun-2025 13:39:06] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:39:06] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:39:06] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 13:39:06] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 13:39:06] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 13:39:06] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:39:06] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:39:06] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 13:39:06] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 13:39:06] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 13:41:46] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:41:46] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:41:46] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 13:41:46] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 13:41:46] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 13:41:46] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:41:46] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:41:46] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 13:41:46] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 13:41:46] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 13:51:36] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:51:36] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:51:36] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 13:51:36] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 13:51:36] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 13:51:36] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:51:36] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:51:36] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 13:51:36] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 13:51:36] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 13:52:43] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:52:43] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:52:43] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 13:52:43] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 13:52:43] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 13:52:43] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:52:43] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:52:43] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 13:52:43] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 13:52:43] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 13:53:20] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:53:20] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 13:53:20] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 13:53:20] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 13:53:20] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 13:53:20] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:53:20] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 13:53:20] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 13:53:20] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 13:53:20] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:12:23] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:12:23] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:12:24] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:12:24] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:12:24] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:12:24] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:12:24] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:12:24] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:12:24] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:12:24] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:12:24] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:12:24] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:13:06] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:13:06] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:13:06] PHP Deprecated: strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\function\function-enkripsi.php on line 11
+[19-Jun-2025 14:13:06] PHP Deprecated: strlen(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\function\function-enkripsi.php on line 11
+[19-Jun-2025 14:13:06] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:13:06] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:13:06] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:13:06] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:13:06] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:13:06] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:13:06] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:13:06] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:14:26] PHP Warning: Cannot modify header information - headers already sent by (output started at D:\laragon\www\SSO-KARSA\test-inventory\driver\page\head.php:1) in D:\laragon\www\SSO-KARSA\test-inventory\driver\akses.php on line 10
+[19-Jun-2025 14:15:06] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:15:06] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:15:06] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:15:06] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:15:06] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:15:06] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:15:06] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:15:06] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:15:06] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:15:06] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:20:21] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:20:21] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:20:21] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:20:21] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:20:21] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:20:21] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:20:21] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:20:21] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:20:21] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:20:21] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:20:27] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:20:27] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:20:27] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:20:27] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:20:27] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:20:27] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:20:27] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:20:27] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:20:27] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:20:27] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:20:56] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:20:56] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:20:56] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:20:56] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:20:56] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:20:56] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:20:56] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:20:56] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:20:56] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:20:56] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:21:12] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:21:12] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:21:12] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:21:12] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:21:12] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:21:12] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:21:12] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:21:12] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:21:12] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:21:12] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 14:21:52] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 14:21:55] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 14:22:01] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:22:01] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:22:03] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:22:03] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:22:03] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:22:03] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:22:03] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:22:03] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:22:03] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:22:31] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:22:31] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:22:31] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:22:31] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:22:31] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:22:31] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:22:31] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:22:31] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:22:31] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:22:31] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:31:02] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:31:02] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:31:02] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:31:02] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:31:02] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:31:02] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:31:02] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:31:02] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:31:02] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:31:02] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:31:16] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:31:16] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:31:16] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:31:16] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:31:16] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:31:16] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:31:16] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:31:16] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:31:16] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:31:16] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 14:31:22] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 14:31:32] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:31:32] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:31:34] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:31:34] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 14:31:34] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 14:31:34] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 14:31:34] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 14:31:34] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:31:34] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 14:31:34] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 14:31:34] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 14:31:34] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 14:54:05] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:03:13] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:03:13] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:03:15] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:03:15] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:03:15] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:03:15] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:03:15] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:03:15] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:03:15] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 15:03:20] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 15:05:31] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:05:34] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:05:34] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:05:34] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:05:34] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:05:34] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:05:34] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:05:34] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:05:34] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:05:34] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:05:34] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:05:42] PHP Warning: Cannot modify header information - headers already sent by (output started at D:\laragon\www\SSO-KARSA\test-inventory\driver\page\head.php:1) in D:\laragon\www\SSO-KARSA\test-inventory\driver\akses.php on line 10
+[19-Jun-2025 15:06:09] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:09] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:09] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:06:09] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:06:09] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:06:09] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:09] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:09] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:06:09] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:06:09] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:06:15] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:15] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:15] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:06:15] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:06:15] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:06:15] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:15] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:15] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:06:15] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:06:15] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:06:16] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:16] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:16] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:06:16] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:06:16] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:06:16] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:16] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:16] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:06:16] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:06:16] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 15:06:18] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 15:06:28] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:06:35] PHP Warning: Cannot modify header information - headers already sent by (output started at D:\laragon\www\SSO-KARSA\test-inventory\driver\page\head.php:1) in D:\laragon\www\SSO-KARSA\test-inventory\driver\akses.php on line 10
+[19-Jun-2025 15:06:51] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:51] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:51] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:06:51] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:51] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:51] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:06:51] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 15:06:54] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 15:07:09] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:07:13] PHP Warning: Cannot modify header information - headers already sent by (output started at D:\laragon\www\SSO-KARSA\test-inventory\driver\page\head.php:1) in D:\laragon\www\SSO-KARSA\test-inventory\driver\akses.php on line 10
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 15:07:39] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 15:07:47] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 15:07:50] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:07:50] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:07:50] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:07:50] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:07:50] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:07:50] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:07:50] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:07:50] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:07:50] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:07:50] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 15:07:55] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:07:55] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 15:07:55] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 15:07:55] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 15:07:55] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 15:07:55] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:07:55] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 15:07:55] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 15:07:55] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 15:07:55] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 338
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_perbaikan_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_perbaikan_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_perbaikan_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 339
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_data_sudah_review_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_data_sudah_review_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_data_sudah_review_ecat_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 340
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_reg in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 341
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_ecat in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 342
+[19-Jun-2025 16:41:22] PHP Warning: Undefined variable $total_pl in D:\laragon\www\SSO-KARSA\test-inventory\review-bukti-kirim-revisi.php on line 343
+[19-Jun-2025 16:42:05] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 16:42:05] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 16:42:07] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 16:42:07] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 16:42:07] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 16:42:07] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 16:42:07] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 16:42:07] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 16:42:07] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 16:42:07] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 16:42:07] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 16:42:07] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 17:20:49] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:20:49] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:21:00] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:21:00] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:21:00] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 17:21:00] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 17:21:00] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 17:21:00] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 17:21:00] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 17:21:00] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 17:21:00] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 17:21:00] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 17:31:23] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:31:23] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:31:23] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 17:31:23] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 17:31:23] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 17:31:23] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 17:31:23] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 17:31:23] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 17:31:23] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 17:31:23] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 17:31:57] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:31:57] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:31:57] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 17:31:57] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 17:31:57] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 17:31:57] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 17:31:57] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 17:31:57] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 17:31:57] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 17:31:57] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71
+[19-Jun-2025 17:32:05] PHP Warning: include(../koneksi.php): Failed to open stream: No such file or directory in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:32:05] PHP Warning: include(): Failed opening '../koneksi.php' for inclusion (include_path='.;C:\php\pear') in D:\laragon\www\SSO-KARSA\test-inventory\query\detail-komplain-nonppn.php on line 2
+[19-Jun-2025 17:32:05] PHP Warning: Undefined variable $nama_penerima in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 39
+[19-Jun-2025 17:32:05] PHP Warning: Undefined variable $no_resi in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 43
+[19-Jun-2025 17:32:05] PHP Warning: Undefined variable $jenis_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 47
+[19-Jun-2025 17:32:05] PHP Warning: Undefined variable $nominal_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 17:32:05] PHP Deprecated: number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 53
+[19-Jun-2025 17:32:05] PHP Warning: Undefined variable $free_ongkir in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 57
+[19-Jun-2025 17:32:05] PHP Warning: Undefined variable $dikirim_oleh in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 67
+[19-Jun-2025 17:32:05] PHP Warning: Undefined variable $penanggung_jawab in D:\laragon\www\SSO-KARSA\test-inventory\modal-komplain\reupload-bukti-terima-ekspedisi-nonppn.php on line 71

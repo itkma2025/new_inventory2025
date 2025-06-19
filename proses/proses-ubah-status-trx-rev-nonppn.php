@@ -47,7 +47,7 @@ if (isset($sanitasi_post['ubah-status'])) {
     $total_inv = $sanitasi_post['total_inv'];
     if ($status_kirim == 'dikirim') {
         $jenis_pengiriman = $sanitasi_post['jenis_pengiriman'];
-        if ($jenis_pengiriman == 'Driver') {
+        if ($jenis_pengiriman == 'Driver') { 
             $pengirim = $sanitasi_post['pengirim'];
             // Begin transaction
             $connect->begin_transaction();

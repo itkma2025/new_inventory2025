@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="proses/alert-ubah-pengiriman.php" method="POST" enctype="multipart/form-data">
+                <form action="proses/alert-ubah-pengiriman-nonppn.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id_komplain" value="<?php echo $id ?>">
                     <input type="hidden" name="id_status_kirim_revisi" value="<?php echo $id_status_kirim_revisi ?>">
                     <input type="hidden" name="id_inv" value="<?php echo $id_inv ?>">
@@ -18,28 +18,28 @@
                             <div class="row">
                                 <div class="col">
                                     <label id="labelResi">Jenis Pengiriman</label>
-                                    <input type="text" class="form-control bg-light" name="jenis_pengiriman" id="ubah_jenis_pengiriman" value="<?php echo $jenis_pengiriman ?>" readonly>
+                                    <input type="text" class="form-control bg-light" name="jenis_pengiriman" value="<?php echo $jenis_pengiriman ?>" readonly>
                                 </div>
                                 <?php  
                                     if ($jenis_pengiriman == 'Ekspedisi') {
                                         ?>
                                             <div class="col" id="ubah_jenis_ekspedisi">
                                                 <label id="labelResi">Ekspedisi</label>
-                                                <input type="text" class="form-control bg-light" id="ekspedisi-ubah" name="ekspedisi" value="<?php echo $nama_ekspedisi ?>" readonly>
+                                                <input type="text" class="form-control bg-light" name="ekspedisi" value="<?php echo $nama_ekspedisi ?>" readonly>
                                             </div> 
                                        <?php
                                     } else if ($jenis_pengiriman == 'Driver') {
                                         ?>
                                             <div class="col" id="ubah_jenis_driver">
                                                 <label id="labelResi">Driver</label>
-                                                <input type="text" class="form-control bg-light" id="ubah-pengirim" name="pengirim" value="<?php echo $nama_driver_asli ?>" readonly>
+                                                <input type="text" class="form-control bg-light" name="pengirim" value="<?php echo $nama_driver_asli ?>" readonly>
                                             </div>
                                         <?php
                                     } else if ($jenis_pengiriman == 'Diambil Langsung') {
                                         ?>
                                             <div class="col" id="ubah_jenis_diambil">
                                                 <label id="labelDiambil">Diambil Oleh</label>
-                                                <input type="text" name="diambil_oleh" id="ubah_diambil" class="form-control bg-light">
+                                                <input type="text" name="diambil_oleh" class="form-control bg-light" value="<?php echo $diambil_oleh ?>" readonly>
                                             </div>
                                         <?php
                                     } else {

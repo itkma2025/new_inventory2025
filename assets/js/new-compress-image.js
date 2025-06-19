@@ -100,15 +100,6 @@ function compressImage(event, modalType) {
     imagePreviewId = "imagePreviewReupload";
     imageSizeId = "imageSizeReupload";
     fileInputId = "formFileReupload";
-  } else if (modalType === "DiambilLangsung") {
-    imagePreviewId = "imagePreviewDiambil";
-    imageSizeId = "imageSizeDiambil";
-    fileInputId = "formFileDiambil";
-    // 🔍 Debug khusus kondisi Diambil
-    console.log(">> Kondisi 'DiambilLangsung' dipilih");
-    console.log("Preview ID:", imagePreviewId);
-    console.log("Size ID:", imageSizeId);
-    console.log("File Input ID:", fileInputId);
   }
 
   const imageSizeElement = document.getElementById(imageSizeId);
@@ -169,6 +160,8 @@ function compressImage(event, modalType) {
     }
   }
 }
+
+
 
 
 
