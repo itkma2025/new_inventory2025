@@ -23,7 +23,7 @@
                         $img = "assets/img/no_img.jpg";
                     }
                 ?>
-                <form action="proses/alert-ubah-pengiriman-nonppn.php" method="POST" enctype="multipart/form-data">
+                <form action="proses/reupload-trx-rev-nonppn.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id_komplain" value="<?php echo $id ?>">
                     <input type="hidden" name="id_status_kirim_revisi" value="<?php echo $id_status_kirim_revisi ?>">
                     <input type="hidden" name="id_inv" value="<?php echo $id_inv ?>">
@@ -65,8 +65,7 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                            id="cancelDikirim">Tutup</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelDikirim">Tutup</button>
                         <button type="submit" class="btn btn-primary" name="reupload"> Reupload Bukti Terima</button>
                     </div>
                 </form>

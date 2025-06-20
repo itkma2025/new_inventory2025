@@ -50,6 +50,8 @@
             <!-- END SWEET ALERT -->
             <?php  
                 echo $id = decrypt($_GET['id'], $key_spk);
+                var_dump($id);
+
                 include "query/detail-komplain-nonppn.php";
                 $id_inv = $data_kondisi['id_inv'];
                 $no_inv = $data_detail['no_inv'];
@@ -222,8 +224,7 @@
 
                                 // Kode untuk mengecek data invoice penerima revisi
                                 $sql_penerima_rev = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id'");
-
-                                $cek_data_penerima_rev = $sql_penerima_rev->num_rows;     
+                                $cek_data_penerima_rev = $sql_penerima_rev->num_rows;    
                                 if($status_kmpl == '0'){
                                     if($cek_data_jenis_pengiriman == '0') {
                                         ?>
@@ -232,7 +233,6 @@
                                                 <i class="bi bi-arrow-left-right"></i> Ubah Status
                                             </button>
                                         <?php
-
                                     } else {
                                         if($approval == '2'){
                                             ?>
@@ -249,16 +249,6 @@
                                                 </button>
                                             <?php
 
-                                        }
-
-                                        if($jenis_pengiriman == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0'){
-                                            ?>
-                                                <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#DiterimaEx">
-                                                <i class="bi bi-send"></i>
-                                                    Diterima
-                                                </button>
-                                            <?php
                                         }
 
                                         if($approval == '1' && $jenis_reject == '1'){
@@ -378,6 +368,15 @@
                                                     data-bs-target="#DiterimaEx">
                                                     <i class="bi bi-send"></i>
                                                         Diterima
+                                                    </button>
+                                                <?php
+                                            }
+
+                                            if($jenis_pengiriman == '' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
                                                     </button>
                                                 <?php
                                             }
@@ -990,10 +989,10 @@
             <div class="modal-body">
                 <div class="card-body">
                     <form action="proses/proses-invoice-diterima-revisi.php" method="POST" enctype="multipart/form-data">
-                        <input type="text" name="id_komplain" value="<?php echo $id; ?>">
-                        <input type="text" name="id_inv" value="<?php echo $id_inv; ?>">
-                        <input type="text" name="alamat" value="<?php echo $alamat; ?>">
-                        <input type="text" name="jenis_inv" value="<?php echo $jenis_inv; ?>">
+                        <input type="hidden" name="id_komplain" value="<?php echo $id; ?>">
+                        <input type="hidden" name="id_inv" value="<?php echo $id_inv; ?>">
+                        <input type="hidden" name="alamat" value="<?php echo $alamat; ?>">
+                        <input type="hidden" name="jenis_inv" value="<?php echo $jenis_inv; ?>">
                         <div class="mb-3">
                             <label>Nama Penerima</label>
                             <input type="text" class="form-control" name="nama_penerima" autocomplete="off" required>

@@ -72,11 +72,11 @@
                 $id_inv_substr = $id_inv_decrypt;
                 $inv_id = substr($id_inv_substr, 0, 3);
                 $query_update_inv = "";
-                if ($inv_id = "NON"){
+                if ($inv_id == "NON"){
                     $query_update_inv = mysqli_query($connect, "UPDATE inv_nonppn SET status_transaksi = 'Komplain Diterima' WHERE id_inv_nonppn = '$id_inv_decrypt'");
-                } else if ($inv_id = "PPN"){
+                } else if ($inv_id == "PPN"){
                     $query_update_inv = mysqli_query($connect, "UPDATE inv_ppn SET status_transaksi = 'Komplain Diterima' WHERE id_inv_ppn = '$id_inv_decrypt'");
-                } else if ($inv_id = "BUM"){
+                } else if ($inv_id == "BUM"){
                     $query_update_inv = mysqli_query($connect, "UPDATE inv_bum SET status_transaksi = 'Komplain Diterima' WHERE id_inv_bum = '$id_inv_decrypt'");
                 }
 
@@ -143,10 +143,10 @@
                 $cek_bukti = mysqli_query($connect, "SELECT id_komplain FROM inv_bukti_terima_revisi WHERE id_komplain = '$id_komplain_decrypt'");
                 if (mysqli_num_rows($cek_bukti) > 0) {
                     // Data sudah ada, update saja
-                    $bukti_terima = mysqli_query($connect, "UPDATE inv_bukti_terima_revisi SET bukti_satu = '$newFileName', approval = '0' WHERE id_komplain = '$id_komplain_decrypt'");
+                    $bukti_terima = mysqli_query($connect, "UPDATE inv_bukti_terima_revisi SET bukti_satu = '$newFileName', approval = '0', created_by = '$id_user' WHERE id_komplain = '$id_komplain_decrypt'");
                 } else { 
                     // Data tidak ada, insert baru
-                    $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima_revisi (id_bukti_terima, id_komplain, bukti_satu) VALUES ('$id_bukti_terima', '$id_komplain_decrypt', '$newFileName')");
+                    $bukti_terima = mysqli_query($connect, "INSERT INTO inv_bukti_terima_revisi (id_bukti_terima, id_komplain, bukti_satu, created_by) VALUES ('$id_bukti_terima', '$id_komplain_decrypt', '$newFileName', '$id_user')");
                 }
 
                 $id_inv_substr = $id_inv_decrypt;

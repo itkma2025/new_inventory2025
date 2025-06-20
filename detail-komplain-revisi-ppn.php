@@ -38,11 +38,11 @@
 
     <main id="main" class="main">
         <!-- Loading -->
-        <div class="loader loader">
+        <!-- <div class="loader loader">
             <div class="loading">
                 <img src="img/loading.gif" width="200px" height="auto">
             </div>
-        </div>
+        </div> -->
         <!-- ENd Loading -->
         <section>
             <!-- SWEET ALERT -->
@@ -50,12 +50,19 @@
             <!-- END SWEET ALERT -->
             <?php  
                 echo $id = decrypt($_GET['id'], $key_spk);
+                var_dump($id);
+
                 include "query/detail-komplain-ppn.php";
                 $id_inv = $data_kondisi['id_inv'];
                 $no_inv = $data_detail['no_inv'];
                 $alamat = $data_detail['alamat'];
-                $nama_driver = $data_driver_rev['nama_driver'] ?? '';
-                $nama_driver = str_replace(' ', '_', $nama_driver);
+                $id_driver = $data_driver_rev['id_driver'] ?? '';
+                $nama_driver_asli = $data_driver_rev['nama_driver'] ?? '';
+                $nama_driver = str_replace(' ', '_', $nama_driver_asli);
+                $nama_ekspedisi = $data_driver_rev['nama_ekspedisi'] ?? '';
+                $alasan = $data_driver_rev['alasan'] ?? '';
+                $tgl_kirim = $data_driver_rev['tgl_kirim'] ?? '';
+                $diambil_oleh = $data_driver_rev['diambil_oleh'] ?? '';
                 include "query/produk-komplain-tmp.php";
                 $cek_status_cancel = $connect->query("SELECT id_inv_ppn, status_transaksi FROM inv_ppn WHERE id_inv_ppn = '$id_inv'");
                 $data_status_cancel = mysqli_fetch_array($cek_status_cancel);
@@ -206,11 +213,18 @@
                                 $data_cek_jenis_pengiriman = $cek_jenis_pengiriman->fetch_assoc();
                                 $cek_data_jenis_pengiriman = mysqli_num_rows($cek_jenis_pengiriman);
                                 $status_review = $data_cek_jenis_pengiriman['status_review'];
+                                $status_kirim = $data_cek_jenis_pengiriman['status_kirim'];
+                                $jenis_pengiriman = $data_cek_jenis_pengiriman['jenis_pengiriman'] ?? '';
+                                $jenis_penerima = $data_cek_jenis_pengiriman['jenis_penerima'];
                                 $approval = $data_cek_jenis_pengiriman['approval'];
                                 $jenis_reject = $data_cek_jenis_pengiriman['jenis_reject']; 
                                 $id_status_kirim_revisi = $data_cek_jenis_pengiriman['id_status_kirim_revisi'];
                                 $id_bukti_terima = $data_cek_jenis_pengiriman['id_bukti_terima'];
                                 $bukti_satu = $data_cek_jenis_pengiriman['bukti_satu'];
+
+                                // Kode untuk mengecek data invoice penerima revisi
+                                $sql_penerima_rev = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id'");
+                                $cek_data_penerima_rev = $sql_penerima_rev->num_rows;    
                                 if($status_kmpl == '0'){
                                     if($cek_data_jenis_pengiriman == '0') {
                                         ?>
@@ -227,6 +241,14 @@
                                                     <i class="bi bi-arrow-left-right"></i> Ubah Status
                                                 </button>
                                             <?php
+
+                                            ?>
+                                                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#alertUbahJenisPengiriman">
+                                                    <i class="bi bi-truck"></i>
+                                                    Ubah Pengiriman
+                                                </button>
+                                            <?php
+
                                         }
 
                                         if($approval == '1' && $jenis_reject == '1'){
@@ -238,7 +260,8 @@
                                             $free_ongkir = '';
                                             $dikirim_oleh = '';
                                             $penanggung_jawab = '';
-                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi'){
+                                            $none = '';
+                                            if($jenis_pengiriman == 'Ekspedisi'){
                                                 $modalReupload = 'reuploadEx';
                                                 $nama_penerima = $data_driver_rev['nama_ekspedisi'];
                                                 $no_resi = $data_driver_rev['no_resi'];
@@ -247,26 +270,23 @@
                                                 $free_ongkir = $data_driver_rev['free_ongkir'];
                                                 $dikirim_oleh = $data_driver_rev['dikirim_oleh'];
                                                 $penanggung_jawab = $data_driver_rev['penanggung_jawab'];
-                                            } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Driver'){
-                                                $modalReupload = 'reuploadDriver';
-                                            } else if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung'){
+                                                $none = '';
+                                            } else if($jenis_pengiriman == 'Diambil Langsung'){
                                                 $modalReupload = 'reuploadDiambil';
+                                                $none = '';
                                             }
+
                                             if($status_review != '0'){
                                                 ?>
-                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    <button class="btn btn-secondary mb-3 <?php echo $none ?>" data-bs-toggle="modal"
                                                         data-bs-target="#<?php echo $modalReupload ?>">
                                                         <i class="bi bi-image"></i> Reupload Bukti Terima
                                                     </button>
                                                 <?php
                                             } 
-                                        } else if($approval == '1' && $jenis_reject == '2'){
-                                            // Kode untuk mengecek data invoice penerima revisi
-                                            $sql_penerima_rev = $connect->query("SELECT id_komplain FROM inv_penerima_revisi WHERE id_komplain = '$id'");
-
-                                            $cek_data_penerima_rev = $sql_penerima_rev->num_rows;     
-                                             // Jenis pengiriman Ekspedisi
-                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                        } else if($approval == '0' && $jenis_reject == '2'){
+                                            // Jenis pengiriman Ekspedisi
+                                            if($jenis_pengiriman == 'Ekspedisi' || $jenis_penerima == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0'){
                                                 ?>
                                                     <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
                                                     data-bs-target="#DiterimaEx">
@@ -276,7 +296,7 @@
                                                 <?php
                                             }
 
-                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '1'){
+                                            if($jenis_pengiriman == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '1'){
                                                 ?>
                                                     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
                                                         <i class="bi bi-truck"></i>
@@ -286,7 +306,7 @@
                                             }
                                             // ==================================================================================
                                             // Jenis pengiriman diambil langsung
-                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                            if($jenis_pengiriman == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '0'){
                                                 ?>
                                                     <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
                                                     data-bs-target="#DiterimaEx">
@@ -296,7 +316,7 @@
                                                 <?php
                                             }
 
-                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '1'){
+                                            if($jenis_pengiriman == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '1'){
                                                 ?>
                                                     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
                                                         <i class="bi bi-truck"></i>
@@ -313,36 +333,54 @@
                                                     </button>
                                                 <?php
                                             }
-                                        } else if($approval == '0' && $jenis_reject == '2'){
-                                            if($data_cek_jenis_pengiriman['jenis_pengiriman'] == 'Driver' && $data_cek_jenis_pengiriman['jenis_penerima'] == 'Ekspedisi' && $data_cek_jenis_pengiriman['status_kirim'] == '0'){
+                                        } else if ($approval == '1' && $jenis_reject == '2') {
+                                            // Jenis pengiriman Ekspedisi
+                                            if($jenis_pengiriman == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '1'){
                                                 ?>
-                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                                    data-bs-target="#DiterimaEx">
-                                                    <i class="bi bi-send"></i>
-                                                        Diterima
-                                                    </button>
-
                                                     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
                                                         <i class="bi bi-truck"></i>
                                                         Ubah Pengiriman
                                                     </button>
                                                 <?php
                                             }
-                                        } else {
-                                            ?>
-                                                <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                                data-bs-target="#DiterimaEx">
-                                                <i class="bi bi-send"></i>
-                                                    Diterima
-                                                </button>
+                                            if($jenis_pengiriman == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
+                                                    </button>
+                                                <?php
+                                            }
 
-                                                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
-                                                    <i class="bi bi-truck"></i>
-                                                    Ubah Pengiriman
-                                                </button>
-                                            <?php
+                                            if($jenis_pengiriman == 'Diambil Langsung' && $cek_data_penerima_rev == '0' && $status_review == '1'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
+                                        } else if ($approval == '0' && $jenis_reject == '0') {
+                                             if($jenis_penerima == 'Ekspedisi' && $cek_data_penerima_rev == '0' && $status_review == '0' && $status_kirim == '0'){
+                                                ?>
+                                                    <button class="btn btn-secondary mb-3" data-bs-toggle="modal"
+                                                    data-bs-target="#DiterimaEx">
+                                                    <i class="bi bi-send"></i>
+                                                        Diterima
+                                                    </button>
+                                                <?php
+                                            }
+
+                                            if($jenis_pengiriman == '' && $cek_data_penerima_rev == '0' && $status_review == '0'){
+                                                ?>
+                                                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#ubahJenisPengiriman">
+                                                        <i class="bi bi-truck"></i>
+                                                        Ubah Pengiriman
+                                                    </button>
+                                                <?php
+                                            }
                                         }
-                            
                                     }
                                 }
                             ?>
@@ -616,17 +654,17 @@
     ?>
     <!-- End Modal Ubah Status -->
 
+    <!-- Modal Alert Ubah Jenis Pengiriman-->
+    <?php  
+        require_once __DIR__ . "/modal-komplain/alert-ubah-pengiriman-ppn.php";
+    ?>
+    <!-- End Modal Alert Ubah Jenis Pengiriman-->
+
     <!-- Modal Ubah Jenis Pengiriman-->
     <?php  
         require_once __DIR__ . "/modal-komplain/ubah-jenis-pengiriman-trx-komplain-ppn.php";
     ?>
     <!-- End Modal Ubah Jenis Pengiriman-->
-
-    <!-- Modal Reupload-->
-    <?php  
-        require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-ppn.php";
-    ?>
-    <!-- End Modal Reupload-->
 
     <!-- Footer -->
     <?php include "page/footer.php" ?>
@@ -639,6 +677,17 @@
 </body>
 
 </html>
+<!-- Modal Reupload-->
+<?php  
+    require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-diambil-ppn.php";
+?>
+<!-- End Modal Reupload-->
+
+<!-- Modal Reupload-->
+<?php  
+    require_once __DIR__ . "/modal-komplain/reupload-bukti-terima-ekspedisi-ppn.php";
+?>
+<!-- End Modal Reupload-->
 
 <!-- Modal Refund -->
 <div class="modal fade" id="bayarRefund" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -954,8 +1003,9 @@
                                 id="date" required="required">
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary" name="diterima_ekspedisi"><i
-                                    class="bi bi-arrow-left-right"></i> Ubah Status</button>
+                            <button type="submit" class="btn btn-primary" name="diterima_ekspedisi">
+                                <i class="bi bi-arrow-left-right"></i> Ubah Status
+                            </button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                                 id="cancelEkspedisi"><i class="bi bi-x-circle"></i> Cancel</button>
                         </div>
@@ -1293,13 +1343,34 @@
 </script>
 
 <script>
-    $(document).on('click', '.detailReview', function() {
-        var id = $(this).data("id");
+    // $(document).on('click', '.detailReview', function() {
+    //     var id = $(this).data("id");
+
+    //     $.ajax({
+    //         url: "modal/bukti-kirim-revisi.php", 
+    //         type: "POST",
+    //         data: { id: id },
+    //         success: function (response) {
+    //             $("#contentReview").html(response);
+    //         },
+    //         error: function () {
+    //             $("#contentReview").html('<p class="text-danger">Gagal mengambil data.</p>');
+    //         }
+    //     });
+    // });
+</script>
+
+<script>
+    $(document).on('click', '.detailReview', function () {
+        const id = $(this).data("id");
 
         $.ajax({
-            url: "modal/bukti-kirim-revisi.php", 
+            url: "ajax/get-content.php",
             type: "POST",
-            data: { id: id },
+            data: {
+                action: "bukti_revisi",
+                id: id
+            },
             success: function (response) {
                 $("#contentReview").html(response);
             },
@@ -1309,3 +1380,4 @@
         });
     });
 </script>
+

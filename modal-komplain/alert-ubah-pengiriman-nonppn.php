@@ -17,27 +17,27 @@
                         <div class="mb-3">
                             <div class="row">
                                 <div class="col">
-                                    <label id="labelResi">Jenis Pengiriman</label>
+                                    <label>Jenis Pengiriman</label>
                                     <input type="text" class="form-control bg-light" name="jenis_pengiriman" value="<?php echo $jenis_pengiriman ?>" readonly>
                                 </div>
                                 <?php  
                                     if ($jenis_pengiriman == 'Ekspedisi') {
                                         ?>
-                                            <div class="col" id="ubah_jenis_ekspedisi">
+                                            <div class="col">
                                                 <label id="labelResi">Ekspedisi</label>
                                                 <input type="text" class="form-control bg-light" name="ekspedisi" value="<?php echo $nama_ekspedisi ?>" readonly>
                                             </div> 
                                        <?php
                                     } else if ($jenis_pengiriman == 'Driver') {
                                         ?>
-                                            <div class="col" id="ubah_jenis_driver">
+                                            <div class="col">
                                                 <label id="labelResi">Driver</label>
                                                 <input type="text" class="form-control bg-light" name="pengirim" value="<?php echo $nama_driver_asli ?>" readonly>
                                             </div>
                                         <?php
                                     } else if ($jenis_pengiriman == 'Diambil Langsung') {
                                         ?>
-                                            <div class="col" id="ubah_jenis_diambil">
+                                            <div class="col">
                                                 <label id="labelDiambil">Diambil Oleh</label>
                                                 <input type="text" name="diambil_oleh" class="form-control bg-light" value="<?php echo $diambil_oleh ?>" readonly>
                                             </div>
@@ -55,7 +55,7 @@
                     <!-- Modal footer -->
                     <div class="mt-4 text-center">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelDikirim">Tutup</button>
-                        <button type="submit" class="btn btn-primary" name="alert-ubah-pengiriman-nonppn"> Ubah Status</button>
+                        <button type="submit" class="btn btn-primary" name="alert-ubah-pengiriman-nonppn"> Ubah Pengiriman</button>
                     </div>
                 </form>
             </div>

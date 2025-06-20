@@ -31,22 +31,22 @@
                     <input type="hidden" name="id_bukti_terima" value="<?php echo $id_bukti_terima ?>">
                     <input type="hidden" name="bukti_sebelumnya" value="<?php echo $bukti_satu ?>">
                     <div class="mb-3">
-                        <label id="labelResi">Jenis Pengiriman</label>
+                        <label>Jenis Pengiriman</label>
                         <input type="text" class="form-control" style="background-color: #f8f9fa;" value="<?php echo $data_cek_jenis_pengiriman['jenis_pengiriman'] ?>"readonly>
                     </div>
                     <div class="mb-3">
-                        <label id="labelResi">Nama Ekspedisi</label>
+                        <label>Nama Ekspedisi</label>
                         <input type="text" class="form-control" style="background-color: #f8f9fa;" value="<?php echo $nama_penerima ?>" readonly>
                     </div>
                     <div class="mb-3">
-                        <label id="labelResi">No. Resi</label>
+                        <label>No. Resi</label>
                         <input type="text" class="form-control" style="background-color: #f8f9fa;" value="<?php echo $no_resi ?>" readonly>
                     </div>
                      <div class="mb-3">
-                        <label id="labelResi">Jenis Ongkir</label>
+                        <label>Jenis Ongkir</label>
                         <input type="text" class="form-control" style="background-color: #f8f9fa;" value="<?php echo ($jenis_ongkir == 0) ? 'Non COD' : 'COD'; ?>" readonly>
                     </div>
-                    <div class="mb-3" id="ubah_ongkir" style="display: block;">
+                    <div class="mb-3" style="display: block;">
                         <div class="row">
                             <label>Nominal Ongkir</label>
                             <div class="col-sm-7">
@@ -55,7 +55,7 @@
                             <div class="col-sm-5">
                                 <div class="form-check mt-1">
                                     <input class="form-check-input" type="checkbox" <?php echo ($free_ongkir == 0) ? '' : 'checked'; ?> readonly onclick="return false;">
-                                    <label class="form-check-label" for="ubah_free_ongkir" id="ubah_free_ongkir_label">
+                                    <label class="form-check-label">
                                         Free Ongkir
                                     </label>
                                 </div>
@@ -63,15 +63,15 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label id="labelDikirimOleh">Dikirim Oleh</label>
+                        <label>Dikirim Oleh</label>
                         <input type="text" class="form-control" style="background-color: #f8f9fa;" value="<?php echo $dikirim_oleh ?>">
                     </div>
                     <div class="mb-3">
-                        <label id="labelPj">Penanggung Jawab</label>
+                        <label>Penanggung Jawab</label>
                         <input type="text" class="form-control" style="background-color: #f8f9fa;" value="<?php echo $penanggung_jawab ?>">
                     </div>
-                    <div class="mb-3" id="ubah_tanggal">
-                        <label id="labelDate">Tanggal</label>
+                    <div class="mb-3">
+                        <label>Tanggal</label>
                         <input type="text" style="background-color:white;" class="bg-white form-control" name="tgl"
                             id="ubah_date" required>
                     </div>
@@ -101,7 +101,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                             id="cancelDikirim">Tutup</button>
-                        <button type="submit" class="btn btn-primary" name="reupload-ex"> Reupload Bukti Terima</button>
+                        <button type="submit" class="btn btn-primary" name="reupload"> Reupload Bukti Terima</button>
                     </div>
                 </form>
             </div>

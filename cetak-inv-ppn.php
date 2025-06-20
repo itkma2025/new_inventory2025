@@ -85,19 +85,24 @@ $(document).ready(function() {
     }
 
     $("#ppn-old").click(function() {
-        clearInterval(autoReload); // Hentikan auto reload sebelumnya
+        clearInterval(autoReload); // Hentikan auto reload jika sebelumnya ada
         setActiveButton("ppn-old");
-        loadContentOld();
-        autoReload = setInterval(loadContentOld, 200); // Perbarui setiap 0.2 detik setelah diklik
+        loadContentOld(); // Panggil sekali saja
+        // Tidak perlu setInterval lagi
     });
 
     $("#ppn-new").click(function() {
-        clearInterval(autoReload); // Hentikan auto reload sebelumnya
+        clearInterval(autoReload); // Hentikan auto reload jika ada
         setActiveButton("ppn-new");
-        loadContentNew();
-        autoReload = setInterval(loadContentNew, 200); // Perbarui setiap 0.2 detik setelah diklik
-        console.log(autoReload);
+
+        loadContentNew(); // Panggilan pertama langsung
+
+        // Panggilan kedua setelah delay (misal 200 ms)
+        setTimeout(function() {
+            loadContentNew();
+        }, 200);
     });
+
 });
 </script>
 

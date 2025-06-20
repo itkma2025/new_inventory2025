@@ -90,6 +90,9 @@ if (isset($_POST['id'])) {
                                     } else if($approval == '2'){
                                         $status = '<span class="badge bg-success">Approved</span>';
                                         $alasan = '-';
+                                    } else {
+                                        $status = '<span class="badge bg-warning">Pengiriman Diubah</span>';
+                                        $alasan = '-';
                                     }
                                     $nama_driver = $data['nama_driver'];
                                     $nama_driver = !empty($nama_driver) ? str_replace(' ', '_', $nama_driver) : '';
