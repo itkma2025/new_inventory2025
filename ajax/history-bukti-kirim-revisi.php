@@ -69,7 +69,7 @@ if (isset($_POST['id'])) {
                     </thead>
                     <tbody>
                         <?php  
-                             while($data = mysqli_fetch_assoc($sql)){ 
+                            while($data = mysqli_fetch_assoc($sql)){ 
                                     $no_inv = $data['no_inv'];
                                     $cs_inv = $data['cs_inv'];
                                     $diupload_oleh = $data['nama_driver'] ?? $data['user_created'] ?? '-';
@@ -94,8 +94,7 @@ if (isset($_POST['id'])) {
                                         $status = '<span class="badge bg-warning">Pengiriman Diubah</span>';
                                         $alasan = '-';
                                     }
-                                    $nama_driver = $data['nama_driver'];
-                                    $nama_driver = !empty($nama_driver) ? str_replace(' ', '_', $nama_driver) : '';
+                                    $nama_driver = str_replace(' ', '_', $diupload_oleh) ?? '';
                                     $lokasi = $data['lokasi'];
                                     $created_date = $data['created_date'];
                                     $gambar = $data['bukti_satu'];
@@ -103,14 +102,7 @@ if (isset($_POST['id'])) {
                                     $view_image = urlencode($encrypt_image);
                                     $driver = urlencode($nama_driver);
                                     $path = "image-history-revisi.php?file=$view_image&&driver=$driver";
-                                    $img = "";
-                                    if ($gambar && file_exists("../gambar-revisi/bukti1/" . $gambar)) {
-                                        $img = $path;
-                                    } else if($gambar && file_exists("../gambar-revisi/bukti_kirim/" . $nama_driver . "/" . $gambar)){
-                                        $img = $path;
-                                    } else {
-                                        $img = "assets/img/no_img.jpg";
-                                    }
+                                    $img = $path;
                                 ?>
                         <tr>
                             <td class="text-center">

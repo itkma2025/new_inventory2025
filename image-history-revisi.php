@@ -1,7 +1,8 @@
 <?php
-require_once __DIR__ . '/akses.php'; // Otentikasi jika ada
-require_once __DIR__ . '/function/function-enkripsi.php'; // Otentikasi jika ada
-$default_image = __DIR__ . '/assets/img/no_img.jpg'; // Gambar default saat tidak ditemukan
+require_once __DIR__ . '/akses.php'; 
+require_once __DIR__ . '/function/function-enkripsi.php';
+
+$default_image = __DIR__ . '/assets/img/no_img.jpg';
 
 // Validasi input
 if (!isset($_GET['file'])) {
@@ -11,27 +12,30 @@ if (!isset($_GET['file'])) {
 
 $encrypted = $_GET['file'];
 $decrypted = decrypt($encrypted, $key_global);
-$nama_driver = htmlspecialchars(urldecode($_GET['driver']));
 $filename = $decrypted;
+$nama_driver = htmlspecialchars(urldecode($_GET['driver'] ?? ''));
 
+// Daftar folder yang akan dicek, urutkan berdasarkan prioritas
+$folders = [
+    "gambar-revisi/bukti_kirim/" . $nama_driver,
+    "gambar-revisi/bukti_kirim/ecat/" . $nama_driver,
+    "gambar-revisi/bukti_kirim/pl/" . $nama_driver,
+    "gambar-revisi/bukti_kirim/ekspedisi", // fallback umum untuk ekspedisi
+    "gambar-revisi/bukti1"                 // fallback umum lama
+];
 
-$base_dir = "";
-if ($filename && file_exists("gambar-revisi/bukti1/" . $filename)) {
-    echo $base_dir = "gambar-revisi/bukti1/" . $filename;
-} else if($filename && file_exists("gambar-revisi/bukti_kirim/" . $nama_driver . "/" . $filename)){
-    $base_dir = "gambar-revisi/bukti_kirim/" . $nama_driver . "/" . $filename;
-} else if($filename && file_exists("gambar-revisi/bukti_kirim/ecat/" . $nama_driver . "/" . $filename)){
-    $base_dir = "gambar-revisi/bukti_kirim/ecat/" . $nama_driver . "/" . $filename;
-} else if($filename && file_exists("gambar-revisi/bukti_kirim/pl/" . $nama_driver . "/" . $filename)){
-    $base_dir = "gambar-revisi/bukti_kirim/pl/" . $nama_driver . "/" . $filename;
-} else {
-    $base_dir = $default_image;
+// Coba cari file di semua folder di atas
+$filepath = '';
+foreach ($folders as $folder) {
+    $try_path = __DIR__ . '/' . $folder . '/' . $filename;
+    if (file_exists($try_path)) {
+        $filepath = $try_path;
+        break;
+    }
 }
 
-$filepath = $base_dir;
-
-// Gunakan gambar default jika tidak ditemukan
-if (!file_exists($filepath)) {
+// Jika tidak ditemukan, gunakan default
+if (!$filepath || !file_exists($filepath)) {
     $filepath = $default_image;
 }
 
@@ -40,17 +44,13 @@ if (ob_get_level()) {
     ob_end_clean();
 }
 
-// Tentukan tipe MIME
+// Tentukan MIME type
 $mime = mime_content_type($filepath);
 header("Content-Type: $mime");
-
-// Header no-cache (opsional)
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 header("Expires: 0");
 
-// Tampilkan file
+// Kirimkan gambar
 readfile($filepath);
 exit;
-
-
