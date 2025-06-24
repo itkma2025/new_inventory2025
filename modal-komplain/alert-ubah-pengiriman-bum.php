@@ -55,7 +55,7 @@
                     <!-- Modal footer -->
                     <div class="mt-4 text-center">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelDikirim">Tutup</button>
-                        <button type="submit" class="btn btn-primary" name="alert-ubah-pengiriman-ppn"> Ubah Pengiriman</button>
+                        <button type="submit" class="btn btn-primary" name="alert-ubah-pengiriman-bum"> Ubah Pengiriman</button>
                     </div>
                 </form>
             </div>

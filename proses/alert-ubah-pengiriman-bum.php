@@ -138,11 +138,11 @@ if (isset($sanitasi_post['alert-ubah-pengiriman-bum'])) {
         exit();
     } catch (Exception $e) {
         // Rollback transaksi jika terjadi kesalahan
-        $connect->rollback();
+        $connect->rollback();  
         $error_message = "Gagal saat proses data: " . $e->getMessage();
         echo $error_message;
         $_SESSION['info'] = "Data Gagal Diupdate";
-        // header("Location:../detail-komplain-revisi-bum.php?id=$id_komplain_encrypt");
+        header("Location:../detail-komplain-revisi-bum.php?id=$id_komplain_encrypt");
         exit();
     }
 }
